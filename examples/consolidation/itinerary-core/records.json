@@ -1,0 +1,49 @@
+[
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.16.1",
+    "externalKey": "bali/bromo-ijen-3d2n",
+    "entityType": "package",
+    "canonicalKey": "package:bromo-ijen-3d2n",
+    "payload": {
+      "route_sequence": [
+        "gilimanuk-ferry",
+        "ijen-night-hike",
+        "bromo-sunrise",
+        "madakaripura"
+      ],
+      "public_url": "/tours/from-bali/bromo-ijen-3d2n",
+      "origin": "bali",
+      "duration": "3D2N"
+    },
+    "payloadSha256": "7efb82c9d7f4e7ebff9bf0475674af8d6ce387fe4b91ed1f35f37034cb01862c"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.16.1",
+    "externalKey": "mount-bromo",
+    "entityType": "destination",
+    "canonicalKey": "destination:mount-bromo",
+    "payload": {
+      "operational": {
+        "elevation_m": 2329,
+        "difficulty": "moderate",
+        "jeep_required": true
+      }
+    },
+    "payloadSha256": "12c27e4df0e7ed46be423e52633e8c721efe621aa77088e0be6de563c04253b7"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.16.1",
+    "externalKey": "surabaya-airport-to-bromo-area",
+    "entityType": "route",
+    "canonicalKey": "route:surabaya-airport-to-bromo-area",
+    "payload": {
+      "feasibility": "validated",
+      "distance_km": 95,
+      "drive_time_min": 180
+    },
+    "payloadSha256": "f81c87e707552255c35c0c696a17422d5b8f7fd85edf09b4079cb9662ae47f53"
+  }
+]

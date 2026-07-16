@@ -1,0 +1,16 @@
+{
+  "source": "llm-wiki-trust",
+  "version": "2026.07.16.1",
+  "producedAt": "2026-07-16T00:00:00.000Z",
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "records.json",
+      "sha256": "54c7e8de6a300caccad1717187cc39b5573bc306109f6f8d0cdd34ed54e18f40",
+      "recordCount": 4
+    }
+  ],
+  "metadata": {
+    "validation": "passed"
+  }
+}

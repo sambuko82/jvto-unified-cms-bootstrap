@@ -21,3 +21,4 @@ entity_types:
   - component
   - design_system_version
   - source_release
+  - general_module

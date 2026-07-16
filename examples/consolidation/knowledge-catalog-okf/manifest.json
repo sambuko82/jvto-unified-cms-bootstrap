@@ -1,0 +1,16 @@
+{
+  "source": "knowledge-catalog-okf",
+  "version": "2026.07.16.1",
+  "producedAt": "2026-07-16T00:00:00.000Z",
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "records.json",
+      "sha256": "1f781390f5a79066a1baf2654e5768e8a03df85ebbde1c7a3cf5d411f5733d52",
+      "recordCount": 2
+    }
+  ],
+  "metadata": {
+    "validation": "passed"
+  }
+}

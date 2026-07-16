@@ -1,0 +1,85 @@
+{
+  "publicationId": "00000000-0000-4000-8000-000000000001",
+  "publishedAt": "2026-07-16T00:00:00.000Z",
+  "actorId": "fixture-actor",
+  "approverIds": [
+    "fixture-approver"
+  ],
+  "sourceVersions": {
+    "llm-wiki-trust": "2026.07.16.1",
+    "llm-wiki-policy": "2026.07.16.1",
+    "itinerary-core": "2026.07.16.1",
+    "knowledge-catalog-okf": "2026.07.16.1",
+    "design-system": "2026.07.16.1",
+    "canonical-facts": "2026.07.16.1"
+  },
+  "items": [
+    {
+      "entityId": "5138b525-14f8-4b9e-9a90-e7ca5d54d8fa",
+      "versionId": "06810aff-dff9-49ef-b1be-0079534dbe37",
+      "previousVersionId": null
+    },
+    {
+      "entityId": "aa88aa03-b12e-49d2-8328-5c2dc1f9002f",
+      "versionId": "5dd9ac7a-9134-4dac-82fb-1a0581789c80",
+      "previousVersionId": null
+    },
+    {
+      "entityId": "4db2db40-76de-4da6-9f2f-5e53ec975692",
+      "versionId": "b6e541ff-3e8b-4f0c-9ef2-47e527420997",
+      "previousVersionId": null
+    },
+    {
+      "entityId": "c6a10574-4d99-42c0-81df-8f6d9ddafa6c",
+      "versionId": "dcc63a3d-12ca-467f-93ef-a0abb8dc7433",
+      "previousVersionId": null
+    },
+    {
+      "entityId": "06c02e26-78da-41f5-9df9-0943799a0502",
+      "versionId": "ca051ad9-1888-4556-8f41-511d8c1a83a3",
+      "previousVersionId": null
+    },
+    {
+      "entityId": "95bb7f23-c749-4f26-b93b-b4d2ad6ee955",
+      "versionId": "34afe86b-b859-4555-982c-ba247ea0cf40",
+      "previousVersionId": null
+    },
+    {
+      "entityId": "9ec623db-5dc5-413c-a233-3489c9e1b18e",
+      "versionId": "cce35a77-dda1-41a3-8aa4-6addc91bbf9e",
+      "previousVersionId": null
+    },
+    {
+      "entityId": "58f12709-9c7f-4c0a-b7f5-0b3022642b68",
+      "versionId": "6718438d-6970-4ca7-b491-42f4e832aa1b",
+      "previousVersionId": null
+    },
+    {
+      "entityId": "9bad952d-96b2-47a3-bc34-32763fcc32f0",
+      "versionId": "f3b7423f-eb34-4a4a-af5c-642a8a790993",
+      "previousVersionId": null
+    },
+    {
+      "entityId": "a907fed3-3c54-4c7a-8d0f-e6133c0bd643",
+      "versionId": "6336332f-eebc-43a9-9b40-26fff471ec35",
+      "previousVersionId": null
+    },
+    {
+      "entityId": "64e844d4-af15-4894-b792-8db41c154f26",
+      "versionId": "5935b4db-2ad1-492b-a699-45cae94e8bc2",
+      "previousVersionId": null
+    }
+  ],
+  "affectedRoutes": [
+    "/",
+    "/tours/from-bali/bromo-ijen-3d2n",
+    "/travel-guide/booking-information"
+  ],
+  "validation": {
+    "passed": true,
+    "errors": [],
+    "warnings": [
+      "claim:c1.canonical_wording: Incoming value is supplied by the configured owner source."
+    ]
+  }
+}

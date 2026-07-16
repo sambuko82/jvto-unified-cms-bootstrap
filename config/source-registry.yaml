@@ -62,6 +62,33 @@ sources:
     manifest_required: true
     checksum_required: true
 
+  - code: llm-wiki-policy
+    name: LLM Wiki Policy Bundle (v2 cancellation + Xendit payment)
+    role: compiler
+    source_type: github_release
+    repository: sambuko82/llm-wiki
+    authority_rank: 85
+    manifest_required: true
+    checksum_required: true
+
+  - code: knowledge-catalog-okf
+    name: JVTO Knowledge Catalog (OKF customer-sales-release)
+    role: compiler
+    source_type: github_release
+    repository: sambuko82/knowledge-catalog-jvto-bootstrap
+    authority_rank: 82
+    manifest_required: true
+    checksum_required: true
+
+  - code: canonical-facts
+    name: JVTO Canonical Facts Lock (adjudicated)
+    role: governance_contract
+    source_type: document
+    repository: jvto-devteam/jvto-web
+    authority_rank: 100
+    manifest_required: false
+    checksum_required: true
+
   - code: canonical-spec
     name: JVTO Canonical Spec Set
     role: governance_contract
