@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jvto.local/schemas/publication-manifest.schema.json",
+  "title": "JVTO Publication Manifest",
+  "type": "object",
+  "required": [
+    "publicationId",
+    "publishedAt",
+    "actorId",
+    "items",
+    "affectedRoutes",
+    "validation"
+  ],
+  "properties": {
+    "publicationId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "publishedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "actorId": {
+      "type": "string"
+    },
+    "approverIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sourceVersions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "entityId",
+          "versionId"
+        ],
+        "properties": {
+          "entityId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "versionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "previousVersionId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "affectedRoutes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^/"
+      }
+    },
+    "validation": {
+      "type": "object",
+      "required": [
+        "passed",
+        "errors",
+        "warnings"
+      ],
+      "properties": {
+        "passed": {
+          "type": "boolean"
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

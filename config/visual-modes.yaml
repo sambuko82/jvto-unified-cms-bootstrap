@@ -1,0 +1,14 @@
+version: 1
+visual_modes:
+  homepage:
+    clusters: [homepage]
+    purpose: trust-led commercial entry
+  travel:
+    clusters: [tours, destinations]
+    purpose: discovery, route selection and travel desire
+  trust:
+    clusters: [verify, policy]
+    purpose: canonical proof and formal rules
+  hybrid:
+    clusters: [travel-guide, why-jvto, contact]
+    purpose: operational support, people and narrative trust

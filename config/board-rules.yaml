@@ -1,0 +1,29 @@
+version: 1
+rules:
+  - id: page-mode-default
+    description: Page cluster determines the default visual mode.
+    severity: error
+
+  - id: package-first-flow
+    description: Package pages must present product and practicalities before heavy trust sections.
+    severity: error
+
+  - id: proof-canonical-owner
+    description: Every public proof item must have one canonical owner page.
+    severity: error
+
+  - id: homepage-proof-teaser
+    description: Homepage may display compact proof teasers but not become the proof archive.
+    severity: error
+
+  - id: no-unsupported-route
+    description: CMS cannot publish a static route not implemented by the runtime or registered as dynamic.
+    severity: error
+
+  - id: component-runtime-support
+    description: CMS may expose a component only after its runtime implementation is registered.
+    severity: error
+
+  - id: no-private-public-projection
+    description: Restricted operational or personal fields cannot enter public read models.
+    severity: error

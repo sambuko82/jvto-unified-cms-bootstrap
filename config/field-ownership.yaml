@@ -1,0 +1,43 @@
+version: 1
+rules:
+  - entity_type: package
+    field_path: price_tiers
+    owner_source: postgres-operational
+    write_policy: operational_only
+    conflict_policy: block
+
+  - entity_type: package
+    field_path: public_copy
+    owner_source: cms
+    write_policy: editable
+    conflict_policy: create_new_version
+
+  - entity_type: package
+    field_path: readiness
+    owner_source: llm-wiki-package-readiness
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  - entity_type: route
+    field_path: feasibility
+    owner_source: itinerary-core
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  - entity_type: policy_rule
+    field_path: '*'
+    owner_source: postgres-operational
+    write_policy: compliance_only
+    conflict_policy: block
+
+  - entity_type: claim
+    field_path: canonical_wording
+    owner_source: llm-wiki-trust
+    write_policy: override_with_approval
+    conflict_policy: manual_resolution
+
+  - entity_type: component
+    field_path: implementation
+    owner_source: jvto-web-runtime
+    write_policy: developer_only
+    conflict_policy: block

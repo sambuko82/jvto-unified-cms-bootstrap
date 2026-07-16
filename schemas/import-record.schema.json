@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jvto.local/schemas/import-record.schema.json",
+  "title": "JVTO Imported Source Record",
+  "type": "object",
+  "required": [
+    "source",
+    "releaseVersion",
+    "externalKey",
+    "entityType",
+    "payload",
+    "payloadSha256"
+  ],
+  "properties": {
+    "source": {
+      "type": "string"
+    },
+    "releaseVersion": {
+      "type": "string"
+    },
+    "externalKey": {
+      "type": "string"
+    },
+    "entityType": {
+      "type": "string"
+    },
+    "canonicalKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "payload": {
+      "type": "object"
+    },
+    "payloadSha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "status": {
+      "enum": [
+        "received",
+        "validated",
+        "unmapped",
+        "mapped",
+        "conflicted",
+        "approved",
+        "promoted",
+        "rejected"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

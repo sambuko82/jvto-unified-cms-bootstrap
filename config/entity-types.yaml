@@ -1,0 +1,23 @@
+version: 1
+entity_types:
+  - page
+  - package
+  - destination
+  - route
+  - activity
+  - hotel
+  - vehicle_type
+  - crew_member
+  - public_person_profile
+  - review
+  - claim
+  - evidence
+  - proof_group
+  - policy_rule
+  - policy_document
+  - faq
+  - support_topic
+  - asset
+  - component
+  - design_system_version
+  - source_release

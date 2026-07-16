@@ -1,0 +1,71 @@
+version: 1
+sources:
+  - code: postgres-operational
+    name: JVTO PostgreSQL Operational Data
+    role: canonical_owner
+    source_type: database
+    authority_rank: 100
+    manifest_required: false
+    checksum_required: false
+
+  - code: jvto-web-runtime
+    name: JVTO Web Runtime
+    role: runtime_owner
+    source_type: repository
+    repository: jvto-devteam/jvto-web
+    authority_rank: 90
+    manifest_required: false
+    checksum_required: false
+
+  - code: llm-wiki-trust
+    name: LLM Wiki Trust Bundle
+    role: compiler
+    source_type: github_release
+    repository: sambuko82/llm-wiki
+    authority_rank: 85
+    manifest_required: true
+    checksum_required: true
+
+  - code: llm-wiki-package-readiness
+    name: LLM Wiki Package Readiness
+    role: compiler
+    source_type: github_release
+    repository: sambuko82/llm-wiki
+    authority_rank: 85
+    manifest_required: true
+    checksum_required: true
+
+  - code: llm-wiki-blog
+    name: LLM Wiki Published Blog
+    role: editorial_owner
+    source_type: github_release
+    repository: sambuko82/llm-wiki
+    authority_rank: 80
+    manifest_required: true
+    checksum_required: true
+
+  - code: itinerary-core
+    name: JVTO Itinerary Intelligence
+    role: compiler
+    source_type: github_release
+    repository: sambuko82/jvto-itinerary-core
+    authority_rank: 85
+    manifest_required: true
+    checksum_required: true
+
+  - code: design-system
+    name: JVTO Design System
+    role: reference_source
+    source_type: github_release
+    repository: sambuko82/jvto-new-on-design-system
+    authority_rank: 70
+    manifest_required: true
+    checksum_required: true
+
+  - code: canonical-spec
+    name: JVTO Canonical Spec Set
+    role: governance_contract
+    source_type: document
+    authority_rank: 100
+    manifest_required: false
+    checksum_required: true

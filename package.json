@@ -1,0 +1,27 @@
+{
+  "name": "jvto-unified-cms-control-plane",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Codex-ready implementation workspace for the JVTO Unified CMS control plane.",
+  "scripts": {
+    "validate:config": "node scripts/validate-config.mjs",
+    "validate:schemas": "node scripts/validate-schemas.mjs",
+    "validate:secrets": "node scripts/check-secrets.mjs",
+    "validate": "npm run validate:config && npm run validate:schemas && npm run validate:secrets && npm run typecheck",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8",
+    "yaml": "^2.7.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "source": "llm-wiki-package-readiness",
+  "releaseVersion": "2026.07.16.1",
+  "externalKey": "SUB-3D2N-BROMO-IJEN",
+  "entityType": "package",
+  "canonicalKey": "package:sub-3d2n-bromo-ijen",
+  "payload": {
+    "readiness": "ready",
+    "blockingGaps": [],
+    "warnings": [
+      "Blue-fire access remains authority-dependent"
+    ]
+  },
+  "payloadSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "status": "mapped"
+}

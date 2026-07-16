@@ -1,0 +1,23 @@
+{
+  "source": "llm-wiki-trust",
+  "version": "2026.07.16.1",
+  "commitSha": "0123456789abcdef0123456789abcdef01234567",
+  "releaseTag": "trust-bundle-v2026.07.16.1",
+  "producedAt": "2026-07-16T12:00:00Z",
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "trust-bundle/manifest.json",
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "recordCount": 1
+    },
+    {
+      "path": "trust-bundle/claims.json",
+      "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "recordCount": 9
+    }
+  ],
+  "metadata": {
+    "validation": "passed"
+  }
+}
