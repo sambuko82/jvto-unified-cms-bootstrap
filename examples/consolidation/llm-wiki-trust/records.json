@@ -1,0 +1,60 @@
+[
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.16.1",
+    "externalKey": "C1",
+    "entityType": "claim",
+    "canonicalKey": "claim:c1",
+    "payload": {
+      "canonical_wording": "JVTO is led by Bripka Agung Sambuko, an active officer of the Indonesian Tourist Police (Ditpamobvit East Java).",
+      "pillar": "police-led",
+      "evidence": [
+        {
+          "id": "E001",
+          "type": "document",
+          "proof_ids": [
+            "P001"
+          ]
+        }
+      ]
+    },
+    "payloadSha256": "5aabb6db39b03a52daf0572807e70b210345df7423295ae7c2b6b6b06e771d35"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.16.1",
+    "externalKey": "faq-cancellation",
+    "entityType": "faq",
+    "canonicalKey": "faq:faq-cancellation",
+    "payload": {
+      "question": "What is your cancellation policy?",
+      "answer": "A full cancellation at least 48 hours before Day 1 converts to 100% Lifetime Package Credit; partial cancellations refund cash on the cancelled seats.",
+      "source_claim_id": "C6"
+    },
+    "payloadSha256": "94a3604e69171c41d419dca73136ce8c4ea69cb35ea77749a983c25d78c1b0b0"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.16.1",
+    "externalKey": "/#agung-sambuko",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:agung-sambuko",
+    "payload": {
+      "name": "Agung \"Mr. Sam\" Sambuko",
+      "schema_id": "/#agung-sambuko",
+      "job_title": "Active Tourist Police Officer, Ditpamobvit East Java"
+    },
+    "payloadSha256": "84993cdb0daad1b8dd7f848ba2a319d2f923a29caeb4ea1cea9fe2472bc5d85b"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.16.1",
+    "externalKey": "kawah-ijen",
+    "entityType": "destination",
+    "canonicalKey": "destination:kawah-ijen",
+    "payload": {
+      "narrative": "Active stratovolcano at 2,386 m with the world’s largest acidic crater lake and the pre-dawn blue fire phenomenon."
+    },
+    "payloadSha256": "7ae182a0e2d9e57a69cd48369eceaa073ae17472a83efc68ca5311f27c30e2c1"
+  }
+]

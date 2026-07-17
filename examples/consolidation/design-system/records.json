@@ -1,0 +1,32 @@
+[
+  {
+    "source": "design-system",
+    "releaseVersion": "2026.07.16.1",
+    "externalKey": "/",
+    "entityType": "page",
+    "canonicalKey": "page:home",
+    "payload": {
+      "content": {
+        "h1": "Tourist Police-led private volcano tours",
+        "eyebrow": "JVTO"
+      },
+      "route": "/"
+    },
+    "payloadSha256": "2fabd0692dc9373b55f30e505cabf796ed193a56ffd19bf19f09a9cfdb2c7670"
+  },
+  {
+    "source": "design-system",
+    "releaseVersion": "2026.07.16.1",
+    "externalKey": "/travel-guide/booking-information",
+    "entityType": "page",
+    "canonicalKey": "page:travel-guide-booking-information",
+    "payload": {
+      "content": {
+        "h1": "Booking information",
+        "lede": "A 20% deposit locks your vehicle and crew."
+      },
+      "route": "/travel-guide/booking-information"
+    },
+    "payloadSha256": "404d2701ab9086eaabc6055cf97ed06923e8c7b052dcb532e665e940a6bcbf0c"
+  }
+]

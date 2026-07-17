@@ -1,0 +1,95 @@
+version: 1
+
+# The explicit, machine-checkable map of how every JVTO repo's compiled output
+# consolidates into CMS canonical entities. It pairs with:
+#   - config/source-registry.yaml   (who the sources are + authority)
+#   - config/field-ownership.yaml   (which source owns which field)
+#   - src/integration/*             (the engine that executes this map)
+# Precedence tie-breaker over ALL upstream artifacts is the adjudicated facts
+# lock (jvto-web docs/CANONICAL_FACTS.md), surfaced here as `canonical-facts`.
+
+canonical_key_convention: "<entity_type>:<slug>"
+tie_breaker: canonical-facts
+
+# The multi-form identifiers the canonical-key resolver normalizes to one slug.
+join_keys:
+  - entity: package
+    forms:
+      - bare-slug            # bromo-1d1n
+      - origin-prefixed      # bali/bromo-ijen-3d2n
+      - full-path            # tours/from-surabaya/bromo-1d1n
+      - public-url           # /tours/from-bali/bromo-ijen-3d2n
+    bridges:
+      - itinerary-core package-catalog-index.json .source_trace -> llm-wiki fields
+      - okf package-profiles.json .itinerary_core_package_id -> itinerary-core
+  - entity: destination
+    forms: [token]           # kawah-ijen | ijen, mount-bromo | bromo, tumpak-sewu
+  - entity: public_person_profile
+    forms: [schema-id]       # /#agung-sambuko, /#dr-ahmad-irwandanu, /#crew-{code}
+  - entity: claim
+    forms: [claim-id]        # C1..C9  (evidence E001.. via proof_ids)
+  - entity: policy_document
+    forms: [policy-id]       # cancellation-package-credit | policies/... | module_policy_...
+  - entity: page
+    forms: [route]           # /, /travel-guide/..., matches content_pages(route,lang)
+
+# repo output -> CMS entity mappings. `owner_fields` must match a rule in
+# config/field-ownership.yaml whose owner_source == source.
+mappings:
+  # llm-wiki — narrative / trust / policy SSOT
+  - source: llm-wiki-trust
+    artifact: output/website/trust-bundle/claims.json
+    entity_type: claim
+    owner_fields: [canonical_wording]
+  - source: llm-wiki-trust
+    artifact: output/website/trust-bundle/faq.json
+    entity_type: faq
+    owner_fields: ['*']
+  - source: llm-wiki-trust
+    artifact: output/website/trust-bundle/people.json
+    entity_type: public_person_profile
+    owner_fields: ['*']
+  - source: llm-wiki-trust
+    artifact: output/website/trust-bundle/destinations.json
+    entity_type: destination
+    owner_fields: [narrative]
+  - source: llm-wiki-policy
+    artifact: output/website/policy-bundle/decision-matrix.json
+    entity_type: policy_document
+    owner_fields: [decision_matrix, customer_copy, payment_methods]
+
+  # jvto-itinerary-core — operational SSOT
+  - source: itinerary-core
+    artifact: generated/itinerary-intelligence/package-catalog-index.json
+    entity_type: package
+    owner_fields: [route_sequence]
+  - source: itinerary-core
+    artifact: generated/itinerary-intelligence/22-destinations-master.json
+    entity_type: destination
+    owner_fields: [operational]
+  - source: itinerary-core
+    artifact: generated/itinerary-intelligence/11-package-route-map.json
+    entity_type: route
+    owner_fields: ['*']
+
+  # knowledge-catalog — OKF normalized catalog
+  - source: knowledge-catalog-okf
+    artifact: okf/customer-sales-release/jvto/package-profiles.json
+    entity_type: package
+    owner_fields: [profile, module_refs]
+  - source: knowledge-catalog-okf
+    artifact: okf/customer-sales-release/jvto/general-modules.json
+    entity_type: general_module
+    owner_fields: ['*']
+
+  # design-system — CMS-ready page seed
+  - source: design-system
+    artifact: handoff/seed/01_content_pages_v2.sql
+    entity_type: page
+    owner_fields: [content]
+
+  # jvto-web CANONICAL_FACTS — adjudication tie-breaker
+  - source: canonical-facts
+    artifact: docs/CANONICAL_FACTS.md
+    entity_type: policy_document
+    owner_fields: [adjudicated_facts]

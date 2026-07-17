@@ -11,7 +11,8 @@
     "validate": "npm run validate:config && npm run validate:schemas && npm run validate:secrets && npm run typecheck",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "build": "tsc -p tsconfig.build.json"
+    "build": "tsc -p tsconfig.build.json",
+    "build:fixtures": "npm run build && node scripts/build-fixtures.mjs"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

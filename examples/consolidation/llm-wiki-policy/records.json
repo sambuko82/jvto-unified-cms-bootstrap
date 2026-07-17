@@ -1,0 +1,74 @@
+[
+  {
+    "source": "llm-wiki-policy",
+    "releaseVersion": "2026.07.16.1",
+    "externalKey": "cancellation-package-credit",
+    "entityType": "policy_document",
+    "canonicalKey": "policy_document:cancellation-package-credit",
+    "payload": {
+      "decision_matrix": {
+        "schema_version": "cancellation-policy/v2.0",
+        "policy_version": "2026-07",
+        "cutoff_hours": 48,
+        "rules": {
+          "full_voluntary_gte_48h": {
+            "outcome": "lifetime_package_credit",
+            "refund_percent": 0
+          },
+          "full_voluntary_lt_48h": {
+            "outcome": "forfeit",
+            "refund_percent": 0
+          },
+          "partial_gte_48h": {
+            "outcome": "cash_refund",
+            "refund_percent": 100
+          },
+          "partial_lt_48h": {
+            "outcome": "cash_refund",
+            "refund_percent": 50
+          }
+        },
+        "package_credit_locks": {
+          "never_cash": true,
+          "same_package_pax_price": true,
+          "splittable": false,
+          "transfers_allowed": 1
+        },
+        "flight_disruption": {
+          "recovery_fee_percent": 50
+        }
+      },
+      "customer_copy": {
+        "package_guarantee_summary": "Cancel your full booking at least 48 hours before Day 1 and keep 100% as Lifetime Package Credit."
+      },
+      "payment_methods": {
+        "gateway": "Xendit",
+        "deposit_percent": 20,
+        "close_departure_full_within_days": 14,
+        "instant": {
+          "instruments": [
+            "card",
+            "qris"
+          ],
+          "fee": "shown at Xendit checkout",
+          "asean_qris": true
+        },
+        "transfer": {
+          "instruments": [
+            "wise",
+            "bank_transfer"
+          ],
+          "surcharge": false
+        },
+        "office_cash": {
+          "currency": "IDR",
+          "before_day1": true,
+          "approved_in_writing": true,
+          "guest_pre_converts_idr": true,
+          "money_changer": "not recommended, no partnership, no rate guarantee"
+        }
+      }
+    },
+    "payloadSha256": "909dab4e87df50af71b3646045cc5322b2b4ec90fd21db19871d54bdf6420754"
+  }
+]

@@ -1,0 +1,60 @@
+[
+  {
+    "source": "knowledge-catalog-okf",
+    "releaseVersion": "2026.07.16.1",
+    "externalKey": "bali/bromo-ijen-3d2n",
+    "entityType": "package",
+    "canonicalKey": "package:bromo-ijen-3d2n",
+    "payload": {
+      "profile": {
+        "title": "Bromo & Ijen 3D2N from Bali",
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Bali pickup → Ijen base",
+            "meals": [
+              "D"
+            ]
+          },
+          {
+            "day": 2,
+            "title": "Ijen blue fire → Bromo",
+            "meals": [
+              "B",
+              "L",
+              "D"
+            ]
+          },
+          {
+            "day": 3,
+            "title": "Bromo sunrise → Madakaripura",
+            "meals": [
+              "B"
+            ]
+          }
+        ]
+      },
+      "module_refs": [
+        "policy_booking_paths",
+        "policy_cancellation_package_credit",
+        "destination_ijen"
+      ]
+    },
+    "payloadSha256": "f67ed52d692ded197127e42317513b43d54c034020dae7a5ce07f053d42f6c68"
+  },
+  {
+    "source": "knowledge-catalog-okf",
+    "releaseVersion": "2026.07.16.1",
+    "externalKey": "policy_anti_fraud",
+    "entityType": "general_module",
+    "canonicalKey": "general_module:policy-anti-fraud",
+    "payload": {
+      "category": "policy",
+      "scope": "global",
+      "title": "Anti-fraud & payment security",
+      "short_answer": "Pay only via the official website (Xendit), listed bank accounts, or a confirmed payment link. JVTO never asks for card/CVV/OTP over chat.",
+      "customer_visible": true
+    },
+    "payloadSha256": "7d79b355b0e8918de154042c97f58c22d11de701ceaed54dc896423d05e35c38"
+  }
+]

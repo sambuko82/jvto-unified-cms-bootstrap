@@ -41,3 +41,130 @@ rules:
     owner_source: jvto-web-runtime
     write_policy: developer_only
     conflict_policy: block
+
+  # ---- Policy (v2 cancellation + Xendit payment) ----
+  # Machine logic + customer copy are owned by the llm-wiki policy bundle; the
+  # operational Postgres still blocks any live-money field, and CANONICAL_FACTS
+  # adjudicates the headline figures (deposit %, credit model).
+  - entity_type: policy_document
+    field_path: decision_matrix
+    owner_source: llm-wiki-policy
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  - entity_type: policy_document
+    field_path: customer_copy
+    owner_source: llm-wiki-policy
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  - entity_type: policy_document
+    field_path: payment_methods
+    owner_source: llm-wiki-policy
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  - entity_type: policy_document
+    field_path: adjudicated_facts
+    owner_source: canonical-facts
+    write_policy: compliance_only
+    conflict_policy: block
+
+  - entity_type: policy_rule
+    field_path: '*'
+    owner_source: llm-wiki-policy
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  # ---- Packages ----
+  - entity_type: package
+    field_path: profile
+    owner_source: knowledge-catalog-okf
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  - entity_type: package
+    field_path: route_sequence
+    owner_source: itinerary-core
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  - entity_type: package
+    field_path: module_refs
+    owner_source: knowledge-catalog-okf
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  # ---- Route (operational) ----
+  - entity_type: route
+    field_path: '*'
+    owner_source: itinerary-core
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  # ---- Destinations ----
+  - entity_type: destination
+    field_path: narrative
+    owner_source: llm-wiki-trust
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  - entity_type: destination
+    field_path: operational
+    owner_source: itinerary-core
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  # ---- People ----
+  - entity_type: public_person_profile
+    field_path: '*'
+    owner_source: llm-wiki-trust
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  # ---- Reviews / ratings (adjudicated) ----
+  - entity_type: review
+    field_path: rating_summary
+    owner_source: canonical-facts
+    write_policy: compliance_only
+    conflict_policy: block
+
+  # ---- Trust: evidence + proof ----
+  - entity_type: evidence
+    field_path: '*'
+    owner_source: llm-wiki-trust
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  - entity_type: proof_group
+    field_path: '*'
+    owner_source: llm-wiki-trust
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  # ---- FAQ ----
+  - entity_type: faq
+    field_path: '*'
+    owner_source: llm-wiki-trust
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  # ---- General module (OKF reusable content module) ----
+  - entity_type: general_module
+    field_path: '*'
+    owner_source: knowledge-catalog-okf
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  # ---- Pages (copy + SEO) ----
+  - entity_type: page
+    field_path: seo
+    owner_source: llm-wiki-trust
+    write_policy: editable
+    conflict_policy: create_new_version
+
+  - entity_type: page
+    field_path: content
+    owner_source: design-system
+    write_policy: editable
+    conflict_policy: create_new_version

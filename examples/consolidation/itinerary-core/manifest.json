@@ -1,0 +1,16 @@
+{
+  "source": "itinerary-core",
+  "version": "2026.07.16.1",
+  "producedAt": "2026-07-16T00:00:00.000Z",
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "records.json",
+      "sha256": "a664a4337fb692ba68ab152b7871faa60fe2a926852d088dbadd821c2fb5c7e3",
+      "recordCount": 3
+    }
+  ],
+  "metadata": {
+    "validation": "passed"
+  }
+}

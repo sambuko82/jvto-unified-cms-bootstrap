@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jvto.local/schemas/consolidation-map.schema.json",
+  "title": "JVTO Consolidation Map",
+  "type": "object",
+  "required": ["version", "canonical_key_convention", "tie_breaker", "join_keys", "mappings"],
+  "properties": {
+    "version": { "const": 1 },
+    "canonical_key_convention": { "type": "string", "minLength": 1 },
+    "tie_breaker": { "type": "string", "minLength": 1 },
+    "join_keys": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["entity", "forms"],
+        "properties": {
+          "entity": { "type": "string", "minLength": 1 },
+          "forms": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "bridges": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "mappings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["source", "artifact", "entity_type", "owner_fields"],
+        "properties": {
+          "source": { "type": "string", "minLength": 1 },
+          "artifact": { "type": "string", "minLength": 1 },
+          "entity_type": { "type": "string", "minLength": 1 },
+          "owner_fields": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string", "minLength": 1 }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

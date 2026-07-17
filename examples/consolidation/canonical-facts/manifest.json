@@ -1,0 +1,16 @@
+{
+  "source": "canonical-facts",
+  "version": "2026.07.16.1",
+  "producedAt": "2026-07-16T00:00:00.000Z",
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "records.json",
+      "sha256": "16e10c56d7ca8efd155c1ca3e40dd30dd38829b4e71ffe3859414da4bddc032f",
+      "recordCount": 1
+    }
+  ],
+  "metadata": {
+    "validation": "passed"
+  }
+}
