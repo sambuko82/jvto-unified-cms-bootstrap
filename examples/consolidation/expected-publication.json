@@ -78,8 +78,6 @@
   "validation": {
     "passed": true,
     "errors": [],
-    "warnings": [
-      "claim:c1.canonical_wording: Incoming value is supplied by the configured owner source."
-    ]
+    "warnings": []
   }
 }

@@ -18,3 +18,6 @@ jobs:
       - run: npm run validate
       - run: npm test
       - run: npm run build
+      # Re-consolidate + re-render over the committed release bundles and fail if
+      # the committed projection/HTML is stale (deterministic output drift guard).
+      - run: npm run verify:projection

@@ -1,0 +1,20 @@
+{
+  "source": "itinerary-core",
+  "version": "2026.07.21.1",
+  "producedAt": "2026-07-21T00:00:00.000Z",
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "records.json",
+      "sha256": "bbc68ab016928a9f723bb22f1d6ba00cb01913a928a099d30f807ce478933f14",
+      "recordCount": 46
+    }
+  ],
+  "metadata": {
+    "validation": "passed",
+    "upstream": {
+      "schema_version": 1,
+      "status": "mvp_seed_outputs_ready"
+    }
+  }
+}

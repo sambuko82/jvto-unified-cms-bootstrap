@@ -1,0 +1,133 @@
+[
+  {
+    "source": "design-system",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "/",
+    "entityType": "page",
+    "canonicalKey": "page:home",
+    "payload": {
+      "content": {
+        "h1": "Tourist Police-Led Private Volcano Tours in East Java",
+        "eyebrow": "Java Volcano Tour Operator",
+        "lede": "Private Bromo, Ijen & Tumpak Sewu tours from Surabaya or Bali. Licensed operator (NIB 1102230032918), led by an active Tourist Police officer. No shared groups. Plan-B framework when conditions change.",
+        "story": {
+          "heading": "A Tourist Police officer first, tour operator second.",
+          "body": "Mr. Sam is Bripka Agung Sambuko, an active officer of the Indonesian Tourist Police (Ditpamobvit East Java). Every route decision, written rule, and safety boundary comes from someone who answers to police protocol — not a marketing brief."
+        },
+        "ctaHeading": "Read the rulebook before you book."
+      },
+      "seo": {
+        "title": "Tourist Police-Led Private Volcano Tours in East Java | Java Volcano Tour Operator",
+        "description": "Private Bromo, Ijen & Tumpak Sewu tours from Surabaya or Bali. Licensed Indonesian operator (NIB 1102230032918), police-led safety culture, all-inclusive packages, Ijen health screening included."
+      },
+      "route": "/"
+    },
+    "payloadSha256": "3a2e37c16000bcd9d9f768ef69a15de2a2070b63f70a77f114977805f2af67fa"
+  },
+  {
+    "source": "design-system",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "/travel-guide",
+    "entityType": "page",
+    "canonicalKey": "page:travel-guide",
+    "payload": {
+      "content": {
+        "h1": "Travel Guide"
+      },
+      "seo": {
+        "title": "Travel Guide | Health, Safety, Packing & Closures — JVTO",
+        "description": "Operational guidance for East Java volcano tours: mandatory Ijen health screening, safety protocols, packing and fitness, weather and closures, and police-escort rules for groups.",
+        "schema_type": "CollectionPage"
+      },
+      "route": "/travel-guide"
+    },
+    "payloadSha256": "639ae268b601c06483c07b0bd84d937efb578e477007e6a8712d39069879061b"
+  },
+  {
+    "source": "design-system",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "/travel-guide/ijen-health-screening",
+    "entityType": "page",
+    "canonicalKey": "page:ijen-health-screening",
+    "payload": {
+      "content": {
+        "h1": "Ijen health screening",
+        "eyebrow": "Travel Guide · Health",
+        "lede": "A health certificate is mandatory for every guest before Kawah Ijen crater entry, per BBKSDA SE.1658/KSA.9/2024. JVTO coordinates the clinic workflow for every guest.",
+        "body": "<p class=\"lede\">A health certificate is mandatory for every guest before Kawah Ijen crater entry, per BBKSDA SE.1658/KSA.9/2024. JVTO coordinates the clinic workflow for every guest.</p><h2>A regulatory rule, coordinated by us</h2><p>The screening is set by BBKSDA (the East Java conservation authority) under Surat Edaran SE.1658/KSA.9/2024 — it is not JVTO-imposed. JVTO integrates the workflow so every guest arrives at the crater gate with a valid certificate.</p><blockquote>No valid QR code = no crater-zone access.</blockquote><h2>The four-step protocol</h2><ol><li>A nurse visits your hotel the evening before the hike (Bondowoso / Banyuwangi area).</li><li>Vitals recorded: SpO2, blood pressure, heart rate, respiratory history.</li><li>QR surat sehat issued, signed by Dr. Ahmad Irwandanu, SIP (STR QN00001073380217).</li><li>BBKSDA scans the QR code at the crater gate before entry.</li></ol>",
+        "faqs": [
+          {
+            "q": "Is the health certificate really mandatory?",
+            "a": "Yes — mandatory for every guest before crater entry, per BBKSDA SE.1658/KSA.9/2024. No valid QR code means no crater-zone access."
+          },
+          {
+            "q": "Who issues the certificate?",
+            "a": "Dr. Ahmad Irwandanu, SIP — STR QN00001073380217, verifiable on the Kemenkes SATUSEHAT registry."
+          }
+        ]
+      },
+      "seo": {
+        "title": "Ijen Health Screening — Mandatory for Every Guest | JVTO",
+        "description": "A health certificate is mandatory for every guest before Kawah Ijen crater entry, per BBKSDA SE.1658/KSA.9/2024. JVTO coordinates the clinic workflow; surat sehat issued by Dr. Ahmad Irwandanu, SIP.",
+        "schema_type": "MedicalWebPage",
+        "schema_json": [
+          {
+            "@type": "MedicalWebPage",
+            "@id": "https://javavolcano-touroperator.com/travel-guide/ijen-health-screening#page",
+            "name": "Ijen Health Screening",
+            "about": {
+              "@type": "MedicalCondition",
+              "name": "Altitude and sulfuric-gas exposure at Kawah Ijen"
+            },
+            "lastReviewed": "2026-06-01",
+            "reviewedBy": {
+              "@type": "Physician",
+              "name": "Dr. Ahmad Irwandanu, SIP",
+              "identifier": "QN00001073380217"
+            }
+          }
+        ]
+      },
+      "route": "/travel-guide/ijen-health-screening"
+    },
+    "payloadSha256": "a19cd11bb9572b2c5095059771986d86796c7039497cdd2e94a5d4aebdab8d7f"
+  },
+  {
+    "source": "design-system",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "/travel-guide/faq",
+    "entityType": "page",
+    "canonicalKey": "page:faq",
+    "payload": {
+      "content": {
+        "h1": "Frequently asked questions",
+        "eyebrow": "Travel Guide · FAQ",
+        "faqs": [
+          {
+            "q": "Is Blue Fire guaranteed?",
+            "a": "No — Blue Fire is a natural phenomenon subject to weather and gas activity. We time the trek to give you the best chance."
+          },
+          {
+            "q": "Do I need a health certificate for Ijen?",
+            "a": "Yes. It is mandatory for every guest before crater entry, per BBKSDA SE.1658/KSA.9/2024."
+          },
+          {
+            "q": "What is your cancellation policy?",
+            "a": "A full cancellation at least 48 hours before Day 1 converts your payment to 100% JVTO Lifetime Package Credit — never cash, non-expiring, locked to the same package, traveler count and price, and transferable to another person once. A full cancellation within 48 hours, or a no-show, is forfeited. Partial cancellations (some travelers drop while at least two paying travelers remain) are refunded in cash on the cancelled seats only: 100% at least 48 hours before Day 1, 50% within 48 hours, 0% once the tour has started. If a confirmed flight is cancelled by the airline with no alternative, a 50% flight Recovery Fee applies and the remainder converts to Lifetime Package Credit. Bookings are made only on the JVTO website; WhatsApp and email are support-only."
+          },
+          {
+            "q": "How much deposit is required?",
+            "a": "A 20% deposit confirms the booking (up to 100% if Day 1 is within 14 days), processed through JVTO's secure payment gateway, Xendit. Pay by card or QRIS (QRIS is convenient for ASEAN travellers); the card or QRIS balance is due no later than 5 days before Day 1, and Wise or bank transfer no later than 3 days before. The card/QRIS fee is shown at Xendit checkout before you confirm, and JVTO adds no surcharge on Wise or bank transfers. A cash IDR balance is possible at the JVTO office before Day 1 only if approved in writing and only if you have already converted to IDR yourself."
+          }
+        ]
+      },
+      "seo": {
+        "title": "Volcano Tour FAQ | Blue Fire, Health, Booking — JVTO",
+        "description": "Answers on Blue Fire visibility, mandatory Ijen health screening, private-tour logistics, deposits and the Lifetime Package Credit cancellation policy.",
+        "schema_type": "FAQPage"
+      },
+      "route": "/travel-guide/faq"
+    },
+    "payloadSha256": "a9316f9980ad6da4352d838ef61adcd37df15357a2bb2346b2f99acad7ee945a"
+  }
+]

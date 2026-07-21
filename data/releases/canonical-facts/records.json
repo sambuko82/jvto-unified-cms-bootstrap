@@ -1,0 +1,26 @@
+[
+  {
+    "source": "canonical-facts",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "canonical-facts",
+    "entityType": "policy_document",
+    "canonicalKey": "policy_document:cancellation-package-credit",
+    "payload": {
+      "adjudicated_facts": {
+        "founding_year": 2015,
+        "deposit_percent": 20,
+        "close_departure_full_within_days": 14,
+        "cancellation_model": "lifetime_package_credit",
+        "reviews": {
+          "trustpilot": "4.8/51",
+          "google": "4.9/123",
+          "tripadvisor": "4.95/21",
+          "cross_platform": "4.8/195"
+        },
+        "ijen_health_screening": "mandatory",
+        "nib": "1102230032918"
+      }
+    },
+    "payloadSha256": "e3bee508d72f70cc53bcc42397fede0dc4361b8ed07393f4414e1e7b8d8ac604"
+  }
+]

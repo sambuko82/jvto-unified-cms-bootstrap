@@ -1,0 +1,21 @@
+{
+  "source": "llm-wiki-policy",
+  "version": "2026.07.21.1",
+  "producedAt": "2026-07-21T00:00:00.000Z",
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "records.json",
+      "sha256": "41afd6db9dce6c5fe2de63314e8a920b00f5f786db1d94c7c2010f8ca29426c4",
+      "recordCount": 9
+    }
+  ],
+  "metadata": {
+    "validation": "passed",
+    "upstream": {
+      "schema_version": "policy-bundle/v2.0",
+      "generated_at": "2026-07-15T05:27:37.759483+00:00",
+      "clean": true
+    }
+  }
+}

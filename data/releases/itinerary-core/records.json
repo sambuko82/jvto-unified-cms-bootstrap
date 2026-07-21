@@ -1,0 +1,989 @@
+[
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "bromo-1d1n",
+    "entityType": "route",
+    "canonicalKey": "route:bromo-1d1n",
+    "payload": {
+      "label": "1D1N Bromo sunrise (day trip / overnight)",
+      "origin": "Surabaya",
+      "duration": "1D1N",
+      "route_sequence": [
+        "Surabaya",
+        "Bromo Area",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_airport_to_bromo_area",
+        "bromo_area_to_malang",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport"
+      ]
+    },
+    "payloadSha256": "2cdb3392f9d63a9f1bc464ef41c59c5edf8f0a4dbcb056849f50e2ed622345f6"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "bromo-2d1n",
+    "entityType": "route",
+    "canonicalKey": "route:bromo-2d1n",
+    "payload": {
+      "label": "2D1N Bromo",
+      "origin": "Surabaya",
+      "duration": "2D1N",
+      "route_sequence": [
+        "Surabaya",
+        "Bromo Area",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_hotel_to_bromo_area",
+        "bromo_area_to_malang",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport"
+      ]
+    },
+    "payloadSha256": "ee166deb66d1b7e83b545585ae38c4558d98260357ac3cb1b43c66b0ce22eae7"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "ijen-2d1n",
+    "entityType": "route",
+    "canonicalKey": "route:ijen-2d1n",
+    "payload": {
+      "label": "2D1N Ijen",
+      "origin": "Surabaya",
+      "duration": "2D1N",
+      "route_sequence": [
+        "Surabaya",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport",
+        "Ketapang Harbor"
+      ]
+    },
+    "payloadSha256": "de7291a82cf91f34958d07c2c1187729d6929340dd0bbce133b4674732962722"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "bromo-madakaripura-ijen-3d2n",
+    "entityType": "route",
+    "canonicalKey": "route:bromo-madakaripura-ijen-3d2n",
+    "payload": {
+      "label": "3D2N Bromo, Madakaripura, Ijen",
+      "origin": "Surabaya",
+      "duration": "3D2N",
+      "route_sequence": [
+        "Surabaya",
+        "Bromo Area",
+        "Madakaripura Waterfall",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Ketapang Harbor"
+      ],
+      "route_legs": [
+        "surabaya_airport_to_bromo_area",
+        "bromo_area_to_madakaripura",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "ijen_base_to_ketapang_harbor"
+      ],
+      "standard_dropoff_options": [
+        "Ketapang Harbor",
+        "Bali with additional transfer",
+        "Surabaya with route adjustment"
+      ]
+    },
+    "payloadSha256": "3bb75eedb3ef4c29799a187eee43513dd2cb18cfd7bb41bb8638db9f1b377cda"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "ijen-bromo-madakaripura-3d2n",
+    "entityType": "route",
+    "canonicalKey": "route:ijen-bromo-madakaripura-3d2n",
+    "payload": {
+      "label": "3D2N Ijen, Bromo, Madakaripura (Ijen-first)",
+      "origin": "Surabaya",
+      "duration": "3D2N",
+      "route_sequence": [
+        "Surabaya",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Bromo Area",
+        "Madakaripura Waterfall",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bromo_area_to_madakaripura",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport"
+      ]
+    },
+    "payloadSha256": "66f92a17debcd75e835004f8455fb9fa8a9332e50e758888885ae1c685140ed1"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "taman-safari-prigen-bromo-madakaripura-3d2n",
+    "entityType": "route",
+    "canonicalKey": "route:taman-safari-prigen-bromo-madakaripura-3d2n",
+    "payload": {
+      "label": "3D2N Taman Safari / Prigen, Bromo, Madakaripura (specialty)",
+      "origin": "Surabaya",
+      "duration": "3D2N",
+      "route_sequence": [
+        "Surabaya",
+        "Bromo Area",
+        "Madakaripura Waterfall",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_airport_to_bromo_area",
+        "bromo_area_to_madakaripura",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport"
+      ]
+    },
+    "payloadSha256": "1d5754ac5db63d1f92403a80961a2a87e5a9fc6a995f517d8eafe8d794bbbb6a"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "ijen-papuma-tumpak-sewu-bromo-4d3n",
+    "entityType": "route",
+    "canonicalKey": "route:ijen-papuma-tumpak-sewu-bromo-4d3n",
+    "payload": {
+      "label": "4D3N Ijen, Papuma, Tumpak Sewu, Bromo",
+      "origin": "Surabaya",
+      "duration": "4D3N",
+      "route_sequence": [
+        "Surabaya",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Papuma Area",
+        "Tumpak Sewu Area",
+        "Bromo Area",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "ijen_area_to_papuma",
+        "papuma_to_tumpak_sewu_area",
+        "tumpak_sewu_to_bromo_area",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport"
+      ]
+    },
+    "payloadSha256": "4b89f9ca98607e29f89854efc6add8155d1cca4c72cfcca4919a5b4f50e7e28e"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "ijen-bromo-madakaripura-4d3n",
+    "entityType": "route",
+    "canonicalKey": "route:ijen-bromo-madakaripura-4d3n",
+    "payload": {
+      "label": "4D3N Ijen, Bromo, Madakaripura",
+      "origin": "Surabaya",
+      "duration": "4D3N",
+      "route_sequence": [
+        "Surabaya",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Bromo Area",
+        "Madakaripura Waterfall",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bromo_area_to_madakaripura",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport"
+      ]
+    },
+    "payloadSha256": "b6b69246619809275689a7c9c02522148723dd6a3fcdf070a809e6cb3209d2f5"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "tumpak-sewu-bromo-ijen-4d3n",
+    "entityType": "route",
+    "canonicalKey": "route:tumpak-sewu-bromo-ijen-4d3n",
+    "payload": {
+      "label": "4D3N Tumpak Sewu, Bromo, Ijen",
+      "origin": "Surabaya",
+      "duration": "4D3N",
+      "route_sequence": [
+        "Surabaya",
+        "Tumpak Sewu Area",
+        "Bromo Area",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Ketapang Harbor"
+      ],
+      "route_legs": [
+        "surabaya_to_tumpak_sewu",
+        "tumpak_sewu_to_bromo_area",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "ijen_base_to_ketapang_harbor"
+      ],
+      "standard_dropoff_options": [
+        "Ketapang Harbor",
+        "Bali with additional transfer"
+      ]
+    },
+    "payloadSha256": "2790f9d92095c65b4c0bc80e2b120bddb45341eb51344440925ba8f6c03dad37"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "ijen-papuma-tumpak-sewu-bromo-5d4n",
+    "entityType": "route",
+    "canonicalKey": "route:ijen-papuma-tumpak-sewu-bromo-5d4n",
+    "payload": {
+      "label": "5D4N Ijen, Papuma, Tumpak Sewu, Bromo",
+      "origin": "Surabaya",
+      "duration": "5D4N",
+      "route_sequence": [
+        "Surabaya",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Papuma Area",
+        "Tumpak Sewu Area",
+        "Bromo Area",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "ijen_area_to_papuma",
+        "papuma_to_tumpak_sewu_area",
+        "tumpak_sewu_to_bromo_area",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport"
+      ]
+    },
+    "payloadSha256": "d0a0a2b086b58f2c7ff0748fbe2a66c2376a851bc168583131aca1b85d8af2e0"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "ijen-bromo-madakaripura-malang-5d4n",
+    "entityType": "route",
+    "canonicalKey": "route:ijen-bromo-madakaripura-malang-5d4n",
+    "payload": {
+      "label": "5D4N Ijen, Bromo, Madakaripura, Malang",
+      "origin": "Surabaya",
+      "duration": "5D4N",
+      "route_sequence": [
+        "Surabaya",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Bromo Area",
+        "Madakaripura Waterfall",
+        "Malang",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bromo_area_to_madakaripura",
+        "bromo_area_to_malang",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Malang Hotel",
+        "Surabaya Airport",
+        "Surabaya Hotel"
+      ]
+    },
+    "payloadSha256": "bea5589b204c2f274ef9c715dc7617b928d2c3951a79ded88ce5b523bbeee2e4"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "ijen-papuma-tumpak-sewu-bromo-malang-6d5n",
+    "entityType": "route",
+    "canonicalKey": "route:ijen-papuma-tumpak-sewu-bromo-malang-6d5n",
+    "payload": {
+      "label": "6D5N Ijen, Papuma, Tumpak Sewu, Bromo, Malang",
+      "origin": "Surabaya",
+      "duration": "6D5N",
+      "route_sequence": [
+        "Surabaya",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Papuma Area",
+        "Tumpak Sewu Area",
+        "Bromo Area",
+        "Malang",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "ijen_area_to_papuma",
+        "papuma_to_tumpak_sewu_area",
+        "tumpak_sewu_to_bromo_area",
+        "bromo_area_to_malang",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Malang Hotel",
+        "Surabaya Airport",
+        "Surabaya Hotel"
+      ]
+    },
+    "payloadSha256": "a99a0695b23dca76532e441e811a2651371f7074ad72510b7b13746026ae281d"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "bromo-ijen-3d2n",
+    "entityType": "route",
+    "canonicalKey": "route:bromo-ijen-3d2n",
+    "payload": {
+      "label": "3D2N Bromo and Ijen (Surabaya-return)",
+      "origin": "Surabaya",
+      "duration": "3D2N",
+      "route_sequence": [
+        "Surabaya",
+        "Bromo Area",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Ketapang Harbor"
+      ],
+      "route_legs": [
+        "surabaya_airport_to_bromo_area",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "ijen_base_to_ketapang_harbor"
+      ],
+      "standard_dropoff_options": [
+        "Ketapang Harbor",
+        "Bali with additional transfer",
+        "Surabaya with route adjustment"
+      ]
+    },
+    "payloadSha256": "e3f5e435cac594ac2b933b842d4d8de4c80878d511ad66fb3213e5ff76c401e2"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "bromo-ijen-bali-4d3n",
+    "entityType": "route",
+    "canonicalKey": "route:bromo-ijen-bali-4d3n",
+    "payload": {
+      "label": "4D3N Bromo and Ijen ending in Bali (Surabaya origin)",
+      "origin": "Surabaya",
+      "duration": "4D3N",
+      "route_sequence": [
+        "Surabaya",
+        "Bromo Area",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Ketapang Harbor",
+        "Bali"
+      ],
+      "route_legs": [
+        "surabaya_airport_to_bromo_area",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "ijen_base_to_ketapang_harbor",
+        "ketapang_harbor_to_gilimanuk_bali_side"
+      ],
+      "standard_dropoff_options": [
+        "Bali hotel area",
+        "Ketapang Harbor",
+        "Gilimanuk / Bali side"
+      ]
+    },
+    "payloadSha256": "7bfd94d2c858e85f09d142772fd5d92d53ddc4701203671196fb0059bea53bdb"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "bromo-ijen-3d2n-bali",
+    "entityType": "route",
+    "canonicalKey": "route:bromo-ijen-3d2n-bali",
+    "payload": {
+      "label": "3D2N Bromo and Ijen (Bali origin)",
+      "origin": "Bali",
+      "duration": "3D2N",
+      "route_sequence": [
+        "Bali Hotel Area",
+        "Banyuwangi / Ijen Area",
+        "Ijen Crater",
+        "Bromo Area",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "bali_hotel_area_to_banyuwangi_ijen_area",
+        "banyuwangi_to_ijen_base",
+        "bromo_area_to_bondowoso_ijen_area",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Airport",
+        "Surabaya Hotel",
+        "Malang"
+      ]
+    },
+    "payloadSha256": "ed0cd78d7385fdda193cf6c7acc0c40602ae0fd0261b9e3be6d60d38b660c06f"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "ijen-bromo-madakaripura-3d2n-bali",
+    "entityType": "route",
+    "canonicalKey": "route:ijen-bromo-madakaripura-3d2n-bali",
+    "payload": {
+      "label": "3D2N Ijen, Bromo, Madakaripura (Bali origin)",
+      "origin": "Bali",
+      "duration": "3D2N",
+      "route_sequence": [
+        "Bali Hotel Area",
+        "Banyuwangi / Ijen Area",
+        "Ijen Crater",
+        "Bromo Area",
+        "Madakaripura Waterfall",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "bali_hotel_area_to_banyuwangi_ijen_area",
+        "banyuwangi_to_ijen_base",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bromo_area_to_madakaripura",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Airport",
+        "Surabaya Hotel"
+      ]
+    },
+    "payloadSha256": "4a6799a5605d93e87b4faae950d50f01eb426419794aa82592e8d0397a2096b9"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "ijen-papuma-tumpak-sewu-bromo-4d3n-bali",
+    "entityType": "route",
+    "canonicalKey": "route:ijen-papuma-tumpak-sewu-bromo-4d3n-bali",
+    "payload": {
+      "label": "4D3N Ijen, Papuma, Tumpak Sewu, Bromo (Bali origin)",
+      "origin": "Bali",
+      "duration": "4D3N",
+      "route_sequence": [
+        "Bali Hotel Area",
+        "Banyuwangi / Ijen Area",
+        "Ijen Crater",
+        "Papuma Area",
+        "Tumpak Sewu Area",
+        "Bromo Area",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "bali_hotel_area_to_banyuwangi_ijen_area",
+        "banyuwangi_to_ijen_base",
+        "ijen_area_to_papuma",
+        "papuma_to_tumpak_sewu_area",
+        "tumpak_sewu_to_bromo_area",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Airport",
+        "Surabaya Hotel"
+      ]
+    },
+    "payloadSha256": "79d656b686b1ba774954f650e7cb475ba16787495ed532515097169104dafca6"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "ijen-papuma-tumpak-sewu-bromo-5d4n-bali",
+    "entityType": "route",
+    "canonicalKey": "route:ijen-papuma-tumpak-sewu-bromo-5d4n-bali",
+    "payload": {
+      "label": "5D4N Ijen, Papuma, Tumpak Sewu, Bromo (Bali origin)",
+      "origin": "Bali",
+      "duration": "5D4N",
+      "route_sequence": [
+        "Bali Hotel Area",
+        "Banyuwangi / Ijen Area",
+        "Ijen Crater",
+        "Papuma Area",
+        "Tumpak Sewu Area",
+        "Bromo Area",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "bali_hotel_area_to_banyuwangi_ijen_area",
+        "banyuwangi_to_ijen_base",
+        "ijen_area_to_papuma",
+        "papuma_to_tumpak_sewu_area",
+        "tumpak_sewu_to_bromo_area",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Airport",
+        "Surabaya Hotel"
+      ]
+    },
+    "payloadSha256": "b80994d1be3c28426986d493cd6acc93b2209811aca6f942c99c156f6325717b"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Mount Bromo",
+    "entityType": "destination",
+    "canonicalKey": "destination:mount-bromo",
+    "payload": {
+      "operational": {
+        "elevation_m": 2329,
+        "difficulty_level": "Easy to Moderate",
+        "best_time_to_visit": "May–October (dry season). Arrive at viewpoint by 04:30 AM for sunrise.",
+        "jeep_required": true,
+        "standard_tour_start_time": "03:00",
+        "entrance_ticket_domestic_idr": 160000,
+        "entrance_ticket_foreign_idr": 320000,
+        "required_gear": "Thermal jacket, sturdy trekking boots, flashlight/headlamp, sunscreen, dust/surgical mask."
+      }
+    },
+    "payloadSha256": "c34da7004e653f862ad7ecc053d7e702059e193568d66a95592e06ad96fcc911"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Mount Ijen",
+    "entityType": "destination",
+    "canonicalKey": "destination:kawah-ijen",
+    "payload": {
+      "operational": {
+        "elevation_m": 2386,
+        "difficulty_level": "Moderate",
+        "best_time_to_visit": "May–October (dry season). Begin trek at 01:00–02:00 AM for blue fire and sunrise.",
+        "jeep_required": false,
+        "standard_tour_start_time": "00:00",
+        "entrance_ticket_domestic_idr": 75000,
+        "entrance_ticket_foreign_idr": 150000,
+        "required_gear": "Thermal layers, waterproof jacket, sturdy trekking boots, gas mask (for sulfur fumes), headlamp, warm hat."
+      }
+    },
+    "payloadSha256": "d34835c6a3f4fea2a5311b0ed095a110fc7a2e09496e449bb12e6cebe18fd823"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Bali",
+    "entityType": "destination",
+    "canonicalKey": "destination:bali",
+    "payload": {
+      "operational": {
+        "elevation_m": null,
+        "difficulty_level": null,
+        "best_time_to_visit": "April–October (dry season).",
+        "jeep_required": false,
+        "entrance_ticket_domestic_idr": null,
+        "entrance_ticket_foreign_idr": null,
+        "required_gear": null
+      }
+    },
+    "payloadSha256": "0e5c53da5883afb692b6a6ecec152a47597470b21f84ea80703c869beeac6cd7"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Surabaya",
+    "entityType": "destination",
+    "canonicalKey": "destination:surabaya",
+    "payload": {
+      "operational": {
+        "elevation_m": null,
+        "difficulty_level": null,
+        "best_time_to_visit": "May–October.",
+        "jeep_required": false,
+        "entrance_ticket_domestic_idr": null,
+        "entrance_ticket_foreign_idr": null,
+        "required_gear": null
+      }
+    },
+    "payloadSha256": "bc41cf8cb7db405be61dc42f6c3b58a0caf41f7031c0c38c189141f79cf24ce7"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Malang City",
+    "entityType": "destination",
+    "canonicalKey": "destination:malang-city",
+    "payload": {
+      "operational": {
+        "elevation_m": 452,
+        "difficulty_level": null,
+        "best_time_to_visit": "Year-round; cooler and more pleasant April–October.",
+        "jeep_required": false,
+        "entrance_ticket_domestic_idr": null,
+        "entrance_ticket_foreign_idr": null,
+        "required_gear": null
+      }
+    },
+    "payloadSha256": "12cca8e35c3e8c0a1857badcb3533add98f6927dde4fe60330e5447d84b5f904"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Madakaripura Waterfall",
+    "entityType": "destination",
+    "canonicalKey": "destination:madakaripura",
+    "payload": {
+      "operational": {
+        "elevation_m": 620,
+        "difficulty_level": "Moderate",
+        "best_time_to_visit": "May–October. Morning or early afternoon for best light.",
+        "jeep_required": false,
+        "standard_tour_start_time": "08:00",
+        "entrance_ticket_domestic_idr": 90000,
+        "entrance_ticket_foreign_idr": 90000,
+        "required_gear": "Quick-dry clothing, waterproof bag, water shoes/sandals, poncho (expect to get fully wet), snacks."
+      }
+    },
+    "payloadSha256": "dbd48b95779c769071a742fb7b8fc70814d624abe4e90e9c0ab53013fe5a1b65"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Tumpak Sewu Waterfall",
+    "entityType": "destination",
+    "canonicalKey": "destination:tumpak-sewu",
+    "payload": {
+      "operational": {
+        "elevation_m": 400,
+        "difficulty_level": "Moderate",
+        "best_time_to_visit": "May–October (dry season). Morning for best light and fewer crowds.",
+        "jeep_required": false,
+        "standard_tour_start_time": "07:00",
+        "entrance_ticket_domestic_idr": 100000,
+        "entrance_ticket_foreign_idr": 100000,
+        "required_gear": "Quick-dry clothing, non-slip shoes/sandals, poncho, waterproof bag for valuables, trekking poles optional."
+      }
+    },
+    "payloadSha256": "de95ac2c06c4ec15c7ba5191e5353cfc8957086afe9008a13202a8325ed25f22"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Papuma Beach",
+    "entityType": "destination",
+    "canonicalKey": "destination:papuma-beach",
+    "payload": {
+      "operational": {
+        "elevation_m": 0,
+        "difficulty_level": "Easy",
+        "best_time_to_visit": "May–October. Late afternoon for sunset views.",
+        "jeep_required": false,
+        "standard_tour_start_time": "14:00",
+        "entrance_ticket_domestic_idr": 44000,
+        "entrance_ticket_foreign_idr": 44000,
+        "required_gear": "Light clothing, sandals, sunscreen, hat, water, camera."
+      }
+    },
+    "payloadSha256": "9c2c7a30cd162cbcc343a55621291ee9f2662f564dfd9f620a3d7d3b98b42a09"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Coffee & Cocoa Science Technopark",
+    "entityType": "destination",
+    "canonicalKey": "destination:coffee-cocoa-science-technopark",
+    "payload": {
+      "operational": {
+        "elevation_m": null,
+        "difficulty_level": null,
+        "best_time_to_visit": "Weekdays for guided tours.",
+        "jeep_required": false,
+        "entrance_ticket_domestic_idr": 75000,
+        "entrance_ticket_foreign_idr": 75000,
+        "required_gear": null
+      }
+    },
+    "payloadSha256": "f92b5abc502b49260deeb5d6a1c691afc1bdddefd1deb72e601bb747041760bc"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Taman Safari Prigen",
+    "entityType": "destination",
+    "canonicalKey": "destination:taman-safari-prigen",
+    "payload": {
+      "operational": {
+        "elevation_m": 800,
+        "difficulty_level": "Easy",
+        "best_time_to_visit": "May–October. Open at 08:30 AM. Animals most active morning and late afternoon.",
+        "jeep_required": false,
+        "standard_tour_start_time": "09:00",
+        "entrance_ticket_domestic_idr": 425000,
+        "entrance_ticket_foreign_idr": 500000,
+        "required_gear": "Comfortable clothing, walking shoes, sunscreen, hat, camera."
+      }
+    },
+    "payloadSha256": "7d0dc23e8fffcb25943ff4aa71362a98faf75be0445d73f4e06b995d21b9601f"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Pickup",
+    "entityType": "activity",
+    "canonicalKey": "activity:pickup",
+    "payload": {
+      "name": "Pickup",
+      "category": "Pickup"
+    },
+    "payloadSha256": "e67076f4295e55c980852f81004181f951466e0db498406bcca6ef3b4fc57b95"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Lunch",
+    "entityType": "activity",
+    "canonicalKey": "activity:lunch",
+    "payload": {
+      "name": "Lunch",
+      "category": "Meals"
+    },
+    "payloadSha256": "4895e8ad890fc0ac24ac5dd3deaf96e668e5d528c314ff1581fa5ce737bca6cf"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Accommodation",
+    "entityType": "activity",
+    "canonicalKey": "activity:accommodation",
+    "payload": {
+      "name": "Accommodation",
+      "category": "Accommodation"
+    },
+    "payloadSha256": "77ed7b3cc620b0be352c20f4a1b3567ab541c664362cfbf7ff5e5f12e81d1ab5"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Dinner",
+    "entityType": "activity",
+    "canonicalKey": "activity:dinner",
+    "payload": {
+      "name": "Dinner",
+      "category": "Meals"
+    },
+    "payloadSha256": "4cf2576384e4a1e4134a1acbc22bd70f1437650259904fd3eabd785d2ba34af3"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "By car",
+    "entityType": "activity",
+    "canonicalKey": "activity:by-car",
+    "payload": {
+      "name": "By car",
+      "category": "Transportation"
+    },
+    "payloadSha256": "4042cc8880a4b43ff0d96795987695b600f812fc631dbae1acafa0bf5a5948d3"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Ijen Crater Hike",
+    "entityType": "activity",
+    "canonicalKey": "activity:ijen-crater-hike",
+    "payload": {
+      "name": "Ijen Crater Hike",
+      "category": "Attraction"
+    },
+    "payloadSha256": "822b7067270ff5a3d26d1ac491fe96285053672a92b7dfad6ce1b2e4548fc52d"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "By private Jeep",
+    "entityType": "activity",
+    "canonicalKey": "activity:by-private-jeep",
+    "payload": {
+      "name": "By private Jeep",
+      "category": "Transportation"
+    },
+    "payloadSha256": "407a50742f4335cb995ed132b82a9f6a696f5898d806a594b5311439b9d1e97c"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Bromo Sunrise Tour",
+    "entityType": "activity",
+    "canonicalKey": "activity:bromo-sunrise-tour",
+    "payload": {
+      "name": "Bromo Sunrise Tour",
+      "category": "Attraction"
+    },
+    "payloadSha256": "5be5a8a8057705fd6e86b7e33564c1ff02ea0f180a71773acf46e6dcfc1ead1c"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Breakfast",
+    "entityType": "activity",
+    "canonicalKey": "activity:breakfast",
+    "payload": {
+      "name": "Breakfast",
+      "category": "Meals"
+    },
+    "payloadSha256": "91bac7ba00c999af36758ea7556a9d1df7e71120e31a256a9fa3e9a60ae58a34"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Madakaripura Waterfall Tour",
+    "entityType": "activity",
+    "canonicalKey": "activity:madakaripura-waterfall-tour",
+    "payload": {
+      "name": "Madakaripura Waterfall Tour",
+      "category": "Attraction"
+    },
+    "payloadSha256": "8c080a4d25d6e3c1801dbe019a21e1e3c696db8edc8e042ef8b9fae82026f064"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Papuma Beach Sunset Tour",
+    "entityType": "activity",
+    "canonicalKey": "activity:papuma-beach-sunset-tour",
+    "payload": {
+      "name": "Papuma Beach Sunset Tour",
+      "category": "Attraction"
+    },
+    "payloadSha256": "0009012f05f4cea77f05d19a6a0fd1a3b664dc1c88535ccda8d96183c341de4d"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Tumpak Sewu Waterfall Tour",
+    "entityType": "activity",
+    "canonicalKey": "activity:tumpak-sewu-waterfall-tour",
+    "payload": {
+      "name": "Tumpak Sewu Waterfall Tour",
+      "category": "Attraction"
+    },
+    "payloadSha256": "749dd77476e383f836ee2b8dbff16ef175bab093e52828d61bf8a1e7b21db372"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Malang Tour",
+    "entityType": "activity",
+    "canonicalKey": "activity:malang-tour",
+    "payload": {
+      "name": "Malang Tour",
+      "category": "Attraction"
+    },
+    "payloadSha256": "5fd6cae93b0dde2b80a9af97ab8e890cf01265f4edf28259ededb1246441222a"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Surabaya City Tour",
+    "entityType": "activity",
+    "canonicalKey": "activity:surabaya-city-tour",
+    "payload": {
+      "name": "Surabaya City Tour",
+      "category": "Attraction"
+    },
+    "payloadSha256": "d1967b71ed21c18eccf07182281ac1841e3135a9a90b82b9df97c00493262a9c"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Coffee & Cocoa Technopark",
+    "entityType": "activity",
+    "canonicalKey": "activity:coffee-cocoa-technopark",
+    "payload": {
+      "name": "Coffee & Cocoa Technopark",
+      "category": "Attraction"
+    },
+    "payloadSha256": "674bfd72ddda66d934a92325db1b76a1c664974ace6a4bc7c13d48a594a5e0f4"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Taman Safari Adventure",
+    "entityType": "activity",
+    "canonicalKey": "activity:taman-safari-adventure",
+    "payload": {
+      "name": "Taman Safari Adventure",
+      "category": "Attraction"
+    },
+    "payloadSha256": "5cf1c43fe1ab30edcf6a45fcb905968924caf5f58186269218301ac77e3640e2"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Madakaripura Waterfall Tour 2",
+    "entityType": "activity",
+    "canonicalKey": "activity:madakaripura-waterfall-tour-2",
+    "payload": {
+      "name": "Madakaripura Waterfall Tour 2",
+      "category": "Attraction"
+    },
+    "payloadSha256": "401943edf9f567763e954031d39598766ae1300c3b7677a5bb0372e0dae00afb"
+  },
+  {
+    "source": "itinerary-core",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Coffee Break",
+    "entityType": "activity",
+    "canonicalKey": "activity:coffee-break",
+    "payload": {
+      "name": "Coffee Break",
+      "category": "Meals"
+    },
+    "payloadSha256": "7d707b8c6043ba9af550c9f8c909e32ada302e9717a1d12a52b874fb7eef9791"
+  }
+]

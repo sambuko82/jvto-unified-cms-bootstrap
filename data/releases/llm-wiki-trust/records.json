@@ -1,0 +1,647 @@
+[
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "C1",
+    "entityType": "claim",
+    "canonicalKey": "claim:c1",
+    "payload": {
+      "canonical_wording": "Volcano travel is unpredictable, so JVTO focuses on operational certainty: disciplined decisions, clear safety boundaries, and realistic expectations.",
+      "name": "Safety-Led Operations",
+      "domain": "credentials",
+      "category": "trust-signal",
+      "last_verified": "2026-05-26",
+      "evidence_count": 5
+    },
+    "payloadSha256": "7122da0846931763b3b1628e789611161c2cc347478e0bc67e14483e8cd499fe"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "C2",
+    "entityType": "claim",
+    "canonicalKey": "claim:c2",
+    "payload": {
+      "canonical_wording": "JVTO runs private tours by default so timing, pacing, and safety decisions stay consistent for your group.",
+      "name": "Private Tours (Execution Control)",
+      "domain": "products",
+      "category": "tour-package",
+      "last_verified": "2026-05-12",
+      "evidence_count": 1
+    },
+    "payloadSha256": "be39fdd3e6256deb267cfad361f397bea8c8bba42b6b0bfa7fa4f6ff4d1b069d"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "C3",
+    "entityType": "claim",
+    "canonicalKey": "claim:c3",
+    "payload": {
+      "canonical_wording": "JVTO uses an all-inclusive structure by default to reduce surprise costs and mid-trip negotiation.",
+      "name": "All-Inclusive Clarity",
+      "domain": "products",
+      "category": "tour-package",
+      "last_verified": "2026-05-12",
+      "evidence_count": 1
+    },
+    "payloadSha256": "3fcd8cfc58f3f033828a295d03d783805054303b8b77afd397d0dde6be94faee"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "C4",
+    "entityType": "claim",
+    "canonicalKey": "claim:c4",
+    "payload": {
+      "canonical_wording": "On routes that include Mount Ijen, JVTO integrates health screening as a practical safety step, not a formality.",
+      "name": "Ijen Health-Screening Coordination",
+      "domain": "credentials",
+      "category": "medical-protocol",
+      "last_verified": "2026-05-26",
+      "evidence_count": 3
+    },
+    "payloadSha256": "501b81bc376b883835153acd39b4e6470e2553ff2ad25e96a1208505f29b4961"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "C5",
+    "entityType": "claim",
+    "canonicalKey": "claim:c5",
+    "payload": {
+      "canonical_wording": "JVTO organizes trust signals as a verification layer: clear claims, context, and evidence links — not just marketing statements.",
+      "name": "Proof-First Trust (Verification Layer)",
+      "domain": "credentials",
+      "category": "trust-signal",
+      "last_verified": "2026-05-26",
+      "evidence_count": 2
+    },
+    "payloadSha256": "833ef8d24c490b862ac1e2b55c680ff76514fcfaa4fb9aca7a34cc5c9302b28a"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "C6",
+    "entityType": "claim",
+    "canonicalKey": "claim:c6",
+    "payload": {
+      "canonical_wording": "JVTO treats reviews as a registry: grouped by platform and theme, so guests can validate patterns instead of reading random quotes.",
+      "name": "Reviews Registry (Independent Validation)",
+      "domain": "reviews",
+      "category": "review-compilation",
+      "last_verified": "2026-05-18",
+      "evidence_count": 2
+    },
+    "payloadSha256": "0f0ba2e7f1cd0519e6321575413702712688e9db89278c847ad8b2a18b0ac139"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "C7",
+    "entityType": "claim",
+    "canonicalKey": "claim:c7",
+    "payload": {
+      "canonical_wording": "JVTO's product is executed by real people. The Team Registry shows roles, routes, and proof from review mentions — not generic bios.",
+      "name": "Our Team (Personality Economy + Operational Credibility)",
+      "domain": "people",
+      "category": "crew-profile",
+      "last_verified": "2026-05-25",
+      "evidence_count": 1
+    },
+    "payloadSha256": "9180259fbb600ee454330c33d36ccbd8954178aec8c5dabde402c44871f9e537"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "C8",
+    "entityType": "claim",
+    "canonicalKey": "claim:c8",
+    "payload": {
+      "canonical_wording": "JVTO partnerships are explained by function: competence context (HPWKI), sustainability context (INDECON), and verification logic (ISIC).",
+      "name": "Partners as Context (HPWKI / INDECON / ISIC)",
+      "domain": "credentials",
+      "category": "trust-signal",
+      "last_verified": "2026-05-16",
+      "evidence_count": 2
+    },
+    "payloadSha256": "20b4aa31dd57858dd4c176d228fda7d74ebed8ffc2515717f5f866db0199c4d5"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "C9",
+    "entityType": "claim",
+    "canonicalKey": "claim:c9",
+    "payload": {
+      "canonical_wording": "JVTO lists press and recognition with context so guests can evaluate third-party references, not just branding claims.",
+      "name": "Press & Recognition (Third-Party Context)",
+      "domain": "credentials",
+      "category": "trust-signal",
+      "last_verified": "2026-05-16",
+      "evidence_count": 1
+    },
+    "payloadSha256": "5f8a5e6476027facbce0b9a053d6b7573eecb381be40293c286d233123a9c000"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Safety-Led Operations",
+    "entityType": "faq",
+    "canonicalKey": "faq:safety-led-operations",
+    "payload": {
+      "question": "Safety-Led Operations",
+      "answer": "Safety-led planning. Clear boundaries. Plan B when conditions change.",
+      "source_claim_id": "C1",
+      "target_pages": [
+        "output/website/pages/verify-jvto/"
+      ]
+    },
+    "payloadSha256": "5255623786eafe1703418080b0165400af0445924b91bf6e0a83b952009f8218"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Private Tours (Execution Control)",
+    "entityType": "faq",
+    "canonicalKey": "faq:private-tours-execution-control",
+    "payload": {
+      "question": "Private Tours (Execution Control)",
+      "answer": "Private tours only. Your own vehicle. Your own pace (within safety limits). No mixed groups by default.",
+      "source_claim_id": "C2",
+      "target_pages": [
+        "output/website/pages/tours/"
+      ]
+    },
+    "payloadSha256": "1f967ee0b7544aa2e17a02eeed453b894594028e37b1b8aecc0dd3dc3d3c6826"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "All-Inclusive Clarity",
+    "entityType": "faq",
+    "canonicalKey": "faq:all-inclusive-clarity",
+    "payload": {
+      "question": "All-Inclusive Clarity",
+      "answer": "All-inclusive by default. Clear inclusions. Fewer surprise costs. Transparent pricing, written rules.",
+      "source_claim_id": "C3",
+      "target_pages": [
+        "output/website/pages/tours/"
+      ]
+    },
+    "payloadSha256": "bc633066dbc18eaba08aa3de059dcf161235b33eb8d9c819b8b04e24924dd3ba"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Ijen Health-Screening Coordination",
+    "entityType": "faq",
+    "canonicalKey": "faq:ijen-health-screening-coordination",
+    "payload": {
+      "question": "Ijen Health-Screening Coordination",
+      "answer": "A health certificate is mandatory for every Ijen guest — screening included and coordinated by JVTO. Real screening, clear rules.",
+      "source_claim_id": "C4",
+      "target_pages": [
+        "output/website/pages/travel-guide/"
+      ]
+    },
+    "payloadSha256": "3386706a97ef22f55ad749731d8f2ead98f9ad21f8f10794ae19fe802e70674c"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Proof-First Trust (Verification Layer)",
+    "entityType": "faq",
+    "canonicalKey": "faq:proof-first-trust-verification-layer",
+    "payload": {
+      "question": "Proof-First Trust (Verification Layer)",
+      "answer": "Proof you can verify — licenses, partners, press, and documented references. Trust stack, not slogans.",
+      "source_claim_id": "C5",
+      "target_pages": [
+        "output/website/pages/verify-jvto/"
+      ]
+    },
+    "payloadSha256": "38b593b3379b1d2985a3c14364f270a8595a77c9f58a187ccec2c70609a0e3ed"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Reviews Registry (Independent Validation)",
+    "entityType": "faq",
+    "canonicalKey": "faq:reviews-registry-independent-validation",
+    "payload": {
+      "question": "Reviews Registry (Independent Validation)",
+      "answer": "Reviews as a registry, not a quote wall. Check patterns across platforms.",
+      "source_claim_id": "C6",
+      "target_pages": [
+        "output/website/pages/verify-jvto/",
+        "output/website/faq/"
+      ]
+    },
+    "payloadSha256": "4e206d01f9d12c5cae58735ffd2ef68c16dd907e2276916ae0ae7468e522363d"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Our Team (Personality Economy + Operational Credibility)",
+    "entityType": "faq",
+    "canonicalKey": "faq:our-team-personality-economy-operational-credibility",
+    "payload": {
+      "question": "Our Team (Personality Economy + Operational Credibility)",
+      "answer": "Meet the people behind your trip — with proof from reviews. Team profiles linked to real guest language.",
+      "source_claim_id": "C7",
+      "target_pages": [
+        "output/website/pages/team/"
+      ]
+    },
+    "payloadSha256": "e9d65dc8a5da00ebe91e2f6383cab42b4067f117955b91d10dfd1fe73a312a0a"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Partners as Context (HPWKI / INDECON / ISIC)",
+    "entityType": "faq",
+    "canonicalKey": "faq:isic",
+    "payload": {
+      "question": "Partners as Context (HPWKI / INDECON / ISIC)",
+      "answer": "Partners for context: competence, sustainability, and verification. Not logos — real functions.",
+      "source_claim_id": "C8",
+      "target_pages": [
+        "output/website/pages/verify-jvto/"
+      ]
+    },
+    "payloadSha256": "02044183891bc4f386afe2271be13d6d6514b56a9e4d54c9f267b79096bad02f"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "Press & Recognition (Third-Party Context)",
+    "entityType": "faq",
+    "canonicalKey": "faq:press-recognition-third-party-context",
+    "payload": {
+      "question": "Press & Recognition (Third-Party Context)",
+      "answer": "Press and recognition, explained with context. Third-party references you can evaluate.",
+      "source_claim_id": "C9",
+      "target_pages": [
+        "output/website/pages/verify-jvto/"
+      ]
+    },
+    "payloadSha256": "cd063b759af37af154658b9594d54cdabcf60ebc2d9c0d5212f99a6b76be2db3"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "/#agung-sambuko",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:agung-sambuko",
+    "payload": {
+      "name": "Agung Sambuko",
+      "role": "Founder & Active Tourist Police Officer",
+      "job_title": "Active Tourist Police Officer, Ditpamobvit East Java",
+      "police_rank": "Bripka",
+      "police_unit": "Ditpamobvit (Direktorat Pengamanan Objek Vital) — East Java",
+      "organization": "PT Java Volcano Rendezvous",
+      "portrait_url": "https://javavolcano-touroperator.com/founder/agung_sambuko.jpg",
+      "schema_id": "/#agung-sambuko"
+    },
+    "payloadSha256": "5f7a1e5c835662a050cd505bcfc82c40921d4e62e08744521dcad797596673bd"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "/#dr-ahmad-irwandanu",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:dr-ahmad-irwandanu",
+    "payload": {
+      "name": "Dr. Ahmad Irwandanu",
+      "role": "Medical Officer — Ijen Health-Screening Coordination",
+      "schema_id": "/#dr-ahmad-irwandanu"
+    },
+    "payloadSha256": "e8181e2c2dd898715ea72d09321bf89652e03548b31d4677283c3a2d5e3ffef8"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "anjas",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:anjas",
+    "payload": {
+      "role": "Guide",
+      "kta": "KTA-G-2024-006",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "strengths": "Astrophotography, volcanic terrain navigation, East Java cultural heritage",
+      "review_count": 12,
+      "review_rating": 4.91,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768270423657-690185912-anjas.png"
+    },
+    "payloadSha256": "d53fe661380495ca91c712c51c1806539af974a4ef9d649383fb512bab93bba0"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "taufik",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:taufik",
+    "payload": {
+      "role": "Guide",
+      "kta": "KTA-G-2024-007",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "strengths": "Safety-first, logistics, punctuality, photography",
+      "review_count": 8,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768228083285-919198019-taufik_1_.png"
+    },
+    "payloadSha256": "d037562ab7ce1280c1414974d3899f4e9047842a03c8f3807f2035b24a69e8ca"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "rendi",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:rendi",
+    "payload": {
+      "role": "Guide",
+      "kta": "KTA-G-2024-002",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "strengths": "Mountain rescue, first aid, expedition safety, Ijen crater safety procedures",
+      "review_count": 22,
+      "review_rating": 5,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768228514527-518051332-rendi.png"
+    },
+    "payloadSha256": "b3229dc712bf8bee5b16f4ec7fdc49028f0f85a29925b4fb1151ca29f747a509"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "kiki",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:kiki",
+    "payload": {
+      "role": "Guide",
+      "kta": "KTA-G-2024-008",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "strengths": "Photography, friendly, logistics, safety-first",
+      "review_count": 17,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768271545598-834784538-kiki.png"
+    },
+    "payloadSha256": "f3b0359f993875d1aeb652b941213ef2c1b272a1b06383414c338acb208ea02d"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "gufron",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:gufron",
+    "payload": {
+      "role": "Guide",
+      "kta": "KTA-G-2024-001",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "strengths": "Volcano photography, geology, Ijen crater safety, East Java cultural heritage",
+      "review_count": 20,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768225567764-405955176-gufron.png"
+    },
+    "payloadSha256": "c8fb05c9374bcf10fb8cc464c9ac8eea012e03c4ee0cad8efd810be816336ecc"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "fauzi",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:fauzi",
+    "payload": {
+      "role": "Guide",
+      "kta": "KTA-G-2024-010",
+      "languages": [
+        "ID"
+      ],
+      "strengths": "Photography, attentive, safety-first, finding uncrowded spots",
+      "review_count": 6,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768226003889-338819579-fauzi.png"
+    },
+    "payloadSha256": "2ac92986275d1d0dd3e42821e5a48af9edca079e33cac4fe0259975a43733c83"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "boy",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:boy",
+    "payload": {
+      "role": "Guide",
+      "kta": "KTA-G-2024-004",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "strengths": "Friendly, safety-first, logistics, great photos, local knowledge",
+      "review_count": 23,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768228191022-893381041-boy.png"
+    },
+    "payloadSha256": "59419afe77b8d1a38d65f3f39ee5bfd6b4cc5450d2cb1c721e94e489d430b231"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "yandi",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:yandi",
+    "payload": {
+      "role": "Driver",
+      "kta": "KTA-D-2024-003",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "review_count": 16,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768270364125-144711646-yandi.png"
+    },
+    "payloadSha256": "1eb10f3190a8894bc008a2992bad1bd242053efc4d2dfbeeec498e1b16323318"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "fredi",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:fredi",
+    "payload": {
+      "role": "Driver",
+      "kta": "KTA-D-2024-005",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "strengths": "Punctuality, safe driving, professional attitude",
+      "review_count": 20,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768276791622-262250680-freddy.png"
+    },
+    "payloadSha256": "44974ec7a55bd1effa28cc12765f2f559d814d0f8593caf3d4a7b0d8c8167b9d"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "holili",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:holili",
+    "payload": {
+      "role": "Driver",
+      "kta": "KTA-D-2024-009",
+      "languages": [
+        "ID"
+      ],
+      "review_count": 6,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768277053384-470130286-holili.jpg"
+    },
+    "payloadSha256": "909299e50d6f3e0a9460643bce3da45675a38b9372f64661cca2aee1d79d5f5d"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "joyo",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:joyo",
+    "payload": {
+      "role": "Driver",
+      "kta": "KTA-D-2024-011",
+      "languages": [
+        "ID"
+      ],
+      "review_count": 19,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768277336049-911840775-joyo.png"
+    },
+    "payloadSha256": "fcf8746246e149f847aa5b2a2739fac6cb1a9513c735c26039f72dab2b5d5dbf"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "yusuf",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:yusuf",
+    "payload": {
+      "role": "Driver",
+      "kta": null,
+      "languages": [
+        "ID"
+      ],
+      "review_count": 7
+    },
+    "payloadSha256": "40628b9858d13868113a67649d784d0c67b19a0437825216aca918413d5b3f4e"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "dika",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:dika",
+    "payload": {
+      "role": "Driver",
+      "kta": null,
+      "languages": [
+        "ID"
+      ],
+      "review_count": 3
+    },
+    "payloadSha256": "87c61b2a5eea120343cf61e30d95f8294b900d104175756c7fe64f4b9ef38fee"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "pras",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:pras",
+    "payload": {
+      "role": "Driver",
+      "kta": null,
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "review_count": 6
+    },
+    "payloadSha256": "18976073a10a0d797abc50a9a125327b6cebee214a4460564c6cd04f53c89257"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "kawah-ijen",
+    "entityType": "destination",
+    "canonicalKey": "destination:kawah-ijen",
+    "payload": {
+      "narrative": "Kawah Ijen is an active volcano at 2,386 m with the world's highest-volume acidic crater lake. Famous for the pre-dawn blue fire sulfuric-gas phenomenon — visible only in suitable weather and gas conditions. Access from Paltuding trailhead via a steep ~3 km night hike. BBKSDA East Java is the regulatory authority.",
+      "name": "Kawah Ijen (Ijen Crater)",
+      "type": "Active stratovolcano",
+      "elevation_m": 2386
+    },
+    "payloadSha256": "ced1ba5f22463515efcfa90689a3178eb8b7fd52f8d8a3ad9775bffb03516c40"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "mount-bromo",
+    "entityType": "destination",
+    "canonicalKey": "destination:mount-bromo",
+    "payload": {
+      "narrative": "Mount Bromo is an active volcano in the Tengger caldera, East Java. Best known for the Penanjakan sunrise viewpoint over the sea-of-sand caldera floor and the active smoking crater. Accessed by 4WD jeep from Cemoro Lawang in the pre-dawn window (03:00–05:00).",
+      "name": "Mount Bromo (Gunung Bromo)",
+      "type": "Active stratovolcano",
+      "elevation_m": 2329
+    },
+    "payloadSha256": "5d9b58b83eb6a3f0ddcbaa5a85d753e5e33811c3d74bfed7e0af5073c503d3e7"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "madakaripura",
+    "entityType": "destination",
+    "canonicalKey": "destination:madakaripura",
+    "payload": {
+      "narrative": "Madakaripura is Java's tallest waterfall in Probolinggo, East Java. A narrow canyon gorge leads to a horseshoe curtain waterfall fed from multiple directions. Historical context: said to be the final meditation site of Gajah Mada, Majapahit prime minister. Easy ~20 min trek from roadside parking.",
+      "name": "Madakaripura Waterfall (Air Terjun Madakaripura)",
+      "type": "Horseshoe curtain waterfall in narrow canyon"
+    },
+    "payloadSha256": "392a9d52488c5396c7f18294f312c2488ce4aa8625326ccbae33eec7594ba8fa"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "tumpak-sewu",
+    "entityType": "destination",
+    "canonicalKey": "destination:tumpak-sewu",
+    "payload": {
+      "narrative": "Tumpak Sewu is a multi-tiered canyon waterfall (~120 m) in Lumajang, East Java. Nicknamed 'Java's Niagara' for its curtain of streams cascading over a curved cliff face into a canyon. Accessed via rim viewpoint or steep canyon descent (~300 steps).",
+      "name": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu)",
+      "type": "Multi-tiered curtain waterfall"
+    },
+    "payloadSha256": "4413aba3336369b96a320547715bffb24ee3bf8c57426f41be316eccec0d2ba5"
+  },
+  {
+    "source": "llm-wiki-trust",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "papuma-beach",
+    "entityType": "destination",
+    "canonicalKey": "destination:papuma-beach",
+    "payload": {
+      "narrative": "Papuma Beach in Jember offers white sand and dramatic coastal rock formations. JVTO includes it as a coastal contrast stop on Papuma-family packages (4D+). Best for guests who want a beach break on an otherwise volcano-focused East Java itinerary.",
+      "name": "Papuma Beach (Pantai Papuma)",
+      "type": "White-sand beach with rocky cape (Tanjung Papuma)",
+      "elevation_m": {
+        "beach": 0,
+        "cape_headland": 86
+      }
+    },
+    "payloadSha256": "c5b9c6cb492de83c9567908e76abb3cdb9d34beb82a3dbd8bcca32e63856cb07"
+  }
+]
