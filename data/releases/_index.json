@@ -1,0 +1,30 @@
+{
+  "releaseVersion": "2026.07.21.1",
+  "producedAt": "2026-07-21T00:00:00.000Z",
+  "sources": [
+    {
+      "source": "llm-wiki-trust",
+      "records": 39
+    },
+    {
+      "source": "llm-wiki-policy",
+      "records": 9
+    },
+    {
+      "source": "itinerary-core",
+      "records": 46
+    },
+    {
+      "source": "knowledge-catalog-okf",
+      "records": 83
+    },
+    {
+      "source": "design-system",
+      "records": 4
+    },
+    {
+      "source": "canonical-facts",
+      "records": 1
+    }
+  ]
+}

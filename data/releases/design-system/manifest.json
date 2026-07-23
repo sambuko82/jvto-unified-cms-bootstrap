@@ -1,0 +1,17 @@
+{
+  "source": "design-system",
+  "version": "2026.07.21.1",
+  "producedAt": "2026-07-21T00:00:00.000Z",
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "records.json",
+      "sha256": "c13b83b3ce3c00dffcccaeff37554ae21408c855465807ddbb0924599831c929",
+      "recordCount": 4
+    }
+  ],
+  "metadata": {
+    "validation": "passed",
+    "upstream": null
+  }
+}

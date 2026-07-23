@@ -12,7 +12,13 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "build": "tsc -p tsconfig.build.json",
-    "build:fixtures": "npm run build && node scripts/build-fixtures.mjs"
+    "build:fixtures": "npm run build && node scripts/build-fixtures.mjs",
+    "build:bundles": "npm run build && node scripts/build-release-bundles.mjs",
+    "crosscheck": "node scripts/crosscheck-bundles.mjs",
+    "consolidate": "node scripts/consolidate.mjs",
+    "render": "node scripts/render-cms.mjs",
+    "cms:build": "npm run build && node scripts/consolidate.mjs && node scripts/render-cms.mjs",
+    "verify:projection": "node scripts/consolidate.mjs && node scripts/render-cms.mjs && git diff --exit-code -- output/"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

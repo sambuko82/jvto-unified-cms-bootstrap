@@ -71,6 +71,10 @@ mappings:
     artifact: generated/itinerary-intelligence/11-package-route-map.json
     entity_type: route
     owner_fields: ['*']
+  - source: itinerary-core
+    artifact: generated/itinerary-intelligence/18-activities-master.json
+    entity_type: activity
+    owner_fields: ['*']
 
   # knowledge-catalog — OKF normalized catalog
   - source: knowledge-catalog-okf

@@ -30,11 +30,14 @@ rules:
     write_policy: compliance_only
     conflict_policy: block
 
+  # Claim canonical wording is compiled by llm-wiki-trust and synced read-only
+  # (mirrors jvto-web's claim treatment). CMS never edits it; edits happen
+  # upstream and re-consolidate. A non-owner proposal stages as context only.
   - entity_type: claim
     field_path: canonical_wording
     owner_source: llm-wiki-trust
-    write_policy: override_with_approval
-    conflict_policy: manual_resolution
+    write_policy: read_only
+    conflict_policy: prefer_owner
 
   - entity_type: component
     field_path: implementation
@@ -97,6 +100,13 @@ rules:
 
   # ---- Route (operational) ----
   - entity_type: route
+    field_path: '*'
+    owner_source: itinerary-core
+    write_policy: read_only
+    conflict_policy: prefer_owner
+
+  # ---- Activity (operational) ----
+  - entity_type: activity
     field_path: '*'
     owner_source: itinerary-core
     write_policy: read_only

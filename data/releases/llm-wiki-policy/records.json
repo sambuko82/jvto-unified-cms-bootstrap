@@ -1,0 +1,250 @@
+[
+  {
+    "source": "llm-wiki-policy",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "booking-paths",
+    "entityType": "policy_document",
+    "canonicalKey": "policy_document:booking-paths",
+    "payload": {
+      "domain": "Booking Paths",
+      "summary": "**Website-only booking.** JVTO accepts bookings exclusively through the official website checkout under a valid JVTO Booking ID. WhatsApp/email are support channels only — they never create, confirm, modify, cancel, or transfer a booking.",
+      "evidence_count": 2,
+      "canonical_sources": [
+        "products/packages-overview.md"
+      ]
+    },
+    "payloadSha256": "abc43a046a83ef52cda16e9bcbadaf0dab3629929ee30a88617e555736b4cc14"
+  },
+  {
+    "source": "llm-wiki-policy",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "payment-rules",
+    "entityType": "policy_document",
+    "canonicalKey": "policy_document:payment-rules",
+    "payload": {
+      "domain": "Payment Rules",
+      "summary": "20% deposit standard; close-departure (Day 1 within 14 days) may require full payment",
+      "evidence_count": 2,
+      "canonical_sources": [
+        "products/packages-overview.md"
+      ]
+    },
+    "payloadSha256": "150cd7eebc42b5a7ea05c5b2f22b21f5fe6ad352e42e6cbeabc7c9e40ac9632c"
+  },
+  {
+    "source": "llm-wiki-policy",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "cancellation-package-credit",
+    "entityType": "policy_document",
+    "canonicalKey": "policy_document:cancellation-package-credit",
+    "payload": {
+      "domain": "Cancellation / Package Credit",
+      "summary": "**Canonical logic lives in the YAML** (compiler reads it directly). Full voluntary ≥48h → Lifetime Package Credit (no cash); full <48h → forfeited. **Partial passenger cancellation** (booking continues): ≥48h → 100% cash refund of cancelled pax price, <48h → 50%, after Day 1 → 0%. Package Credit: no expiry, no cash value, same package/pax/price locked, one transfer, no split. Flight disruption → 50% Recovery Fee (once).",
+      "evidence_count": 3,
+      "canonical_sources": [
+        "policies/cancellation-package-credit.yml"
+      ],
+      "decision_matrix": {
+        "schema_version": "cancellation-policy/v2.0",
+        "policy_version": "2026-07",
+        "effective_from": "2026-07-15",
+        "cutoff_hours": 48,
+        "cutoff_comparison": "inclusive",
+        "cutoff_based_on": "day_1_start_at",
+        "rules": {
+          "full_voluntary_gte_48h": {
+            "outcome": "lifetime_package_credit",
+            "cash_refund_percent": 0,
+            "package_credit_eligible": true
+          },
+          "full_voluntary_lt_48h": {
+            "outcome": "forfeited",
+            "cash_refund_percent": 0,
+            "package_credit_eligible": false
+          },
+          "partial_gte_48h": {
+            "outcome": "cash_refund",
+            "cash_refund_percent": 100
+          },
+          "partial_lt_48h": {
+            "outcome": "cash_refund",
+            "cash_refund_percent": 50
+          },
+          "partial_after_day_1": {
+            "outcome": "cash_refund",
+            "cash_refund_percent": 0
+          },
+          "no_show": {
+            "outcome": "forfeited",
+            "cash_refund_percent": 0
+          },
+          "flight_disruption_verified": {
+            "outcome": "package_reactivation",
+            "recovery_fee_percent": 50,
+            "maximum_uses": 1
+          },
+          "flight_disruption_unverified": {
+            "outcome": "voluntary_late_cancellation"
+          },
+          "force_majeure_full_tour": {
+            "options": [
+              "lifetime_package_credit",
+              "cash_refund_less_nonrecoverable_vendor_cost"
+            ]
+          },
+          "force_majeure_partial_tour": {
+            "first_remedy": "alternative_route",
+            "second_remedy": "affected_component_refund"
+          },
+          "jvto_operational": {
+            "options": [
+              "accepted_alternative",
+              "full_cash_refund"
+            ]
+          }
+        },
+        "partial_thresholds": {
+          "minimum_remaining_pax": 2,
+          "minimum_remaining_percent": 50,
+          "reprice_remaining_guests": false,
+          "threshold_fail_behaviour": "reclassify_as_full_cancellation",
+          "foc_passenger_refund_percent": 0
+        },
+        "package_credit_locks": {
+          "expires": false,
+          "cash_value": false,
+          "package_change_allowed": false,
+          "split_allowed": false,
+          "transfer_allowed": true,
+          "maximum_transfers": 1,
+          "original_package_locked": true,
+          "original_pax_locked": true,
+          "original_price_locked": true
+        },
+        "booking_scope": {
+          "allowed_sources": [
+            "website"
+          ],
+          "disallowed_sources": [
+            "whatsapp",
+            "email",
+            "manual",
+            "ota"
+          ],
+          "support_channels": [
+            "whatsapp",
+            "email"
+          ]
+        }
+      },
+      "customer_copy": {
+        "package_guarantee_summary": "Your confirmed package does not disappear when plans change early. Cancel your entire booking at least 48 hours before Day 1 and the same package, your original number of travellers, and your original confirmed package price remain available for future use as Lifetime Package Credit.",
+        "before_48_full_cancellation": "Cancel the complete booking 48 hours or more before Day 1: you receive Lifetime Package Credit. It never expires and preserves the same package, original pax entitlement, and original confirmed price, and can be transferred once. Package Credit is not cash and cannot be exchanged for cash.",
+        "after_48_full_cancellation": "Cancel the complete booking less than 48 hours before Day 1: the booking is forfeited and no Package Credit is created.",
+        "partial_cancellation": "If one or more travellers cancel but the tour continues, the cancelled travellers receive a cash refund of their confirmed price: 100% at 48 hours or more before Day 1, 50% within 48 hours, and 0% after Day 1. At least 2 paying travellers must remain, otherwise it is treated as a full cancellation.",
+        "flight_disruption": "If a verified natural transport disruption (for example volcanic ash) cancels your flight, your package can be reactivated once for a 50% Recovery Fee of the original confirmed package price.",
+        "destination_force_majeure": "If a verified official event affects your destination and the whole tour is impossible, you can choose Lifetime Package Credit or a cash refund less any non-recoverable vendor cost. If only part is affected, JVTO first offers an alternative route, then a refund of the affected component.",
+        "package_transfer": "Package Credit may be transferred once to another person. The old credit code is closed and a new one is issued to the recipient. A second transfer is not permitted.",
+        "package_redemption": "To use Package Credit, choose a new date for the same package. Your original pax entitlement appears automatically; fewer travellers yields no refund, and more travellers are charged the incremental website price."
+      }
+    },
+    "payloadSha256": "62435ce533353a2da280566b631348644f2be0a2435726fa878cfdf3dd844324"
+  },
+  {
+    "source": "llm-wiki-policy",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "inclusions-exclusions",
+    "entityType": "policy_document",
+    "canonicalKey": "policy_document:inclusions-exclusions",
+    "payload": {
+      "domain": "Inclusions / Exclusions",
+      "summary": "Madakaripura helmets are NOT a JVTO inclusion (local site management)",
+      "evidence_count": 3,
+      "canonical_sources": [
+        "products/packages-overview.md"
+      ]
+    },
+    "payloadSha256": "bdf392f21d7785a6e0a22fdb7054e359ad1a61b66f128a1951acb6c59a6c2e90"
+  },
+  {
+    "source": "llm-wiki-policy",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "ijen-health-screening",
+    "entityType": "policy_document",
+    "canonicalKey": "policy_document:ijen-health-screening",
+    "payload": {
+      "domain": "Ijen Health Screening",
+      "summary": "Mandatory wording (health certificate required for every guest before crater entry); BBKSDA SE.1658/KSA.9/2024 cited as supporting authority, not a conditional trigger. Adjudicated 2026-07-06, supersedes the 2026-07-05 conditional decision",
+      "evidence_count": 2,
+      "canonical_sources": [
+        "website/faq-master.md",
+        "people/dr-ahmad-irwandanu.md"
+      ]
+    },
+    "payloadSha256": "f5bf856d37bbda9f13d1cfd2a48add8d3d4e837cc5614293048ae77bca573d9b"
+  },
+  {
+    "source": "llm-wiki-policy",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "natural-phenomena",
+    "entityType": "policy_document",
+    "canonicalKey": "policy_document:natural-phenomena",
+    "payload": {
+      "domain": "Natural Phenomena",
+      "summary": "No guarantee for Blue Fire / sunrise",
+      "evidence_count": 2,
+      "canonical_sources": [
+        "website/brand-voice.md"
+      ]
+    },
+    "payloadSha256": "14dd7b69b65e706518780a701b8a75391178e02c58cfc93a81bdf8e4f2222b02"
+  },
+  {
+    "source": "llm-wiki-policy",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "isic",
+    "entityType": "policy_document",
+    "canonicalKey": "policy_document:isic",
+    "payload": {
+      "domain": "ISIC",
+      "summary": "ISIC is UNESCO-endorsed; do NOT imply UNESCO endorses JVTO",
+      "evidence_count": 2,
+      "canonical_sources": [
+        "credentials/trust-signals.md"
+      ]
+    },
+    "payloadSha256": "6b2fc0bdc8396711ab1846c8e63b66bcf196a50dc869cf640546ef0894db04ec"
+  },
+  {
+    "source": "llm-wiki-policy",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "police-escort",
+    "entityType": "policy_document",
+    "canonicalKey": "policy_document:police-escort",
+    "payload": {
+      "domain": "Police Escort",
+      "summary": "Conditional coordination only (large groups ~18+, when approved by Traffic Police)",
+      "evidence_count": 3,
+      "canonical_sources": [
+        "credentials/trust-signals.md"
+      ]
+    },
+    "payloadSha256": "7ea154cfa87aa2a590d22a21ac8f7750e19973c4d7dc5b15df8a2e53afcd1f23"
+  },
+  {
+    "source": "llm-wiki-policy",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "anti-fraud",
+    "entityType": "policy_document",
+    "canonicalKey": "policy_document:anti-fraud",
+    "payload": {
+      "domain": "Anti-Fraud",
+      "summary": "Use only official JVTO channels; never share full card numbers, CVV, passwords, OTP",
+      "evidence_count": 3,
+      "canonical_sources": [
+        "products/packages-overview.md"
+      ]
+    },
+    "payloadSha256": "5e9171843f9f3a5b2c5a8e7d94e586be45f35dde63c21f351d9164a1864a8853"
+  }
+]
