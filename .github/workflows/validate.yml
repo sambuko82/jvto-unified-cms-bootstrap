@@ -8,6 +8,21 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    # Ephemeral throwaway Postgres for the runtime integration tests — NOT the
+    # owner's production jvto_cms. Passwordless (trust) so no secret lands in the repo.
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_HOST_AUTH_METHOD: trust
+          POSTGRES_DB: jvto_cms_local
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -17,6 +32,10 @@ jobs:
       - run: npm ci
       - run: npm run validate
       - run: npm test
+        env:
+          # The runtime tests load db/core/schema.sql + output/seed/load.sql into
+          # this ephemeral DB, then exercise the resolver + API against it.
+          DATABASE_URL: postgres://postgres@localhost:5432/jvto_cms_local
       - run: npm run build
       # Re-consolidate + re-render over the committed release bundles and fail if
       # the committed projection/HTML is stale (deterministic output drift guard).
