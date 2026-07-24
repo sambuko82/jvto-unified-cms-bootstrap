@@ -7,9 +7,9 @@
 --   pages/sections  = the page IA + block composition from jvto-new-on-design-system.
 --   resolver        = route -> page -> ordered sections -> hydrated entity_refs.
 --
--- Supersedes the 28-table multi-source governance schema (archived in db/legacy/):
--- a single authoritative source needs no staging / ownership / conflict / precedence /
--- workflow / publication-manifest tables. Typed columns + bounded JSONB, NO EAV.
+-- Supersedes the 28-table multi-source governance schema: a single authoritative
+-- source needs no staging / ownership / conflict / precedence / workflow /
+-- publication-manifest tables. Typed columns + bounded JSONB, NO EAV.
 --
 -- Fresh Postgres only (never jvto_dev / the jvto-web DB). Idempotent (IF NOT EXISTS).
 -- gen_random_uuid() is core in PostgreSQL 13+.

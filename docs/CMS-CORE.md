@@ -15,7 +15,7 @@ content atoms (entities)   ×   page composition (pages/sections)   →   resolv
 
 A single authoritative content source (the consolidated projection, 0 conflicts)
 means **no ownership / conflict / staging / workflow / publication machinery** — the
-old 28-table governance schema is archived in `db/legacy/`.
+old 28-table governance schema has been removed.
 
 ## Schema (`db/core/schema.sql`, 6 tables)
 

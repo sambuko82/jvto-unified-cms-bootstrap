@@ -11,6 +11,8 @@
     "validate": "npm run validate:config && npm run validate:schemas && npm run validate:secrets && npm run typecheck",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
     "build": "tsc -p tsconfig.build.json",
     "build:fixtures": "npm run build && node scripts/build-fixtures.mjs",
     "build:bundles": "npm run build && node scripts/build-release-bundles.mjs",
@@ -23,10 +25,16 @@
     "cms:build": "npm run build && node scripts/consolidate.mjs && node scripts/render-cms.mjs && node scripts/build-pages.mjs && node scripts/build-seed.mjs",
     "verify:projection": "node scripts/consolidate.mjs && node scripts/render-cms.mjs && node scripts/build-pages.mjs && node scripts/build-seed.mjs && git diff --exit-code -- output/"
   },
+  "dependencies": {
+    "fastify": "^5.2.0",
+    "pg": "^8.13.1"
+  },
   "devDependencies": {
     "@types/node": "^22.10.0",
+    "@types/pg": "^8.11.10",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8",
     "yaml": "^2.7.0"

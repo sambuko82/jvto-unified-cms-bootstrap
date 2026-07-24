@@ -5,7 +5,7 @@ import { sha256Hex } from './canonical.js';
 import type { MappedRecord, ProjectedEntity, RecordConflict } from './types.js';
 
 /** Field-name fragments that must never appear in a public projection. */
-const PRIVATE_FIELD_MARKERS = [
+export const PRIVATE_FIELD_MARKERS = [
   'password',
   'cvv',
   'card_number',
@@ -31,7 +31,7 @@ export function deterministicUuid(seed: string): string {
   return `${s.slice(0, 8)}-${s.slice(8, 12)}-${s.slice(12, 16)}-${s.slice(16, 20)}-${s.slice(20, 32)}`;
 }
 
-function isPrivateField(fieldPath: string): boolean {
+export function isPrivateField(fieldPath: string): boolean {
   const lower = fieldPath.toLowerCase();
   return PRIVATE_FIELD_MARKERS.some((marker) => lower.includes(marker));
 }
