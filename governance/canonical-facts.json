@@ -1,0 +1,34 @@
+{
+  "_note": "Self-contained JVTO facts lock — the top-precedence tie-breaker over every upstream source. Relocated out of jvto-web/docs/CANONICAL_FACTS.md so this repo has no jvto-web dependency. Adjudicated values; treat as governance. Consumed by scripts/build-release-bundles.mjs (canonical-facts source) and seeded into governance_facts.",
+  "adjudicated_facts": {
+    "founding_year": 2015,
+    "pt_legal_context": "PT Java Volcano Rendezvous; NIB/TDUP era 2023 (no invented incorporation date)",
+    "deposit_percent": 20,
+    "close_departure_full_within_days": 14,
+    "cancellation_model": "lifetime_package_credit",
+    "cancellation_naming": "Lifetime Package Credit (supersedes the retired 'Travel Credit')",
+    "ijen_health_screening": "mandatory",
+    "ijen_health_authority": "BBKSDA Surat Edaran SE.1658/KSA.9/2024 (cited as supporting authority, not a conditional trigger)",
+    "blue_fire": "natural phenomenon subject to weather and gas activity; cannot be guaranteed",
+    "reviews": {
+      "trustpilot": "4.8/51",
+      "google": "4.9/123",
+      "tripadvisor": "4.95/21",
+      "cross_platform": "4.8/195"
+    },
+    "prices": "IDR-only (format: IDR 1,550,000/person)",
+    "email_primary": "hello@javavolcano-touroperator.com",
+    "email_secondary": "javavolcanotouroperator@gmail.com",
+    "phone": "+62 822 4478 8833",
+    "nib": "1102230032918",
+    "ahu": "-0023020",
+    "hq_address": "Jl. Khairil Anwar No.102A, Bondowoso 68214",
+    "elevations": { "kawah_ijen_m": 2386, "mount_bromo_m": 2329 }
+  },
+  "forbidden_values": {
+    "founding": ["2016", "2019", "2020", "2023 (as founding)", "EST 2016"],
+    "reviews": ["112", "4.9/112", "47", "92", "5.0/5"],
+    "cancellation": ["Travel Credit", "Lifetime Travel Credit"],
+    "ijen_health": ["when BBKSDA regulations require it", "where required", "when their regulations are in effect", "conditional"]
+  }
+}

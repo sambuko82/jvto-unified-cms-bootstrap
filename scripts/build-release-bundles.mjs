@@ -323,22 +323,16 @@ function buildDesign() {
 }
 
 // ---------------------------------------------------------------------------
-// canonical-facts — the adjudicated facts lock (tie-breaker). Sourced from
-// jvto-web docs/CANONICAL_FACTS.md; embedded here as the single governance
-// record (stable, authored once). Merges onto the cancellation policy document.
+// canonical-facts — the adjudicated facts lock (tie-breaker). Read from this
+// repo's self-contained governance/canonical-facts.json (no jvto-web dependency).
+// Merges onto the cancellation policy document.
 // ---------------------------------------------------------------------------
 function buildCanonicalFacts() {
+  // Self-contained: read the facts lock from this repo (no jvto-web dependency).
+  const lock = readJson(path.join(root, 'governance/canonical-facts.json'));
   return [
     rec('canonical-facts', 'policy_document', 'canonical-facts', 'policy_document:cancellation-package-credit', {
-      adjudicated_facts: {
-        founding_year: 2015,
-        deposit_percent: 20,
-        close_departure_full_within_days: 14,
-        cancellation_model: 'lifetime_package_credit',
-        reviews: { trustpilot: '4.8/51', google: '4.9/123', tripadvisor: '4.95/21', cross_platform: '4.8/195' },
-        ijen_health_screening: 'mandatory',
-        nib: '1102230032918',
-      },
+      adjudicated_facts: lock.adjudicated_facts,
     }),
   ];
 }

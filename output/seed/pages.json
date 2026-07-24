@@ -1,0 +1,834 @@
+[
+  {
+    "route": "/",
+    "file_group": "001",
+    "sort_order": 1,
+    "cluster": "homepage",
+    "page_type": "homepage",
+    "template": "index",
+    "visual_mode": "homepage",
+    "hub_route": null,
+    "title": "Tourist Police-Led Private Volcano Tours in East Java | Java Volcano Tour Operator",
+    "h1": "Tourist Police-Led Private Volcano Tours in East Java",
+    "seo": {
+      "title": "Tourist Police-Led Private Volcano Tours in East Java | Java Volcano Tour Operator"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours",
+    "file_group": "002",
+    "sort_order": 1,
+    "cluster": "travel",
+    "page_type": "hub",
+    "template": "collection",
+    "visual_mode": "travel",
+    "hub_route": null,
+    "title": "All JVTO Tours — Private Bromo, Ijen & Tumpak Sewu",
+    "h1": "All JVTO Tours — Private Bromo, Ijen & Tumpak Sewu",
+    "seo": {
+      "title": "All JVTO Tours — Private Bromo, Ijen & Tumpak Sewu"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-surabaya",
+    "file_group": "002",
+    "sort_order": 2,
+    "cluster": "travel",
+    "page_type": "hub",
+    "template": "collection",
+    "visual_mode": "travel",
+    "hub_route": "/tours",
+    "title": "Tours from Surabaya",
+    "h1": "Tours from Surabaya",
+    "seo": {
+      "title": "Tours from Surabaya"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-bali",
+    "file_group": "002",
+    "sort_order": 3,
+    "cluster": "travel",
+    "page_type": "hub",
+    "template": "collection",
+    "visual_mode": "travel",
+    "hub_route": "/tours",
+    "title": "Tours from Bali",
+    "h1": "Tours from Bali",
+    "seo": {
+      "title": "Tours from Bali"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-bali/bromo-ijen-3d2n",
+    "file_group": "002",
+    "sort_order": 4,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-bali",
+    "title": "3 Day Bromo & Ijen Volcano Discovery from Bali",
+    "h1": "3 Day Bromo & Ijen Volcano Discovery from Bali",
+    "seo": {
+      "title": "3 Day Bromo & Ijen Volcano Discovery from Bali"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-bali/ijen-bromo-madakaripura-3d2n",
+    "file_group": "002",
+    "sort_order": 5,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-bali",
+    "title": "3 Day Ijen, Bromo & Madakaripura Waterfall Journey from Bali to Surabaya",
+    "h1": "3 Day Ijen, Bromo & Madakaripura Waterfall Journey from Bali to Surabaya",
+    "seo": {
+      "title": "3 Day Ijen, Bromo & Madakaripura Waterfall Journey from Bali to Surabaya"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-bali/ijen-papuma-tumpak-sewu-bromo-4d3n",
+    "file_group": "002",
+    "sort_order": 6,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-bali",
+    "title": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Expedition from Bali to Surabaya",
+    "h1": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Expedition from Bali to Surabaya",
+    "seo": {
+      "title": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Expedition from Bali to Surabaya"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-bali/ijen-papuma-tumpak-sewu-bromo-5d4n",
+    "file_group": "002",
+    "sort_order": 7,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-bali",
+    "title": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Discovery from Bali to Surabaya",
+    "h1": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Discovery from Bali to Surabaya",
+    "seo": {
+      "title": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Discovery from Bali to Surabaya"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-surabaya/bromo-1d1n",
+    "file_group": "002",
+    "sort_order": 8,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-surabaya",
+    "title": "1 Day Bromo Midnight Experience from Surabaya",
+    "h1": "1 Day Bromo Midnight Experience from Surabaya",
+    "seo": {
+      "title": "1 Day Bromo Midnight Experience from Surabaya"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-surabaya/bromo-2d1n",
+    "file_group": "002",
+    "sort_order": 9,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-surabaya",
+    "title": "2 Day Bromo Sunrise Adventure from Surabaya",
+    "h1": "2 Day Bromo Sunrise Adventure from Surabaya",
+    "seo": {
+      "title": "2 Day Bromo Sunrise Adventure from Surabaya"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-surabaya/bromo-madakaripura-ijen-3d2n",
+    "file_group": "002",
+    "sort_order": 10,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-surabaya",
+    "title": "3 Day Bromo, Madakaripura & Ijen Overland from Surabaya to Bali",
+    "h1": "3 Day Bromo, Madakaripura & Ijen Overland from Surabaya to Bali",
+    "seo": {
+      "title": "3 Day Bromo, Madakaripura & Ijen Overland from Surabaya to Bali"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-surabaya/ijen-2d1n",
+    "file_group": "002",
+    "sort_order": 11,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-surabaya",
+    "title": "2 Day Ijen Blue Fire Expedition from Surabaya",
+    "h1": "2 Day Ijen Blue Fire Expedition from Surabaya",
+    "seo": {
+      "title": "2 Day Ijen Blue Fire Expedition from Surabaya"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-surabaya/ijen-bromo-madakaripura-3d2n",
+    "file_group": "002",
+    "sort_order": 12,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-surabaya",
+    "title": "3 Day Ijen, Bromo & Madakaripura Waterfall Discovery from Surabaya",
+    "h1": "3 Day Ijen, Bromo & Madakaripura Waterfall Discovery from Surabaya",
+    "seo": {
+      "title": "3 Day Ijen, Bromo & Madakaripura Waterfall Discovery from Surabaya"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-surabaya/ijen-bromo-madakaripura-4d3n",
+    "file_group": "002",
+    "sort_order": 13,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-surabaya",
+    "title": "4 Day Ijen, Bromo & Madakaripura Waterfall Expedition from Surabaya",
+    "h1": "4 Day Ijen, Bromo & Madakaripura Waterfall Expedition from Surabaya",
+    "seo": {
+      "title": "4 Day Ijen, Bromo & Madakaripura Waterfall Expedition from Surabaya"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-surabaya/ijen-bromo-madakaripura-malang-5d4n",
+    "file_group": "002",
+    "sort_order": 14,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-surabaya",
+    "title": "5 Day Ijen, Bromo, Madakaripura & Malang City Adventure from Surabaya",
+    "h1": "5 Day Ijen, Bromo, Madakaripura & Malang City Adventure from Surabaya",
+    "seo": {
+      "title": "5 Day Ijen, Bromo, Madakaripura & Malang City Adventure from Surabaya"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-surabaya/ijen-papuma-tumpak-sewu-bromo-4d3n",
+    "file_group": "002",
+    "sort_order": 15,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-surabaya",
+    "title": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Journey from Surabaya",
+    "h1": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Journey from Surabaya",
+    "seo": {
+      "title": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Journey from Surabaya"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-surabaya/ijen-papuma-tumpak-sewu-bromo-5d4n",
+    "file_group": "002",
+    "sort_order": 16,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-surabaya",
+    "title": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Nature Trip from Surabaya",
+    "h1": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Nature Trip from Surabaya",
+    "seo": {
+      "title": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Nature Trip from Surabaya"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-surabaya/ijen-papuma-tumpak-sewu-bromo-malang-6d5n",
+    "file_group": "002",
+    "sort_order": 17,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-surabaya",
+    "title": "6 Day Ijen, Papuma Beach, Tumpak Sewu, Bromo & Malang City Discovery from Surabaya",
+    "h1": "6 Day Ijen, Papuma Beach, Tumpak Sewu, Bromo & Malang City Discovery from Surabaya",
+    "seo": {
+      "title": "6 Day Ijen, Papuma Beach, Tumpak Sewu, Bromo & Malang City Discovery from Surabaya"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-surabaya/taman-safari-prigen-bromo-madakaripura-3d2n",
+    "file_group": "002",
+    "sort_order": 18,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-surabaya",
+    "title": "3 Day Taman Safari Prigen, Bromo & Madakaripura from Surabaya",
+    "h1": "3 Day Taman Safari Prigen, Bromo & Madakaripura from Surabaya",
+    "seo": {
+      "title": "3 Day Taman Safari Prigen, Bromo & Madakaripura from Surabaya"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-surabaya/tumpak-sewu-bromo-ijen-4d3n",
+    "file_group": "002",
+    "sort_order": 19,
+    "cluster": "travel",
+    "page_type": "tour",
+    "template": "tour",
+    "visual_mode": "travel",
+    "hub_route": "/tours/from-surabaya",
+    "title": "4 Day Tumpak Sewu, Bromo & Ijen Adventure from Surabaya to Bali",
+    "h1": "4 Day Tumpak Sewu, Bromo & Ijen Adventure from Surabaya to Bali",
+    "seo": {
+      "title": "4 Day Tumpak Sewu, Bromo & Ijen Adventure from Surabaya to Bali"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/destinations",
+    "file_group": "003",
+    "sort_order": 1,
+    "cluster": "travel",
+    "page_type": "hub",
+    "template": "collection",
+    "visual_mode": "travel",
+    "hub_route": null,
+    "title": "Destinations — Bromo, Ijen, Tumpak Sewu, Madakaripura, Papuma",
+    "h1": "Destinations — Bromo, Ijen, Tumpak Sewu, Madakaripura, Papuma",
+    "seo": {
+      "title": "Destinations — Bromo, Ijen, Tumpak Sewu, Madakaripura, Papuma"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/destinations/bromo",
+    "file_group": "003",
+    "sort_order": 2,
+    "cluster": "travel",
+    "page_type": "destination",
+    "template": "destination",
+    "visual_mode": "travel",
+    "hub_route": "/destinations",
+    "title": "Mount Bromo (Gunung Bromo)",
+    "h1": "Mount Bromo (Gunung Bromo)",
+    "seo": {
+      "title": "Mount Bromo (Gunung Bromo)"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/destinations/ijen",
+    "file_group": "003",
+    "sort_order": 3,
+    "cluster": "travel",
+    "page_type": "destination",
+    "template": "destination",
+    "visual_mode": "travel",
+    "hub_route": "/destinations",
+    "title": "Kawah Ijen (Ijen Crater)",
+    "h1": "Kawah Ijen (Ijen Crater)",
+    "seo": {
+      "title": "Kawah Ijen (Ijen Crater)"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/destinations/tumpak-sewu",
+    "file_group": "003",
+    "sort_order": 4,
+    "cluster": "travel",
+    "page_type": "destination",
+    "template": "destination",
+    "visual_mode": "travel",
+    "hub_route": "/destinations",
+    "title": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu)",
+    "h1": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu)",
+    "seo": {
+      "title": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu)"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/destinations/madakaripura",
+    "file_group": "003",
+    "sort_order": 5,
+    "cluster": "travel",
+    "page_type": "destination",
+    "template": "destination",
+    "visual_mode": "travel",
+    "hub_route": "/destinations",
+    "title": "Madakaripura Waterfall (Air Terjun Madakaripura)",
+    "h1": "Madakaripura Waterfall (Air Terjun Madakaripura)",
+    "seo": {
+      "title": "Madakaripura Waterfall (Air Terjun Madakaripura)"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/destinations/papuma",
+    "file_group": "003",
+    "sort_order": 6,
+    "cluster": "travel",
+    "page_type": "destination",
+    "template": "destination",
+    "visual_mode": "travel",
+    "hub_route": "/destinations",
+    "title": "Papuma Beach (Pantai Papuma)",
+    "h1": "Papuma Beach (Pantai Papuma)",
+    "seo": {
+      "title": "Papuma Beach (Pantai Papuma)"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/why-jvto",
+    "file_group": "004",
+    "sort_order": 1,
+    "cluster": "hybrid",
+    "page_type": "hub",
+    "template": "collection",
+    "visual_mode": "hybrid",
+    "hub_route": null,
+    "title": "Why JVTO",
+    "h1": "Why JVTO",
+    "seo": {
+      "title": "Why JVTO"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/why-jvto/the-jvto-difference",
+    "file_group": "004",
+    "sort_order": 2,
+    "cluster": "hybrid",
+    "page_type": "narrative",
+    "template": "narrative",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto",
+    "title": "The JVTO Difference",
+    "h1": "The JVTO Difference",
+    "seo": {
+      "title": "The JVTO Difference"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/why-jvto/reviews",
+    "file_group": "004",
+    "sort_order": 3,
+    "cluster": "hybrid",
+    "page_type": "narrative",
+    "template": "narrative",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto",
+    "title": "Reviews",
+    "h1": "Reviews",
+    "seo": {
+      "title": "Reviews"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/why-jvto/our-story",
+    "file_group": "004",
+    "sort_order": 4,
+    "cluster": "hybrid",
+    "page_type": "narrative",
+    "template": "narrative",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto",
+    "title": "Our Story",
+    "h1": "Our Story",
+    "seo": {
+      "title": "Our Story"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/why-jvto/our-team",
+    "file_group": "004",
+    "sort_order": 5,
+    "cluster": "hybrid",
+    "page_type": "narrative",
+    "template": "narrative",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto",
+    "title": "Our Team",
+    "h1": "Our Team",
+    "seo": {
+      "title": "Our Team"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/why-jvto/community-standards",
+    "file_group": "004",
+    "sort_order": 6,
+    "cluster": "hybrid",
+    "page_type": "narrative",
+    "template": "narrative",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto",
+    "title": "Community Standards",
+    "h1": "Community Standards",
+    "seo": {
+      "title": "Community Standards"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/travel-guide",
+    "file_group": "005",
+    "sort_order": 1,
+    "cluster": "hybrid",
+    "page_type": "hub",
+    "template": "collection",
+    "visual_mode": "hybrid",
+    "hub_route": null,
+    "title": "Travel Guide",
+    "h1": "Travel Guide",
+    "seo": {
+      "title": "Travel Guide"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/travel-guide/faq",
+    "file_group": "005",
+    "sort_order": 2,
+    "cluster": "hybrid",
+    "page_type": "faq",
+    "template": "travel-guide",
+    "visual_mode": "hybrid",
+    "hub_route": "/travel-guide",
+    "title": "Frequently Asked Questions",
+    "h1": "Frequently Asked Questions",
+    "seo": {
+      "title": "Frequently Asked Questions"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/travel-guide/ijen-health-screening",
+    "file_group": "005",
+    "sort_order": 3,
+    "cluster": "hybrid",
+    "page_type": "travel_guide",
+    "template": "travel-guide",
+    "visual_mode": "hybrid",
+    "hub_route": "/travel-guide",
+    "title": "Ijen Health Screening",
+    "h1": "Ijen Health Screening",
+    "seo": {
+      "title": "Ijen Health Screening"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/travel-guide/booking-information",
+    "file_group": "005",
+    "sort_order": 4,
+    "cluster": "hybrid",
+    "page_type": "travel_guide",
+    "template": "travel-guide",
+    "visual_mode": "hybrid",
+    "hub_route": "/travel-guide",
+    "title": "Booking Information",
+    "h1": "Booking Information",
+    "seo": {
+      "title": "Booking Information"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/travel-guide/weather-and-closures",
+    "file_group": "005",
+    "sort_order": 5,
+    "cluster": "hybrid",
+    "page_type": "travel_guide",
+    "template": "travel-guide",
+    "visual_mode": "hybrid",
+    "hub_route": "/travel-guide",
+    "title": "Weather & Closures",
+    "h1": "Weather & Closures",
+    "seo": {
+      "title": "Weather & Closures"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/travel-guide/police-escort-for-groups",
+    "file_group": "005",
+    "sort_order": 6,
+    "cluster": "hybrid",
+    "page_type": "travel_guide",
+    "template": "travel-guide",
+    "visual_mode": "hybrid",
+    "hub_route": "/travel-guide",
+    "title": "Police Escort for Groups",
+    "h1": "Police Escort for Groups",
+    "seo": {
+      "title": "Police Escort for Groups"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/travel-guide/safety-on-tours",
+    "file_group": "005",
+    "sort_order": 7,
+    "cluster": "hybrid",
+    "page_type": "travel_guide",
+    "template": "travel-guide",
+    "visual_mode": "hybrid",
+    "hub_route": "/travel-guide",
+    "title": "Safety on Tours",
+    "h1": "Safety on Tours",
+    "seo": {
+      "title": "Safety on Tours"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/travel-guide/packing-and-fitness",
+    "file_group": "005",
+    "sort_order": 8,
+    "cluster": "hybrid",
+    "page_type": "travel_guide",
+    "template": "travel-guide",
+    "visual_mode": "hybrid",
+    "hub_route": "/travel-guide",
+    "title": "Packing & Fitness",
+    "h1": "Packing & Fitness",
+    "seo": {
+      "title": "Packing & Fitness"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/verify-jvto",
+    "file_group": "006",
+    "sort_order": 1,
+    "cluster": "trust",
+    "page_type": "hub",
+    "template": "verify",
+    "visual_mode": "trust",
+    "hub_route": null,
+    "title": "Verify JVTO — Proof Library",
+    "h1": "Verify JVTO — Proof Library",
+    "seo": {
+      "title": "Verify JVTO — Proof Library"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/verify-jvto/legal",
+    "file_group": "006",
+    "sort_order": 2,
+    "cluster": "trust",
+    "page_type": "verify",
+    "template": "verify",
+    "visual_mode": "trust",
+    "hub_route": "/verify-jvto",
+    "title": "Legal & Licenses",
+    "h1": "Legal & Licenses",
+    "seo": {
+      "title": "Legal & Licenses"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/verify-jvto/police-safety",
+    "file_group": "006",
+    "sort_order": 3,
+    "cluster": "trust",
+    "page_type": "verify",
+    "template": "verify",
+    "visual_mode": "trust",
+    "hub_route": "/verify-jvto",
+    "title": "Police & Safety",
+    "h1": "Police & Safety",
+    "seo": {
+      "title": "Police & Safety"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/verify-jvto/press-recognition",
+    "file_group": "006",
+    "sort_order": 4,
+    "cluster": "trust",
+    "page_type": "verify",
+    "template": "verify",
+    "visual_mode": "trust",
+    "hub_route": "/verify-jvto",
+    "title": "Press & Recognition",
+    "h1": "Press & Recognition",
+    "seo": {
+      "title": "Press & Recognition"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/verify-jvto/history-artifacts",
+    "file_group": "006",
+    "sort_order": 5,
+    "cluster": "trust",
+    "page_type": "verify",
+    "template": "verify",
+    "visual_mode": "trust",
+    "hub_route": "/verify-jvto",
+    "title": "History & Artifacts",
+    "h1": "History & Artifacts",
+    "seo": {
+      "title": "History & Artifacts"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/policy",
+    "file_group": "006",
+    "sort_order": 6,
+    "cluster": "trust",
+    "page_type": "hub",
+    "template": "policy",
+    "visual_mode": "trust",
+    "hub_route": null,
+    "title": "Legal & Transparency",
+    "h1": "Legal & Transparency",
+    "seo": {
+      "title": "Legal & Transparency"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/policy/booking-payment-cancellation",
+    "file_group": "006",
+    "sort_order": 7,
+    "cluster": "trust",
+    "page_type": "policy",
+    "template": "policy",
+    "visual_mode": "trust",
+    "hub_route": "/policy",
+    "title": "Booking, Payment & Cancellation",
+    "h1": "Booking, Payment & Cancellation",
+    "seo": {
+      "title": "Booking, Payment & Cancellation"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/policy/inclusions-exclusions",
+    "file_group": "006",
+    "sort_order": 8,
+    "cluster": "trust",
+    "page_type": "policy",
+    "template": "policy",
+    "visual_mode": "trust",
+    "hub_route": "/policy",
+    "title": "Inclusions & Exclusions",
+    "h1": "Inclusions & Exclusions",
+    "seo": {
+      "title": "Inclusions & Exclusions"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/policy/privacy",
+    "file_group": "006",
+    "sort_order": 9,
+    "cluster": "trust",
+    "page_type": "policy",
+    "template": "policy",
+    "visual_mode": "trust",
+    "hub_route": "/policy",
+    "title": "Privacy Policy",
+    "h1": "Privacy Policy",
+    "seo": {
+      "title": "Privacy Policy"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/contact",
+    "file_group": "007",
+    "sort_order": 1,
+    "cluster": "hybrid",
+    "page_type": "contact",
+    "template": "contact",
+    "visual_mode": "hybrid",
+    "hub_route": null,
+    "title": "Contact JVTO",
+    "h1": "Contact JVTO",
+    "seo": {
+      "title": "Contact JVTO"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/blog",
+    "file_group": "008",
+    "sort_order": 1,
+    "cluster": "hybrid",
+    "page_type": "hub",
+    "template": "collection",
+    "visual_mode": "hybrid",
+    "hub_route": null,
+    "title": "Blog",
+    "h1": "Blog",
+    "seo": {
+      "title": "Blog"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/blog/why-not-unlicensed-ijen-operator",
+    "file_group": "008",
+    "sort_order": 2,
+    "cluster": "hybrid",
+    "page_type": "blog",
+    "template": "narrative",
+    "visual_mode": "hybrid",
+    "hub_route": "/blog",
+    "title": "Why Not an Unlicensed Ijen Operator",
+    "h1": "Why Not an Unlicensed Ijen Operator",
+    "seo": {
+      "title": "Why Not an Unlicensed Ijen Operator"
+    },
+    "status": "published"
+  }
+]

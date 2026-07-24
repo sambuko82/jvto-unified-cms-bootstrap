@@ -17,8 +17,11 @@
     "crosscheck": "node scripts/crosscheck-bundles.mjs",
     "consolidate": "node scripts/consolidate.mjs",
     "render": "node scripts/render-cms.mjs",
-    "cms:build": "npm run build && node scripts/consolidate.mjs && node scripts/render-cms.mjs",
-    "verify:projection": "node scripts/consolidate.mjs && node scripts/render-cms.mjs && git diff --exit-code -- output/"
+    "pages": "node scripts/build-pages.mjs",
+    "seed": "node scripts/build-seed.mjs",
+    "pull-db": "node scripts/pull-db.mjs",
+    "cms:build": "npm run build && node scripts/consolidate.mjs && node scripts/render-cms.mjs && node scripts/build-pages.mjs && node scripts/build-seed.mjs",
+    "verify:projection": "node scripts/consolidate.mjs && node scripts/render-cms.mjs && node scripts/build-pages.mjs && node scripts/build-seed.mjs && git diff --exit-code -- output/"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

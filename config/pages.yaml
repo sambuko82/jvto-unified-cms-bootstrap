@@ -1,0 +1,379 @@
+version: 1
+
+# The site information architecture, adopted from jvto-new-on-design-system:
+# 8 FILE groups in order, hub -> child, per-page block composition. Sections
+# reference content atoms by ref_query (resolved from projection.json) or explicit
+# entity_refs (canonical_keys). Tour + destination DETAIL pages are generated from
+# entities by scripts/build-pages.mjs (see `generate:`). visual_mode/cluster follow
+# the bootstrap visual-modes: Home->homepage; Tours/Destinations->travel;
+# Verify/Policy->trust; Why-JVTO/Travel-Guide/Contact/Blog->hybrid.
+
+groups:
+  "001": { label: Home,            cluster: homepage }
+  "002": { label: Tours,           cluster: travel }
+  "003": { label: Destinations,    cluster: travel }
+  "004": { label: Why JVTO,        cluster: hybrid }
+  "005": { label: Travel Guide,    cluster: hybrid }
+  "006": { label: Verify & Policy, cluster: trust }
+  "007": { label: Contact,         cluster: hybrid }
+  "008": { label: Blog,            cluster: hybrid }
+
+# Section vocabulary (section_type): hero, section_head, rich_text, callout,
+# steps, vantage, dest_facts, data_box, timeline, faq_list, card_grid, cta.
+# ref_query vocabulary (resolved by build-pages): packages:all|origin=surabaya|
+# origin=bali ; destinations:real ; faq:all ; crew:all ; people:founders.
+
+pages:
+  # ── FILE 001 — Home ─────────────────────────────────────────────────────────
+  - route: /
+    file_group: "001"
+    page_type: homepage
+    template: index
+    visual_mode: homepage
+    title: "Tourist Police-Led Private Volcano Tours in East Java | Java Volcano Tour Operator"
+    h1: "Tourist Police-Led Private Volcano Tours in East Java"
+    sections:
+      - { type: hero }
+      - { type: section_head, content: { title: "Why JVTO" } }
+      - { type: card_grid, variant: package, ref_query: "packages:all" }
+      - { type: card_grid, variant: landscape, ref_query: "destinations:real" }
+      - { type: faq_list, ref_query: "faq:all" }
+      - { type: cta }
+
+  # ── FILE 002 — Tours ────────────────────────────────────────────────────────
+  - route: /tours
+    file_group: "002"
+    page_type: hub
+    template: collection
+    visual_mode: travel
+    title: "All JVTO Tours — Private Bromo, Ijen & Tumpak Sewu"
+    sections:
+      - { type: section_head, content: { title: "All Tours" } }
+      - { type: card_grid, variant: tour, ref_query: "packages:all" }
+      - { type: cta }
+  - route: /tours/from-surabaya
+    file_group: "002"
+    hub_route: /tours
+    page_type: hub
+    template: collection
+    visual_mode: travel
+    title: "Tours from Surabaya"
+    sections:
+      - { type: section_head, content: { title: "From Surabaya" } }
+      - { type: card_grid, variant: tour, ref_query: "packages:origin=surabaya" }
+  - route: /tours/from-bali
+    file_group: "002"
+    hub_route: /tours
+    page_type: hub
+    template: collection
+    visual_mode: travel
+    title: "Tours from Bali"
+    sections:
+      - { type: section_head, content: { title: "From Bali" } }
+      - { type: card_grid, variant: tour, ref_query: "packages:origin=bali" }
+
+  # ── FILE 003 — Destinations ─────────────────────────────────────────────────
+  - route: /destinations
+    file_group: "003"
+    page_type: hub
+    template: collection
+    visual_mode: travel
+    title: "Destinations — Bromo, Ijen, Tumpak Sewu, Madakaripura, Papuma"
+    sections:
+      - { type: section_head, content: { title: "Destinations" } }
+      - { type: card_grid, variant: landscape, ref_query: "destinations:real" }
+
+  # ── FILE 004 — Why JVTO ─────────────────────────────────────────────────────
+  - route: /why-jvto
+    file_group: "004"
+    page_type: hub
+    template: collection
+    visual_mode: hybrid
+    title: "Why JVTO"
+    sections:
+      - { type: section_head, content: { title: "Why JVTO" } }
+      - { type: rich_text }
+      - { type: cta }
+  - route: /why-jvto/the-jvto-difference
+    file_group: "004"
+    hub_route: /why-jvto
+    page_type: narrative
+    template: narrative
+    visual_mode: hybrid
+    title: "The JVTO Difference"
+    sections:
+      - { type: section_head, content: { title: "Six differentiators" } }
+      - { type: rich_text, entity_refs: ["claim:c1", "claim:c2", "claim:c3", "claim:c5", "claim:c8"] }
+      - { type: cta }
+  - route: /why-jvto/reviews
+    file_group: "004"
+    hub_route: /why-jvto
+    page_type: narrative
+    template: narrative
+    visual_mode: hybrid
+    title: "Reviews"
+    sections:
+      - { type: section_head, content: { title: "Reviews registry" } }
+      - { type: rich_text, entity_refs: ["claim:c6"] }
+  - route: /why-jvto/our-story
+    file_group: "004"
+    hub_route: /why-jvto
+    page_type: narrative
+    template: narrative
+    visual_mode: hybrid
+    title: "Our Story"
+    sections:
+      - { type: timeline }
+      - { type: rich_text, entity_refs: ["public_person_profile:agung-sambuko"] }
+  - route: /why-jvto/our-team
+    file_group: "004"
+    hub_route: /why-jvto
+    page_type: narrative
+    template: narrative
+    visual_mode: hybrid
+    title: "Our Team"
+    sections:
+      - { type: section_head, content: { title: "The crew" } }
+      - { type: card_grid, variant: crew, ref_query: "crew:all" }
+  - route: /why-jvto/community-standards
+    file_group: "004"
+    hub_route: /why-jvto
+    page_type: narrative
+    template: narrative
+    visual_mode: hybrid
+    title: "Community Standards"
+    sections:
+      - { type: rich_text }
+
+  # ── FILE 005 — Travel Guide ─────────────────────────────────────────────────
+  - route: /travel-guide
+    file_group: "005"
+    page_type: hub
+    template: collection
+    visual_mode: hybrid
+    title: "Travel Guide"
+    sections:
+      - { type: section_head, content: { title: "Travel Guide" } }
+      - { type: cta }
+  - route: /travel-guide/faq
+    file_group: "005"
+    hub_route: /travel-guide
+    page_type: faq
+    template: travel-guide
+    visual_mode: hybrid
+    title: "Frequently Asked Questions"
+    sections:
+      - { type: faq_list, ref_query: "faq:all" }
+  - route: /travel-guide/ijen-health-screening
+    file_group: "005"
+    hub_route: /travel-guide
+    page_type: travel_guide
+    template: travel-guide
+    visual_mode: hybrid
+    title: "Ijen Health Screening"
+    sections:
+      - { type: callout, variant: lime }
+      - { type: steps, entity_refs: ["policy_document:ijen-health-screening", "general_module:policy-ijen-health-screening"] }
+  - route: /travel-guide/booking-information
+    file_group: "005"
+    hub_route: /travel-guide
+    page_type: travel_guide
+    template: travel-guide
+    visual_mode: hybrid
+    title: "Booking Information"
+    sections:
+      - { type: steps, entity_refs: ["policy_document:booking-paths", "policy_document:payment-rules"] }
+      - { type: data_box, entity_refs: ["policy_document:cancellation-package-credit"] }
+  - route: /travel-guide/weather-and-closures
+    file_group: "005"
+    hub_route: /travel-guide
+    page_type: travel_guide
+    template: travel-guide
+    visual_mode: hybrid
+    title: "Weather & Closures"
+    sections:
+      - { type: callout, variant: alert-gold }
+      - { type: rich_text, entity_refs: ["policy_document:natural-phenomena", "general_module:policy-ijen-monthly-closure"] }
+  - route: /travel-guide/police-escort-for-groups
+    file_group: "005"
+    hub_route: /travel-guide
+    page_type: travel_guide
+    template: travel-guide
+    visual_mode: hybrid
+    title: "Police Escort for Groups"
+    sections:
+      - { type: rich_text, entity_refs: ["policy_document:police-escort"] }
+  - route: /travel-guide/safety-on-tours
+    file_group: "005"
+    hub_route: /travel-guide
+    page_type: travel_guide
+    template: travel-guide
+    visual_mode: hybrid
+    title: "Safety on Tours"
+    sections:
+      - { type: rich_text, entity_refs: ["claim:c1"] }
+  - route: /travel-guide/packing-and-fitness
+    file_group: "005"
+    hub_route: /travel-guide
+    page_type: travel_guide
+    template: travel-guide
+    visual_mode: hybrid
+    title: "Packing & Fitness"
+    sections:
+      - { type: rich_text }
+
+  # ── FILE 006 — Verify & Policy ──────────────────────────────────────────────
+  - route: /verify-jvto
+    file_group: "006"
+    page_type: hub
+    template: verify
+    visual_mode: trust
+    title: "Verify JVTO — Proof Library"
+    sections:
+      - { type: section_head, content: { title: "Proof library" } }
+      - { type: cta }
+  - route: /verify-jvto/legal
+    file_group: "006"
+    hub_route: /verify-jvto
+    page_type: verify
+    template: verify
+    visual_mode: trust
+    title: "Legal & Licenses"
+    sections:
+      - { type: rich_text, entity_refs: ["claim:c5", "policy_document:isic"] }
+  - route: /verify-jvto/police-safety
+    file_group: "006"
+    hub_route: /verify-jvto
+    page_type: verify
+    template: verify
+    visual_mode: trust
+    title: "Police & Safety"
+    sections:
+      - { type: rich_text, entity_refs: ["public_person_profile:agung-sambuko", "claim:c1"] }
+  - route: /verify-jvto/press-recognition
+    file_group: "006"
+    hub_route: /verify-jvto
+    page_type: verify
+    template: verify
+    visual_mode: trust
+    title: "Press & Recognition"
+    sections:
+      - { type: timeline, entity_refs: ["claim:c9"] }
+  - route: /verify-jvto/history-artifacts
+    file_group: "006"
+    hub_route: /verify-jvto
+    page_type: verify
+    template: verify
+    visual_mode: trust
+    title: "History & Artifacts"
+    sections:
+      - { type: timeline }
+  - route: /policy
+    file_group: "006"
+    page_type: hub
+    template: policy
+    visual_mode: trust
+    title: "Legal & Transparency"
+    sections:
+      - { type: section_head, content: { title: "Policies" } }
+  - route: /policy/booking-payment-cancellation
+    file_group: "006"
+    hub_route: /policy
+    page_type: policy
+    template: policy
+    visual_mode: trust
+    title: "Booking, Payment & Cancellation"
+    sections:
+      - { type: rich_text, entity_refs: ["policy_document:booking-paths", "policy_document:payment-rules", "policy_document:cancellation-package-credit"] }
+  - route: /policy/inclusions-exclusions
+    file_group: "006"
+    hub_route: /policy
+    page_type: policy
+    template: policy
+    visual_mode: trust
+    title: "Inclusions & Exclusions"
+    sections:
+      - { type: vantage, entity_refs: ["policy_document:inclusions-exclusions", "general_module:inclusion-all-inclusive-baseline", "general_module:exclusion-standard"] }
+  - route: /policy/privacy
+    file_group: "006"
+    hub_route: /policy
+    page_type: policy
+    template: policy
+    visual_mode: trust
+    title: "Privacy Policy"
+    sections:
+      - { type: rich_text }
+
+  # ── FILE 007 — Contact ──────────────────────────────────────────────────────
+  - route: /contact
+    file_group: "007"
+    page_type: contact
+    template: contact
+    visual_mode: hybrid
+    title: "Contact JVTO"
+    sections:
+      - { type: rich_text }
+      - { type: cta }
+
+  # ── FILE 008 — Blog ─────────────────────────────────────────────────────────
+  - route: /blog
+    file_group: "008"
+    page_type: hub
+    template: collection
+    visual_mode: hybrid
+    title: "Blog"
+    sections:
+      - { type: section_head, content: { title: "Insights" } }
+  - route: /blog/why-not-unlicensed-ijen-operator
+    file_group: "008"
+    hub_route: /blog
+    page_type: blog
+    template: narrative
+    visual_mode: hybrid
+    title: "Why Not an Unlicensed Ijen Operator"
+    sections:
+      - { type: rich_text, entity_refs: ["claim:c5", "policy_document:anti-fraud"] }
+
+# Generated DETAIL pages (build-pages.mjs expands these from entities).
+generate:
+  tours:
+    from: package                       # one page per package entity
+    file_group: "002"
+    page_type: tour
+    template: tour
+    visual_mode: travel
+    route: "/tours/from-{origin}/{slug}" # origin+slug parsed from canonical_key
+    hub_by_origin: { surabaya: /tours/from-surabaya, bali: /tours/from-bali }
+    sections:                            # entity_refs auto: the package + its destinations + booking policy
+      - { type: hero,       self: true }
+      - { type: steps,      self: true }
+      - { type: vantage,    refs: ["general_module:inclusion-all-inclusive-baseline", "general_module:exclusion-standard"] }
+      - { type: section_head, content: { title: "Destinations on this route" } }
+      - { type: card_grid,  variant: landscape, refs_from: destination_tokens }
+      - { type: data_box,   refs: ["policy_document:payment-rules", "policy_document:cancellation-package-credit"] }
+      - { type: faq_list,   ref_query: "faq:all" }
+      - { type: cta,        self: true }
+  destinations:
+    from: destination
+    file_group: "003"
+    page_type: destination
+    template: destination
+    visual_mode: travel
+    route: "/destinations/{token}"
+    only: [mount-bromo, kawah-ijen, tumpak-sewu, madakaripura, papuma-beach]
+    token_map: { mount-bromo: bromo, kawah-ijen: ijen, tumpak-sewu: tumpak-sewu, madakaripura: madakaripura, papuma-beach: papuma }
+    sections:
+      - { type: dest_facts, self: true }
+      - { type: rich_text,  self: true }
+      - { type: callout,    variant: lime, when_ijen: true, refs: ["general_module:policy-ijen-health-screening"] }
+      - { type: section_head, content: { title: "Packages that include it" } }
+      - { type: card_grid,  variant: package, refs_from: packages_with_destination }
+
+redirects:
+  - { from: /about, to: /why-jvto/our-story }
+  - { from: /faq, to: /travel-guide/faq }
+  - { from: /reviews, to: /why-jvto/reviews }
+  - { from: /all-inclusive, to: /policy/inclusions-exclusions }
+  - { from: /student-package, to: /isic/student-package }
+  - { from: /how-to-book, to: /travel-guide/booking-information }
+  - { from: /terms-and-condition, to: /policy }

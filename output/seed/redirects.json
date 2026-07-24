@@ -1,0 +1,37 @@
+[
+  {
+    "from_path": "/about",
+    "to_path": "/why-jvto/our-story",
+    "code": 301
+  },
+  {
+    "from_path": "/faq",
+    "to_path": "/travel-guide/faq",
+    "code": 301
+  },
+  {
+    "from_path": "/reviews",
+    "to_path": "/why-jvto/reviews",
+    "code": 301
+  },
+  {
+    "from_path": "/all-inclusive",
+    "to_path": "/policy/inclusions-exclusions",
+    "code": 301
+  },
+  {
+    "from_path": "/student-package",
+    "to_path": "/isic/student-package",
+    "code": 301
+  },
+  {
+    "from_path": "/how-to-book",
+    "to_path": "/travel-guide/booking-information",
+    "code": 301
+  },
+  {
+    "from_path": "/terms-and-condition",
+    "to_path": "/policy",
+    "code": 301
+  }
+]
