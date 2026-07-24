@@ -1,0 +1,111 @@
+[
+  {
+    "key": "founding_year",
+    "value": 2015
+  },
+  {
+    "key": "pt_legal_context",
+    "value": "PT Java Volcano Rendezvous; NIB/TDUP era 2023 (no invented incorporation date)"
+  },
+  {
+    "key": "deposit_percent",
+    "value": 20
+  },
+  {
+    "key": "close_departure_full_within_days",
+    "value": 14
+  },
+  {
+    "key": "cancellation_model",
+    "value": "lifetime_package_credit"
+  },
+  {
+    "key": "cancellation_naming",
+    "value": "Lifetime Package Credit (supersedes the retired 'Travel Credit')"
+  },
+  {
+    "key": "ijen_health_screening",
+    "value": "mandatory"
+  },
+  {
+    "key": "ijen_health_authority",
+    "value": "BBKSDA Surat Edaran SE.1658/KSA.9/2024 (cited as supporting authority, not a conditional trigger)"
+  },
+  {
+    "key": "blue_fire",
+    "value": "natural phenomenon subject to weather and gas activity; cannot be guaranteed"
+  },
+  {
+    "key": "reviews",
+    "value": {
+      "trustpilot": "4.8/51",
+      "google": "4.9/123",
+      "tripadvisor": "4.95/21",
+      "cross_platform": "4.8/195"
+    }
+  },
+  {
+    "key": "prices",
+    "value": "IDR-only (format: IDR 1,550,000/person)"
+  },
+  {
+    "key": "email_primary",
+    "value": "hello@javavolcano-touroperator.com"
+  },
+  {
+    "key": "email_secondary",
+    "value": "javavolcanotouroperator@gmail.com"
+  },
+  {
+    "key": "phone",
+    "value": "+62 822 4478 8833"
+  },
+  {
+    "key": "nib",
+    "value": "1102230032918"
+  },
+  {
+    "key": "ahu",
+    "value": "-0023020"
+  },
+  {
+    "key": "hq_address",
+    "value": "Jl. Khairil Anwar No.102A, Bondowoso 68214"
+  },
+  {
+    "key": "elevations",
+    "value": {
+      "kawah_ijen_m": 2386,
+      "mount_bromo_m": 2329
+    }
+  },
+  {
+    "key": "forbidden_values",
+    "value": {
+      "founding": [
+        "2016",
+        "2019",
+        "2020",
+        "2023 (as founding)",
+        "EST 2016"
+      ],
+      "reviews": [
+        "112",
+        "4.9/112",
+        "47",
+        "92",
+        "5.0/5"
+      ],
+      "cancellation": [
+        "Travel Credit",
+        "Lifetime Travel Credit"
+      ],
+      "ijen_health": [
+        "when BBKSDA regulations require it",
+        "where required",
+        "when their regulations are in effect",
+        "conditional"
+      ]
+    }
+  }
+]

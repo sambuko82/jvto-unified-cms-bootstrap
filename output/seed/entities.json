@@ -1,0 +1,5050 @@
+[
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:accommodation",
+    "slug": "accommodation",
+    "title": "Accommodation",
+    "data": {
+      "name": "Accommodation",
+      "category": "Accommodation"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:breakfast",
+    "slug": "breakfast",
+    "title": "Breakfast",
+    "data": {
+      "name": "Breakfast",
+      "category": "Meals"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:bromo-sunrise-tour",
+    "slug": "bromo-sunrise-tour",
+    "title": "Bromo Sunrise Tour",
+    "data": {
+      "name": "Bromo Sunrise Tour",
+      "category": "Attraction"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:by-car",
+    "slug": "by-car",
+    "title": "By car",
+    "data": {
+      "name": "By car",
+      "category": "Transportation"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:by-private-jeep",
+    "slug": "by-private-jeep",
+    "title": "By private Jeep",
+    "data": {
+      "name": "By private Jeep",
+      "category": "Transportation"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:coffee-break",
+    "slug": "coffee-break",
+    "title": "Coffee Break",
+    "data": {
+      "name": "Coffee Break",
+      "category": "Meals"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:coffee-cocoa-technopark",
+    "slug": "coffee-cocoa-technopark",
+    "title": "Coffee & Cocoa Technopark",
+    "data": {
+      "name": "Coffee & Cocoa Technopark",
+      "category": "Attraction"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:dinner",
+    "slug": "dinner",
+    "title": "Dinner",
+    "data": {
+      "name": "Dinner",
+      "category": "Meals"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:ijen-crater-hike",
+    "slug": "ijen-crater-hike",
+    "title": "Ijen Crater Hike",
+    "data": {
+      "name": "Ijen Crater Hike",
+      "category": "Attraction"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:lunch",
+    "slug": "lunch",
+    "title": "Lunch",
+    "data": {
+      "name": "Lunch",
+      "category": "Meals"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:madakaripura-waterfall-tour",
+    "slug": "madakaripura-waterfall-tour",
+    "title": "Madakaripura Waterfall Tour",
+    "data": {
+      "name": "Madakaripura Waterfall Tour",
+      "category": "Attraction"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:madakaripura-waterfall-tour-2",
+    "slug": "madakaripura-waterfall-tour-2",
+    "title": "Madakaripura Waterfall Tour 2",
+    "data": {
+      "name": "Madakaripura Waterfall Tour 2",
+      "category": "Attraction"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:malang-tour",
+    "slug": "malang-tour",
+    "title": "Malang Tour",
+    "data": {
+      "name": "Malang Tour",
+      "category": "Attraction"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:papuma-beach-sunset-tour",
+    "slug": "papuma-beach-sunset-tour",
+    "title": "Papuma Beach Sunset Tour",
+    "data": {
+      "name": "Papuma Beach Sunset Tour",
+      "category": "Attraction"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:pickup",
+    "slug": "pickup",
+    "title": "Pickup",
+    "data": {
+      "name": "Pickup",
+      "category": "Pickup"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:surabaya-city-tour",
+    "slug": "surabaya-city-tour",
+    "title": "Surabaya City Tour",
+    "data": {
+      "name": "Surabaya City Tour",
+      "category": "Attraction"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:taman-safari-adventure",
+    "slug": "taman-safari-adventure",
+    "title": "Taman Safari Adventure",
+    "data": {
+      "name": "Taman Safari Adventure",
+      "category": "Attraction"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "activity",
+    "canonical_key": "activity:tumpak-sewu-waterfall-tour",
+    "slug": "tumpak-sewu-waterfall-tour",
+    "title": "Tumpak Sewu Waterfall Tour",
+    "data": {
+      "name": "Tumpak Sewu Waterfall Tour",
+      "category": "Attraction"
+    },
+    "provenance": {
+      "name": "itinerary-core",
+      "category": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "claim",
+    "canonical_key": "claim:c1",
+    "slug": "c1",
+    "title": "Safety-Led Operations",
+    "data": {
+      "canonical_wording": "Volcano travel is unpredictable, so JVTO focuses on operational certainty: disciplined decisions, clear safety boundaries, and realistic expectations.",
+      "name": "Safety-Led Operations",
+      "domain": "credentials",
+      "category": "trust-signal",
+      "last_verified": "2026-05-26",
+      "evidence_count": 5
+    },
+    "provenance": {
+      "canonical_wording": "llm-wiki-trust",
+      "name": "llm-wiki-trust",
+      "domain": "llm-wiki-trust",
+      "category": "llm-wiki-trust",
+      "last_verified": "llm-wiki-trust",
+      "evidence_count": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "claim",
+    "canonical_key": "claim:c2",
+    "slug": "c2",
+    "title": "Private Tours (Execution Control)",
+    "data": {
+      "canonical_wording": "JVTO runs private tours by default so timing, pacing, and safety decisions stay consistent for your group.",
+      "name": "Private Tours (Execution Control)",
+      "domain": "products",
+      "category": "tour-package",
+      "last_verified": "2026-05-12",
+      "evidence_count": 1
+    },
+    "provenance": {
+      "canonical_wording": "llm-wiki-trust",
+      "name": "llm-wiki-trust",
+      "domain": "llm-wiki-trust",
+      "category": "llm-wiki-trust",
+      "last_verified": "llm-wiki-trust",
+      "evidence_count": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "claim",
+    "canonical_key": "claim:c3",
+    "slug": "c3",
+    "title": "All-Inclusive Clarity",
+    "data": {
+      "canonical_wording": "JVTO uses an all-inclusive structure by default to reduce surprise costs and mid-trip negotiation.",
+      "name": "All-Inclusive Clarity",
+      "domain": "products",
+      "category": "tour-package",
+      "last_verified": "2026-05-12",
+      "evidence_count": 1
+    },
+    "provenance": {
+      "canonical_wording": "llm-wiki-trust",
+      "name": "llm-wiki-trust",
+      "domain": "llm-wiki-trust",
+      "category": "llm-wiki-trust",
+      "last_verified": "llm-wiki-trust",
+      "evidence_count": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "claim",
+    "canonical_key": "claim:c4",
+    "slug": "c4",
+    "title": "Ijen Health-Screening Coordination",
+    "data": {
+      "canonical_wording": "On routes that include Mount Ijen, JVTO integrates health screening as a practical safety step, not a formality.",
+      "name": "Ijen Health-Screening Coordination",
+      "domain": "credentials",
+      "category": "medical-protocol",
+      "last_verified": "2026-05-26",
+      "evidence_count": 3
+    },
+    "provenance": {
+      "canonical_wording": "llm-wiki-trust",
+      "name": "llm-wiki-trust",
+      "domain": "llm-wiki-trust",
+      "category": "llm-wiki-trust",
+      "last_verified": "llm-wiki-trust",
+      "evidence_count": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "claim",
+    "canonical_key": "claim:c5",
+    "slug": "c5",
+    "title": "Proof-First Trust (Verification Layer)",
+    "data": {
+      "canonical_wording": "JVTO organizes trust signals as a verification layer: clear claims, context, and evidence links — not just marketing statements.",
+      "name": "Proof-First Trust (Verification Layer)",
+      "domain": "credentials",
+      "category": "trust-signal",
+      "last_verified": "2026-05-26",
+      "evidence_count": 2
+    },
+    "provenance": {
+      "canonical_wording": "llm-wiki-trust",
+      "name": "llm-wiki-trust",
+      "domain": "llm-wiki-trust",
+      "category": "llm-wiki-trust",
+      "last_verified": "llm-wiki-trust",
+      "evidence_count": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "claim",
+    "canonical_key": "claim:c6",
+    "slug": "c6",
+    "title": "Reviews Registry (Independent Validation)",
+    "data": {
+      "canonical_wording": "JVTO treats reviews as a registry: grouped by platform and theme, so guests can validate patterns instead of reading random quotes.",
+      "name": "Reviews Registry (Independent Validation)",
+      "domain": "reviews",
+      "category": "review-compilation",
+      "last_verified": "2026-05-18",
+      "evidence_count": 2
+    },
+    "provenance": {
+      "canonical_wording": "llm-wiki-trust",
+      "name": "llm-wiki-trust",
+      "domain": "llm-wiki-trust",
+      "category": "llm-wiki-trust",
+      "last_verified": "llm-wiki-trust",
+      "evidence_count": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "claim",
+    "canonical_key": "claim:c7",
+    "slug": "c7",
+    "title": "Our Team (Personality Economy + Operational Credibility)",
+    "data": {
+      "canonical_wording": "JVTO's product is executed by real people. The Team Registry shows roles, routes, and proof from review mentions — not generic bios.",
+      "name": "Our Team (Personality Economy + Operational Credibility)",
+      "domain": "people",
+      "category": "crew-profile",
+      "last_verified": "2026-05-25",
+      "evidence_count": 1
+    },
+    "provenance": {
+      "canonical_wording": "llm-wiki-trust",
+      "name": "llm-wiki-trust",
+      "domain": "llm-wiki-trust",
+      "category": "llm-wiki-trust",
+      "last_verified": "llm-wiki-trust",
+      "evidence_count": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "claim",
+    "canonical_key": "claim:c8",
+    "slug": "c8",
+    "title": "Partners as Context (HPWKI / INDECON / ISIC)",
+    "data": {
+      "canonical_wording": "JVTO partnerships are explained by function: competence context (HPWKI), sustainability context (INDECON), and verification logic (ISIC).",
+      "name": "Partners as Context (HPWKI / INDECON / ISIC)",
+      "domain": "credentials",
+      "category": "trust-signal",
+      "last_verified": "2026-05-16",
+      "evidence_count": 2
+    },
+    "provenance": {
+      "canonical_wording": "llm-wiki-trust",
+      "name": "llm-wiki-trust",
+      "domain": "llm-wiki-trust",
+      "category": "llm-wiki-trust",
+      "last_verified": "llm-wiki-trust",
+      "evidence_count": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "claim",
+    "canonical_key": "claim:c9",
+    "slug": "c9",
+    "title": "Press & Recognition (Third-Party Context)",
+    "data": {
+      "canonical_wording": "JVTO lists press and recognition with context so guests can evaluate third-party references, not just branding claims.",
+      "name": "Press & Recognition (Third-Party Context)",
+      "domain": "credentials",
+      "category": "trust-signal",
+      "last_verified": "2026-05-16",
+      "evidence_count": 1
+    },
+    "provenance": {
+      "canonical_wording": "llm-wiki-trust",
+      "name": "llm-wiki-trust",
+      "domain": "llm-wiki-trust",
+      "category": "llm-wiki-trust",
+      "last_verified": "llm-wiki-trust",
+      "evidence_count": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "destination",
+    "canonical_key": "destination:bali",
+    "slug": "bali",
+    "title": null,
+    "data": {
+      "operational": {
+        "elevation_m": null,
+        "difficulty_level": null,
+        "best_time_to_visit": "April–October (dry season).",
+        "jeep_required": false,
+        "entrance_ticket_domestic_idr": null,
+        "entrance_ticket_foreign_idr": null,
+        "required_gear": null
+      }
+    },
+    "provenance": {
+      "operational": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "destination",
+    "canonical_key": "destination:coffee-cocoa-science-technopark",
+    "slug": "coffee-cocoa-science-technopark",
+    "title": null,
+    "data": {
+      "operational": {
+        "elevation_m": null,
+        "difficulty_level": null,
+        "best_time_to_visit": "Weekdays for guided tours.",
+        "jeep_required": false,
+        "entrance_ticket_domestic_idr": 75000,
+        "entrance_ticket_foreign_idr": 75000,
+        "required_gear": null
+      }
+    },
+    "provenance": {
+      "operational": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "destination",
+    "canonical_key": "destination:kawah-ijen",
+    "slug": "kawah-ijen",
+    "title": "Kawah Ijen (Ijen Crater)",
+    "data": {
+      "narrative": "Kawah Ijen is an active volcano at 2,386 m with the world's highest-volume acidic crater lake. Famous for the pre-dawn blue fire sulfuric-gas phenomenon — visible only in suitable weather and gas conditions. Access from Paltuding trailhead via a steep ~3 km night hike. BBKSDA East Java is the regulatory authority.",
+      "name": "Kawah Ijen (Ijen Crater)",
+      "type": "Active stratovolcano",
+      "elevation_m": 2386,
+      "operational": {
+        "elevation_m": 2386,
+        "difficulty_level": "Moderate",
+        "best_time_to_visit": "May–October (dry season). Begin trek at 01:00–02:00 AM for blue fire and sunrise.",
+        "jeep_required": false,
+        "standard_tour_start_time": "00:00",
+        "entrance_ticket_domestic_idr": 75000,
+        "entrance_ticket_foreign_idr": 150000,
+        "required_gear": "Thermal layers, waterproof jacket, sturdy trekking boots, gas mask (for sulfur fumes), headlamp, warm hat."
+      }
+    },
+    "provenance": {
+      "narrative": "llm-wiki-trust",
+      "name": "llm-wiki-trust",
+      "type": "llm-wiki-trust",
+      "elevation_m": "llm-wiki-trust",
+      "operational": "itinerary-core"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "destination",
+    "canonical_key": "destination:madakaripura",
+    "slug": "madakaripura",
+    "title": "Madakaripura Waterfall (Air Terjun Madakaripura)",
+    "data": {
+      "narrative": "Madakaripura is Java's tallest waterfall in Probolinggo, East Java. A narrow canyon gorge leads to a horseshoe curtain waterfall fed from multiple directions. Historical context: said to be the final meditation site of Gajah Mada, Majapahit prime minister. Easy ~20 min trek from roadside parking.",
+      "name": "Madakaripura Waterfall (Air Terjun Madakaripura)",
+      "type": "Horseshoe curtain waterfall in narrow canyon",
+      "operational": {
+        "elevation_m": 620,
+        "difficulty_level": "Moderate",
+        "best_time_to_visit": "May–October. Morning or early afternoon for best light.",
+        "jeep_required": false,
+        "standard_tour_start_time": "08:00",
+        "entrance_ticket_domestic_idr": 90000,
+        "entrance_ticket_foreign_idr": 90000,
+        "required_gear": "Quick-dry clothing, waterproof bag, water shoes/sandals, poncho (expect to get fully wet), snacks."
+      }
+    },
+    "provenance": {
+      "narrative": "llm-wiki-trust",
+      "name": "llm-wiki-trust",
+      "type": "llm-wiki-trust",
+      "operational": "itinerary-core"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "destination",
+    "canonical_key": "destination:malang-city",
+    "slug": "malang-city",
+    "title": null,
+    "data": {
+      "operational": {
+        "elevation_m": 452,
+        "difficulty_level": null,
+        "best_time_to_visit": "Year-round; cooler and more pleasant April–October.",
+        "jeep_required": false,
+        "entrance_ticket_domestic_idr": null,
+        "entrance_ticket_foreign_idr": null,
+        "required_gear": null
+      }
+    },
+    "provenance": {
+      "operational": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "destination",
+    "canonical_key": "destination:mount-bromo",
+    "slug": "mount-bromo",
+    "title": "Mount Bromo (Gunung Bromo)",
+    "data": {
+      "narrative": "Mount Bromo is an active volcano in the Tengger caldera, East Java. Best known for the Penanjakan sunrise viewpoint over the sea-of-sand caldera floor and the active smoking crater. Accessed by 4WD jeep from Cemoro Lawang in the pre-dawn window (03:00–05:00).",
+      "name": "Mount Bromo (Gunung Bromo)",
+      "type": "Active stratovolcano",
+      "elevation_m": 2329,
+      "operational": {
+        "elevation_m": 2329,
+        "difficulty_level": "Easy to Moderate",
+        "best_time_to_visit": "May–October (dry season). Arrive at viewpoint by 04:30 AM for sunrise.",
+        "jeep_required": true,
+        "standard_tour_start_time": "03:00",
+        "entrance_ticket_domestic_idr": 160000,
+        "entrance_ticket_foreign_idr": 320000,
+        "required_gear": "Thermal jacket, sturdy trekking boots, flashlight/headlamp, sunscreen, dust/surgical mask."
+      }
+    },
+    "provenance": {
+      "narrative": "llm-wiki-trust",
+      "name": "llm-wiki-trust",
+      "type": "llm-wiki-trust",
+      "elevation_m": "llm-wiki-trust",
+      "operational": "itinerary-core"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "destination",
+    "canonical_key": "destination:papuma-beach",
+    "slug": "papuma-beach",
+    "title": "Papuma Beach (Pantai Papuma)",
+    "data": {
+      "narrative": "Papuma Beach in Jember offers white sand and dramatic coastal rock formations. JVTO includes it as a coastal contrast stop on Papuma-family packages (4D+). Best for guests who want a beach break on an otherwise volcano-focused East Java itinerary.",
+      "name": "Papuma Beach (Pantai Papuma)",
+      "type": "White-sand beach with rocky cape (Tanjung Papuma)",
+      "elevation_m": {
+        "beach": 0,
+        "cape_headland": 86
+      },
+      "operational": {
+        "elevation_m": 0,
+        "difficulty_level": "Easy",
+        "best_time_to_visit": "May–October. Late afternoon for sunset views.",
+        "jeep_required": false,
+        "standard_tour_start_time": "14:00",
+        "entrance_ticket_domestic_idr": 44000,
+        "entrance_ticket_foreign_idr": 44000,
+        "required_gear": "Light clothing, sandals, sunscreen, hat, water, camera."
+      }
+    },
+    "provenance": {
+      "narrative": "llm-wiki-trust",
+      "name": "llm-wiki-trust",
+      "type": "llm-wiki-trust",
+      "elevation_m": "llm-wiki-trust",
+      "operational": "itinerary-core"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "destination",
+    "canonical_key": "destination:surabaya",
+    "slug": "surabaya",
+    "title": null,
+    "data": {
+      "operational": {
+        "elevation_m": null,
+        "difficulty_level": null,
+        "best_time_to_visit": "May–October.",
+        "jeep_required": false,
+        "entrance_ticket_domestic_idr": null,
+        "entrance_ticket_foreign_idr": null,
+        "required_gear": null
+      }
+    },
+    "provenance": {
+      "operational": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "destination",
+    "canonical_key": "destination:taman-safari-prigen",
+    "slug": "taman-safari-prigen",
+    "title": null,
+    "data": {
+      "operational": {
+        "elevation_m": 800,
+        "difficulty_level": "Easy",
+        "best_time_to_visit": "May–October. Open at 08:30 AM. Animals most active morning and late afternoon.",
+        "jeep_required": false,
+        "standard_tour_start_time": "09:00",
+        "entrance_ticket_domestic_idr": 425000,
+        "entrance_ticket_foreign_idr": 500000,
+        "required_gear": "Comfortable clothing, walking shoes, sunscreen, hat, camera."
+      }
+    },
+    "provenance": {
+      "operational": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "destination",
+    "canonical_key": "destination:tumpak-sewu",
+    "slug": "tumpak-sewu",
+    "title": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu)",
+    "data": {
+      "narrative": "Tumpak Sewu is a multi-tiered canyon waterfall (~120 m) in Lumajang, East Java. Nicknamed 'Java's Niagara' for its curtain of streams cascading over a curved cliff face into a canyon. Accessed via rim viewpoint or steep canyon descent (~300 steps).",
+      "name": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu)",
+      "type": "Multi-tiered curtain waterfall",
+      "operational": {
+        "elevation_m": 400,
+        "difficulty_level": "Moderate",
+        "best_time_to_visit": "May–October (dry season). Morning for best light and fewer crowds.",
+        "jeep_required": false,
+        "standard_tour_start_time": "07:00",
+        "entrance_ticket_domestic_idr": 100000,
+        "entrance_ticket_foreign_idr": 100000,
+        "required_gear": "Quick-dry clothing, non-slip shoes/sandals, poncho, waterproof bag for valuables, trekking poles optional."
+      }
+    },
+    "provenance": {
+      "narrative": "llm-wiki-trust",
+      "name": "llm-wiki-trust",
+      "type": "llm-wiki-trust",
+      "operational": "itinerary-core"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "faq",
+    "canonical_key": "faq:all-inclusive-clarity",
+    "slug": "all-inclusive-clarity",
+    "title": "All-Inclusive Clarity",
+    "data": {
+      "question": "All-Inclusive Clarity",
+      "answer": "All-inclusive by default. Clear inclusions. Fewer surprise costs. Transparent pricing, written rules.",
+      "source_claim_id": "C3",
+      "target_pages": [
+        "output/website/pages/tours/"
+      ]
+    },
+    "provenance": {
+      "question": "llm-wiki-trust",
+      "answer": "llm-wiki-trust",
+      "source_claim_id": "llm-wiki-trust",
+      "target_pages": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "faq",
+    "canonical_key": "faq:ijen-health-screening-coordination",
+    "slug": "ijen-health-screening-coordination",
+    "title": "Ijen Health-Screening Coordination",
+    "data": {
+      "question": "Ijen Health-Screening Coordination",
+      "answer": "A health certificate is mandatory for every Ijen guest — screening included and coordinated by JVTO. Real screening, clear rules.",
+      "source_claim_id": "C4",
+      "target_pages": [
+        "output/website/pages/travel-guide/"
+      ]
+    },
+    "provenance": {
+      "question": "llm-wiki-trust",
+      "answer": "llm-wiki-trust",
+      "source_claim_id": "llm-wiki-trust",
+      "target_pages": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "faq",
+    "canonical_key": "faq:isic",
+    "slug": "isic",
+    "title": "Partners as Context (HPWKI / INDECON / ISIC)",
+    "data": {
+      "question": "Partners as Context (HPWKI / INDECON / ISIC)",
+      "answer": "Partners for context: competence, sustainability, and verification. Not logos — real functions.",
+      "source_claim_id": "C8",
+      "target_pages": [
+        "output/website/pages/verify-jvto/"
+      ]
+    },
+    "provenance": {
+      "question": "llm-wiki-trust",
+      "answer": "llm-wiki-trust",
+      "source_claim_id": "llm-wiki-trust",
+      "target_pages": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "faq",
+    "canonical_key": "faq:our-team-personality-economy-operational-credibility",
+    "slug": "our-team-personality-economy-operational-credibility",
+    "title": "Our Team (Personality Economy + Operational Credibility)",
+    "data": {
+      "question": "Our Team (Personality Economy + Operational Credibility)",
+      "answer": "Meet the people behind your trip — with proof from reviews. Team profiles linked to real guest language.",
+      "source_claim_id": "C7",
+      "target_pages": [
+        "output/website/pages/team/"
+      ]
+    },
+    "provenance": {
+      "question": "llm-wiki-trust",
+      "answer": "llm-wiki-trust",
+      "source_claim_id": "llm-wiki-trust",
+      "target_pages": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "faq",
+    "canonical_key": "faq:press-recognition-third-party-context",
+    "slug": "press-recognition-third-party-context",
+    "title": "Press & Recognition (Third-Party Context)",
+    "data": {
+      "question": "Press & Recognition (Third-Party Context)",
+      "answer": "Press and recognition, explained with context. Third-party references you can evaluate.",
+      "source_claim_id": "C9",
+      "target_pages": [
+        "output/website/pages/verify-jvto/"
+      ]
+    },
+    "provenance": {
+      "question": "llm-wiki-trust",
+      "answer": "llm-wiki-trust",
+      "source_claim_id": "llm-wiki-trust",
+      "target_pages": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "faq",
+    "canonical_key": "faq:private-tours-execution-control",
+    "slug": "private-tours-execution-control",
+    "title": "Private Tours (Execution Control)",
+    "data": {
+      "question": "Private Tours (Execution Control)",
+      "answer": "Private tours only. Your own vehicle. Your own pace (within safety limits). No mixed groups by default.",
+      "source_claim_id": "C2",
+      "target_pages": [
+        "output/website/pages/tours/"
+      ]
+    },
+    "provenance": {
+      "question": "llm-wiki-trust",
+      "answer": "llm-wiki-trust",
+      "source_claim_id": "llm-wiki-trust",
+      "target_pages": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "faq",
+    "canonical_key": "faq:proof-first-trust-verification-layer",
+    "slug": "proof-first-trust-verification-layer",
+    "title": "Proof-First Trust (Verification Layer)",
+    "data": {
+      "question": "Proof-First Trust (Verification Layer)",
+      "answer": "Proof you can verify — licenses, partners, press, and documented references. Trust stack, not slogans.",
+      "source_claim_id": "C5",
+      "target_pages": [
+        "output/website/pages/verify-jvto/"
+      ]
+    },
+    "provenance": {
+      "question": "llm-wiki-trust",
+      "answer": "llm-wiki-trust",
+      "source_claim_id": "llm-wiki-trust",
+      "target_pages": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "faq",
+    "canonical_key": "faq:reviews-registry-independent-validation",
+    "slug": "reviews-registry-independent-validation",
+    "title": "Reviews Registry (Independent Validation)",
+    "data": {
+      "question": "Reviews Registry (Independent Validation)",
+      "answer": "Reviews as a registry, not a quote wall. Check patterns across platforms.",
+      "source_claim_id": "C6",
+      "target_pages": [
+        "output/website/pages/verify-jvto/",
+        "output/website/faq/"
+      ]
+    },
+    "provenance": {
+      "question": "llm-wiki-trust",
+      "answer": "llm-wiki-trust",
+      "source_claim_id": "llm-wiki-trust",
+      "target_pages": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "faq",
+    "canonical_key": "faq:safety-led-operations",
+    "slug": "safety-led-operations",
+    "title": "Safety-Led Operations",
+    "data": {
+      "question": "Safety-Led Operations",
+      "answer": "Safety-led planning. Clear boundaries. Plan B when conditions change.",
+      "source_claim_id": "C1",
+      "target_pages": [
+        "output/website/pages/verify-jvto/"
+      ]
+    },
+    "provenance": {
+      "question": "llm-wiki-trust",
+      "answer": "llm-wiki-trust",
+      "source_claim_id": "llm-wiki-trust",
+      "target_pages": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:destination-bromo",
+    "slug": "destination-bromo",
+    "title": "Mount Bromo",
+    "data": {
+      "category": "destination",
+      "scope": "destination_scoped",
+      "title": "Mount Bromo",
+      "short_answer": "Active East Java volcano in the Tengger caldera \"Sea of Sand\", famous for its pre-dawn sunrise panorama reached by 4WD jeep.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:destination-ijen",
+    "slug": "destination-ijen",
+    "title": "Kawah Ijen",
+    "data": {
+      "category": "destination",
+      "scope": "destination_scoped",
+      "title": "Kawah Ijen",
+      "short_answer": "Active East Java volcano known for its turquoise acidic crater lake, pre-dawn \"blue fire\", and active sulfur mining, reached by a guided night hike.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:destination-madakaripura",
+    "slug": "destination-madakaripura",
+    "title": "Madakaripura Waterfall",
+    "data": {
+      "category": "destination",
+      "scope": "destination_scoped",
+      "title": "Madakaripura Waterfall",
+      "short_answer": "Java's tallest waterfall, in a narrow Probolinggo canyon near Bromo, reached by a short gorge walk where visitors get wet from the spray.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:destination-papuma",
+    "slug": "destination-papuma",
+    "title": "Papuma Beach",
+    "data": {
+      "category": "destination",
+      "scope": "destination_scoped",
+      "title": "Papuma Beach",
+      "short_answer": "A white-sand beach with offshore rock formations and a headland viewpoint in Jember, East Java — the one coastal stop on JVTO's volcano circuits.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:destination-tumpak-sewu",
+    "slug": "destination-tumpak-sewu",
+    "title": "Tumpak Sewu Waterfall",
+    "data": {
+      "category": "destination",
+      "scope": "destination_scoped",
+      "title": "Tumpak Sewu Waterfall",
+      "short_answer": "A wide multi-tiered \"curtain\" waterfall in Lumajang, East Java, often called \"Java's Niagara\", with an easy rim viewpoint and an optional steep canyon descent.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:dropoff-bali-hotel",
+    "slug": "dropoff-bali-hotel",
+    "title": "Bali hotel dropoff",
+    "data": {
+      "category": "location",
+      "scope": "endpoint_scoped",
+      "title": "Bali hotel dropoff",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:dropoff-custom-address",
+    "slug": "dropoff-custom-address",
+    "title": "Custom address dropoff",
+    "data": {
+      "category": "location",
+      "scope": "endpoint_scoped",
+      "title": "Custom address dropoff",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:dropoff-ketapang-harbor",
+    "slug": "dropoff-ketapang-harbor",
+    "title": "Ketapang Harbor dropoff",
+    "data": {
+      "category": "location",
+      "scope": "endpoint_scoped",
+      "title": "Ketapang Harbor dropoff",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:dropoff-malang",
+    "slug": "dropoff-malang",
+    "title": "Malang dropoff",
+    "data": {
+      "category": "location",
+      "scope": "endpoint_scoped",
+      "title": "Malang dropoff",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:dropoff-surabaya-airport",
+    "slug": "dropoff-surabaya-airport",
+    "title": "Surabaya Airport dropoff",
+    "data": {
+      "category": "location",
+      "scope": "endpoint_scoped",
+      "title": "Surabaya Airport dropoff",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:dropoff-surabaya-hotel",
+    "slug": "dropoff-surabaya-hotel",
+    "title": "Surabaya hotel dropoff",
+    "data": {
+      "category": "location",
+      "scope": "endpoint_scoped",
+      "title": "Surabaya hotel dropoff",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:dropoff-surabaya-train-station",
+    "slug": "dropoff-surabaya-train-station",
+    "title": "Surabaya train station dropoff",
+    "data": {
+      "category": "location",
+      "scope": "endpoint_scoped",
+      "title": "Surabaya train station dropoff",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:exclusion-standard",
+    "slug": "exclusion-standard",
+    "title": "Standard Exclusions",
+    "data": {
+      "category": "inclusion_component",
+      "scope": "global",
+      "title": "Standard Exclusions",
+      "short_answer": "Excluded: international/domestic flights, visas, travel insurance, tips, personal expenses.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:inclusion-all-inclusive-baseline",
+    "slug": "inclusion-all-inclusive-baseline",
+    "title": "All-Inclusive Baseline",
+    "data": {
+      "category": "inclusion",
+      "scope": "global",
+      "title": "All-Inclusive Baseline",
+      "short_answer": "Every package includes private transport, a dedicated driver and guide(s), all entrance fees and permits, drinking water, meals as stated, and full pick-up to drop-off assistance.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:inclusion-bromo-private-jeep",
+    "slug": "inclusion-bromo-private-jeep",
+    "title": "Private 4WD Jeep for Bromo",
+    "data": {
+      "category": "inclusion_component",
+      "scope": "conditional_variation",
+      "title": "Private 4WD Jeep for Bromo",
+      "short_answer": "Private 4WD jeep for the Bromo Sea of Sand and sunrise viewpoint.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:inclusion-dedicated-crew",
+    "slug": "inclusion-dedicated-crew",
+    "title": "dedicated private driver and guide(s)",
+    "data": {
+      "category": "inclusion_component",
+      "scope": "global",
+      "title": "dedicated private driver and guide(s)",
+      "short_answer": "Dedicated private driver and guide(s); no shared group.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:inclusion-drinking-water",
+    "slug": "inclusion-drinking-water",
+    "title": "drinking water",
+    "data": {
+      "category": "inclusion_component",
+      "scope": "global",
+      "title": "drinking water",
+      "short_answer": "Drinking water provided during the tour.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:inclusion-east-java-bali-ferry",
+    "slug": "inclusion-east-java-bali-ferry",
+    "title": "East Java – Bali Ferry Crossing",
+    "data": {
+      "category": "inclusion_component",
+      "scope": "conditional_variation",
+      "title": "East Java – Bali Ferry Crossing",
+      "short_answer": "Ketapang–Gilimanuk ferry crossing for Bali-linked packages.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:inclusion-entrance-permits",
+    "slug": "inclusion-entrance-permits",
+    "title": "all entrance fees and permits",
+    "data": {
+      "category": "inclusion_component",
+      "scope": "global",
+      "title": "all entrance fees and permits",
+      "short_answer": "All entrance fees and permits for the stated route.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:inclusion-ijen-equipment",
+    "slug": "inclusion-ijen-equipment",
+    "title": "Ijen Equipment (Gas Mask & Trekking Poles)",
+    "data": {
+      "category": "inclusion_component",
+      "scope": "conditional_variation",
+      "title": "Ijen Equipment (Gas Mask & Trekking Poles)",
+      "short_answer": "Gas masks and trekking poles for the Ijen crater hike.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:inclusion-ijen-health-screening-coordination",
+    "slug": "inclusion-ijen-health-screening-coordination",
+    "title": "Ijen Health-Screening Coordination",
+    "data": {
+      "category": "inclusion_component",
+      "scope": "conditional_variation",
+      "title": "Ijen Health-Screening Coordination",
+      "short_answer": "Coordination of the mandatory Ijen health screening — a certificate is required for every guest before crater entry.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:inclusion-pickup-dropoff-assistance",
+    "slug": "inclusion-pickup-dropoff-assistance",
+    "title": "full pick-up to drop-off assistance",
+    "data": {
+      "category": "inclusion_component",
+      "scope": "global",
+      "title": "full pick-up to drop-off assistance",
+      "short_answer": "Full pick-up to drop-off assistance.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:inclusion-private-transport",
+    "slug": "inclusion-private-transport",
+    "title": "private transport (dedicated vehicle)",
+    "data": {
+      "category": "inclusion_component",
+      "scope": "global",
+      "title": "private transport (dedicated vehicle)",
+      "short_answer": "Private, dedicated vehicle for your group only.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:inclusion-stated-meals",
+    "slug": "inclusion-stated-meals",
+    "title": "meals as stated in the itinerary",
+    "data": {
+      "category": "inclusion_component",
+      "scope": "global",
+      "title": "meals as stated in the itinerary",
+      "short_answer": "Meals as marked in the itinerary (at least breakfast).",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:pickup-custom-address",
+    "slug": "pickup-custom-address",
+    "title": "Custom address pickup",
+    "data": {
+      "category": "location",
+      "scope": "endpoint_scoped",
+      "title": "Custom address pickup",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:pickup-ketapang-harbor",
+    "slug": "pickup-ketapang-harbor",
+    "title": "Ketapang Harbor pickup",
+    "data": {
+      "category": "location",
+      "scope": "endpoint_scoped",
+      "title": "Ketapang Harbor pickup",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:pickup-previous-tour-dropoff",
+    "slug": "pickup-previous-tour-dropoff",
+    "title": "Previous tour dropoff as next pickup",
+    "data": {
+      "category": "location",
+      "scope": "endpoint_scoped",
+      "title": "Previous tour dropoff as next pickup",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:pickup-surabaya-airport",
+    "slug": "pickup-surabaya-airport",
+    "title": "Surabaya Airport pickup",
+    "data": {
+      "category": "location",
+      "scope": "endpoint_scoped",
+      "title": "Surabaya Airport pickup",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:pickup-surabaya-city-point",
+    "slug": "pickup-surabaya-city-point",
+    "title": "Surabaya city point pickup",
+    "data": {
+      "category": "location",
+      "scope": "endpoint_scoped",
+      "title": "Surabaya city point pickup",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:pickup-surabaya-hotel",
+    "slug": "pickup-surabaya-hotel",
+    "title": "Surabaya hotel pickup",
+    "data": {
+      "category": "location",
+      "scope": "endpoint_scoped",
+      "title": "Surabaya hotel pickup",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:pickup-surabaya-train-station",
+    "slug": "pickup-surabaya-train-station",
+    "title": "Surabaya train station pickup",
+    "data": {
+      "category": "location",
+      "scope": "endpoint_scoped",
+      "title": "Surabaya train station pickup",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:policy-anti-fraud",
+    "slug": "policy-anti-fraud",
+    "title": "Booking Safety & Anti-Fraud",
+    "data": {
+      "category": "policy",
+      "scope": "global",
+      "title": "Booking Safety & Anti-Fraud",
+      "short_answer": "Use only JVTO's official channels; JVTO never asks for full card numbers, CVV, banking passwords, or OTP codes.",
+      "detail_summary": "Book and pay only through JVTO's official channels — the website, the official WhatsApp number, the official email, and JVTO's listed payment links and accounts. JVTO never asks for your full card number, CVV, online banking password, or one-time codes by chat or email. If an account number, link, or contact looks different, pause and verify through an official channel.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "detail_summary": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:policy-booking-paths",
+    "slug": "policy-booking-paths",
+    "title": "How to Book",
+    "data": {
+      "category": "policy",
+      "scope": "global",
+      "title": "How to Book",
+      "short_answer": "JVTO accepts bookings only through the official website; WhatsApp and email are for support, not for booking.",
+      "detail_summary": "JVTO accepts bookings only through the official JVTO website. WhatsApp and email are for customer assistance only and do not create, confirm, modify, cancel, or transfer a booking.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "detail_summary": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:policy-cancellation-package-credit",
+    "slug": "policy-cancellation-package-credit",
+    "title": "Cancellation & Lifetime Package Credit",
+    "data": {
+      "category": "policy",
+      "scope": "global",
+      "title": "Cancellation & Lifetime Package Credit",
+      "short_answer": "A 48-hour cut-off: full cancellations 48h+ before Day 1 become Lifetime Package Credit; cash refunds apply only to partial passenger cancellations.",
+      "detail_summary": "Full cancellation 48h+ before Day 1 converts the confirmed package to Lifetime Package Credit (never expires; same package, pax, and price; one transfer; not cash). Within 48h it is forfeited. Partial passenger cancellations get a cash refund of the cancelled travelers' price (100% at 48h+, 50% within 48h). Verified flight cancellations can reactivate the package for a 50% Recovery Fee.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "detail_summary": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:policy-ijen-health-screening",
+    "slug": "policy-ijen-health-screening",
+    "title": "Ijen Health Screening",
+    "data": {
+      "category": "policy",
+      "scope": "ijen_scoped",
+      "title": "Ijen Health Screening",
+      "short_answer": "For Ijen crater hikes, a health certificate is mandatory for every guest before crater entry — JVTO coordinates the screening with licensed medical staff.",
+      "detail_summary": "A health certificate is mandatory for every guest before crater access at Kawah Ijen; JVTO coordinates the screening with licensed medical staff and the verified certificate is checked at the crater gate. The East Java conservation authority (BBKSDA), Surat Edaran SE.1658/KSA.9/2024, is cited as the supporting authority.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "detail_summary": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:policy-ijen-monthly-closure",
+    "slug": "policy-ijen-monthly-closure",
+    "title": "Ijen Monthly Closure (Rijik Program)",
+    "data": {
+      "category": "policy",
+      "scope": "ijen_scoped",
+      "title": "Ijen Monthly Closure (Rijik Program)",
+      "short_answer": "Kawah Ijen closes to all visitors on the first Friday of each month for the Rijik ecosystem-cleaning program; JVTO schedules tours around it so guests are unaffected.",
+      "detail_summary": "Tourism Nature Park (TWA) Kawah Ijen closes completely to all tourism and mining activity on the **first Friday of every month** (00:00–23:59 WIB) for the **Rijik** ecosystem-cleaning program, which has run since March 2019.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "detail_summary": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:policy-inclusions-exclusions",
+    "slug": "policy-inclusions-exclusions",
+    "title": "What's Included",
+    "data": {
+      "category": "policy",
+      "scope": "global",
+      "title": "What's Included",
+      "short_answer": "JVTO tours are all-inclusive of transport, crew, entrance fees, water, and stated meals; flights, insurance, tips, and personal expenses are excluded.",
+      "detail_summary": "Every JVTO package includes private transport, a dedicated driver and guide(s), all entrance fees and permits, drinking water, full pick-up to drop-off assistance, and meals as stated (at least breakfast). Bromo tours add the private 4WD jeep; Ijen tours add gas masks and trekking poles (and mandatory health-screening coordination — a certificate is required for every guest before crater entry); Bali-origin tours add the ferry crossing.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "detail_summary": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:policy-isic-student",
+    "slug": "policy-isic-student",
+    "title": "ISIC Student Pricing",
+    "data": {
+      "category": "policy",
+      "scope": "conditional_eligible",
+      "title": "ISIC Student Pricing",
+      "short_answer": "JVTO is an official ISIC provider offering student pricing on selected packages to verified ISIC cardholders.",
+      "detail_summary": "JVTO is an official ISIC (International Student Identity Card) provider — provider ID 259268, listed publicly on the ISIC website. Verified ISIC cardholders can receive student pricing on selected packages.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "detail_summary": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:policy-natural-phenomena",
+    "slug": "policy-natural-phenomena",
+    "title": "Natural Phenomena Are Not Guaranteed",
+    "data": {
+      "category": "policy",
+      "scope": "global",
+      "title": "Natural Phenomena Are Not Guaranteed",
+      "short_answer": "JVTO cannot guarantee weather-dependent sights such as sunrise or Ijen's blue fire; itineraries are planned to maximise the chance.",
+      "detail_summary": "Weather-dependent sights — a clear sunrise, or Ijen's blue fire — cannot be guaranteed, because cloud, weather, and volcanic gas are outside any operator's control. JVTO plans timing and routes to maximise the chance of good conditions, and may adjust timing or routing for safety.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "detail_summary": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:policy-payment-deposit",
+    "slug": "policy-payment-deposit",
+    "title": "Payment & Deposit",
+    "data": {
+      "category": "policy",
+      "scope": "global",
+      "title": "Payment & Deposit",
+      "short_answer": "A deposit secures the booking, with the balance due before the tour; exact amounts and deadlines are on the booking page.",
+      "detail_summary": "A deposit (standard 20% of the booking value) secures a booking, with the balance due before the tour starts; close-to-departure bookings may require fuller payment. Exact amounts, accepted methods, and deadlines are shown at checkout and on the booking information page.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "detail_summary": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:policy-police-escort",
+    "slug": "policy-police-escort",
+    "title": "Police Escort for Large Groups",
+    "data": {
+      "category": "policy",
+      "scope": "conditional_large_group",
+      "title": "Police Escort for Large Groups",
+      "short_answer": "For large groups, JVTO can coordinate an official traffic-police escort on some road segments, subject to authority approval.",
+      "detail_summary": "For large groups (typically around 18 or more travelers), JVTO can coordinate an official traffic-police escort on certain road segments where the relevant Traffic Police unit approves it. This is a coordination service subject to authority approval, not a default inclusion. See the travel-guide page for how it works and any group incentives.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "detail_summary": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-bali-hotel-area-to-banyuwangi-ijen-area",
+    "slug": "route-leg-bali-hotel-area-to-banyuwangi-ijen-area",
+    "title": "Bali Hotel Area to Banyuwangi / Ijen Area",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Bali Hotel Area to Banyuwangi / Ijen Area",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-banyuwangi-to-ijen-base",
+    "slug": "route-leg-banyuwangi-to-ijen-base",
+    "title": "Banyuwangi to Ijen Base",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Banyuwangi to Ijen Base",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-bondowoso-ijen-area-to-ijen-crater",
+    "slug": "route-leg-bondowoso-ijen-area-to-ijen-crater",
+    "title": "Bondowoso / Ijen Area to Ijen Crater",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Bondowoso / Ijen Area to Ijen Crater",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-bondowoso-to-ijen-base",
+    "slug": "route-leg-bondowoso-to-ijen-base",
+    "title": "Bondowoso to Ijen Base",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Bondowoso to Ijen Base",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-bromo-area-to-bondowoso-ijen-area",
+    "slug": "route-leg-bromo-area-to-bondowoso-ijen-area",
+    "title": "Bromo Area to Bondowoso / Ijen Area",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Bromo Area to Bondowoso / Ijen Area",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-bromo-area-to-madakaripura",
+    "slug": "route-leg-bromo-area-to-madakaripura",
+    "title": "Bromo Area to Madakaripura",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Bromo Area to Madakaripura",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-bromo-area-to-malang",
+    "slug": "route-leg-bromo-area-to-malang",
+    "title": "Bromo Area to Malang",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Bromo Area to Malang",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-ijen-area-to-ketapang-harbor",
+    "slug": "route-leg-ijen-area-to-ketapang-harbor",
+    "title": "Ijen Area to Ketapang Harbor",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Ijen Area to Ketapang Harbor",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-ijen-base-to-ketapang-harbor",
+    "slug": "route-leg-ijen-base-to-ketapang-harbor",
+    "title": "Ijen Base to Ketapang Harbor",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Ijen Base to Ketapang Harbor",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-ketapang-harbor-to-gilimanuk-bali-side",
+    "slug": "route-leg-ketapang-harbor-to-gilimanuk-bali-side",
+    "title": "Ketapang Harbor to Gilimanuk / Bali side",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Ketapang Harbor to Gilimanuk / Bali side",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-malang-to-surabaya",
+    "slug": "route-leg-malang-to-surabaya",
+    "title": "Malang to Surabaya",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Malang to Surabaya",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-surabaya-airport-to-bromo-area",
+    "slug": "route-leg-surabaya-airport-to-bromo-area",
+    "title": "Surabaya Airport to Bromo Area",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Surabaya Airport to Bromo Area",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-surabaya-hotel-to-bromo-area",
+    "slug": "route-leg-surabaya-hotel-to-bromo-area",
+    "title": "Surabaya Hotel to Bromo Area",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Surabaya Hotel to Bromo Area",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-surabaya-to-bondowoso-ijen-area",
+    "slug": "route-leg-surabaya-to-bondowoso-ijen-area",
+    "title": "Surabaya to Bondowoso / Ijen Area",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Surabaya to Bondowoso / Ijen Area",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-surabaya-to-tumpak-sewu",
+    "slug": "route-leg-surabaya-to-tumpak-sewu",
+    "title": "Surabaya to Tumpak Sewu",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Surabaya to Tumpak Sewu",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:route-leg-tumpak-sewu-to-bromo-area",
+    "slug": "route-leg-tumpak-sewu-to-bromo-area",
+    "title": "Tumpak Sewu to Bromo Area",
+    "data": {
+      "category": "route_leg",
+      "scope": "route_scoped",
+      "title": "Tumpak Sewu to Bromo Area",
+      "customer_visible": false,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:service-crew-language-standard",
+    "slug": "service-crew-language-standard",
+    "title": "Crew & Language Standard",
+    "data": {
+      "category": "service",
+      "scope": "global",
+      "title": "Crew & Language Standard",
+      "short_answer": "English-speaking driver/guide standard; other languages subject to confirmation",
+      "detail_summary": "private dedicated driver + guide (no shared groups)",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "detail_summary": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:service-private-tour-standard",
+    "slug": "service-private-tour-standard",
+    "title": "Private Tour Format",
+    "data": {
+      "category": "service",
+      "scope": "global",
+      "title": "Private Tour Format",
+      "short_answer": "This is a private tour with your own dedicated driver and guide(s); you are never combined with another group.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:service-standard-rooming",
+    "slug": "service-standard-rooming",
+    "title": "Standard Rooming",
+    "data": {
+      "category": "service",
+      "scope": "global",
+      "title": "Standard Rooming",
+      "short_answer": "Standard rooming is arranged for the group; twin, double, separate rooms, or an extra room can be requested (subject to confirmation).",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:service-vehicle-by-pax",
+    "slug": "service-vehicle-by-pax",
+    "title": "Vehicle by Group Size",
+    "data": {
+      "category": "service",
+      "scope": "global",
+      "title": "Vehicle by Group Size",
+      "short_answer": "We use an AC MPV for 1–3 guests and a Hiace for 4–9 guests.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:staging-banyuwangi",
+    "slug": "staging-banyuwangi",
+    "title": "Banyuwangi Staging Before Ijen",
+    "data": {
+      "category": "staging",
+      "scope": "route_scoped",
+      "title": "Banyuwangi Staging Before Ijen",
+      "short_answer": "We stage here so guests can rest and prepare before the next activity. Luminor Hotel / Banyuwangi area used for Bali-origin packages; ferry from Gilimanuk requires Ferizy pre-booking.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:staging-bondowoso-ijen",
+    "slug": "staging-bondowoso-ijen",
+    "title": "Why We Stay Near Ijen",
+    "data": {
+      "category": "staging",
+      "scope": "route_scoped",
+      "title": "Why We Stay Near Ijen",
+      "short_answer": "We stage here so guests can rest and prepare before the next activity. medical check can be arranged at hotel; dinner before Ijen preparation.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:staging-bromo-area-sunrise",
+    "slug": "staging-bromo-area-sunrise",
+    "title": "Why We Stay Near Bromo Before Sunrise",
+    "data": {
+      "category": "staging",
+      "scope": "route_scoped",
+      "title": "Why We Stay Near Bromo Before Sunrise",
+      "short_answer": "We stage here so guests can rest and prepare before the next activity. early jeep pickup; takeaway breakfast possible.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:staging-malang-batu",
+    "slug": "staging-malang-batu",
+    "title": "Malang / Batu Staging",
+    "data": {
+      "category": "staging",
+      "scope": "route_scoped",
+      "title": "Malang / Batu Staging",
+      "short_answer": "We stage here so guests can rest and prepare before the next activity. Whiz Prime Malang / Holiday Inn Express Surabaya used for city stays; Malang city and Batu attractions accessible on day-use basis.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:staging-papuma",
+    "slug": "staging-papuma",
+    "title": "Papuma Staging",
+    "data": {
+      "category": "staging",
+      "scope": "route_scoped",
+      "title": "Papuma Staging",
+      "short_answer": "We stage here so guests can rest and prepare before the next activity. Doho Homestay / Jember area is the closest base; Papuma best visited in morning before crowds.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "general_module",
+    "canonical_key": "general_module:staging-tumpak-sewu",
+    "slug": "staging-tumpak-sewu",
+    "title": "Why We Stage Near Tumpak Sewu",
+    "data": {
+      "category": "staging",
+      "scope": "route_scoped",
+      "title": "Why We Stage Near Tumpak Sewu",
+      "short_answer": "We stage here so guests can rest and prepare before the next activity. Artha Cottage / Lumajang area is the closest base; early morning start recommended 07:00–08:00 for waterfall access.",
+      "customer_visible": true,
+      "reusable": true
+    },
+    "provenance": {
+      "category": "knowledge-catalog-okf",
+      "scope": "knowledge-catalog-okf",
+      "title": "knowledge-catalog-okf",
+      "short_answer": "knowledge-catalog-okf",
+      "customer_visible": "knowledge-catalog-okf",
+      "reusable": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:bali-bromo-ijen-3d2n",
+    "slug": "bali-bromo-ijen-3d2n",
+    "title": "3 Day Bromo & Ijen Volcano Discovery from Bali",
+    "data": {
+      "profile": {
+        "title": "3 Day Bromo & Ijen Volcano Discovery from Bali",
+        "description": "A 3D2N private tour from Bali: 3 Day Bromo & Ijen Volcano Discovery from Bali.",
+        "origin": "Bali",
+        "duration": "3D2N",
+        "day_count": 3,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Bali to the Bromo Side via East Java Crossing",
+            "meals": []
+          },
+          {
+            "day": 2,
+            "title": "Bromo Sunrise, Madakaripura, and Transfer to Bondowoso",
+            "meals": [
+              "B",
+              "D"
+            ]
+          },
+          {
+            "day": 3,
+            "title": "Ijen Climb and Return to Bali",
+            "meals": [
+              "B"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "bromo",
+          "ijen"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-bali/bromo-ijen-3d2n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:bali-ijen-bromo-madakaripura-3d2n",
+    "slug": "bali-ijen-bromo-madakaripura-3d2n",
+    "title": "3 Day Ijen, Bromo & Madakaripura Waterfall Journey from Bali to Surabaya",
+    "data": {
+      "profile": {
+        "title": "3 Day Ijen, Bromo & Madakaripura Waterfall Journey from Bali to Surabaya",
+        "description": "A 3D2N private tour from Bali: 3 Day Ijen, Bromo & Madakaripura Waterfall Journey from Bali to Surabaya.",
+        "origin": "Bali",
+        "duration": "3D2N",
+        "day_count": 3,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Bali to Banyuwangi for Ijen Staging",
+            "meals": [
+              "D"
+            ]
+          },
+          {
+            "day": 2,
+            "title": "Ijen Climb and Transfer Toward the Bromo Side",
+            "meals": [
+              "B",
+              "L"
+            ]
+          },
+          {
+            "day": 3,
+            "title": "Bromo Sunrise, Madakaripura, and Finish in Surabaya",
+            "meals": [
+              "B"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "ijen",
+          "bromo",
+          "madakaripura"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-bali/ijen-bromo-madakaripura-3d2n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:bali-ijen-papuma-tumpak-sewu-bromo-4d3n",
+    "slug": "bali-ijen-papuma-tumpak-sewu-bromo-4d3n",
+    "title": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Expedition from Bali to Surabaya",
+    "data": {
+      "profile": {
+        "title": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Expedition from Bali to Surabaya",
+        "description": "A 4D3N private tour from Bali: 4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Expedition from Bali to Surabaya.",
+        "origin": "Bali",
+        "duration": "4D3N",
+        "day_count": 4,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Bali to Banyuwangi for Ijen Staging",
+            "meals": [
+              "D"
+            ]
+          },
+          {
+            "day": 2,
+            "title": "Ijen Climb and Papuma Transfer",
+            "meals": [
+              "B",
+              "L"
+            ]
+          },
+          {
+            "day": 3,
+            "title": "Tumpak Sewu Segment and Transfer Toward Bromo",
+            "meals": [
+              "B"
+            ]
+          },
+          {
+            "day": 4,
+            "title": "Bromo Sunrise and Finish in Surabaya",
+            "meals": [
+              "B"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "ijen",
+          "papuma",
+          "tumpak",
+          "sewu",
+          "bromo"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-bali/ijen-papuma-tumpak-sewu-bromo-4d3n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:bali-ijen-papuma-tumpak-sewu-bromo-5d4n",
+    "slug": "bali-ijen-papuma-tumpak-sewu-bromo-5d4n",
+    "title": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Discovery from Bali to Surabaya",
+    "data": {
+      "profile": {
+        "title": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Discovery from Bali to Surabaya",
+        "description": "A 5D4N private tour from Bali: 5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Discovery from Bali to Surabaya.",
+        "origin": "Bali",
+        "duration": "5D4N",
+        "day_count": 5,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Bali to Banyuwangi for Ijen Staging",
+            "meals": [
+              "D"
+            ]
+          },
+          {
+            "day": 2,
+            "title": "Ijen Climb and Transfer to the Papuma Side",
+            "meals": [
+              "B",
+              "L"
+            ]
+          },
+          {
+            "day": 3,
+            "title": "Papuma Side to Tumpak Sewu Staging",
+            "meals": [
+              "B"
+            ]
+          },
+          {
+            "day": 4,
+            "title": "Tumpak Sewu and Transfer Toward Bromo",
+            "meals": [
+              "B"
+            ]
+          },
+          {
+            "day": 5,
+            "title": "Bromo Sunrise and Final Surabaya Handoff",
+            "meals": [
+              "B"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "ijen",
+          "papuma",
+          "tumpak",
+          "sewu",
+          "bromo"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-bali/ijen-papuma-tumpak-sewu-bromo-5d4n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:surabaya-bromo-1d1n",
+    "slug": "surabaya-bromo-1d1n",
+    "title": "1 Day Bromo Midnight Experience from Surabaya",
+    "data": {
+      "profile": {
+        "title": "1 Day Bromo Midnight Experience from Surabaya",
+        "description": "A 1D1N private tour from Surabaya: 1 Day Bromo Midnight Experience from Surabaya.",
+        "origin": "Surabaya",
+        "duration": "1D1N",
+        "day_count": 1,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Midnight Departure from Surabaya for Bromo Sunrise",
+            "meals": [
+              "B"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "bromo"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-surabaya/bromo-1d1n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:surabaya-bromo-2d1n",
+    "slug": "surabaya-bromo-2d1n",
+    "title": "2 Day Bromo Sunrise Adventure from Surabaya",
+    "data": {
+      "profile": {
+        "title": "2 Day Bromo Sunrise Adventure from Surabaya",
+        "description": "A 2D1N private tour from Surabaya: 2 Day Bromo Sunrise Adventure from Surabaya.",
+        "origin": "Surabaya",
+        "duration": "2D1N",
+        "day_count": 2,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Surabaya to the Bromo Side for Overnight Staging",
+            "meals": []
+          },
+          {
+            "day": 2,
+            "title": "Bromo Sunrise, Madakaripura, and Return to Surabaya",
+            "meals": [
+              "B"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "bromo"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-surabaya/bromo-2d1n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:surabaya-bromo-madakaripura-ijen-3d2n",
+    "slug": "surabaya-bromo-madakaripura-ijen-3d2n",
+    "title": "3 Day Bromo, Madakaripura & Ijen Overland from Surabaya to Bali",
+    "data": {
+      "profile": {
+        "title": "3 Day Bromo, Madakaripura & Ijen Overland from Surabaya to Bali",
+        "description": "A 3D2N private tour from Surabaya: 3 Day Bromo, Madakaripura & Ijen Overland from Surabaya to Bali.",
+        "origin": "Surabaya",
+        "duration": "3D2N",
+        "day_count": 3,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Surabaya to the Bromo Side for Overnight Staging",
+            "meals": []
+          },
+          {
+            "day": 2,
+            "title": "Bromo Sunrise, Madakaripura, and Transfer Toward Ijen",
+            "meals": [
+              "B",
+              "D"
+            ]
+          },
+          {
+            "day": 3,
+            "title": "Ijen Climb and Forward Finish into Bali",
+            "meals": [
+              "B"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "bromo",
+          "madakaripura",
+          "ijen"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-surabaya/bromo-madakaripura-ijen-3d2n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:surabaya-ijen-2d1n",
+    "slug": "surabaya-ijen-2d1n",
+    "title": "2 Day Ijen Blue Fire Expedition from Surabaya",
+    "data": {
+      "profile": {
+        "title": "2 Day Ijen Blue Fire Expedition from Surabaya",
+        "description": "A 2D1N private tour from Surabaya: 2 Day Ijen Blue Fire Expedition from Surabaya.",
+        "origin": "Surabaya",
+        "duration": "2D1N",
+        "day_count": 2,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Surabaya to Bondowoso for Ijen Staging",
+            "meals": [
+              "D"
+            ]
+          },
+          {
+            "day": 2,
+            "title": "Ijen Climb and Return to Surabaya",
+            "meals": [
+              "B",
+              "L"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "ijen"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-surabaya/ijen-2d1n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:surabaya-ijen-bromo-madakaripura-3d2n",
+    "slug": "surabaya-ijen-bromo-madakaripura-3d2n",
+    "title": "3 Day Ijen, Bromo & Madakaripura Waterfall Discovery from Surabaya",
+    "data": {
+      "profile": {
+        "title": "3 Day Ijen, Bromo & Madakaripura Waterfall Discovery from Surabaya",
+        "description": "A 3D2N private tour from Surabaya: 3 Day Ijen, Bromo & Madakaripura Waterfall Discovery from Surabaya.",
+        "origin": "Surabaya",
+        "duration": "3D2N",
+        "day_count": 3,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Surabaya to Bondowoso for Ijen Staging",
+            "meals": [
+              "D"
+            ]
+          },
+          {
+            "day": 2,
+            "title": "Ijen Climb and Transfer Toward the Bromo Side",
+            "meals": [
+              "B",
+              "L"
+            ]
+          },
+          {
+            "day": 3,
+            "title": "Bromo Sunrise, Madakaripura, and Return to Surabaya",
+            "meals": [
+              "B"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "ijen",
+          "bromo",
+          "madakaripura"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-surabaya/ijen-bromo-madakaripura-3d2n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:surabaya-ijen-bromo-madakaripura-4d3n",
+    "slug": "surabaya-ijen-bromo-madakaripura-4d3n",
+    "title": "4 Day Ijen, Bromo & Madakaripura Waterfall Expedition from Surabaya",
+    "data": {
+      "profile": {
+        "title": "4 Day Ijen, Bromo & Madakaripura Waterfall Expedition from Surabaya",
+        "description": "A 4D3N private tour from Surabaya: 4 Day Ijen, Bromo & Madakaripura Waterfall Expedition from Surabaya.",
+        "origin": "Surabaya",
+        "duration": "4D3N",
+        "day_count": 4,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Surabaya to Bondowoso for Ijen Staging",
+            "meals": [
+              "D"
+            ]
+          },
+          {
+            "day": 2,
+            "title": "Ijen Climb and Transfer Toward the Bromo Side",
+            "meals": [
+              "B",
+              "L"
+            ]
+          },
+          {
+            "day": 3,
+            "title": "Bromo Sunrise, Madakaripura, and Return to Surabaya City",
+            "meals": [
+              "B"
+            ]
+          },
+          {
+            "day": 4,
+            "title": "Surabaya Hotel Stay and Airport Transfer",
+            "meals": [
+              "B"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "ijen",
+          "bromo",
+          "madakaripura"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-surabaya/ijen-bromo-madakaripura-4d3n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:surabaya-ijen-bromo-madakaripura-malang-5d4n",
+    "slug": "surabaya-ijen-bromo-madakaripura-malang-5d4n",
+    "title": "5 Day Ijen, Bromo, Madakaripura & Malang City Adventure from Surabaya",
+    "data": {
+      "profile": {
+        "title": "5 Day Ijen, Bromo, Madakaripura & Malang City Adventure from Surabaya",
+        "description": "A 5D4N private tour from Surabaya: 5 Day Ijen, Bromo, Madakaripura & Malang City Adventure from Surabaya.",
+        "origin": "Surabaya",
+        "duration": "5D4N",
+        "day_count": 5,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Surabaya to Bondowoso for Ijen Staging",
+            "meals": [
+              "D"
+            ]
+          },
+          {
+            "day": 2,
+            "title": "Ijen Climb and Transfer Toward the Bromo Side",
+            "meals": [
+              "B",
+              "L"
+            ]
+          },
+          {
+            "day": 3,
+            "title": "Bromo Sunrise, Madakaripura, and Continue to Malang",
+            "meals": [
+              "B"
+            ]
+          },
+          {
+            "day": 4,
+            "title": "Malang and Batu Exploration with Return Toward Surabaya",
+            "meals": [
+              "B"
+            ]
+          },
+          {
+            "day": 5,
+            "title": "Surabaya Hotel Finish and Airport Transfer",
+            "meals": [
+              "B"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "ijen",
+          "bromo",
+          "madakaripura",
+          "malang"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-surabaya/ijen-bromo-madakaripura-malang-5d4n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:surabaya-ijen-papuma-tumpak-sewu-bromo-4d3n",
+    "slug": "surabaya-ijen-papuma-tumpak-sewu-bromo-4d3n",
+    "title": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Journey from Surabaya",
+    "data": {
+      "profile": {
+        "title": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Journey from Surabaya",
+        "description": "A 4D3N private tour from Surabaya: 4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Journey from Surabaya.",
+        "origin": "Surabaya",
+        "duration": "4D3N",
+        "day_count": 4,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Surabaya to Bondowoso for Ijen Staging",
+            "meals": [
+              "D"
+            ]
+          },
+          {
+            "day": 2,
+            "title": "Ijen Climb and Continue to the Papuma Side",
+            "meals": [
+              "B",
+              "L"
+            ]
+          },
+          {
+            "day": 3,
+            "title": "Papuma Area to Tumpak Sewu Staging",
+            "meals": [
+              "B"
+            ]
+          },
+          {
+            "day": 4,
+            "title": "Tumpak Sewu, Bromo Sequence, and Return to Surabaya",
+            "meals": [
+              "B"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "ijen",
+          "papuma",
+          "tumpak",
+          "sewu",
+          "bromo"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-surabaya/ijen-papuma-tumpak-sewu-bromo-4d3n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:surabaya-ijen-papuma-tumpak-sewu-bromo-5d4n",
+    "slug": "surabaya-ijen-papuma-tumpak-sewu-bromo-5d4n",
+    "title": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Nature Trip from Surabaya",
+    "data": {
+      "profile": {
+        "title": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Nature Trip from Surabaya",
+        "description": "A 5D4N private tour from Surabaya: 5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Nature Trip from Surabaya.",
+        "origin": "Surabaya",
+        "duration": "5D4N",
+        "day_count": 5,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Surabaya to Bondowoso for Ijen Staging",
+            "meals": [
+              "D"
+            ]
+          },
+          {
+            "day": 2,
+            "title": "Ijen Climb and Transfer to the Papuma Side",
+            "meals": [
+              "B",
+              "L"
+            ]
+          },
+          {
+            "day": 3,
+            "title": "Papuma Side to Tumpak Sewu Staging",
+            "meals": [
+              "B"
+            ]
+          },
+          {
+            "day": 4,
+            "title": "Tumpak Sewu and Transfer Toward the Bromo Side",
+            "meals": [
+              "B"
+            ]
+          },
+          {
+            "day": 5,
+            "title": "Bromo Sunrise and Final Return",
+            "meals": [
+              "B"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "ijen",
+          "papuma",
+          "tumpak",
+          "sewu",
+          "bromo"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-surabaya/ijen-papuma-tumpak-sewu-bromo-5d4n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:surabaya-ijen-papuma-tumpak-sewu-bromo-malang-6d5n",
+    "slug": "surabaya-ijen-papuma-tumpak-sewu-bromo-malang-6d5n",
+    "title": "6 Day Ijen, Papuma Beach, Tumpak Sewu, Bromo & Malang City Discovery from Surabaya",
+    "data": {
+      "profile": {
+        "title": "6 Day Ijen, Papuma Beach, Tumpak Sewu, Bromo & Malang City Discovery from Surabaya",
+        "description": "A 6D5N private tour from Surabaya: 6 Day Ijen, Papuma Beach, Tumpak Sewu, Bromo & Malang City Discovery from Surabaya.",
+        "origin": "Surabaya",
+        "duration": "6D5N",
+        "day_count": 6,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Surabaya to Bondowoso for Ijen Staging",
+            "meals": [
+              "D"
+            ]
+          },
+          {
+            "day": 2,
+            "title": "Ijen Climb and Continue to the Papuma Side",
+            "meals": [
+              "B",
+              "L"
+            ]
+          },
+          {
+            "day": 3,
+            "title": "Papuma Area to Tumpak Sewu Staging",
+            "meals": [
+              "B"
+            ]
+          },
+          {
+            "day": 4,
+            "title": "Tumpak Sewu and Transfer Toward the Bromo Side",
+            "meals": [
+              "B"
+            ]
+          },
+          {
+            "day": 5,
+            "title": "Bromo Sunrise and Continue to Malang",
+            "meals": [
+              "B"
+            ]
+          },
+          {
+            "day": 6,
+            "title": "Malang and Surabaya Departure Handoff",
+            "meals": [
+              "B"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "ijen",
+          "papuma",
+          "tumpak",
+          "sewu",
+          "bromo",
+          "malang"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-surabaya/ijen-papuma-tumpak-sewu-bromo-malang-6d5n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:surabaya-taman-safari-prigen-bromo-madakaripura-3d2n",
+    "slug": "surabaya-taman-safari-prigen-bromo-madakaripura-3d2n",
+    "title": "3 Day Taman Safari Prigen, Bromo & Madakaripura from Surabaya",
+    "data": {
+      "profile": {
+        "title": "3 Day Taman Safari Prigen, Bromo & Madakaripura from Surabaya",
+        "description": "A 3D2N private tour from Surabaya: 3 Day Taman Safari Prigen, Bromo & Madakaripura from Surabaya.",
+        "origin": "Surabaya",
+        "duration": "3D2N",
+        "day_count": 3,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Surabaya to Taman Safari Prigen and Bromo Overnight",
+            "meals": [
+              "B"
+            ]
+          },
+          {
+            "day": 2,
+            "title": "Bromo Sunrise and Caldera Exploration",
+            "meals": [
+              "B"
+            ]
+          },
+          {
+            "day": 3,
+            "title": "Madakaripura Waterfall and Return to Surabaya",
+            "meals": [
+              "B"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "taman",
+          "safari",
+          "prigen",
+          "bromo",
+          "madakaripura"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-surabaya/taman-safari-prigen-bromo-madakaripura-3d2n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "package",
+    "canonical_key": "package:surabaya-tumpak-sewu-bromo-ijen-4d3n",
+    "slug": "surabaya-tumpak-sewu-bromo-ijen-4d3n",
+    "title": "4 Day Tumpak Sewu, Bromo & Ijen Adventure from Surabaya to Bali",
+    "data": {
+      "profile": {
+        "title": "4 Day Tumpak Sewu, Bromo & Ijen Adventure from Surabaya to Bali",
+        "description": "A 4D3N private tour from Surabaya: 4 Day Tumpak Sewu, Bromo & Ijen Adventure from Surabaya to Bali.",
+        "origin": "Surabaya",
+        "duration": "4D3N",
+        "day_count": 4,
+        "day_titles": [
+          {
+            "day": 1,
+            "title": "Surabaya to the Tumpak Sewu Side",
+            "meals": []
+          },
+          {
+            "day": 2,
+            "title": "Tumpak Sewu and Continue Toward the Bromo Side",
+            "meals": [
+              "B",
+              "L"
+            ]
+          },
+          {
+            "day": 3,
+            "title": "Bromo Sunrise and Transfer to the Ijen Side",
+            "meals": [
+              "B",
+              "D"
+            ]
+          },
+          {
+            "day": 4,
+            "title": "Ijen Climb and Finish into Bali",
+            "meals": [
+              "B"
+            ]
+          }
+        ],
+        "destination_tokens": [
+          "tumpak",
+          "sewu",
+          "bromo",
+          "ijen"
+        ],
+        "readiness": {
+          "package_overview": "available",
+          "standard_price": "unavailable",
+          "inclusions": "unavailable",
+          "endpoint_chain": "unavailable",
+          "rooming": "unavailable",
+          "vehicle_luggage": "unavailable",
+          "guide_support": "unavailable",
+          "policy": "unavailable",
+          "destination_guidance": "unavailable"
+        }
+      },
+      "public_url": "/tours/from-surabaya/tumpak-sewu-bromo-ijen-4d3n"
+    },
+    "provenance": {
+      "profile": "knowledge-catalog-okf",
+      "public_url": "knowledge-catalog-okf"
+    },
+    "source": "knowledge-catalog-okf",
+    "editable": false
+  },
+  {
+    "entity_type": "policy_document",
+    "canonical_key": "policy_document:anti-fraud",
+    "slug": "anti-fraud",
+    "title": null,
+    "data": {
+      "domain": "Anti-Fraud",
+      "summary": "Use only official JVTO channels; never share full card numbers, CVV, passwords, OTP",
+      "evidence_count": 3,
+      "canonical_sources": [
+        "products/packages-overview.md"
+      ]
+    },
+    "provenance": {
+      "domain": "llm-wiki-policy",
+      "summary": "llm-wiki-policy",
+      "evidence_count": "llm-wiki-policy",
+      "canonical_sources": "llm-wiki-policy"
+    },
+    "source": "llm-wiki-policy",
+    "editable": false
+  },
+  {
+    "entity_type": "policy_document",
+    "canonical_key": "policy_document:booking-paths",
+    "slug": "booking-paths",
+    "title": null,
+    "data": {
+      "domain": "Booking Paths",
+      "summary": "**Website-only booking.** JVTO accepts bookings exclusively through the official website checkout under a valid JVTO Booking ID. WhatsApp/email are support channels only — they never create, confirm, modify, cancel, or transfer a booking.",
+      "evidence_count": 2,
+      "canonical_sources": [
+        "products/packages-overview.md"
+      ]
+    },
+    "provenance": {
+      "domain": "llm-wiki-policy",
+      "summary": "llm-wiki-policy",
+      "evidence_count": "llm-wiki-policy",
+      "canonical_sources": "llm-wiki-policy"
+    },
+    "source": "llm-wiki-policy",
+    "editable": false
+  },
+  {
+    "entity_type": "policy_document",
+    "canonical_key": "policy_document:cancellation-package-credit",
+    "slug": "cancellation-package-credit",
+    "title": null,
+    "data": {
+      "domain": "Cancellation / Package Credit",
+      "summary": "**Canonical logic lives in the YAML** (compiler reads it directly). Full voluntary ≥48h → Lifetime Package Credit (no cash); full <48h → forfeited. **Partial passenger cancellation** (booking continues): ≥48h → 100% cash refund of cancelled pax price, <48h → 50%, after Day 1 → 0%. Package Credit: no expiry, no cash value, same package/pax/price locked, one transfer, no split. Flight disruption → 50% Recovery Fee (once).",
+      "evidence_count": 3,
+      "canonical_sources": [
+        "policies/cancellation-package-credit.yml"
+      ],
+      "decision_matrix": {
+        "schema_version": "cancellation-policy/v2.0",
+        "policy_version": "2026-07",
+        "effective_from": "2026-07-15",
+        "cutoff_hours": 48,
+        "cutoff_comparison": "inclusive",
+        "cutoff_based_on": "day_1_start_at",
+        "rules": {
+          "full_voluntary_gte_48h": {
+            "outcome": "lifetime_package_credit",
+            "cash_refund_percent": 0,
+            "package_credit_eligible": true
+          },
+          "full_voluntary_lt_48h": {
+            "outcome": "forfeited",
+            "cash_refund_percent": 0,
+            "package_credit_eligible": false
+          },
+          "partial_gte_48h": {
+            "outcome": "cash_refund",
+            "cash_refund_percent": 100
+          },
+          "partial_lt_48h": {
+            "outcome": "cash_refund",
+            "cash_refund_percent": 50
+          },
+          "partial_after_day_1": {
+            "outcome": "cash_refund",
+            "cash_refund_percent": 0
+          },
+          "no_show": {
+            "outcome": "forfeited",
+            "cash_refund_percent": 0
+          },
+          "flight_disruption_verified": {
+            "outcome": "package_reactivation",
+            "recovery_fee_percent": 50,
+            "maximum_uses": 1
+          },
+          "flight_disruption_unverified": {
+            "outcome": "voluntary_late_cancellation"
+          },
+          "force_majeure_full_tour": {
+            "options": [
+              "lifetime_package_credit",
+              "cash_refund_less_nonrecoverable_vendor_cost"
+            ]
+          },
+          "force_majeure_partial_tour": {
+            "first_remedy": "alternative_route",
+            "second_remedy": "affected_component_refund"
+          },
+          "jvto_operational": {
+            "options": [
+              "accepted_alternative",
+              "full_cash_refund"
+            ]
+          }
+        },
+        "partial_thresholds": {
+          "minimum_remaining_pax": 2,
+          "minimum_remaining_percent": 50,
+          "reprice_remaining_guests": false,
+          "threshold_fail_behaviour": "reclassify_as_full_cancellation",
+          "foc_passenger_refund_percent": 0
+        },
+        "package_credit_locks": {
+          "expires": false,
+          "cash_value": false,
+          "package_change_allowed": false,
+          "split_allowed": false,
+          "transfer_allowed": true,
+          "maximum_transfers": 1,
+          "original_package_locked": true,
+          "original_pax_locked": true,
+          "original_price_locked": true
+        },
+        "booking_scope": {
+          "allowed_sources": [
+            "website"
+          ],
+          "disallowed_sources": [
+            "whatsapp",
+            "email",
+            "manual",
+            "ota"
+          ],
+          "support_channels": [
+            "whatsapp",
+            "email"
+          ]
+        }
+      },
+      "customer_copy": {
+        "package_guarantee_summary": "Your confirmed package does not disappear when plans change early. Cancel your entire booking at least 48 hours before Day 1 and the same package, your original number of travellers, and your original confirmed package price remain available for future use as Lifetime Package Credit.",
+        "before_48_full_cancellation": "Cancel the complete booking 48 hours or more before Day 1: you receive Lifetime Package Credit. It never expires and preserves the same package, original pax entitlement, and original confirmed price, and can be transferred once. Package Credit is not cash and cannot be exchanged for cash.",
+        "after_48_full_cancellation": "Cancel the complete booking less than 48 hours before Day 1: the booking is forfeited and no Package Credit is created.",
+        "partial_cancellation": "If one or more travellers cancel but the tour continues, the cancelled travellers receive a cash refund of their confirmed price: 100% at 48 hours or more before Day 1, 50% within 48 hours, and 0% after Day 1. At least 2 paying travellers must remain, otherwise it is treated as a full cancellation.",
+        "flight_disruption": "If a verified natural transport disruption (for example volcanic ash) cancels your flight, your package can be reactivated once for a 50% Recovery Fee of the original confirmed package price.",
+        "destination_force_majeure": "If a verified official event affects your destination and the whole tour is impossible, you can choose Lifetime Package Credit or a cash refund less any non-recoverable vendor cost. If only part is affected, JVTO first offers an alternative route, then a refund of the affected component.",
+        "package_transfer": "Package Credit may be transferred once to another person. The old credit code is closed and a new one is issued to the recipient. A second transfer is not permitted.",
+        "package_redemption": "To use Package Credit, choose a new date for the same package. Your original pax entitlement appears automatically; fewer travellers yields no refund, and more travellers are charged the incremental website price."
+      },
+      "adjudicated_facts": {
+        "founding_year": 2015,
+        "pt_legal_context": "PT Java Volcano Rendezvous; NIB/TDUP era 2023 (no invented incorporation date)",
+        "deposit_percent": 20,
+        "close_departure_full_within_days": 14,
+        "cancellation_model": "lifetime_package_credit",
+        "cancellation_naming": "Lifetime Package Credit (supersedes the retired 'Travel Credit')",
+        "ijen_health_screening": "mandatory",
+        "ijen_health_authority": "BBKSDA Surat Edaran SE.1658/KSA.9/2024 (cited as supporting authority, not a conditional trigger)",
+        "blue_fire": "natural phenomenon subject to weather and gas activity; cannot be guaranteed",
+        "reviews": {
+          "trustpilot": "4.8/51",
+          "google": "4.9/123",
+          "tripadvisor": "4.95/21",
+          "cross_platform": "4.8/195"
+        },
+        "prices": "IDR-only (format: IDR 1,550,000/person)",
+        "email_primary": "hello@javavolcano-touroperator.com",
+        "email_secondary": "javavolcanotouroperator@gmail.com",
+        "phone": "+62 822 4478 8833",
+        "nib": "1102230032918",
+        "ahu": "-0023020",
+        "hq_address": "Jl. Khairil Anwar No.102A, Bondowoso 68214",
+        "elevations": {
+          "kawah_ijen_m": 2386,
+          "mount_bromo_m": 2329
+        }
+      }
+    },
+    "provenance": {
+      "domain": "llm-wiki-policy",
+      "summary": "llm-wiki-policy",
+      "evidence_count": "llm-wiki-policy",
+      "canonical_sources": "llm-wiki-policy",
+      "decision_matrix": "llm-wiki-policy",
+      "customer_copy": "llm-wiki-policy",
+      "adjudicated_facts": "canonical-facts"
+    },
+    "source": "llm-wiki-policy",
+    "editable": false
+  },
+  {
+    "entity_type": "policy_document",
+    "canonical_key": "policy_document:ijen-health-screening",
+    "slug": "ijen-health-screening",
+    "title": null,
+    "data": {
+      "domain": "Ijen Health Screening",
+      "summary": "Mandatory wording (health certificate required for every guest before crater entry); BBKSDA SE.1658/KSA.9/2024 cited as supporting authority, not a conditional trigger. Adjudicated 2026-07-06, supersedes the 2026-07-05 conditional decision",
+      "evidence_count": 2,
+      "canonical_sources": [
+        "website/faq-master.md",
+        "people/dr-ahmad-irwandanu.md"
+      ]
+    },
+    "provenance": {
+      "domain": "llm-wiki-policy",
+      "summary": "llm-wiki-policy",
+      "evidence_count": "llm-wiki-policy",
+      "canonical_sources": "llm-wiki-policy"
+    },
+    "source": "llm-wiki-policy",
+    "editable": false
+  },
+  {
+    "entity_type": "policy_document",
+    "canonical_key": "policy_document:inclusions-exclusions",
+    "slug": "inclusions-exclusions",
+    "title": null,
+    "data": {
+      "domain": "Inclusions / Exclusions",
+      "summary": "Madakaripura helmets are NOT a JVTO inclusion (local site management)",
+      "evidence_count": 3,
+      "canonical_sources": [
+        "products/packages-overview.md"
+      ]
+    },
+    "provenance": {
+      "domain": "llm-wiki-policy",
+      "summary": "llm-wiki-policy",
+      "evidence_count": "llm-wiki-policy",
+      "canonical_sources": "llm-wiki-policy"
+    },
+    "source": "llm-wiki-policy",
+    "editable": false
+  },
+  {
+    "entity_type": "policy_document",
+    "canonical_key": "policy_document:isic",
+    "slug": "isic",
+    "title": null,
+    "data": {
+      "domain": "ISIC",
+      "summary": "ISIC is UNESCO-endorsed; do NOT imply UNESCO endorses JVTO",
+      "evidence_count": 2,
+      "canonical_sources": [
+        "credentials/trust-signals.md"
+      ]
+    },
+    "provenance": {
+      "domain": "llm-wiki-policy",
+      "summary": "llm-wiki-policy",
+      "evidence_count": "llm-wiki-policy",
+      "canonical_sources": "llm-wiki-policy"
+    },
+    "source": "llm-wiki-policy",
+    "editable": false
+  },
+  {
+    "entity_type": "policy_document",
+    "canonical_key": "policy_document:natural-phenomena",
+    "slug": "natural-phenomena",
+    "title": null,
+    "data": {
+      "domain": "Natural Phenomena",
+      "summary": "No guarantee for Blue Fire / sunrise",
+      "evidence_count": 2,
+      "canonical_sources": [
+        "website/brand-voice.md"
+      ]
+    },
+    "provenance": {
+      "domain": "llm-wiki-policy",
+      "summary": "llm-wiki-policy",
+      "evidence_count": "llm-wiki-policy",
+      "canonical_sources": "llm-wiki-policy"
+    },
+    "source": "llm-wiki-policy",
+    "editable": false
+  },
+  {
+    "entity_type": "policy_document",
+    "canonical_key": "policy_document:payment-rules",
+    "slug": "payment-rules",
+    "title": null,
+    "data": {
+      "domain": "Payment Rules",
+      "summary": "20% deposit standard; close-departure (Day 1 within 14 days) may require full payment",
+      "evidence_count": 2,
+      "canonical_sources": [
+        "products/packages-overview.md"
+      ]
+    },
+    "provenance": {
+      "domain": "llm-wiki-policy",
+      "summary": "llm-wiki-policy",
+      "evidence_count": "llm-wiki-policy",
+      "canonical_sources": "llm-wiki-policy"
+    },
+    "source": "llm-wiki-policy",
+    "editable": false
+  },
+  {
+    "entity_type": "policy_document",
+    "canonical_key": "policy_document:police-escort",
+    "slug": "police-escort",
+    "title": null,
+    "data": {
+      "domain": "Police Escort",
+      "summary": "Conditional coordination only (large groups ~18+, when approved by Traffic Police)",
+      "evidence_count": 3,
+      "canonical_sources": [
+        "credentials/trust-signals.md"
+      ]
+    },
+    "provenance": {
+      "domain": "llm-wiki-policy",
+      "summary": "llm-wiki-policy",
+      "evidence_count": "llm-wiki-policy",
+      "canonical_sources": "llm-wiki-policy"
+    },
+    "source": "llm-wiki-policy",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:agung-sambuko",
+    "slug": "agung-sambuko",
+    "title": "Agung Sambuko",
+    "data": {
+      "name": "Agung Sambuko",
+      "role": "Founder & Active Tourist Police Officer",
+      "job_title": "Active Tourist Police Officer, Ditpamobvit East Java",
+      "police_rank": "Bripka",
+      "police_unit": "Ditpamobvit (Direktorat Pengamanan Objek Vital) — East Java",
+      "organization": "PT Java Volcano Rendezvous",
+      "portrait_url": "https://javavolcano-touroperator.com/founder/agung_sambuko.jpg",
+      "schema_id": "/#agung-sambuko"
+    },
+    "provenance": {
+      "name": "llm-wiki-trust",
+      "role": "llm-wiki-trust",
+      "job_title": "llm-wiki-trust",
+      "police_rank": "llm-wiki-trust",
+      "police_unit": "llm-wiki-trust",
+      "organization": "llm-wiki-trust",
+      "portrait_url": "llm-wiki-trust",
+      "schema_id": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:anjas",
+    "slug": "anjas",
+    "title": null,
+    "data": {
+      "role": "Guide",
+      "kta": "KTA-G-2024-006",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "strengths": "Astrophotography, volcanic terrain navigation, East Java cultural heritage",
+      "review_count": 12,
+      "review_rating": 4.91,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768270423657-690185912-anjas.png"
+    },
+    "provenance": {
+      "role": "llm-wiki-trust",
+      "kta": "llm-wiki-trust",
+      "languages": "llm-wiki-trust",
+      "strengths": "llm-wiki-trust",
+      "review_count": "llm-wiki-trust",
+      "review_rating": "llm-wiki-trust",
+      "portrait_url": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:boy",
+    "slug": "boy",
+    "title": null,
+    "data": {
+      "role": "Guide",
+      "kta": "KTA-G-2024-004",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "strengths": "Friendly, safety-first, logistics, great photos, local knowledge",
+      "review_count": 23,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768228191022-893381041-boy.png"
+    },
+    "provenance": {
+      "role": "llm-wiki-trust",
+      "kta": "llm-wiki-trust",
+      "languages": "llm-wiki-trust",
+      "strengths": "llm-wiki-trust",
+      "review_count": "llm-wiki-trust",
+      "portrait_url": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:dika",
+    "slug": "dika",
+    "title": null,
+    "data": {
+      "role": "Driver",
+      "kta": null,
+      "languages": [
+        "ID"
+      ],
+      "review_count": 3
+    },
+    "provenance": {
+      "role": "llm-wiki-trust",
+      "kta": "llm-wiki-trust",
+      "languages": "llm-wiki-trust",
+      "review_count": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:dr-ahmad-irwandanu",
+    "slug": "dr-ahmad-irwandanu",
+    "title": "Dr. Ahmad Irwandanu",
+    "data": {
+      "name": "Dr. Ahmad Irwandanu",
+      "role": "Medical Officer — Ijen Health-Screening Coordination",
+      "schema_id": "/#dr-ahmad-irwandanu"
+    },
+    "provenance": {
+      "name": "llm-wiki-trust",
+      "role": "llm-wiki-trust",
+      "schema_id": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:fauzi",
+    "slug": "fauzi",
+    "title": null,
+    "data": {
+      "role": "Guide",
+      "kta": "KTA-G-2024-010",
+      "languages": [
+        "ID"
+      ],
+      "strengths": "Photography, attentive, safety-first, finding uncrowded spots",
+      "review_count": 6,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768226003889-338819579-fauzi.png"
+    },
+    "provenance": {
+      "role": "llm-wiki-trust",
+      "kta": "llm-wiki-trust",
+      "languages": "llm-wiki-trust",
+      "strengths": "llm-wiki-trust",
+      "review_count": "llm-wiki-trust",
+      "portrait_url": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:fredi",
+    "slug": "fredi",
+    "title": null,
+    "data": {
+      "role": "Driver",
+      "kta": "KTA-D-2024-005",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "strengths": "Punctuality, safe driving, professional attitude",
+      "review_count": 20,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768276791622-262250680-freddy.png"
+    },
+    "provenance": {
+      "role": "llm-wiki-trust",
+      "kta": "llm-wiki-trust",
+      "languages": "llm-wiki-trust",
+      "strengths": "llm-wiki-trust",
+      "review_count": "llm-wiki-trust",
+      "portrait_url": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:gufron",
+    "slug": "gufron",
+    "title": null,
+    "data": {
+      "role": "Guide",
+      "kta": "KTA-G-2024-001",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "strengths": "Volcano photography, geology, Ijen crater safety, East Java cultural heritage",
+      "review_count": 20,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768225567764-405955176-gufron.png"
+    },
+    "provenance": {
+      "role": "llm-wiki-trust",
+      "kta": "llm-wiki-trust",
+      "languages": "llm-wiki-trust",
+      "strengths": "llm-wiki-trust",
+      "review_count": "llm-wiki-trust",
+      "portrait_url": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:holili",
+    "slug": "holili",
+    "title": null,
+    "data": {
+      "role": "Driver",
+      "kta": "KTA-D-2024-009",
+      "languages": [
+        "ID"
+      ],
+      "review_count": 6,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768277053384-470130286-holili.jpg"
+    },
+    "provenance": {
+      "role": "llm-wiki-trust",
+      "kta": "llm-wiki-trust",
+      "languages": "llm-wiki-trust",
+      "review_count": "llm-wiki-trust",
+      "portrait_url": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:joyo",
+    "slug": "joyo",
+    "title": null,
+    "data": {
+      "role": "Driver",
+      "kta": "KTA-D-2024-011",
+      "languages": [
+        "ID"
+      ],
+      "review_count": 19,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768277336049-911840775-joyo.png"
+    },
+    "provenance": {
+      "role": "llm-wiki-trust",
+      "kta": "llm-wiki-trust",
+      "languages": "llm-wiki-trust",
+      "review_count": "llm-wiki-trust",
+      "portrait_url": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:kiki",
+    "slug": "kiki",
+    "title": null,
+    "data": {
+      "role": "Guide",
+      "kta": "KTA-G-2024-008",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "strengths": "Photography, friendly, logistics, safety-first",
+      "review_count": 17,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768271545598-834784538-kiki.png"
+    },
+    "provenance": {
+      "role": "llm-wiki-trust",
+      "kta": "llm-wiki-trust",
+      "languages": "llm-wiki-trust",
+      "strengths": "llm-wiki-trust",
+      "review_count": "llm-wiki-trust",
+      "portrait_url": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:pras",
+    "slug": "pras",
+    "title": null,
+    "data": {
+      "role": "Driver",
+      "kta": null,
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "review_count": 6
+    },
+    "provenance": {
+      "role": "llm-wiki-trust",
+      "kta": "llm-wiki-trust",
+      "languages": "llm-wiki-trust",
+      "review_count": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:rendi",
+    "slug": "rendi",
+    "title": null,
+    "data": {
+      "role": "Guide",
+      "kta": "KTA-G-2024-002",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "strengths": "Mountain rescue, first aid, expedition safety, Ijen crater safety procedures",
+      "review_count": 22,
+      "review_rating": 5,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768228514527-518051332-rendi.png"
+    },
+    "provenance": {
+      "role": "llm-wiki-trust",
+      "kta": "llm-wiki-trust",
+      "languages": "llm-wiki-trust",
+      "strengths": "llm-wiki-trust",
+      "review_count": "llm-wiki-trust",
+      "review_rating": "llm-wiki-trust",
+      "portrait_url": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:taufik",
+    "slug": "taufik",
+    "title": null,
+    "data": {
+      "role": "Guide",
+      "kta": "KTA-G-2024-007",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "strengths": "Safety-first, logistics, punctuality, photography",
+      "review_count": 8,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768228083285-919198019-taufik_1_.png"
+    },
+    "provenance": {
+      "role": "llm-wiki-trust",
+      "kta": "llm-wiki-trust",
+      "languages": "llm-wiki-trust",
+      "strengths": "llm-wiki-trust",
+      "review_count": "llm-wiki-trust",
+      "portrait_url": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:yandi",
+    "slug": "yandi",
+    "title": null,
+    "data": {
+      "role": "Driver",
+      "kta": "KTA-D-2024-003",
+      "languages": [
+        "EN",
+        "ID"
+      ],
+      "review_count": 16,
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768270364125-144711646-yandi.png"
+    },
+    "provenance": {
+      "role": "llm-wiki-trust",
+      "kta": "llm-wiki-trust",
+      "languages": "llm-wiki-trust",
+      "review_count": "llm-wiki-trust",
+      "portrait_url": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "public_person_profile",
+    "canonical_key": "public_person_profile:yusuf",
+    "slug": "yusuf",
+    "title": null,
+    "data": {
+      "role": "Driver",
+      "kta": null,
+      "languages": [
+        "ID"
+      ],
+      "review_count": 7
+    },
+    "provenance": {
+      "role": "llm-wiki-trust",
+      "kta": "llm-wiki-trust",
+      "languages": "llm-wiki-trust",
+      "review_count": "llm-wiki-trust"
+    },
+    "source": "llm-wiki-trust",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:bromo-1d1n",
+    "slug": "bromo-1d1n",
+    "title": "1D1N Bromo sunrise (day trip / overnight)",
+    "data": {
+      "label": "1D1N Bromo sunrise (day trip / overnight)",
+      "origin": "Surabaya",
+      "duration": "1D1N",
+      "route_sequence": [
+        "Surabaya",
+        "Bromo Area",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_airport_to_bromo_area",
+        "bromo_area_to_malang",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:bromo-2d1n",
+    "slug": "bromo-2d1n",
+    "title": "2D1N Bromo",
+    "data": {
+      "label": "2D1N Bromo",
+      "origin": "Surabaya",
+      "duration": "2D1N",
+      "route_sequence": [
+        "Surabaya",
+        "Bromo Area",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_hotel_to_bromo_area",
+        "bromo_area_to_malang",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:bromo-ijen-3d2n",
+    "slug": "bromo-ijen-3d2n",
+    "title": "3D2N Bromo and Ijen (Surabaya-return)",
+    "data": {
+      "label": "3D2N Bromo and Ijen (Surabaya-return)",
+      "origin": "Surabaya",
+      "duration": "3D2N",
+      "route_sequence": [
+        "Surabaya",
+        "Bromo Area",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Ketapang Harbor"
+      ],
+      "route_legs": [
+        "surabaya_airport_to_bromo_area",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "ijen_base_to_ketapang_harbor"
+      ],
+      "standard_dropoff_options": [
+        "Ketapang Harbor",
+        "Bali with additional transfer",
+        "Surabaya with route adjustment"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:bromo-ijen-3d2n-bali",
+    "slug": "bromo-ijen-3d2n-bali",
+    "title": "3D2N Bromo and Ijen (Bali origin)",
+    "data": {
+      "label": "3D2N Bromo and Ijen (Bali origin)",
+      "origin": "Bali",
+      "duration": "3D2N",
+      "route_sequence": [
+        "Bali Hotel Area",
+        "Banyuwangi / Ijen Area",
+        "Ijen Crater",
+        "Bromo Area",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "bali_hotel_area_to_banyuwangi_ijen_area",
+        "banyuwangi_to_ijen_base",
+        "bromo_area_to_bondowoso_ijen_area",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Airport",
+        "Surabaya Hotel",
+        "Malang"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:bromo-ijen-bali-4d3n",
+    "slug": "bromo-ijen-bali-4d3n",
+    "title": "4D3N Bromo and Ijen ending in Bali (Surabaya origin)",
+    "data": {
+      "label": "4D3N Bromo and Ijen ending in Bali (Surabaya origin)",
+      "origin": "Surabaya",
+      "duration": "4D3N",
+      "route_sequence": [
+        "Surabaya",
+        "Bromo Area",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Ketapang Harbor",
+        "Bali"
+      ],
+      "route_legs": [
+        "surabaya_airport_to_bromo_area",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "ijen_base_to_ketapang_harbor",
+        "ketapang_harbor_to_gilimanuk_bali_side"
+      ],
+      "standard_dropoff_options": [
+        "Bali hotel area",
+        "Ketapang Harbor",
+        "Gilimanuk / Bali side"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:bromo-madakaripura-ijen-3d2n",
+    "slug": "bromo-madakaripura-ijen-3d2n",
+    "title": "3D2N Bromo, Madakaripura, Ijen",
+    "data": {
+      "label": "3D2N Bromo, Madakaripura, Ijen",
+      "origin": "Surabaya",
+      "duration": "3D2N",
+      "route_sequence": [
+        "Surabaya",
+        "Bromo Area",
+        "Madakaripura Waterfall",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Ketapang Harbor"
+      ],
+      "route_legs": [
+        "surabaya_airport_to_bromo_area",
+        "bromo_area_to_madakaripura",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "ijen_base_to_ketapang_harbor"
+      ],
+      "standard_dropoff_options": [
+        "Ketapang Harbor",
+        "Bali with additional transfer",
+        "Surabaya with route adjustment"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:ijen-2d1n",
+    "slug": "ijen-2d1n",
+    "title": "2D1N Ijen",
+    "data": {
+      "label": "2D1N Ijen",
+      "origin": "Surabaya",
+      "duration": "2D1N",
+      "route_sequence": [
+        "Surabaya",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport",
+        "Ketapang Harbor"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:ijen-bromo-madakaripura-3d2n",
+    "slug": "ijen-bromo-madakaripura-3d2n",
+    "title": "3D2N Ijen, Bromo, Madakaripura (Ijen-first)",
+    "data": {
+      "label": "3D2N Ijen, Bromo, Madakaripura (Ijen-first)",
+      "origin": "Surabaya",
+      "duration": "3D2N",
+      "route_sequence": [
+        "Surabaya",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Bromo Area",
+        "Madakaripura Waterfall",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bromo_area_to_madakaripura",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:ijen-bromo-madakaripura-3d2n-bali",
+    "slug": "ijen-bromo-madakaripura-3d2n-bali",
+    "title": "3D2N Ijen, Bromo, Madakaripura (Bali origin)",
+    "data": {
+      "label": "3D2N Ijen, Bromo, Madakaripura (Bali origin)",
+      "origin": "Bali",
+      "duration": "3D2N",
+      "route_sequence": [
+        "Bali Hotel Area",
+        "Banyuwangi / Ijen Area",
+        "Ijen Crater",
+        "Bromo Area",
+        "Madakaripura Waterfall",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "bali_hotel_area_to_banyuwangi_ijen_area",
+        "banyuwangi_to_ijen_base",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bromo_area_to_madakaripura",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Airport",
+        "Surabaya Hotel"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:ijen-bromo-madakaripura-4d3n",
+    "slug": "ijen-bromo-madakaripura-4d3n",
+    "title": "4D3N Ijen, Bromo, Madakaripura",
+    "data": {
+      "label": "4D3N Ijen, Bromo, Madakaripura",
+      "origin": "Surabaya",
+      "duration": "4D3N",
+      "route_sequence": [
+        "Surabaya",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Bromo Area",
+        "Madakaripura Waterfall",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bromo_area_to_madakaripura",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:ijen-bromo-madakaripura-malang-5d4n",
+    "slug": "ijen-bromo-madakaripura-malang-5d4n",
+    "title": "5D4N Ijen, Bromo, Madakaripura, Malang",
+    "data": {
+      "label": "5D4N Ijen, Bromo, Madakaripura, Malang",
+      "origin": "Surabaya",
+      "duration": "5D4N",
+      "route_sequence": [
+        "Surabaya",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Bromo Area",
+        "Madakaripura Waterfall",
+        "Malang",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bromo_area_to_madakaripura",
+        "bromo_area_to_malang",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Malang Hotel",
+        "Surabaya Airport",
+        "Surabaya Hotel"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:ijen-papuma-tumpak-sewu-bromo-4d3n",
+    "slug": "ijen-papuma-tumpak-sewu-bromo-4d3n",
+    "title": "4D3N Ijen, Papuma, Tumpak Sewu, Bromo",
+    "data": {
+      "label": "4D3N Ijen, Papuma, Tumpak Sewu, Bromo",
+      "origin": "Surabaya",
+      "duration": "4D3N",
+      "route_sequence": [
+        "Surabaya",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Papuma Area",
+        "Tumpak Sewu Area",
+        "Bromo Area",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "ijen_area_to_papuma",
+        "papuma_to_tumpak_sewu_area",
+        "tumpak_sewu_to_bromo_area",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:ijen-papuma-tumpak-sewu-bromo-4d3n-bali",
+    "slug": "ijen-papuma-tumpak-sewu-bromo-4d3n-bali",
+    "title": "4D3N Ijen, Papuma, Tumpak Sewu, Bromo (Bali origin)",
+    "data": {
+      "label": "4D3N Ijen, Papuma, Tumpak Sewu, Bromo (Bali origin)",
+      "origin": "Bali",
+      "duration": "4D3N",
+      "route_sequence": [
+        "Bali Hotel Area",
+        "Banyuwangi / Ijen Area",
+        "Ijen Crater",
+        "Papuma Area",
+        "Tumpak Sewu Area",
+        "Bromo Area",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "bali_hotel_area_to_banyuwangi_ijen_area",
+        "banyuwangi_to_ijen_base",
+        "ijen_area_to_papuma",
+        "papuma_to_tumpak_sewu_area",
+        "tumpak_sewu_to_bromo_area",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Airport",
+        "Surabaya Hotel"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:ijen-papuma-tumpak-sewu-bromo-5d4n",
+    "slug": "ijen-papuma-tumpak-sewu-bromo-5d4n",
+    "title": "5D4N Ijen, Papuma, Tumpak Sewu, Bromo",
+    "data": {
+      "label": "5D4N Ijen, Papuma, Tumpak Sewu, Bromo",
+      "origin": "Surabaya",
+      "duration": "5D4N",
+      "route_sequence": [
+        "Surabaya",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Papuma Area",
+        "Tumpak Sewu Area",
+        "Bromo Area",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "ijen_area_to_papuma",
+        "papuma_to_tumpak_sewu_area",
+        "tumpak_sewu_to_bromo_area",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:ijen-papuma-tumpak-sewu-bromo-5d4n-bali",
+    "slug": "ijen-papuma-tumpak-sewu-bromo-5d4n-bali",
+    "title": "5D4N Ijen, Papuma, Tumpak Sewu, Bromo (Bali origin)",
+    "data": {
+      "label": "5D4N Ijen, Papuma, Tumpak Sewu, Bromo (Bali origin)",
+      "origin": "Bali",
+      "duration": "5D4N",
+      "route_sequence": [
+        "Bali Hotel Area",
+        "Banyuwangi / Ijen Area",
+        "Ijen Crater",
+        "Papuma Area",
+        "Tumpak Sewu Area",
+        "Bromo Area",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "bali_hotel_area_to_banyuwangi_ijen_area",
+        "banyuwangi_to_ijen_base",
+        "ijen_area_to_papuma",
+        "papuma_to_tumpak_sewu_area",
+        "tumpak_sewu_to_bromo_area",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Airport",
+        "Surabaya Hotel"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:ijen-papuma-tumpak-sewu-bromo-malang-6d5n",
+    "slug": "ijen-papuma-tumpak-sewu-bromo-malang-6d5n",
+    "title": "6D5N Ijen, Papuma, Tumpak Sewu, Bromo, Malang",
+    "data": {
+      "label": "6D5N Ijen, Papuma, Tumpak Sewu, Bromo, Malang",
+      "origin": "Surabaya",
+      "duration": "6D5N",
+      "route_sequence": [
+        "Surabaya",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Papuma Area",
+        "Tumpak Sewu Area",
+        "Bromo Area",
+        "Malang",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "ijen_area_to_papuma",
+        "papuma_to_tumpak_sewu_area",
+        "tumpak_sewu_to_bromo_area",
+        "bromo_area_to_malang",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Malang Hotel",
+        "Surabaya Airport",
+        "Surabaya Hotel"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:taman-safari-prigen-bromo-madakaripura-3d2n",
+    "slug": "taman-safari-prigen-bromo-madakaripura-3d2n",
+    "title": "3D2N Taman Safari / Prigen, Bromo, Madakaripura (specialty)",
+    "data": {
+      "label": "3D2N Taman Safari / Prigen, Bromo, Madakaripura (specialty)",
+      "origin": "Surabaya",
+      "duration": "3D2N",
+      "route_sequence": [
+        "Surabaya",
+        "Bromo Area",
+        "Madakaripura Waterfall",
+        "Surabaya"
+      ],
+      "route_legs": [
+        "surabaya_airport_to_bromo_area",
+        "bromo_area_to_madakaripura",
+        "malang_to_surabaya"
+      ],
+      "standard_dropoff_options": [
+        "Surabaya Hotel",
+        "Surabaya Airport"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  },
+  {
+    "entity_type": "route",
+    "canonical_key": "route:tumpak-sewu-bromo-ijen-4d3n",
+    "slug": "tumpak-sewu-bromo-ijen-4d3n",
+    "title": "4D3N Tumpak Sewu, Bromo, Ijen",
+    "data": {
+      "label": "4D3N Tumpak Sewu, Bromo, Ijen",
+      "origin": "Surabaya",
+      "duration": "4D3N",
+      "route_sequence": [
+        "Surabaya",
+        "Tumpak Sewu Area",
+        "Bromo Area",
+        "Bondowoso / Ijen Area",
+        "Ijen Crater",
+        "Ketapang Harbor"
+      ],
+      "route_legs": [
+        "surabaya_to_tumpak_sewu",
+        "tumpak_sewu_to_bromo_area",
+        "bromo_area_to_bondowoso_ijen_area",
+        "bondowoso_to_ijen_base",
+        "ijen_base_to_ketapang_harbor"
+      ],
+      "standard_dropoff_options": [
+        "Ketapang Harbor",
+        "Bali with additional transfer"
+      ]
+    },
+    "provenance": {
+      "label": "itinerary-core",
+      "origin": "itinerary-core",
+      "duration": "itinerary-core",
+      "route_sequence": "itinerary-core",
+      "route_legs": "itinerary-core",
+      "standard_dropoff_options": "itinerary-core"
+    },
+    "source": "itinerary-core",
+    "editable": false
+  }
+]

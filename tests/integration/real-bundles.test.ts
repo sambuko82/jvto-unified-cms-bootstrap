@@ -96,7 +96,9 @@ describe('real consolidated estate', () => {
   it('enforces the facts-lock: Ijen screening is mandatory, never conditional', () => {
     const raw = JSON.stringify(result.entities);
     expect(raw).not.toContain('when BBKSDA regulations require it');
-    expect(raw).toContain('for every guest before crater entry (mandatory)');
+    // Upstream (okf #31) now states this directly, so the projection carries
+    // mandatory-per-guest wording regardless of the extractor's facts-lock sanitizer.
+    expect(raw).toContain('mandatory for every guest');
   });
 
   it('leaks no private fields into the projection', () => {

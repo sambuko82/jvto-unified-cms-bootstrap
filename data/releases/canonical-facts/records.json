@@ -8,19 +8,33 @@
     "payload": {
       "adjudicated_facts": {
         "founding_year": 2015,
+        "pt_legal_context": "PT Java Volcano Rendezvous; NIB/TDUP era 2023 (no invented incorporation date)",
         "deposit_percent": 20,
         "close_departure_full_within_days": 14,
         "cancellation_model": "lifetime_package_credit",
+        "cancellation_naming": "Lifetime Package Credit (supersedes the retired 'Travel Credit')",
+        "ijen_health_screening": "mandatory",
+        "ijen_health_authority": "BBKSDA Surat Edaran SE.1658/KSA.9/2024 (cited as supporting authority, not a conditional trigger)",
+        "blue_fire": "natural phenomenon subject to weather and gas activity; cannot be guaranteed",
         "reviews": {
           "trustpilot": "4.8/51",
           "google": "4.9/123",
           "tripadvisor": "4.95/21",
           "cross_platform": "4.8/195"
         },
-        "ijen_health_screening": "mandatory",
-        "nib": "1102230032918"
+        "prices": "IDR-only (format: IDR 1,550,000/person)",
+        "email_primary": "hello@javavolcano-touroperator.com",
+        "email_secondary": "javavolcanotouroperator@gmail.com",
+        "phone": "+62 822 4478 8833",
+        "nib": "1102230032918",
+        "ahu": "-0023020",
+        "hq_address": "Jl. Khairil Anwar No.102A, Bondowoso 68214",
+        "elevations": {
+          "kawah_ijen_m": 2386,
+          "mount_bromo_m": 2329
+        }
       }
     },
-    "payloadSha256": "e3bee508d72f70cc53bcc42397fede0dc4361b8ed07393f4414e1e7b8d8ac604"
+    "payloadSha256": "f9d4c9ac7e982a8a11c5eb497f4016cf9e7ea039ffe33ed6865abe20f5eb38a6"
   }
 ]

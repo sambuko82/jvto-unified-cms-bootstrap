@@ -1049,12 +1049,12 @@
       "category": "policy",
       "scope": "ijen_scoped",
       "title": "Ijen Health Screening",
-      "short_answer": "For Ijen crater hikes, JVTO coordinates a health screening with licensed medical staff for every guest before crater entry (mandatory).",
-      "detail_summary": "When the East Java conservation authority (BBKSDA) requires it, crater access at Kawah Ijen depends on a short health screening. For affected tours JVTO coordinates this screening with licensed medical staff, and a verified certificate is needed at the crater gate.",
+      "short_answer": "For Ijen crater hikes, a health certificate is mandatory for every guest before crater entry — JVTO coordinates the screening with licensed medical staff.",
+      "detail_summary": "A health certificate is mandatory for every guest before crater access at Kawah Ijen; JVTO coordinates the screening with licensed medical staff and the verified certificate is checked at the crater gate. The East Java conservation authority (BBKSDA), Surat Edaran SE.1658/KSA.9/2024, is cited as the supporting authority.",
       "customer_visible": true,
       "reusable": true
     },
-    "payloadSha256": "29e2fb99c02f99d4b5abb687e28f8c5bd4d439ba7a0b82714048ac9a42a41fd7"
+    "payloadSha256": "c922b576327cbc37c8b1fe27d1537c90bc869dd748573ff8560694ed656db948"
   },
   {
     "source": "knowledge-catalog-okf",
@@ -1084,11 +1084,11 @@
       "scope": "global",
       "title": "What's Included",
       "short_answer": "JVTO tours are all-inclusive of transport, crew, entrance fees, water, and stated meals; flights, insurance, tips, and personal expenses are excluded.",
-      "detail_summary": "Every JVTO package includes private transport, a dedicated driver and guide(s), all entrance fees and permits, drinking water, full pick-up to drop-off assistance, and meals as stated (at least breakfast). Bromo tours add the private 4WD jeep; Ijen tours add gas masks and trekking poles (and health-screening coordination where BBKSDA requires it); Bali-origin tours add the ferry crossing.",
+      "detail_summary": "Every JVTO package includes private transport, a dedicated driver and guide(s), all entrance fees and permits, drinking water, full pick-up to drop-off assistance, and meals as stated (at least breakfast). Bromo tours add the private 4WD jeep; Ijen tours add gas masks and trekking poles (and mandatory health-screening coordination — a certificate is required for every guest before crater entry); Bali-origin tours add the ferry crossing.",
       "customer_visible": true,
       "reusable": true
     },
-    "payloadSha256": "5cae807514e9bbb7702a5c03c58a730a1394ffd7937568eb8855f2c70f6082c5"
+    "payloadSha256": "76190993a83d4dda54026b406964c829fabcd8e284600fe1da4e8e744c609b20"
   },
   {
     "source": "knowledge-catalog-okf",
@@ -1377,11 +1377,11 @@
       "category": "inclusion_component",
       "scope": "conditional_variation",
       "title": "Ijen Health-Screening Coordination",
-      "short_answer": "Coordination of the BBKSDA health screening where the authority requires it.",
+      "short_answer": "Coordination of the mandatory Ijen health screening — a certificate is required for every guest before crater entry.",
       "customer_visible": true,
       "reusable": true
     },
-    "payloadSha256": "4aaa63ad6d332a697812d41a62e14375bb453f1576e1980f333de6294e288fa3"
+    "payloadSha256": "4bca401434b4f526cac20b864b24cc2bb74110f6f22bd95fbdbe0896b5df841a"
   },
   {
     "source": "knowledge-catalog-okf",
