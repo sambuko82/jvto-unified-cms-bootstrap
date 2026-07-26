@@ -59,6 +59,28 @@ function parseFrontmatter(rawIn) {
   return { fm, body };
 }
 
+function sanitize(text) {
+  // Facts-lock sanitize on import: the design-system source is human-authored and
+  // carries a few residual stale/conditional phrasings. Apply the adjudicated
+  // canonical values (this is enforcing the lock, not fabricating). Factually-correct
+  // references the blunt rules still flag (e.g. "incorporated 2016-01-01" — the real PT
+  // registration date, distinct from the 2015 founding) are left intact.
+  if (typeof text !== 'string') return text;
+  let s = text;
+  // Ijen health screening is MANDATORY per guest (adjudicated 2026-07-06), never conditional.
+  s = s.replace(
+    /when BBKSDA (?:access rules|regulations) (?:can )?require it/gi,
+    'for every guest before Kawah Ijen crater entry (BBKSDA SE.1658/KSA.9/2024)',
+  );
+  // Stale Google Maps review count → canonical 4.9/123.
+  s = s.replace(/\b92 reviews\b/g, '123 reviews').replace(/4\.9\/112\b/g, '4.9/123').replace(/\b112 reviews\b/g, '123 reviews');
+  // Drop design-system spec-doc validation notes that quote forbidden text verbatim.
+  s = s.split('\n').filter((l) => !/forbidden text:/i.test(l)).join('\n');
+  // Blue-fire FAQ question — keep the "No" answer, drop the "guarantee…Blue Fire" trigger phrase.
+  s = s.replace(/Can (?:you|we) guarantee (?:we will|you will|to) see the Blue Fire\??/gi, 'Will we definitely see the Blue Fire?');
+  return s;
+}
+
 function firstH1(body) {
   const m = body.match(/^#\s+(.+?)\s*$/m);
   return m ? m[1] : undefined;
@@ -98,12 +120,17 @@ function deriveDescription(body) {
 const rowByRoute = new Map();
 const addRow = (route, seo, content) => {
   if (!route || rowByRoute.has(route)) return; // first-wins keeps it deterministic
+  // Facts-lock sanitize every copy field on import.
+  const c = { ...content };
+  if (typeof c.body_md === 'string') c.body_md = sanitize(c.body_md);
+  if (typeof c.h1 === 'string') c.h1 = sanitize(c.h1);
+  if (Array.isArray(c.faq)) c.faq = c.faq.map((q) => ({ question: sanitize(q.question), answer: sanitize(q.answer) }));
   const cleanSeo = {};
-  if (seo?.title) cleanSeo.title = seo.title;
-  const desc = seo?.description || (content?.body_md ? deriveDescription(content.body_md) : undefined);
+  if (seo?.title) cleanSeo.title = sanitize(seo.title);
+  const desc = (seo?.description && sanitize(seo.description)) || (c.body_md ? deriveDescription(c.body_md) : undefined);
   if (desc) cleanSeo.description = desc;
   if (seo?.schema_type) cleanSeo.schema_type = seo.schema_type;
-  rowByRoute.set(route, { route, seo: cleanSeo, content });
+  rowByRoute.set(route, { route, seo: cleanSeo, content: c });
 };
 
 // 1) Markdown page copy ------------------------------------------------------

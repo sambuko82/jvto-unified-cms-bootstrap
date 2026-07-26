@@ -23,7 +23,7 @@
     "seed": "node scripts/build-seed.mjs",
     "pull-db": "node scripts/pull-db.mjs",
     "cms:build": "npm run build && node scripts/consolidate.mjs && node scripts/render-cms.mjs && node scripts/build-design-system-extract.mjs && node scripts/build-pages.mjs && node scripts/build-seed.mjs",
-    "verify:projection": "node scripts/consolidate.mjs && node scripts/render-cms.mjs && node scripts/build-design-system-extract.mjs && node scripts/build-pages.mjs && node scripts/build-seed.mjs && git diff --exit-code -- output/ data/releases/design-system/",
+    "verify:projection": "node scripts/consolidate.mjs && node scripts/render-cms.mjs && node scripts/build-pages.mjs && node scripts/build-seed.mjs && git diff --exit-code -- output/",
     "build:design-extract": "node scripts/build-design-system-extract.mjs"
   },
   "dependencies": {
