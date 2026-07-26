@@ -25,14 +25,13 @@
       "route": 18
     },
     "pages": 52,
-    "sections": 253,
+    "sections": 254,
     "redirects": 7,
     "governance_facts": 19,
-    "routes_fully_rendered": 50,
-    "routes_scaffold_only": 2
+    "routes_fully_rendered": 51,
+    "routes_scaffold_only": 1
   },
   "routes_scaffold_only": [
-    "/blog",
     "/blog/why-not-unlicensed-ijen-operator"
   ],
   "gates": {

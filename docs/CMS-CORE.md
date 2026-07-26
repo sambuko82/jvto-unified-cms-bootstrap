@@ -44,20 +44,23 @@ Idempotent (upserts; sections regenerated each load). Verified locally on Postgr
 
 ```bash
 npm run build:bundles && npm run consolidate   # re-extract atoms from the 3 data repos → projection.json
-npm run pages                                  # rebuild the IA from config/pages.yaml → pages.json (fails on dangling refs)
+npm run build:design-extract                   # compose page copy from jvto-new-on-design-system → data/releases/design-system/content-pages.json
+npm run pages                                  # rebuild the IA from config/pages.yaml + overlay the extract → pages.json (fails on dangling refs)
 npm run seed                                   # regenerate output/seed/*
-DATABASE_URL=… npm run pull-db                 # (optional, "nanti") pull real page copy from jvto_dev, read-only
 ```
 
-`npm run cms:build` runs consolidate → render → pages → seed in one shot.
+`npm run cms:build` runs consolidate → render → build:design-extract → pages → seed in one shot.
 
-## Live DB (`jvto_dev`) — read-only
+## Page copy source — `jvto-new-on-design-system` (no jvto_dev)
 
-Proven read-only via Adminer; the live route inventory + IA↔live reconciliation is in
-`data/releases/jvto-db/content-pages-routes.json` (the 16 live tour routes match the
-generated IA exactly). Full per-route `seo`/`content` sync is the deferred enrichment
-via `scripts/pull-db.mjs` (connects with `DATABASE_URL`, facts-lock-sanitizes, **never
-writes**). Credentials live only in a gitignored env — never in the repo.
+Per-route page copy (`seo` + `page_content` body/FAQ) is composed from the design-system
+repo by `scripts/build-design-system-extract.mjs` (override the source with
+`DESIGN_SYSTEM_PATH`): markdown page files keyed on frontmatter `page:`, tour bodies from
+`products.json` (canonical IDR pricing), verify pages from `legal-licenses/police-integration/press-coverage.md`
++ the verify `*.html`, SEO description derived from each page's lede. Deterministic —
+re-runs are byte-identical (`verify:projection` guards `output/` **and**
+`data/releases/design-system/`). The prior `jvto_dev` extract + `scripts/pull-db.mjs` are
+retired (pull-db.mjs kept on disk, unreferenced). No live DB in the copy pipeline.
 
 ## What the new workspace builds next (P3+)
 
