@@ -388,4 +388,56 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     });
     expect(res.statusCode).toBe(403);
   });
+
+  // ── Publish (export jvto_cms → seed) ────────────────────────────────────────
+
+  it('publish requires a session (redirect) and a CSRF token (403)', async () => {
+    const noSession = await app.inject({ method: 'POST', url: '/admin/publish' });
+    expect(noSession.statusCode).toBe(302);
+    const session = await login();
+    const noCsrf = await app.inject({
+      method: 'POST',
+      url: '/admin/publish',
+      cookies: { cms_session: session },
+      headers: FORM,
+      payload: '',
+    });
+    expect(noCsrf.statusCode).toBe(403);
+  });
+
+  it('publish exports the edited jvto_cms into the seed pack', async () => {
+    const { mkdtempSync, readFileSync, rmSync } = await import('node:fs');
+    const os = await import('node:os');
+    const path = await import('node:path');
+    const outDir = mkdtempSync(path.join(os.tmpdir(), 'cms-seed-'));
+    process.env.CMS_SEED_OUT = outDir; // write to a temp dir, not tracked output/seed
+    try {
+      const session = await login();
+      // a console edit that must surface in the exported seed
+      const { cookie, token } = await csrfFor(`/admin/pages${TOUR_ROUTE}`, session);
+      const edit = await app.inject({
+        method: 'POST',
+        url: `/admin/pages${TOUR_ROUTE}/sections/page_content`,
+        cookies: { cms_session: session, cms_csrf: cookie },
+        headers: FORM,
+        payload: `csrf=${token}&h1=Published+edit+marker&body_md=Bromo+and+Ijen+overview.`,
+      });
+      expect(edit.statusCode).toBe(200);
+      // publish (export → seed)
+      const pub = await csrfFor('/admin/publishing', session);
+      const res = await app.inject({
+        method: 'POST',
+        url: '/admin/publish',
+        cookies: { cms_session: session, cms_csrf: pub.cookie },
+        headers: FORM,
+        payload: `csrf=${pub.token}`,
+      });
+      expect(res.statusCode).toBe(200);
+      const seed = readFileSync(path.join(outDir, 'page_sections.json'), 'utf8');
+      expect(seed).toContain('Published edit marker');
+    } finally {
+      delete process.env.CMS_SEED_OUT;
+      rmSync(outDir, { recursive: true, force: true });
+    }
+  });
 });
