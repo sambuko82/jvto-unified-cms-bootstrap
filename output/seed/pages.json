@@ -9,10 +9,11 @@
     "visual_mode": "homepage",
     "hub_route": null,
     "title": "Tourist Police-Led Private Volcano Tours in East Java | Java Volcano Tour Operator",
-    "h1": "Homepage Copy — javavolcano-touroperator.com",
+    "h1": "Tourist Police-Led Private Volcano Tours in East Java",
     "seo": {
-      "title": "Tourist Police-Led Private Volcano Tours in East Java | Java Volcano Tour Operator",
-      "description": "All claims trace to wiki sources cited inline. No invented statistics or credentials. Voice: Style B (narrative dossier) with Style A fact inserts per…"
+      "title": "Tourist Police-Led Private Volcano Tours in East Java | JVTO",
+      "description": "Private Bromo, Ijen & Tumpak Sewu tours from Surabaya or Bali. Licensed operator (No.1102230032918), led by an active Tourist Police officer.",
+      "schema_type": "TravelAgency"
     },
     "status": "published"
   },
@@ -451,10 +452,10 @@
     "visual_mode": "hybrid",
     "hub_route": null,
     "title": "Why JVTO",
-    "h1": "Why JVTO — Hub Page",
+    "h1": "Why Travel with Java Volcano Tour Operator (JVTO)",
     "seo": {
-      "title": "Why JVTO",
-      "description": "Six things that separate JVTO from every other operator in East Java."
+      "title": "Why Travel with Java Volcano Tour Operator (JVTO)",
+      "description": "Tourist Police-led safety, licensed operator, private-only tours, all-inclusive pricing. Why travellers from SG, MY & HK choose JVTO for Bromo and Ijen."
     },
     "status": "published"
   },
@@ -468,10 +469,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/why-jvto",
     "title": "The JVTO Difference",
-    "h1": "The JVTO Difference",
+    "h1": "The JVTO Difference: Safety Leadership and Verified Proof",
     "seo": {
-      "title": "The JVTO Difference",
-      "description": "Six things that make JVTO operationally different from other East Java volcano tour operators. Each one is backed by a verifiable credential — not…"
+      "title": "The JVTO Difference: Safety Leadership & Verified Proof",
+      "description": "What sets JVTO apart: Tourist Police-led safety mindset, documented operational discipline, and a full proof library anyone can verify independently."
     },
     "status": "published"
   },
@@ -485,10 +486,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/why-jvto",
     "title": "Reviews",
-    "h1": "Reviews",
+    "h1": "Guest Voices: Real Experiences, Independently Verified",
     "seo": {
-      "title": "Reviews",
-      "description": "We don't curate a quote wall. Below are reviews organized by platform and by theme — so you can check patterns, not cherry-picked excerpts."
+      "title": "Guest Reviews – Independent Voices on JVTO Tours | JVTO",
+      "description": "Independent reviews of JVTO on Tripadvisor, Trustpilot, Google, ISIC and Indecon. Verified voices — we cannot edit or remove any review on those platforms."
     },
     "status": "published"
   },
@@ -502,10 +503,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/why-jvto",
     "title": "Our Story",
-    "h1": "Our Story",
+    "h1": "Our Story: Roots & Continuity Since 2015",
     "seo": {
-      "title": "Our Story",
-      "description": "JVTO grew from a humble local guesthouse in Bondowoso into a licensed tour operator shaped by the Tourist Police experience of our founder, Mr. Sam."
+      "title": "Our Story – JVTO History & Roots Since 2015 | JVTO",
+      "description": "Documented JVTO history: Booking.com award 2015, Stefan Loose guidebook 2016, and physical artifacts tracing the operator's roots in Bondowoso, East Java."
     },
     "status": "published"
   },
@@ -519,10 +520,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/why-jvto",
     "title": "Our Team",
-    "h1": "Our Team",
+    "h1": "Local Team, Daily Execution",
     "seo": {
-      "title": "Our Team",
-      "description": "14 field crew members — 7 guides and 7 drivers. Every guide and driver is individually named, photographed, and license-linked. Five guides hold HPWKI KTA…"
+      "title": "Our Team – Local East Java Guides & Drivers | JVTO",
+      "description": "Meet JVTO's 14-person local East Java team: experienced guides and drivers who handle daily volcano tour logistics for Bromo, Ijen, and Tumpak Sewu."
     },
     "status": "published"
   },
@@ -536,10 +537,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/why-jvto",
     "title": "Community Standards",
-    "h1": "Community Standards",
+    "h1": "Community Standards: Partners, Ethics & Operational Rules",
     "seo": {
-      "title": "Community Standards",
-      "description": "JVTO publishes its rules, policies, and commitments before you pay anything. This is a deliberate choice. Guests who understand the terms before booking…"
+      "title": "Community Standards – Partners, Ethics & Operational Rules | JVTO",
+      "description": "JVTO community standards: professional partnerships (HPWKI, ISIC, INDECON), ethical travel commitments, and health screening compliance for Ijen tours."
     },
     "status": "published"
   },
@@ -553,10 +554,11 @@
     "visual_mode": "hybrid",
     "hub_route": null,
     "title": "Travel Guide",
-    "h1": "Travel Guide — Booking, Safety & Practical Info",
+    "h1": "Travel Guide – Safety, Health & Practical Information",
     "seo": {
-      "title": "Travel Guide",
-      "description": "We build itineraries around facts, not promises. This travel guide covers everything you need to book with confidence, prepare for the terrain, and…"
+      "title": "Travel Guide – Safety, Booking & Practical Info | JVTO",
+      "description": "JVTO's official travel guide: booking steps, safety rules, Ijen health screening, weather and closures, packing list, and police escort for groups.",
+      "schema_type": "CollectionPage"
     },
     "status": "published"
   },
@@ -572,7 +574,8 @@
     "title": "Frequently Asked Questions",
     "h1": "Frequently Asked Questions",
     "seo": {
-      "title": "Frequently Asked Questions"
+      "title": "FAQ – Private Bromo & Ijen Tours | JVTO",
+      "description": "Answers to common questions about JVTO private tours: inclusions, payments, Package Credit policy, Ijen health screening, closures, and student discounts."
     },
     "status": "published"
   },
@@ -586,10 +589,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/travel-guide",
     "title": "Ijen Health Screening",
-    "h1": "Ijen Health Screening — Real Checks, Digital Proof",
+    "h1": "Ijen Health Screening – Real Checks, Digital Proof",
     "seo": {
-      "title": "Ijen Health Screening",
-      "description": "BBKSDA Jawa Timur — the government conservation agency responsible for the Kawah Ijen Natural Tourism Park — issued Surat Edaran SE.1658/KSA.9/2024…"
+      "title": "Ijen Health Screening – Real Checks, Digital Proof & QR | JVTO",
+      "description": "The Ijen night hike requires a mandatory health certificate for every guest before crater entry. JVTO arranges the screening; if you're advised not to hike, the climb is cancelled for you (not the group) with safe-zone alternatives."
     },
     "status": "published"
   },
@@ -603,10 +606,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/travel-guide",
     "title": "Booking Information",
-    "h1": "Booking Information — Payments, Changes & Package Credit",
+    "h1": "Booking Information – How JVTO Private Tours Work",
     "seo": {
-      "title": "Booking Information",
-      "description": "Everything you need to know to confirm, pay, and manage a JVTO booking. The full legal text is at…"
+      "title": "Booking Information – Payments, Changes & Package Credit | JVTO",
+      "description": "How to book, pay, and cancel a JVTO private tour: website-only booking, 20% deposit (up to 100% within 14 days), card ≤5d / bank·Wise ≤3d balance deadlines, and 100% Lifetime Package Credit for whole-booking cancellations 48h+ before Day 1."
     },
     "status": "published"
   },
@@ -620,10 +623,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/travel-guide",
     "title": "Weather & Closures",
-    "h1": "Weather, Volcanic Activity & Closures",
+    "h1": "Weather, Volcano Alerts & Closures",
     "seo": {
-      "title": "Weather & Closures",
-      "description": "Bromo and Ijen are active volcanoes. Tumpak Sewu and Madakaripura are canyon environments where rainfall matters. Conditions change. This page explains…"
+      "title": "Weather, Volcano Alerts & Closures – How JVTO Handles Changes",
+      "description": "How JVTO handles weather, volcano alerts and closures. Blue Fire and sunrise are natural phenomena and cannot be guaranteed; guides assess conditions daily and may delay or reroute for safety."
     },
     "status": "published"
   },
@@ -637,10 +640,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/travel-guide",
     "title": "Police Escort for Groups",
-    "h1": "Police Escort for Tourist Groups in East Java",
+    "h1": "Traffic Police Escort for Tourist Groups in East Java",
     "seo": {
-      "title": "Police Escort for Groups",
-      "description": "A traffic police escort in East Java is a formal arrangement coordinated between JVTO and the relevant Traffic Police unit (Ditlantas). When approved,…"
+      "title": "Traffic Police Escort for Tourist Groups in East Java | JVTO",
+      "description": "For large groups (around 18+ paying guests) JVTO can coordinate an official Traffic Police escort on certain road segments when approved, plus a Free-of-Charge group incentive (1–3 FOC seats) on direct bookings."
     },
     "status": "published"
   },
@@ -654,10 +657,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/travel-guide",
     "title": "Safety on Tours",
-    "h1": "Safety on Tours — How We Make Decisions",
+    "h1": "Safety on JVTO Tours",
     "seo": {
-      "title": "Safety on Tours",
-      "description": "Mr. Sam is a Tourist Police officer first, tour operator second. That order shapes every operational decision we make. Safety at JVTO is not a marketing…"
+      "title": "Safety on JVTO Tours – How We Plan & What You Should Know",
+      "description": "JVTO safety approach: Tourist Police-led planning, gear requirements, Ijen gas mask sterilisation, emergency protocols, and what guests must follow."
     },
     "status": "published"
   },
@@ -671,10 +674,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/travel-guide",
     "title": "Packing & Fitness",
-    "h1": "Packing & Fitness — Bromo, Ijen & Tumpak Sewu",
+    "h1": "Packing & Fitness for Bromo, Ijen & Tumpak Sewu",
     "seo": {
-      "title": "Packing & Fitness",
-      "description": "Good preparation is straightforward on JVTO routes. The principles are: layering for cold pre-dawn starts, grip for volcanic and canyon terrain, and…"
+      "title": "Packing & Fitness for Bromo, Ijen & Tumpak Sewu | JVTO",
+      "description": "What to pack and how fit you need to be for Bromo, Ijen, and Tumpak Sewu tours. Specific gear list, fitness expectations, and what JVTO provides."
     },
     "status": "published"
   },
@@ -688,10 +691,11 @@
     "visual_mode": "trust",
     "hub_route": null,
     "title": "Verify JVTO — Proof Library",
-    "h1": "Verify JVTO — Proof Library",
+    "h1": "Verify JVTO: A Proof Library You Can Check",
     "seo": {
-      "title": "Verify JVTO — Proof Library",
-      "description": "PT Java Volcano Rendezvous NIB · 1102230032918 Tourist Police-Led"
+      "title": "Verify JVTO – Credentials, Safety, Press & History",
+      "description": "Review JVTO's proof library: legal identity, historical continuity, police and safety context, and third-party references that support the company's trust architecture.",
+      "schema_type": "WebPage"
     },
     "status": "published"
   },
@@ -756,10 +760,11 @@
     "visual_mode": "trust",
     "hub_route": "/verify-jvto",
     "title": "History & Artifacts",
-    "h1": "History & Artifacts",
+    "h1": "History Artifacts: Documented Origins Since 2015",
     "seo": {
-      "title": "History & Artifacts",
-      "description": "PT Java Volcano Rendezvous NIB · 1102230032918 Tourist Police-Led"
+      "title": "History Artifacts — Documented JVTO Origins Since 2015 | JVTO",
+      "description": "Verifiable artifacts: Booking.com 2015 award (9.4/10), Stefan Loose 2018 guidebook, Detik.com 2021 press, NIB registration 2023. SHA-256 verified.",
+      "schema_type": "WebPage"
     },
     "status": "published"
   },
