@@ -22,9 +22,19 @@ Build the JVTO Unified CMS as a governed control plane that extends the existing
 Every step of work here produces (1) real running implementation — not notes or
 references, (2) a measurable, verifiable change, and (3) proof of execution (curl output,
 tests, or a visible result). Do not accumulate documentation without direct
-implementation. On obstacles: use judgment and prior context first, re-examine earlier
-data and recommendations, and ask only for a true blocker (missing credentials, a
+implementation.
+
+On obstacles: use judgment and prior context first, re-examine earlier data and
+recommendations, and ask only for a true blocker (missing credentials, a
 destructive/irreversible action, or a genuine fork).
+
+Validate before executing a questionable directive: when an instruction — or a chosen
+option — looks wrong, reconcile it against established context (the canonical facts, prior
+decisions/ADRs, and earlier data) before acting. Surface the conflict rather than
+executing blindly or silently overriding it, and resolve per the decision hierarchy below
+— never on the newest instruction alone.
+
+Goal: minimize questions, maximize execution, avoid blunders.
 
 ## Required architectural behavior
 
