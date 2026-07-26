@@ -36,9 +36,10 @@ describe.skipIf(!hasDb)('CMS read-runtime (integration)', () => {
               (SELECT count(*) FROM pages) p,
               (SELECT count(*) FROM page_sections) s`,
     );
-    // s = 203 designed IA sections + 50 `page_content` sections (real live copy
-    // overlaid onto the 50 matched pages; 2 blog pages stay scaffold-only).
-    expect(rows[0]).toEqual({ e: '172', p: '52', s: '253' });
+    // s = 203 designed IA sections + 51 `page_content` sections (design-system copy
+    // overlaid onto the 51 matched pages; only /blog/why-not-unlicensed-ijen-operator
+    // stays scaffold-only).
+    expect(rows[0]).toEqual({ e: '172', p: '52', s: '254' });
   });
 
   it('resolves the graded tour route with ordered sections + hydrated entities + JSON-LD', async () => {
