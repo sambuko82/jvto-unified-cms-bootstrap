@@ -28,6 +28,8 @@
     "build:design-extract": "node scripts/build-design-system-extract.mjs"
   },
   "dependencies": {
+    "@fastify/cookie": "^11.1.2",
+    "@fastify/formbody": "^8.0.2",
     "fastify": "^5.2.0",
     "pg": "^8.13.1"
   },
