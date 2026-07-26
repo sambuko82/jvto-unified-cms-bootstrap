@@ -43,7 +43,8 @@ CREATE TABLE IF NOT EXISTS pages (
   title        text,
   h1           text,
   seo          jsonb NOT NULL DEFAULT '{}'::jsonb,     -- { title, description, schema_type, schema_json }
-  status       text NOT NULL DEFAULT 'published'
+  status       text NOT NULL DEFAULT 'published',
+  editable     boolean NOT NULL DEFAULT false          -- true = console-edited (upstream refresh must NOT clobber)
 );
 CREATE INDEX IF NOT EXISTS pages_group_idx ON pages(file_group, sort_order);
 
@@ -56,6 +57,7 @@ CREATE TABLE IF NOT EXISTS page_sections (
   content      jsonb NOT NULL DEFAULT '{}'::jsonb,
   entity_refs  text[] NOT NULL DEFAULT '{}', -- canonical_keys hydrated at resolve time
   asset_refs   text[] NOT NULL DEFAULT '{}',
+  editable     boolean NOT NULL DEFAULT false, -- true = console-edited (upstream refresh must NOT clobber)
   UNIQUE(page_id, sort_order)
 );
 
@@ -80,6 +82,12 @@ CREATE TABLE IF NOT EXISTS assets (
   alt   text,
   meta  jsonb NOT NULL DEFAULT '{}'::jsonb
 );
+
+-- ── Idempotent migrations for already-provisioned databases ───────────────────
+-- (CREATE TABLE IF NOT EXISTS above is a no-op on an existing DB, so new columns
+--  are added here.) `editable` marks console-edited rows the upstream refresh keeps.
+ALTER TABLE pages         ADD COLUMN IF NOT EXISTS editable boolean NOT NULL DEFAULT false;
+ALTER TABLE page_sections ADD COLUMN IF NOT EXISTS editable boolean NOT NULL DEFAULT false;
 
 -- ── Read model: page + ordered sections (resolver hydrates entity_refs in app) ─
 CREATE OR REPLACE VIEW page_render AS
