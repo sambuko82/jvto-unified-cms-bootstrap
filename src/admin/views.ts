@@ -152,3 +152,16 @@ export function publishingView(
         <button type="submit">Publish edits</button></form></div>`;
   return layout({ title: 'Publishing', crumbs: 'Dashboard › Publishing', authed: true, body });
 }
+
+export function publishResult(opts: { ok: boolean; output: string; diff: string; outDir: string }): string {
+  const pre = (text: string, color: string) =>
+    `<pre style="margin:0;white-space:pre-wrap;font-size:12px;color:${color}">${esc(text)}</pre>`;
+  const body = `<h2>Publish result</h2>
+    <div class="flash ${opts.ok ? 'ok' : 'err'}">${
+      opts.ok ? `Exported <code>jvto_cms</code> → <code>${esc(opts.outDir)}</code> (the seed jvto-web renders).` : 'Publish failed.'
+    }</div>
+    ${opts.diff ? `<div class="card"><h3>Changed seed files</h3>${pre(opts.diff, '#cbd5e1')}</div>` : ''}
+    <div class="card"><h3>Export log</h3>${pre(opts.output, '#94a3b8')}</div>
+    <p><a href="/admin/publishing">← Back to Publishing</a></p>`;
+  return layout({ title: 'Publish result', crumbs: 'Dashboard › Publishing › Publish', authed: true, body });
+}

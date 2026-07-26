@@ -4,6 +4,8 @@
 // go through the SAME write core as the JSON API (facts-locked, audited).
 
 import { randomBytes } from 'node:crypto';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import type { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify';
@@ -20,11 +22,12 @@ import {
   SESSION_VALUE,
 } from '../auth.js';
 import { layout, esc } from './theme.js';
-import { loginPage, dashboard, pageEditor, publishingView } from './views.js';
+import { loginPage, dashboard, pageEditor, publishingView, publishResult } from './views.js';
 import type { PageRow, GroupBlock, EditorPage, EditorSection, Flash } from './views.js';
 
 const CSRF_COOKIE = 'cms_csrf';
 const ADMIN_ACTOR = 'admin-console';
+const execFileAsync = promisify(execFile);
 
 function loadGroupLabels(): Record<string, { label: string }> {
   const p = fileURLToPath(new URL('../../config/pages.yaml', import.meta.url));
@@ -193,11 +196,30 @@ export function registerAdmin(app: FastifyInstance): void {
   });
 
   app.post('/admin/publish', { preHandler: requireSession }, async (req, reply) => {
-    if (!csrfOk(req)) return reply.code(403).type('text/html').send(layout({ title: 'Error', authed: true, body: '<div class="flash err">Invalid form token.</div>' }));
-    // The actual export→seed publish is wired in the Publish slice (PR 3).
-    return reply
-      .code(501)
-      .type('text/html')
-      .send(layout({ title: 'Publishing', authed: true, body: '<div class="flash err">Publishing (export → seed) is wired in the next slice.</div><p><a href="/admin/publishing">Back</a></p>' }));
+    if (!csrfOk(req)) {
+      return reply.code(403).type('text/html').send(layout({ title: 'Error', authed: true, body: '<div class="flash err">Invalid form token.</div>' }));
+    }
+    // Publish = export the edited jvto_cms back to the seed pack (the reverse of
+    // load.sql, via scripts/export-cms-seed.mjs). jvto-web renders that seed —
+    // this repo never touches jvto-web.
+    const repoRoot = fileURLToPath(new URL('../../', import.meta.url));
+    const script = fileURLToPath(new URL('../../scripts/export-cms-seed.mjs', import.meta.url));
+    const customOut = process.env.CMS_SEED_OUT; // deploy-time override; default output/seed
+    const args = customOut ? [script, '--out', customOut] : [script];
+    try {
+      const { stdout } = await execFileAsync('node', args, { cwd: repoRoot, env: process.env, timeout: 60_000 });
+      let diff = '';
+      if (!customOut) {
+        try {
+          diff = (await execFileAsync('git', ['-C', repoRoot, 'diff', '--stat', '--', 'output/seed'], { timeout: 15_000 })).stdout.trim();
+        } catch {
+          diff = '';
+        }
+      }
+      return reply.type('text/html').send(publishResult({ ok: true, output: stdout.trim(), diff, outDir: customOut ?? 'output/seed' }));
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      return reply.code(500).type('text/html').send(publishResult({ ok: false, output: message, diff: '', outDir: customOut ?? 'output/seed' }));
+    }
   });
 }
