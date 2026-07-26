@@ -11,7 +11,9 @@
     "title": "Tourist Police-Led Private Volcano Tours in East Java | Java Volcano Tour Operator",
     "h1": "Tourist Police-Led Private Volcano Tours in East Java",
     "seo": {
-      "title": "Tourist Police-Led Private Volcano Tours in East Java | Java Volcano Tour Operator"
+      "title": "Tourist Police-Led Private Volcano Tours in East Java | JVTO",
+      "description": "Private Bromo, Ijen & Tumpak Sewu tours from Surabaya or Bali. Licensed operator (No.1102230032918), led by an active Tourist Police officer.",
+      "schema_type": "TravelAgency"
     },
     "status": "published"
   },
@@ -25,9 +27,11 @@
     "visual_mode": "travel",
     "hub_route": null,
     "title": "All JVTO Tours — Private Bromo, Ijen & Tumpak Sewu",
-    "h1": "All JVTO Tours — Private Bromo, Ijen & Tumpak Sewu",
+    "h1": "Private East Java Tours: Surabaya & Bali Departures",
     "seo": {
-      "title": "All JVTO Tours — Private Bromo, Ijen & Tumpak Sewu"
+      "title": "Private Tours — Ijen, Bromo & Tumpak Sewu | JVTO",
+      "description": "Browse all JVTO private tours from Surabaya and Bali. All-inclusive with licensed guides and police-led safety.",
+      "schema_type": "ItemList"
     },
     "status": "published"
   },
@@ -41,9 +45,11 @@
     "visual_mode": "travel",
     "hub_route": "/tours",
     "title": "Tours from Surabaya",
-    "h1": "Tours from Surabaya",
+    "h1": "Private Tours from Surabaya",
     "seo": {
-      "title": "Tours from Surabaya"
+      "title": "Private East Java Tours from Surabaya",
+      "description": "Explore private tours from Surabaya with proof-backed operator context, clear route differences, and official support before booking.",
+      "schema_type": "ItemList"
     },
     "status": "published"
   },
@@ -57,9 +63,11 @@
     "visual_mode": "travel",
     "hub_route": "/tours",
     "title": "Tours from Bali",
-    "h1": "Tours from Bali",
+    "h1": "Private Tours from Bali",
     "seo": {
-      "title": "Tours from Bali"
+      "title": "Private East Java Tours from Bali — Ijen & Bromo | JVTO",
+      "description": "Private volcano tours from Bali. Door-to-door transfer including Gilimanuk–Ketapang ferry (4–6h). Ijen blue fire, Bromo sunrise. 4 routes: 3D2N to 5D4N. All-inclusive.",
+      "schema_type": "ItemList"
     },
     "status": "published"
   },
@@ -75,7 +83,9 @@
     "title": "3 Day Bromo & Ijen Volcano Discovery from Bali",
     "h1": "3 Day Bromo & Ijen Volcano Discovery from Bali",
     "seo": {
-      "title": "3 Day Bromo & Ijen Volcano Discovery from Bali"
+      "title": "3 Day Bromo & Ijen Volcano Tour from Bali | JVTO",
+      "description": "Private 3-day volcano tour from Bali to East Java: Mount Bromo sunrise, Kawah Ijen blue fire. Ferry crossing included. All-inclusive. Tourist Police-led.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -91,7 +101,9 @@
     "title": "3 Day Ijen, Bromo & Madakaripura Waterfall Journey from Bali to Surabaya",
     "h1": "3 Day Ijen, Bromo & Madakaripura Waterfall Journey from Bali to Surabaya",
     "seo": {
-      "title": "3 Day Ijen, Bromo & Madakaripura Waterfall Journey from Bali to Surabaya"
+      "title": "3 Day Ijen, Bromo & Madakaripura Tour from Bali | JVTO",
+      "description": "Private 3-day tour from Bali: Kawah Ijen blue fire, Mount Bromo sunrise, Madakaripura Waterfall. Ferry crossing included. Ends in Surabaya. All-inclusive.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -107,7 +119,9 @@
     "title": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Expedition from Bali to Surabaya",
     "h1": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Expedition from Bali to Surabaya",
     "seo": {
-      "title": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Expedition from Bali to Surabaya"
+      "title": "4 Day Ijen, Papuma, Tumpak Sewu & Bromo from Bali | JVTO",
+      "description": "Private 4-day East Java tour from Bali: Ijen blue fire, Papuma Beach, Tumpak Sewu canyon, Bromo sunrise. Ferry included. Ends Surabaya. All-inclusive.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -123,7 +137,9 @@
     "title": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Discovery from Bali to Surabaya",
     "h1": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Discovery from Bali to Surabaya",
     "seo": {
-      "title": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Discovery from Bali to Surabaya"
+      "title": "5 Day Ijen, Papuma, Tumpak Sewu & Bromo from Bali | JVTO",
+      "description": "Private 5-day East Java tour from Bali: Ijen, Papuma Beach, Tumpak Sewu, Bromo. More time per stop vs 4-day version. Ferry included. Ends Surabaya.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -139,7 +155,9 @@
     "title": "1 Day Bromo Midnight Experience from Surabaya",
     "h1": "1 Day Bromo Midnight Experience from Surabaya",
     "seo": {
-      "title": "1 Day Bromo Midnight Experience from Surabaya"
+      "title": "1 Day Bromo Sunrise Tour from Surabaya | JVTO Private Tours",
+      "description": "Private 1-day Mount Bromo tour from Surabaya. Midnight departure, sunrise at Penanjakan, Sea of Sand. All-inclusive — transport, permits, guide. East Java.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -155,7 +173,9 @@
     "title": "2 Day Bromo Sunrise Adventure from Surabaya",
     "h1": "2 Day Bromo Sunrise Adventure from Surabaya",
     "seo": {
-      "title": "2 Day Bromo Sunrise Adventure from Surabaya"
+      "title": "2 Day Bromo Sunrise Adventure from Surabaya | JVTO",
+      "description": "Private 2-day Bromo & Madakaripura tour from Surabaya. Overnight near Bromo, sunrise at Penanjakan, waterfall trek. All-inclusive. Licensed operator.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -171,7 +191,9 @@
     "title": "3 Day Bromo, Madakaripura & Ijen Overland from Surabaya to Bali",
     "h1": "3 Day Bromo, Madakaripura & Ijen Overland from Surabaya to Bali",
     "seo": {
-      "title": "3 Day Bromo, Madakaripura & Ijen Overland from Surabaya to Bali"
+      "title": "3 Day Bromo, Madakaripura & Ijen – Surabaya to Bali | JVTO",
+      "description": "Private 3-day overland tour: Surabaya → Bromo sunrise → Madakaripura Waterfall → Ijen blue fire → Bali. All-inclusive. Tourist Police-led operator.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -187,7 +209,9 @@
     "title": "2 Day Ijen Blue Fire Expedition from Surabaya",
     "h1": "2 Day Ijen Blue Fire Expedition from Surabaya",
     "seo": {
-      "title": "2 Day Ijen Blue Fire Expedition from Surabaya"
+      "title": "2 Day Ijen Blue Fire Tour from Surabaya | JVTO",
+      "description": "Private 2-day Kawah Ijen tour from Surabaya. Midnight trek, blue fire phenomenon, crater lake, sulfur miners. All-inclusive. Tourist Police-led operator.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -203,7 +227,9 @@
     "title": "3 Day Ijen, Bromo & Madakaripura Waterfall Discovery from Surabaya",
     "h1": "3 Day Ijen, Bromo & Madakaripura Waterfall Discovery from Surabaya",
     "seo": {
-      "title": "3 Day Ijen, Bromo & Madakaripura Waterfall Discovery from Surabaya"
+      "title": "3 Day Ijen, Bromo & Madakaripura Tour from Surabaya | JVTO",
+      "description": "Private 3-day tour from Surabaya: Kawah Ijen blue fire, Mount Bromo sunrise, Madakaripura Waterfall. All-inclusive — transport, permits, guide, hotel.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -219,7 +245,9 @@
     "title": "4 Day Ijen, Bromo & Madakaripura Waterfall Expedition from Surabaya",
     "h1": "4 Day Ijen, Bromo & Madakaripura Waterfall Expedition from Surabaya",
     "seo": {
-      "title": "4 Day Ijen, Bromo & Madakaripura Waterfall Expedition from Surabaya"
+      "title": "4 Day Ijen, Bromo & Madakaripura Expedition from Surabaya | JVTO",
+      "description": "Private 4-day tour from Surabaya: Kawah Ijen, Mount Bromo sunrise, Madakaripura Waterfall. Deeper itinerary with more time per destination. All-inclusive.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -235,7 +263,9 @@
     "title": "5 Day Ijen, Bromo, Madakaripura & Malang City Adventure from Surabaya",
     "h1": "5 Day Ijen, Bromo, Madakaripura & Malang City Adventure from Surabaya",
     "seo": {
-      "title": "5 Day Ijen, Bromo, Madakaripura & Malang City Adventure from Surabaya"
+      "title": "5 Day Ijen, Bromo, Madakaripura & Malang from Surabaya | JVTO",
+      "description": "Private 5-day tour from Surabaya: Ijen blue fire, Bromo sunrise, Madakaripura Waterfall, Malang city. East Java's best volcanic and cultural highlights.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -251,7 +281,9 @@
     "title": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Journey from Surabaya",
     "h1": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Journey from Surabaya",
     "seo": {
-      "title": "4 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Journey from Surabaya"
+      "title": "4 Day Ijen, Papuma, Tumpak Sewu & Bromo Tour from Surabaya | JVTO",
+      "description": "Private 4-day East Java tour: Ijen blue fire, Papuma Beach, Tumpak Sewu Waterfall, Bromo sunrise. All-inclusive — full East Java circuit from Surabaya.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -267,7 +299,9 @@
     "title": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Nature Trip from Surabaya",
     "h1": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Nature Trip from Surabaya",
     "seo": {
-      "title": "5 Day Ijen, Papuma Beach, Tumpak Sewu & Bromo Nature Trip from Surabaya"
+      "title": "5 Day Ijen, Papuma, Tumpak Sewu & Bromo Tour from Surabaya | JVTO",
+      "description": "Private 5-day East Java tour: Ijen blue fire, Papuma Beach, Tumpak Sewu canyon, Bromo sunrise. More time at each stop vs the 4-day version. All-inclusive.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -283,7 +317,9 @@
     "title": "6 Day Ijen, Papuma Beach, Tumpak Sewu, Bromo & Malang City Discovery from Surabaya",
     "h1": "6 Day Ijen, Papuma Beach, Tumpak Sewu, Bromo & Malang City Discovery from Surabaya",
     "seo": {
-      "title": "6 Day Ijen, Papuma Beach, Tumpak Sewu, Bromo & Malang City Discovery from Surabaya"
+      "title": "6 Day Complete East Java Tour – Ijen, Bromo & Malang | JVTO",
+      "description": "Private 6-day complete East Java tour: Ijen blue fire, Papuma Beach, Tumpak Sewu, Bromo sunrise, Malang city. JVTO's most comprehensive itinerary.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -297,9 +333,11 @@
     "visual_mode": "travel",
     "hub_route": "/tours/from-surabaya",
     "title": "3 Day Taman Safari Prigen, Bromo & Madakaripura from Surabaya",
-    "h1": "3 Day Taman Safari Prigen, Bromo & Madakaripura from Surabaya",
+    "h1": "3 Day Taman Safari Prigen, Bromo & Madakaripura Family Tour from Surabaya",
     "seo": {
-      "title": "3 Day Taman Safari Prigen, Bromo & Madakaripura from Surabaya"
+      "title": "3 Day Taman Safari, Bromo & Madakaripura Family Tour | JVTO",
+      "description": "Private 3-day family tour from Surabaya: Taman Safari Prigen, Mount Bromo sunrise, Madakaripura Waterfall. All-inclusive. Best for families with children.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -315,7 +353,9 @@
     "title": "4 Day Tumpak Sewu, Bromo & Ijen Adventure from Surabaya to Bali",
     "h1": "4 Day Tumpak Sewu, Bromo & Ijen Adventure from Surabaya to Bali",
     "seo": {
-      "title": "4 Day Tumpak Sewu, Bromo & Ijen Adventure from Surabaya to Bali"
+      "title": "4 Day Tumpak Sewu, Bromo & Ijen — Surabaya to Bali | JVTO",
+      "description": "Private 4-day overland: Surabaya → Tumpak Sewu canyon waterfall → Bromo sunrise → Ijen blue fire → Bali. All-inclusive. Tourist Police-led operator.",
+      "schema_type": "TouristTrip"
     },
     "status": "published"
   },
@@ -329,9 +369,11 @@
     "visual_mode": "travel",
     "hub_route": null,
     "title": "Destinations — Bromo, Ijen, Tumpak Sewu, Madakaripura, Papuma",
-    "h1": "Destinations — Bromo, Ijen, Tumpak Sewu, Madakaripura, Papuma",
+    "h1": "East Java Destinations: Volcanoes, Waterfalls & Coastline",
     "seo": {
-      "title": "Destinations — Bromo, Ijen, Tumpak Sewu, Madakaripura, Papuma"
+      "title": "East Java Destinations – Bromo, Ijen, Tumpak Sewu & More | JVTO",
+      "description": "JVTO tour destinations in East Java: Mount Bromo, Kawah Ijen, Madakaripura Waterfall, Tumpak Sewu, and Papuma Beach. Practical guides for each location.",
+      "schema_type": "ItemList"
     },
     "status": "published"
   },
@@ -345,9 +387,11 @@
     "visual_mode": "travel",
     "hub_route": "/destinations",
     "title": "Mount Bromo (Gunung Bromo)",
-    "h1": "Mount Bromo (Gunung Bromo)",
+    "h1": "Mount Bromo: Sunrise, Sea of Sand & Tenggerese Culture",
     "seo": {
-      "title": "Mount Bromo (Gunung Bromo)"
+      "title": "Mount Bromo Sunrise Tour – Complete Tengger Caldera Guide | JVTO",
+      "description": "Mount Bromo: East Java's iconic active volcano. Sunrise at Penanjakan, Sea of Sand, Tenggerese culture. Trekking guide — permits, best time to visit.",
+      "schema_type": "Volcano"
     },
     "status": "published"
   },
@@ -361,9 +405,11 @@
     "visual_mode": "travel",
     "hub_route": "/destinations",
     "title": "Kawah Ijen (Ijen Crater)",
-    "h1": "Kawah Ijen (Ijen Crater)",
+    "h1": "Kawah Ijen: Blue Fire, Crater Lake & Sulfur Miners",
     "seo": {
-      "title": "Kawah Ijen (Ijen Crater)"
+      "title": "Kawah Ijen Blue Fire Volcano – Complete Trekking Guide | JVTO",
+      "description": "Kawah Ijen: blue fire phenomenon, acidic turquoise crater lake, active sulfur mining. Complete trekking guide — trail, permits, safety, best time to visit.",
+      "schema_type": "Volcano"
     },
     "status": "published"
   },
@@ -377,9 +423,11 @@
     "visual_mode": "travel",
     "hub_route": "/destinations",
     "title": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu)",
-    "h1": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu)",
+    "h1": "Tumpak Sewu: Java's Thousand-Stream Waterfall",
     "seo": {
-      "title": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu)"
+      "title": "Tumpak Sewu Waterfall – Java's Most Spectacular Canyon | JVTO",
+      "description": "Tumpak Sewu: the thousand-stream waterfall with Mount Semeru backdrop. Complete adventure guide — canyon descent, best season, what to expect.",
+      "schema_type": "Park"
     },
     "status": "published"
   },
@@ -393,9 +441,11 @@
     "visual_mode": "travel",
     "hub_route": "/destinations",
     "title": "Madakaripura Waterfall (Air Terjun Madakaripura)",
-    "h1": "Madakaripura Waterfall (Air Terjun Madakaripura)",
+    "h1": "Madakaripura Waterfall: Gajah Mada's Sacred Canyon",
     "seo": {
-      "title": "Madakaripura Waterfall (Air Terjun Madakaripura)"
+      "title": "Madakaripura Waterfall – Gajah Mada's Sacred Sanctuary | JVTO",
+      "description": "Madakaripura: the 200-metre waterfall where Gajah Mada meditated. Sacred site in East Java. Guide to visiting — trek, what to wear, cultural context.",
+      "schema_type": "Park"
     },
     "status": "published"
   },
@@ -409,9 +459,11 @@
     "visual_mode": "travel",
     "hub_route": "/destinations",
     "title": "Papuma Beach (Pantai Papuma)",
-    "h1": "Papuma Beach (Pantai Papuma)",
+    "h1": "Papuma Beach: White Sand & Turquoise Waters in Jember",
     "seo": {
-      "title": "Papuma Beach (Pantai Papuma)"
+      "title": "Papuma Beach Jember – White Sand Paradise in East Java | JVTO",
+      "description": "Papuma Beach, Jember: white sand, turquoise waters, unique rock formations. East Java's best coastal stop — pairs well with Ijen or Tumpak Sewu tours.",
+      "schema_type": "Beach"
     },
     "status": "published"
   },
@@ -425,9 +477,10 @@
     "visual_mode": "hybrid",
     "hub_route": null,
     "title": "Why JVTO",
-    "h1": "Why JVTO",
+    "h1": "Why Travel with Java Volcano Tour Operator (JVTO)",
     "seo": {
-      "title": "Why JVTO"
+      "title": "Why Travel with Java Volcano Tour Operator (JVTO)",
+      "description": "Tourist Police-led safety, licensed operator, private-only tours, all-inclusive pricing. Why travellers from SG, MY & HK choose JVTO for Bromo and Ijen."
     },
     "status": "published"
   },
@@ -441,9 +494,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/why-jvto",
     "title": "The JVTO Difference",
-    "h1": "The JVTO Difference",
+    "h1": "The JVTO Difference: Safety Leadership and Verified Proof",
     "seo": {
-      "title": "The JVTO Difference"
+      "title": "The JVTO Difference: Safety Leadership & Verified Proof",
+      "description": "What sets JVTO apart: Tourist Police-led safety mindset, documented operational discipline, and a full proof library anyone can verify independently."
     },
     "status": "published"
   },
@@ -457,9 +511,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/why-jvto",
     "title": "Reviews",
-    "h1": "Reviews",
+    "h1": "Guest Voices: Real Experiences, Independently Verified",
     "seo": {
-      "title": "Reviews"
+      "title": "Guest Reviews – Independent Voices on JVTO Tours | JVTO",
+      "description": "Independent reviews of JVTO on Tripadvisor, Trustpilot, Google, ISIC and Indecon. Verified voices — we cannot edit or remove any review on those platforms."
     },
     "status": "published"
   },
@@ -473,9 +528,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/why-jvto",
     "title": "Our Story",
-    "h1": "Our Story",
+    "h1": "Our Story: Roots & Continuity Since 2015",
     "seo": {
-      "title": "Our Story"
+      "title": "Our Story – JVTO History & Roots Since 2015 | JVTO",
+      "description": "Documented JVTO history: Booking.com award 2015, Stefan Loose guidebook 2016, and physical artifacts tracing the operator's roots in Bondowoso, East Java."
     },
     "status": "published"
   },
@@ -489,9 +545,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/why-jvto",
     "title": "Our Team",
-    "h1": "Our Team",
+    "h1": "Local Team, Daily Execution",
     "seo": {
-      "title": "Our Team"
+      "title": "Our Team – Local East Java Guides & Drivers | JVTO",
+      "description": "Meet JVTO's 14-person local East Java team: experienced guides and drivers who handle daily volcano tour logistics for Bromo, Ijen, and Tumpak Sewu."
     },
     "status": "published"
   },
@@ -505,9 +562,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/why-jvto",
     "title": "Community Standards",
-    "h1": "Community Standards",
+    "h1": "Community Standards: Partners, Ethics & Operational Rules",
     "seo": {
-      "title": "Community Standards"
+      "title": "Community Standards – Partners, Ethics & Operational Rules | JVTO",
+      "description": "JVTO community standards: professional partnerships (HPWKI, ISIC, INDECON), ethical travel commitments, and health screening compliance for Ijen tours."
     },
     "status": "published"
   },
@@ -521,9 +579,11 @@
     "visual_mode": "hybrid",
     "hub_route": null,
     "title": "Travel Guide",
-    "h1": "Travel Guide",
+    "h1": "Travel Guide – Safety, Health & Practical Information",
     "seo": {
-      "title": "Travel Guide"
+      "title": "Travel Guide – Safety, Booking & Practical Info | JVTO",
+      "description": "JVTO's official travel guide: booking steps, safety rules, Ijen health screening, weather and closures, packing list, and police escort for groups.",
+      "schema_type": "CollectionPage"
     },
     "status": "published"
   },
@@ -539,7 +599,8 @@
     "title": "Frequently Asked Questions",
     "h1": "Frequently Asked Questions",
     "seo": {
-      "title": "Frequently Asked Questions"
+      "title": "FAQ – Private Bromo & Ijen Tours | JVTO",
+      "description": "Answers to common questions about JVTO private tours: inclusions, payments, Package Credit policy, Ijen health screening, closures, and student discounts."
     },
     "status": "published"
   },
@@ -553,9 +614,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/travel-guide",
     "title": "Ijen Health Screening",
-    "h1": "Ijen Health Screening",
+    "h1": "Ijen Health Screening – Real Checks, Digital Proof",
     "seo": {
-      "title": "Ijen Health Screening"
+      "title": "Ijen Health Screening – Real Checks, Digital Proof & QR | JVTO",
+      "description": "The Ijen night hike requires a mandatory health certificate for every guest before crater entry. JVTO arranges the screening; if you're advised not to hike, the climb is cancelled for you (not the group) with safe-zone alternatives."
     },
     "status": "published"
   },
@@ -569,9 +631,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/travel-guide",
     "title": "Booking Information",
-    "h1": "Booking Information",
+    "h1": "Booking Information – How JVTO Private Tours Work",
     "seo": {
-      "title": "Booking Information"
+      "title": "Booking Information – Payments, Changes & Package Credit | JVTO",
+      "description": "How to book, pay, and cancel a JVTO private tour: website-only booking, 20% deposit (up to 100% within 14 days), card ≤5d / bank·Wise ≤3d balance deadlines, and 100% Lifetime Package Credit for whole-booking cancellations 48h+ before Day 1."
     },
     "status": "published"
   },
@@ -585,9 +648,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/travel-guide",
     "title": "Weather & Closures",
-    "h1": "Weather & Closures",
+    "h1": "Weather, Volcano Alerts & Closures",
     "seo": {
-      "title": "Weather & Closures"
+      "title": "Weather, Volcano Alerts & Closures – How JVTO Handles Changes",
+      "description": "How JVTO handles weather, volcano alerts and closures. Blue Fire and sunrise are natural phenomena and cannot be guaranteed; guides assess conditions daily and may delay or reroute for safety."
     },
     "status": "published"
   },
@@ -601,9 +665,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/travel-guide",
     "title": "Police Escort for Groups",
-    "h1": "Police Escort for Groups",
+    "h1": "Traffic Police Escort for Tourist Groups in East Java",
     "seo": {
-      "title": "Police Escort for Groups"
+      "title": "Traffic Police Escort for Tourist Groups in East Java | JVTO",
+      "description": "For large groups (around 18+ paying guests) JVTO can coordinate an official Traffic Police escort on certain road segments when approved, plus a Free-of-Charge group incentive (1–3 FOC seats) on direct bookings."
     },
     "status": "published"
   },
@@ -617,9 +682,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/travel-guide",
     "title": "Safety on Tours",
-    "h1": "Safety on Tours",
+    "h1": "Safety on JVTO Tours",
     "seo": {
-      "title": "Safety on Tours"
+      "title": "Safety on JVTO Tours – How We Plan & What You Should Know",
+      "description": "JVTO safety approach: Tourist Police-led planning, gear requirements, Ijen gas mask sterilisation, emergency protocols, and what guests must follow."
     },
     "status": "published"
   },
@@ -633,9 +699,10 @@
     "visual_mode": "hybrid",
     "hub_route": "/travel-guide",
     "title": "Packing & Fitness",
-    "h1": "Packing & Fitness",
+    "h1": "Packing & Fitness for Bromo, Ijen & Tumpak Sewu",
     "seo": {
-      "title": "Packing & Fitness"
+      "title": "Packing & Fitness for Bromo, Ijen & Tumpak Sewu | JVTO",
+      "description": "What to pack and how fit you need to be for Bromo, Ijen, and Tumpak Sewu tours. Specific gear list, fitness expectations, and what JVTO provides."
     },
     "status": "published"
   },
@@ -649,9 +716,11 @@
     "visual_mode": "trust",
     "hub_route": null,
     "title": "Verify JVTO — Proof Library",
-    "h1": "Verify JVTO — Proof Library",
+    "h1": "Verify JVTO: A Proof Library You Can Check",
     "seo": {
-      "title": "Verify JVTO — Proof Library"
+      "title": "Verify JVTO – Credentials, Safety, Press & History",
+      "description": "Review JVTO's proof library: legal identity, historical continuity, police and safety context, and third-party references that support the company's trust architecture.",
+      "schema_type": "WebPage"
     },
     "status": "published"
   },
@@ -665,9 +734,11 @@
     "visual_mode": "trust",
     "hub_route": "/verify-jvto",
     "title": "Legal & Licenses",
-    "h1": "Legal & Licenses",
+    "h1": "Legal & Accountability Proof",
     "seo": {
-      "title": "Legal & Licenses"
+      "title": "Legal Verification — NIB & TDUP | JVTO",
+      "description": "Verify PT Java Volcano Rendezvous: NIB 1102230032918, TDUP issued 2023-02-11, AHU corporate registry.",
+      "schema_type": "WebPage"
     },
     "status": "published"
   },
@@ -681,9 +752,11 @@
     "visual_mode": "trust",
     "hub_route": "/verify-jvto",
     "title": "Police & Safety",
-    "h1": "Police & Safety",
+    "h1": "Police & Safety Proof",
     "seo": {
-      "title": "Police & Safety"
+      "title": "Police-Led Safety — Tourist Police Credentials | JVTO",
+      "description": "JVTO safety: active Tourist Police founder (SPRIN-POLPAR). HPWKI KTA-licensed guides. BBKSDA-compliant Ijen health screening.",
+      "schema_type": "WebPage"
     },
     "status": "published"
   },
@@ -697,9 +770,11 @@
     "visual_mode": "trust",
     "hub_route": "/verify-jvto",
     "title": "Press & Recognition",
-    "h1": "Press & Recognition",
+    "h1": "Press & Recognition: Third-Party Context",
     "seo": {
-      "title": "Press & Recognition"
+      "title": "Press & Recognition – Third-Party Coverage of JVTO | JVTO",
+      "description": "Third-party press coverage: Detik.com, Radar Jember (Jawa Pos), and BBKSDA Jatim. Each article mentions JVTO founder by name. Independent context.",
+      "schema_type": "WebPage"
     },
     "status": "published"
   },
@@ -713,9 +788,11 @@
     "visual_mode": "trust",
     "hub_route": "/verify-jvto",
     "title": "History & Artifacts",
-    "h1": "History & Artifacts",
+    "h1": "History Artifacts: Documented Origins Since 2015",
     "seo": {
-      "title": "History & Artifacts"
+      "title": "History Artifacts — Documented JVTO Origins Since 2015 | JVTO",
+      "description": "Verifiable artifacts: Booking.com 2015 award (9.4/10), Stefan Loose 2018 guidebook, Detik.com 2021 press, NIB registration 2023. SHA-256 verified.",
+      "schema_type": "WebPage"
     },
     "status": "published"
   },
@@ -729,9 +806,11 @@
     "visual_mode": "trust",
     "hub_route": null,
     "title": "Legal & Transparency",
-    "h1": "Legal & Transparency",
+    "h1": "JVTO Policy Pack",
     "seo": {
-      "title": "Legal & Transparency"
+      "title": "Policies & Standards — Booking, Inclusions & Privacy | JVTO",
+      "description": "JVTO's policy pack: booking, payment and Lifetime Package Credit cancellation, inclusions and exclusions, mandatory Ijen health screening, group police-escort coordination, ISIC student pricing, and anti-fraud rules.",
+      "schema_type": "CollectionPage"
     },
     "status": "published"
   },
@@ -745,9 +824,11 @@
     "visual_mode": "trust",
     "hub_route": "/policy",
     "title": "Booking, Payment & Cancellation",
-    "h1": "Booking, Payment & Cancellation",
+    "h1": "JVTO Booking, Payment & Cancellation Policy",
     "seo": {
-      "title": "Booking, Payment & Cancellation"
+      "title": "Booking, Payment & Cancellation Policy | JVTO Tours",
+      "description": "How to book, pay, and cancel with JVTO: website-only booking, 20% deposit, and the Lifetime Package Guarantee — cancel your whole booking 48h+ before Day 1 for 100% Lifetime Package Credit (never expires, not cash).",
+      "schema_type": "WebPage"
     },
     "status": "published"
   },
@@ -761,9 +842,11 @@
     "visual_mode": "trust",
     "hub_route": "/policy",
     "title": "Inclusions & Exclusions",
-    "h1": "Inclusions & Exclusions",
+    "h1": "JVTO Inclusions & Exclusions Policy",
     "seo": {
-      "title": "Inclusions & Exclusions"
+      "title": "What's Included & Excluded in JVTO Tours | JVTO",
+      "description": "What every JVTO private tour includes — private transport, dedicated crew, all entrance fees and permits, mineral water, and pick-up-to-drop-off assistance — and what is excluded, for all packages.",
+      "schema_type": "WebPage"
     },
     "status": "published"
   },
@@ -777,9 +860,11 @@
     "visual_mode": "trust",
     "hub_route": "/policy",
     "title": "Privacy Policy",
-    "h1": "Privacy Policy",
+    "h1": "JVTO Privacy & Data Protection Policy",
     "seo": {
-      "title": "Privacy Policy"
+      "title": "Privacy Policy | Java Volcano Tour Operator (JVTO)",
+      "description": "Personal data collected only for booking and permit purposes. Not sold to third parties. Guests may access, correct, or delete data at any time.",
+      "schema_type": "WebPage"
     },
     "status": "published"
   },
@@ -793,9 +878,11 @@
     "visual_mode": "hybrid",
     "hub_route": null,
     "title": "Contact JVTO",
-    "h1": "Contact JVTO",
+    "h1": "Contact Java Volcano Tour Operator",
     "seo": {
-      "title": "Contact JVTO"
+      "title": "Contact JVTO — Book a Private East Java Tour",
+      "description": "Contact Java Volcano Tour Operator. WhatsApp, email, or inquiry form. Real human response, no bots.",
+      "schema_type": "ContactPage"
     },
     "status": "published"
   },

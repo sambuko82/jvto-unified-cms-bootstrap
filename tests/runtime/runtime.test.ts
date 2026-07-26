@@ -36,7 +36,9 @@ describe.skipIf(!hasDb)('CMS read-runtime (integration)', () => {
               (SELECT count(*) FROM pages) p,
               (SELECT count(*) FROM page_sections) s`,
     );
-    expect(rows[0]).toEqual({ e: '172', p: '52', s: '203' });
+    // s = 203 designed IA sections + 50 `page_content` sections (real live copy
+    // overlaid onto the 50 matched pages; 2 blog pages stay scaffold-only).
+    expect(rows[0]).toEqual({ e: '172', p: '52', s: '253' });
   });
 
   it('resolves the graded tour route with ordered sections + hydrated entities + JSON-LD', async () => {
@@ -47,7 +49,8 @@ describe.skipIf(!hasDb)('CMS read-runtime (integration)', () => {
     expect(r.page.route).toBe(TOUR_ROUTE);
     expect(r.page.page_type).toBe('tour');
 
-    // sections come back ordered by sort_order (1..8)
+    // sections come back ordered by sort_order: the 8 designed IA sections, then the
+    // `page_content` section carrying the real live copy overlaid for this route.
     expect(r.sections.map((s) => s.type)).toEqual([
       'hero',
       'steps',
@@ -57,7 +60,16 @@ describe.skipIf(!hasDb)('CMS read-runtime (integration)', () => {
       'data_box',
       'faq_list',
       'cta',
+      'page_content',
     ]);
+
+    // enrichment: real live copy overlaid — page carries a real seo.description and
+    // the page_content section holds the actual page body (not just a {title} scaffold).
+    expect(typeof r.seo['description']).toBe('string');
+    expect((r.seo['description'] as string).length).toBeGreaterThan(20);
+    const pageContent = r.sections.find((s) => s.type === 'page_content');
+    expect(pageContent, 'page_content section present').toBeTruthy();
+    expect(Object.keys(pageContent?.content ?? {}).length).toBeGreaterThan(0);
 
     // hydrated entities include a package + destinations + a policy
     const keys = r.sections.flatMap((s) => s.entities.map((e) => e.canonical_key));

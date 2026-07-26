@@ -361,6 +361,9 @@ generate:
     visual_mode: travel
     route: "/destinations/{token}"
     only: [mount-bromo, kawah-ijen, tumpak-sewu, madakaripura, papuma-beach]
+    # Routes are owned by the design-system IA (the SSOT) — NOT by the current live
+    # jvto-web, which will be updated to follow the SSOT. Live copy is still pulled in
+    # by identity (see build-pages.mjs DEST_ROUTE_ALIAS), regardless of the live URL slug.
     token_map: { mount-bromo: bromo, kawah-ijen: ijen, tumpak-sewu: tumpak-sewu, madakaripura: madakaripura, papuma-beach: papuma }
     sections:
       - { type: dest_facts, self: true }

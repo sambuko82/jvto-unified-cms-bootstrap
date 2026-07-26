@@ -171,6 +171,13 @@ function collectStrings(value: unknown, out: string[]): void {
   }
 }
 
+// `page_content` sections carry VERBATIM live jvto-web copy imported for enrichment.
+// That is raw source material pending SSOT authoring — the live site is explicitly not
+// the canonical reference and will be updated to follow the SSOT — so it is scanned as
+// ADVISORY (buildImportedCorpus + a distinct warn), NOT enforced here. Enforcement
+// covers only authored SSOT content (page fields, designed sections, hydrated entities).
+const IMPORTED_SECTION_TYPES = new Set(['page_content']);
+
 export function buildScanCorpus(
   page: ResolvedPage['page'],
   seo: Record<string, unknown>,
@@ -181,6 +188,7 @@ export function buildScanCorpus(
     if (typeof v === 'string') corpus.push(v);
   }
   for (const section of sections) {
+    if (IMPORTED_SECTION_TYPES.has(section.type)) continue;
     collectStrings(section.content, corpus);
     for (const entity of section.entities) {
       if (typeof entity.title === 'string') corpus.push(entity.title);
@@ -192,6 +200,15 @@ export function buildScanCorpus(
       const cc = entity.data['customer_copy'];
       if (cc && typeof cc === 'object') collectStrings(cc, corpus);
     }
+  }
+  return corpus;
+}
+
+/** Advisory corpus: only the verbatim imported `page_content` sections. */
+export function buildImportedCorpus(sections: HydratedSection[]): string[] {
+  const corpus: string[] = [];
+  for (const section of sections) {
+    if (IMPORTED_SECTION_TYPES.has(section.type)) collectStrings(section.content, corpus);
   }
   return corpus;
 }
@@ -427,12 +444,16 @@ export async function resolvePage(route: string): Promise<ResolvedPage | null> {
   const seo: Record<string, unknown> = target.seo ?? {};
 
   // Facts-lock governance scan (monitor, non-fatal — the read API stays up).
-  const violations = findFactsLockViolations(
-    buildScanCorpus(page, seo, sections),
-    await loadForbiddenValues(),
-  );
+  const forbidden = await loadForbiddenValues();
+  const violations = findFactsLockViolations(buildScanCorpus(page, seo, sections), forbidden);
   if (violations.length > 0) {
     console.warn(`[facts-lock] ${target.route}: ${violations.join(' | ')}`);
+  }
+  // Advisory: forbidden values inside verbatim imported live copy (pending SSOT
+  // authoring / adjudication — e.g. a live "PT incorporated 2016" timeline line).
+  const importedHits = findFactsLockViolations(buildImportedCorpus(sections), forbidden);
+  if (importedHits.length > 0) {
+    console.warn(`[facts-lock:imported] ${target.route}: ${importedHits.join(' | ')}`);
   }
 
   const jsonld = buildJsonLd(page, [...entityMap.values()]);
