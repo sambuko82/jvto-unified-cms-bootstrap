@@ -147,6 +147,57 @@ for (const name of gd.only) {
   });
 }
 
+// ── overlay real live page copy (jvto_dev content_pages, read-only extract) ──
+// Enriches matched IA pages with the real seo{description,title,schema_type} + h1,
+// and carries the full live content losslessly as one `page_content` section. This
+// is what makes the SSOT actually HOLD the real copy (not just {title} scaffolds).
+// Scaffold is untouched where no live row exists — no fabrication. Deterministic:
+// reads a committed extract, so re-runs reproduce byte-identical output.
+// SSOT routes are design-system-owned; live copy is matched by IDENTITY, so a
+// destination's real copy enriches its SSOT page even when the live URL slug differs
+// (the current live jvto-web is NOT the canonical URL source).
+const DEST_ROUTE_ALIAS = {
+  '/destinations/bromo': '/destinations/mount-bromo',
+  '/destinations/ijen': '/destinations/ijen-crater',
+  '/destinations/tumpak-sewu': '/destinations/tumpak-sewu-waterfall',
+  '/destinations/madakaripura': '/destinations/madakaripura-waterfall',
+  '/destinations/papuma': '/destinations/papuma-beach',
+};
+const dbPath = path.join(root, 'data/releases/jvto-db/content-pages.json');
+const overlay = { matched: 0, seo: 0, iaOnly: [], candidateNewUrls: [] };
+if (fs.existsSync(dbPath)) {
+  const live = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+  const liveByRoute = new Map((live.rows || []).map((r) => [r.route, r]));
+  const consumedLive = new Set();
+  for (const p of pages) {
+    const liveRoute = DEST_ROUTE_ALIAS[p.route] ?? p.route;
+    const row = liveByRoute.get(liveRoute);
+    if (!row) { overlay.iaOnly.push(p.route); continue; }
+    consumedLive.add(liveRoute);
+    overlay.matched++;
+    const lseo = row.seo || {};
+    const lcontent = row.content || {};
+    p.seo = {
+      ...(p.seo || {}),
+      ...(lseo.title ? { title: lseo.title } : {}),
+      ...(lseo.description ? { description: lseo.description } : {}),
+      ...(lseo.schema_type ? { schema_type: lseo.schema_type } : {}),
+    };
+    if (lseo.description) overlay.seo++;
+    if (lcontent.h1) p.h1 = lcontent.h1;
+    // lossless real page copy (body_md/faq/lede/sections/…) as one section
+    p.sections.push({
+      type: 'page_content',
+      variant: (lcontent.schema_version != null ? String(lcontent.schema_version) : 'live'),
+      content: lcontent,
+      entity_refs: [],
+    });
+  }
+  // live routes with real copy but no SSOT page yet = candidate NEW SSOT URLs
+  // (content-drives-URL: add them to the IA in a follow-on pass, don't force now).
+  overlay.candidateNewUrls = (live.rows || []).map((r) => r.route).filter((r) => !consumedLive.has(r)).sort();
+}
+
 if (dangling.length) {
   console.error(`DANGLING entity_refs (${dangling.length}) — every ref must resolve:`);
   console.error([...new Set(dangling)].sort().join('\n'));
@@ -164,6 +215,12 @@ const outDoc = {
     byGroup,
     sections: pages.reduce((n, p) => n + p.sections.length, 0),
     redirects: (cfg.redirects || []).length,
+    liveOverlay: {
+      matched: overlay.matched,
+      withSeoDescription: overlay.seo,
+      scaffoldOnly: overlay.iaOnly,
+      candidateNewUrls: overlay.candidateNewUrls,
+    },
   },
   pages,
   redirects: cfg.redirects || [],
@@ -172,4 +229,9 @@ fs.writeFileSync(path.join(OUT, 'pages.json'), JSON.stringify(outDoc, null, 2) +
 console.log(
   `Pages: ${pages.length} routes (${Object.entries(byGroup).map(([g, n]) => `${g}:${n}`).join(' ')}), ` +
     `${outDoc.counts.sections} sections, ${outDoc.counts.redirects} redirects, 0 dangling refs.`,
+);
+console.log(
+  `Live overlay: ${overlay.matched} pages enriched (${overlay.seo} with real seo.description); ` +
+    `${overlay.iaOnly.length} scaffold-only [${overlay.iaOnly.join(', ') || 'none'}]; ` +
+    `${overlay.candidateNewUrls.length} live routes with content but no SSOT page (candidate new URLs).`,
 );

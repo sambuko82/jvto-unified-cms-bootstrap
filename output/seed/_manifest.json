@@ -1,0 +1,45 @@
+{
+  "bundle": "cms-seed",
+  "schema_version": "cms-seed/v1",
+  "source": "jvto-unified-cms-bootstrap",
+  "generated_at": "2026-07-21T00:00:00.000Z",
+  "files": [
+    "entities.json",
+    "pages.json",
+    "page_sections.json",
+    "redirects.json",
+    "governance_facts.json",
+    "load.sql"
+  ],
+  "counts": {
+    "entities": 172,
+    "entities_by_type": {
+      "activity": 18,
+      "claim": 9,
+      "destination": 10,
+      "faq": 9,
+      "general_module": 67,
+      "package": 16,
+      "policy_document": 9,
+      "public_person_profile": 16,
+      "route": 18
+    },
+    "pages": 52,
+    "sections": 253,
+    "redirects": 7,
+    "governance_facts": 19,
+    "routes_fully_rendered": 50,
+    "routes_scaffold_only": 2
+  },
+  "routes_scaffold_only": [
+    "/blog",
+    "/blog/why-not-unlicensed-ijen-operator"
+  ],
+  "gates": {
+    "projection_blocking_conflicts": 0,
+    "projection_warnings": 0,
+    "dangling_entity_refs": 0,
+    "governance_facts_present": true
+  },
+  "validation": "pass"
+}

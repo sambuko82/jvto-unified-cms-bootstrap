@@ -103,7 +103,63 @@ for (const s of sections)
 sql += '\nCOMMIT;\n';
 fs.writeFileSync(path.join(OUT, 'load.sql'), sql);
 
+// ── _manifest.json (deterministic; consumed by jvto-web's manifest-gated sync) ──
+// generated_at is sourced from the projection (never a wall clock) so re-runs are byte-identical.
+const entityKeys = new Set(entities.map((e) => e.canonical_key));
+const danglingRefs = [];
+for (const s of sections)
+  for (const ref of s.entity_refs) if (!entityKeys.has(ref)) danglingRefs.push({ route: s.route, ref });
+const routesWithBody = new Set(sections.filter((s) => s.section_type === 'page_content').map((s) => s.route));
+const isFullyRendered = (p) => routesWithBody.has(p.route) || Boolean(p.seo && p.seo.description);
+const fullyRendered = pages.filter(isFullyRendered).map((p) => p.route).sort();
+const scaffoldOnly = pages.filter((p) => !isFullyRendered(p)).map((p) => p.route).sort();
+const byType = {};
+for (const e of entities) byType[e.entity_type] = (byType[e.entity_type] || 0) + 1;
+
+const gates = {
+  projection_blocking_conflicts: projection.counts?.blockingConflicts ?? 0,
+  projection_warnings: projection.counts?.warnings ?? 0,
+  dangling_entity_refs: danglingRefs.length,
+  governance_facts_present: facts.length > 0,
+};
+// The seed is consumable iff the projection is conflict-free, no entity_ref dangles,
+// and the facts lock shipped. facts_lock is enforced at read-time by the resolver +
+// by jvto-web's validate:cms-seed; here we assert the lock is PRESENT and structurally clean.
+const validation =
+  gates.projection_blocking_conflicts === 0 &&
+  gates.dangling_entity_refs === 0 &&
+  gates.governance_facts_present
+    ? 'pass'
+    : 'fail';
+
+const manifest = {
+  bundle: 'cms-seed',
+  schema_version: 'cms-seed/v1',
+  source: 'jvto-unified-cms-bootstrap',
+  generated_at: projection.generatedAt ?? projection.generated_at ?? null,
+  files: ['entities.json', 'pages.json', 'page_sections.json', 'redirects.json', 'governance_facts.json', 'load.sql'],
+  counts: {
+    entities: entities.length,
+    entities_by_type: byType,
+    pages: pages.length,
+    sections: sections.length,
+    redirects: redirects.length,
+    governance_facts: facts.length,
+    routes_fully_rendered: fullyRendered.length,
+    routes_scaffold_only: scaffoldOnly.length,
+  },
+  routes_scaffold_only: scaffoldOnly, // explicit so consumers keep their own fallback for these
+  gates,
+  validation,
+};
+write('_manifest.json', manifest);
+if (validation !== 'pass') {
+  console.error('build-seed: _manifest validation FAILED', JSON.stringify(gates));
+  process.exit(1);
+}
+
 console.log(
   `Seed pack → output/seed/: ${entities.length} entities, ${pages.length} pages, ${sections.length} sections, ` +
-    `${redirects.length} redirects, ${facts.length} governance_facts. load.sql ${(sql.length / 1024).toFixed(0)}KB.`,
+    `${redirects.length} redirects, ${facts.length} governance_facts. load.sql ${(sql.length / 1024).toFixed(0)}KB. ` +
+    `_manifest: validation=${validation}, fully_rendered=${fullyRendered.length}/${pages.length}, scaffold_only=[${scaffoldOnly.join(', ')}].`,
 );

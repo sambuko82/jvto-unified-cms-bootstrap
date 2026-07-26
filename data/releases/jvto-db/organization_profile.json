@@ -1,0 +1,104 @@
+{
+  "id": 1,
+  "legal_name": "PT Java Volcano Rendezvous",
+  "brand_name": "Java Volcano Tour Operator",
+  "alternate_name": "JVTO",
+  "founding_date": "2015-01-01",
+  "description": "Java Volcano Tour Operator (JVTO) is a registered Indonesian travel company based in Bondowoso and led by an active Tourist Police officer. We design private, all-inclusive itineraries to Mount Bromo, Ijen Crater and Tumpak Sewu with clear safety rules, transparent pricing and real local impact.",
+  "price_range": "$$",
+  "contact_email": "hello@javavolcano-touroperator.com",
+  "contact_phone": "+6282244788833",
+  "available_languages": [
+    "en",
+    "id"
+  ],
+  "address_json": {
+    "@type": "PostalAddress",
+    "hasMap": "https://www.google.com/maps?cid=1266403973589689021",
+    "postalCode": "68214",
+    "addressRegion": "Jawa Timur",
+    "streetAddress": "Jl. Khairil Anwar No.102 A, Badean",
+    "addressCountry": "ID",
+    "addressLocality": "Bondowoso"
+  },
+  "same_as_urls": [
+    "https://www.tripadvisor.com/Attraction_Review-g297715-d19983165-Reviews-Java_Volcano_Tour_Operator-Surabaya_East_Java_Java.html",
+    "https://trustpilot.com/review/javavolcano-touroperator.com",
+    "https://www.isic.org/discounts/?providerId=259268",
+    "https://www.indecon.id/spotlight-networks/java-volcano-tour-operator",
+    "https://www.google.com/maps?cid=1266403973589689021"
+  ],
+  "website_url": "https://javavolcano-touroperator.com/",
+  "logo_url": "https://javavolcano-touroperator.com/assets/img/jvto-color.png",
+  "hero_image_url": "https://javavolcano-touroperator.com/assets/img/hero/home.webp",
+  "schema_json": {
+    "@id": "https://javavolcano-touroperator.com/#organization",
+    "url": "https://javavolcano-touroperator.com/",
+    "logo": "https://javavolcano-touroperator.com/assets/img/jvto-color.png",
+    "name": "Java Volcano Tour Operator",
+    "@type": "TravelAgency",
+    "image": "https://javavolcano-touroperator.com/assets/img/hero/home.webp",
+    "hasMap": "https://www.google.com/maps?cid=1266403973589689021",
+    "sameAs": [
+      "https://www.tripadvisor.com/Attraction_Review-g297715-d19983165-Reviews-Java_Volcano_Tour_Operator-Surabaya_East_Java_Java.html",
+      "https://trustpilot.com/review/javavolcano-touroperator.com",
+      "https://www.isic.org/discounts/?providerId=259268",
+      "https://www.indecon.id/spotlight-networks/java-volcano-tour-operator",
+      "https://www.google.com/maps?cid=1266403973589689021"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "postalCode": "68214",
+      "addressRegion": "Jawa Timur",
+      "streetAddress": "Jl. Khairil Anwar No.102 A, Badean",
+      "addressCountry": "ID",
+      "addressLocality": "Bondowoso"
+    },
+    "founder": {
+      "@id": "https://javavolcano-touroperator.com/#founder",
+      "name": "Agung Sambuko (Mr. Sam)",
+      "@type": "Person",
+      "image": "https://javavolcano-touroperator.com/founder/agung_sambuko.jpg",
+      "jobTitle": "Founder & Active Tourist Police Officer",
+      "memberOf": {
+        "name": "Indonesian National Police",
+        "@type": "GovernmentOrganization",
+        "sameAs": [
+          "https://polri.go.id/",
+          "https://www.wikidata.org/wiki/Q3103954"
+        ],
+        "description": "Ditpamobvit (Directorate of Vital Object Security).",
+        "alternateName": "Kepolisian Negara Republik Indonesia"
+      },
+      "knowsAbout": [
+        "TouristSafety",
+        "EastJavaTourism",
+        "VolcanoTrekking",
+        "LogisticsManagement"
+      ],
+      "description": "Founder of JVTO and active member of the East Java Tourist Police Unit (Ditpamobvit), specializing in tourist safety and risk management."
+    },
+    "@context": "https://schema.org",
+    "legalName": "PT Java Volcano Rendezvous",
+    "areaServed": [
+      "East Java",
+      "Mount Bromo",
+      "Mount Ijen"
+    ],
+    "priceRange": "$$",
+    "description": "Java Volcano Tour Operator (JVTO) is a registered Indonesian travel company based in Bondowoso and led by an active Tourist Police officer. We design private, all-inclusive itineraries to Mount Bromo, Ijen Crater and Tumpak Sewu with clear safety rules, transparent pricing and real local impact.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@javavolcano-touroperator.com",
+      "telephone": "+6282244788833",
+      "contactType": "Customer Service",
+      "availableLanguage": [
+        "en",
+        "id"
+      ]
+    },
+    "foundingDate": "2015-01-01",
+    "alternateName": "JVTO"
+  },
+  "updated_at": "2026-04-13T14:11:03.498+07:00"
+}
