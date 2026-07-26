@@ -48,3 +48,28 @@ authorizes only the static artifact, not a runtime.
 **Reason:** The owner needs to *see and verify* the consolidated CMS without a DB or
 live site. A deterministic static projection makes the consolidation concrete and
 reviewable while respecting the "one runtime, in jvto-web" boundary.
+
+## ADR-008 — In-repo editable control-plane CMS over `jvto_cms`
+
+**Decision:** This repository runs a governed editorial console — a Fastify write API
+(`src/server.ts`: `PATCH /pages/<route>`, `PUT /pages/<route>/sections/<type>`) plus a
+server-rendered admin UI — over the fresh `jvto_cms` PostgreSQL database, which is the
+single editable content master. Console edits set `editable=true`; they are published by
+exporting the seed *from* `jvto_cms` (`scripts/export-cms-seed.mjs`), and `jvto-web`
+renders that seed. This is the "later architecture decision" that ADR-007 and `README.md`
+reserved.
+
+**This IS a governed editorial console, NOT a public site or a parallel CMS framework.**
+It lifts ADR-007's "no server / no database / no authentication / no editing / not a
+runtime" limit for THIS control plane only. Every other boundary holds: imported
+repository data stays read-only (`entities.editable = false`); no arbitrary JSX/CSS/code
+in content; no private crew/customer/payment/auth fields in any payload; every write is
+authenticated (admin token/session), facts-locked against `governance_facts` (rejected on
+violation, not merely warned), and audited (`audit_log`). It uses the fresh `jvto_cms`
+only — never `jvto_dev`. Public rendering and booking remain in `jvto-web` per ADR-001;
+this console never serves the public website.
+
+**Reason:** The owner needs one authoritative place to edit canonical content.
+Co-locating the write API + console with the schema and facts-lock engine over `jvto_cms`
+makes it the edit master, while the deterministic export→seed bridge keeps `jvto-web` a
+pure downstream renderer.

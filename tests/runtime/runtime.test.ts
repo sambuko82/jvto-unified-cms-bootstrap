@@ -8,13 +8,16 @@ import { hasDb, loadSchemaAndSeed } from './_db.js';
 
 const TOUR_ROUTE = '/tours/from-bali/bromo-ijen-3d2n';
 const EXPECTED_GROUP_COUNTS = [1, 19, 6, 6, 8, 9, 1, 2]; // 001..008, total 52
+const ADMIN_BEARER = 'admin-bearer-local-9x';
+const authHeaders = { authorization: `Bearer ${ADMIN_BEARER}` };
 
-describe.skipIf(!hasDb)('CMS read-runtime (integration)', () => {
+describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
   let rp: typeof import('../../src/resolvePage.js');
   let db: typeof import('../../src/db.js');
   let app: FastifyInstance;
 
   beforeAll(async () => {
+    process.env.CMS_ADMIN_TOKEN = ADMIN_BEARER; // enable the write API for these tests
     await loadSchemaAndSeed();
     rp = await import('../../src/resolvePage.js');
     db = await import('../../src/db.js');
@@ -208,5 +211,97 @@ describe.skipIf(!hasDb)('CMS read-runtime (integration)', () => {
     expect(rows.length).toBe(7);
     const paths = rows.map((r) => r.from_path);
     expect([...paths].sort()).toEqual(paths); // already ordered
+  });
+
+  // ── Write API (admin-gated, facts-locked) ───────────────────────────────────
+
+  it('PATCH /pages/* without a token -> 401', async () => {
+    const res = await app.inject({ method: 'PATCH', url: `/pages${TOUR_ROUTE}`, payload: { status: 'draft' } });
+    expect(res.statusCode).toBe(401);
+  });
+
+  it('PATCH /pages/* with token edits page fields and sets editable=true', async () => {
+    const res = await app.inject({
+      method: 'PATCH',
+      url: `/pages${TOUR_ROUTE}`,
+      headers: authHeaders,
+      payload: {
+        h1: '3 Day Bromo & Ijen Volcano Discovery from Bali',
+        seo: { title: 'Bromo & Ijen from Bali', description: 'Private all-inclusive volcano tour.' },
+      },
+    });
+    expect(res.statusCode).toBe(200);
+    const { rows } = await db.query<{ editable: boolean }>('SELECT editable FROM pages WHERE route = $1', [TOUR_ROUTE]);
+    expect(rows[0]?.editable).toBe(true);
+  });
+
+  it('PUT section with token replaces content and sets editable=true', async () => {
+    const res = await app.inject({
+      method: 'PUT',
+      url: `/pages${TOUR_ROUTE}/sections/page_content`,
+      headers: authHeaders,
+      payload: {
+        content: {
+          h1: 'Edited body',
+          body_md: '# Edited\n\nIjen health screening is mandatory for every guest before crater entry.',
+        },
+      },
+    });
+    expect(res.statusCode).toBe(200);
+    const { rows } = await db.query<{ editable: boolean; h1: string }>(
+      `SELECT s.editable, s.content->>'h1' AS h1 FROM page_sections s JOIN pages p ON p.id = s.page_id
+        WHERE p.route = $1 AND s.section_type = 'page_content'`,
+      [TOUR_ROUTE],
+    );
+    expect(rows[0]?.editable).toBe(true);
+    expect(rows[0]?.h1).toBe('Edited body');
+  });
+
+  it('rejects a forbidden value ("Travel Credit") with 400', async () => {
+    const res = await app.inject({
+      method: 'PUT',
+      url: `/pages${TOUR_ROUTE}/sections/page_content`,
+      headers: authHeaders,
+      payload: { content: { h1: 'Cancellation', body_md: 'You get Travel Credit when you cancel.' } },
+    });
+    expect(res.statusCode).toBe(400);
+    expect(JSON.stringify(res.json())).toContain('Travel Credit');
+  });
+
+  it('rejects the wrong founding year (2016) with 400', async () => {
+    const res = await app.inject({
+      method: 'PATCH',
+      url: `/pages${TOUR_ROUTE}`,
+      headers: authHeaders,
+      payload: { h1: 'Founded in 2016, JVTO leads volcano tours.' },
+    });
+    expect(res.statusCode).toBe(400);
+  });
+
+  it('rejects a private field in content with 400', async () => {
+    const res = await app.inject({
+      method: 'PUT',
+      url: `/pages${TOUR_ROUTE}/sections/page_content`,
+      headers: authHeaders,
+      payload: { content: { h1: 'x', customer_email: 'a@b.com' } },
+    });
+    expect(res.statusCode).toBe(400);
+  });
+
+  it('a write to a non-existent route -> 404', async () => {
+    const res = await app.inject({
+      method: 'PATCH',
+      url: '/pages/does/not/exist',
+      headers: authHeaders,
+      payload: { status: 'published' },
+    });
+    expect(res.statusCode).toBe(404);
+  });
+
+  it('records successful writes (and only those) in audit_log', async () => {
+    const { rows } = await db.query<{ action: string }>('SELECT action FROM audit_log ORDER BY id');
+    const actions = rows.map((r) => r.action);
+    expect(actions).toContain('patch_page');
+    expect(actions).toContain('put_section');
   });
 });
