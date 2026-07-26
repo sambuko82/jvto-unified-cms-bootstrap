@@ -304,4 +304,88 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(actions).toContain('patch_page');
     expect(actions).toContain('put_section');
   });
+
+  // ── Admin console (session cookie + CSRF + facts-lock through forms) ─────────
+
+  const FORM = { 'content-type': 'application/x-www-form-urlencoded' };
+  const csrfOf = (html: string): string => /name="csrf" value="([^"]+)"/.exec(html)?.[1] ?? '';
+
+  async function login(): Promise<string> {
+    const page = await app.inject({ method: 'GET', url: '/admin/login' });
+    const csrfCookie = page.cookies.find((c) => c.name === 'cms_csrf')?.value ?? '';
+    const res = await app.inject({
+      method: 'POST',
+      url: '/admin/login',
+      cookies: { cms_csrf: csrfCookie },
+      headers: FORM,
+      payload: `token=${encodeURIComponent(ADMIN_BEARER)}&csrf=${csrfOf(page.body)}`,
+    });
+    return res.cookies.find((c) => c.name === 'cms_session')?.value ?? '';
+  }
+
+  async function csrfFor(url: string, session: string): Promise<{ cookie: string; token: string }> {
+    const res = await app.inject({ method: 'GET', url, cookies: { cms_session: session } });
+    return { cookie: res.cookies.find((c) => c.name === 'cms_csrf')?.value ?? '', token: csrfOf(res.body) };
+  }
+
+  it('GET /admin without a session redirects to /admin/login', async () => {
+    const res = await app.inject({ method: 'GET', url: '/admin' });
+    expect(res.statusCode).toBe(302);
+    expect(res.headers['location']).toBe('/admin/login');
+  });
+
+  it('admin login yields a session and the dashboard lists pages', async () => {
+    const session = await login();
+    expect(session).toBeTruthy();
+    const dash = await app.inject({ method: 'GET', url: '/admin', cookies: { cms_session: session } });
+    expect(dash.statusCode).toBe(200);
+    expect(dash.body).toContain(`/admin/pages${TOUR_ROUTE}`);
+  });
+
+  it('editing page_content through the console form sets editable=true', async () => {
+    const session = await login();
+    const { cookie, token } = await csrfFor(`/admin/pages${TOUR_ROUTE}`, session);
+    const res = await app.inject({
+      method: 'POST',
+      url: `/admin/pages${TOUR_ROUTE}/sections/page_content`,
+      cookies: { cms_session: session, cms_csrf: cookie },
+      headers: FORM,
+      payload: `csrf=${token}&h1=Console+edit&body_md=Updated+overview+for+Bromo+and+Ijen.`,
+    });
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toContain('Saved');
+    const { rows } = await db.query<{ editable: boolean; h1: string }>(
+      `SELECT s.editable, s.content->>'h1' AS h1 FROM page_sections s JOIN pages p ON p.id = s.page_id
+        WHERE p.route = $1 AND s.section_type = 'page_content'`,
+      [TOUR_ROUTE],
+    );
+    expect(rows[0]?.editable).toBe(true);
+    expect(rows[0]?.h1).toBe('Console edit');
+  });
+
+  it('a facts-lock violation through the console form is rejected (400)', async () => {
+    const session = await login();
+    const { cookie, token } = await csrfFor(`/admin/pages${TOUR_ROUTE}`, session);
+    const res = await app.inject({
+      method: 'POST',
+      url: `/admin/pages${TOUR_ROUTE}/sections/page_content`,
+      cookies: { cms_session: session, cms_csrf: cookie },
+      headers: FORM,
+      payload: `csrf=${token}&h1=x&body_md=You+get+Travel+Credit+when+you+cancel.`,
+    });
+    expect(res.statusCode).toBe(400);
+    expect(res.body).toContain('Travel Credit');
+  });
+
+  it('an admin POST without a CSRF token is rejected (403)', async () => {
+    const session = await login();
+    const res = await app.inject({
+      method: 'POST',
+      url: `/admin/pages${TOUR_ROUTE}/sections/page_content`,
+      cookies: { cms_session: session },
+      headers: FORM,
+      payload: 'h1=x&body_md=hello',
+    });
+    expect(res.statusCode).toBe(403);
+  });
 });

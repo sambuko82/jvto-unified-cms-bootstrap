@@ -38,6 +38,23 @@ export function hasValidBearer(req: FastifyRequest): boolean {
   return Boolean(expected && provided && constantTimeEqual(provided, expected));
 }
 
+// The admin-console session: a cookie signed with the admin token (see @fastify/cookie).
+export const SESSION_COOKIE = 'cms_session';
+export const SESSION_VALUE = 'admin';
+
+/** True when the request carries a valid signed admin session cookie. */
+export function hasValidSession(req: FastifyRequest): boolean {
+  const raw = req.cookies?.[SESSION_COOKIE];
+  if (!raw) return false;
+  const unsigned = req.unsignCookie(raw);
+  return unsigned.valid && unsigned.value === SESSION_VALUE;
+}
+
+/** Authenticated by EITHER the bearer token (API) or the session cookie (console). */
+export function isAuthenticated(req: FastifyRequest): boolean {
+  return hasValidBearer(req) || hasValidSession(req);
+}
+
 /**
  * Fastify preHandler: allow only requests with a valid admin bearer token.
  * 503 when the server has no CMS_ADMIN_TOKEN (write API disabled); 401 otherwise.
@@ -52,7 +69,7 @@ export async function requireAdmin(
       .code(503)
       .send({ error: 'Service Unavailable', message: 'Write API disabled: CMS_ADMIN_TOKEN is not configured.' });
   }
-  if (!hasValidBearer(req)) {
+  if (!isAuthenticated(req)) {
     return reply.code(401).send({ error: 'Unauthorized' });
   }
   return undefined; // authorized — proceed to the handler
