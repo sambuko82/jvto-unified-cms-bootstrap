@@ -161,7 +161,7 @@ const DISPLAY_FIELDS = [
   'canonical_wording',
 ];
 
-function collectStrings(value: unknown, out: string[]): void {
+export function collectStrings(value: unknown, out: string[]): void {
   if (typeof value === 'string') {
     out.push(value);
   } else if (Array.isArray(value)) {

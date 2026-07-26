@@ -6,7 +6,7 @@ Build the JVTO Unified CMS as a governed control plane that extends the existing
 
 ## Non-negotiable constraints
 
-- Do not create a second CMS runtime without a written architecture decision.
+- Do not create a second CMS runtime without a written architecture decision. (The in-repo editable control-plane CMS over `jvto_cms` — write API + admin console — is authorized by **ADR-008**; it is not the public website.)
 - Do not replace the public website or booking engine.
 - Do not make imported repository data editable by default.
 - Do not overwrite source-owned fields silently.
@@ -16,6 +16,15 @@ Build the JVTO Unified CMS as a governed control plane that extends the existing
 - Do not copy credentials, tokens, or passwords into the repository.
 - Do not import mutable repository `main` content directly into production.
 - Do not hardcode prices, ratings, policies, licence numbers, or operational facts in JSX.
+
+## Execution contract (owner-directed)
+
+Every step of work here produces (1) real running implementation — not notes or
+references, (2) a measurable, verifiable change, and (3) proof of execution (curl output,
+tests, or a visible result). Do not accumulate documentation without direct
+implementation. On obstacles: use judgment and prior context first, re-examine earlier
+data and recommendations, and ask only for a true blocker (missing credentials, a
+destructive/irreversible action, or a genuine fork).
 
 ## Required architectural behavior
 

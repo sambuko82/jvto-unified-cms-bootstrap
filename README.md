@@ -4,7 +4,7 @@ A Codex-ready implementation workspace for consolidating JVTO content, knowledge
 
 ## Important architectural rule
 
-This repository is **not intended to become a second production website or a parallel CMS runtime**.
+This repository is **not the public production website and not a parallel third-party CMS framework**. It DOES host the governed in-repo editorial console — a write API + admin UI over the fresh `jvto_cms` database — authorized by **ADR-008**. That console is the single content edit master; public rendering and booking stay in `jvto-web`.
 
 It is the implementation workspace and governance contract for extending the existing:
 
@@ -14,7 +14,7 @@ It is the implementation workspace and governance contract for extending the exi
 - Prisma data layer;
 - repository sync and validation pipelines.
 
-The production target remains `jvto-web/live` unless a later architecture decision explicitly replaces it.
+Public rendering and booking remain in `jvto-web/live`; the editorial console over `jvto_cms` is the "later architecture decision" reserved here (see **ADR-008**), and it never serves the public site.
 
 ## Connected source systems
 

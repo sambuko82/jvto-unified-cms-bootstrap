@@ -83,6 +83,16 @@ CREATE TABLE IF NOT EXISTS assets (
   meta  jsonb NOT NULL DEFAULT '{}'::jsonb
 );
 
+-- ── 6) Audit log (console write/publish actions; no secrets or personal data) ──
+CREATE TABLE IF NOT EXISTS audit_log (
+  id       bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  at       timestamptz NOT NULL DEFAULT now(),
+  actor    text NOT NULL,               -- admin identity; never a token/secret
+  action   text NOT NULL,               -- patch_page | put_section | publish
+  target   text NOT NULL,               -- route, or route#section_type
+  summary  text                         -- short human note; no restricted fields
+);
+
 -- ── Idempotent migrations for already-provisioned databases ───────────────────
 -- (CREATE TABLE IF NOT EXISTS above is a no-op on an existing DB, so new columns
 --  are added here.) `editable` marks console-edited rows the upstream refresh keeps.
