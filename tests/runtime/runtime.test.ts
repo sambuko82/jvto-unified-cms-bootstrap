@@ -7,7 +7,7 @@ import type { FastifyInstance } from 'fastify';
 import { hasDb, loadSchemaAndSeed } from './_db.js';
 
 const TOUR_ROUTE = '/tours/from-bali/bromo-ijen-3d2n';
-const EXPECTED_GROUP_COUNTS = [1, 19, 6, 6, 8, 9, 1, 2]; // 001..008, total 52
+const EXPECTED_GROUP_COUNTS = [1, 19, 6, 6, 14, 9, 1, 2]; // 001..008, total 58
 const ADMIN_BEARER = 'admin-bearer-local-9x';
 const authHeaders = { authorization: `Bearer ${ADMIN_BEARER}` };
 
@@ -39,10 +39,10 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
               (SELECT count(*) FROM pages) p,
               (SELECT count(*) FROM page_sections) s`,
     );
-    // s = 203 designed IA sections + 51 `page_content` sections (design-system copy
-    // overlaid onto the 51 matched pages; only /blog/why-not-unlicensed-ijen-operator
+    // s = 209 designed IA sections + 57 `page_content` sections (design-system copy
+    // overlaid onto the 57 matched pages; only /blog/why-not-unlicensed-ijen-operator
     // stays scaffold-only).
-    expect(rows[0]).toEqual({ e: '172', p: '52', s: '254' });
+    expect(rows[0]).toEqual({ e: '172', p: '58', s: '266' });
   });
 
   it('resolves the graded tour route with ordered sections + hydrated entities + JSON-LD', async () => {
@@ -88,9 +88,9 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(Object.keys(r.jsonld).length).toBeGreaterThan(3);
   });
 
-  it('resolves every one of the 52 pages without throwing (0 orphan pages)', async () => {
+  it('resolves every one of the 58 pages without throwing (0 orphan pages)', async () => {
     const { rows } = await db.query<{ route: string }>('SELECT route FROM pages ORDER BY route');
-    expect(rows.length).toBe(52);
+    expect(rows.length).toBe(58);
     for (const { route } of rows) {
       const resolved = await rp.resolvePage(route);
       expect(resolved, `resolve ${route}`).not.toBeNull();
@@ -156,13 +156,13 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(res.json()).toMatchObject({ status: 'ok' });
   });
 
-  it('GET /pages -> 8 file-groups, 52 routes, correct counts + labels', async () => {
+  it('GET /pages -> 8 file-groups, 58 routes, correct counts + labels', async () => {
     const res = await app.inject({ method: 'GET', url: '/pages' });
     expect(res.statusCode).toBe(200);
     const groups = res.json() as Array<{ file_group: string; label: string; count: number; pages: unknown[] }>;
     expect(groups.map((g) => g.file_group)).toEqual(['001', '002', '003', '004', '005', '006', '007', '008']);
     expect(groups.map((g) => g.count)).toEqual(EXPECTED_GROUP_COUNTS);
-    expect(groups.reduce((n, g) => n + g.count, 0)).toBe(52);
+    expect(groups.reduce((n, g) => n + g.count, 0)).toBe(58);
     expect(groups[0]?.label).toBe('Home');
     expect(groups[1]?.label).toBe('Tours');
   });

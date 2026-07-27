@@ -221,6 +221,63 @@ pages:
     title: "Packing & Fitness"
     sections:
       - { type: rich_text }
+  # IA expansion: adopt the design-system travel-guide articles that carried real
+  # content but had no SSOT page (the build's candidateNewUrls). The overlay
+  # attaches their page_content on exact-route match; prose, no entity_refs.
+  - route: /travel-guide/best-time-to-visit
+    file_group: "005"
+    hub_route: /travel-guide
+    page_type: travel_guide
+    template: travel-guide
+    visual_mode: hybrid
+    title: "Best Time to Visit East Java"
+    sections:
+      - { type: rich_text }
+  - route: /travel-guide/bromo-ijen-itinerary-guide
+    file_group: "005"
+    hub_route: /travel-guide
+    page_type: travel_guide
+    template: travel-guide
+    visual_mode: hybrid
+    title: "Bromo & Ijen Itinerary Guide"
+    sections:
+      - { type: rich_text }
+  - route: /travel-guide/bromo-vs-ijen-comparison
+    file_group: "005"
+    hub_route: /travel-guide
+    page_type: travel_guide
+    template: travel-guide
+    visual_mode: hybrid
+    title: "Mount Bromo vs Mount Ijen"
+    sections:
+      - { type: rich_text }
+  - route: /travel-guide/private-vs-shared-tour-comparison
+    file_group: "005"
+    hub_route: /travel-guide
+    page_type: travel_guide
+    template: travel-guide
+    visual_mode: hybrid
+    title: "Private vs Shared Volcano Tours"
+    sections:
+      - { type: rich_text }
+  - route: /travel-guide/surabaya-vs-bali-starting-point
+    file_group: "005"
+    hub_route: /travel-guide
+    page_type: travel_guide
+    template: travel-guide
+    visual_mode: hybrid
+    title: "Starting from Surabaya vs Bali"
+    sections:
+      - { type: rich_text }
+  - route: /travel-guide/what-to-pack-bromo-ijen
+    file_group: "005"
+    hub_route: /travel-guide
+    page_type: travel_guide
+    template: travel-guide
+    visual_mode: hybrid
+    title: "What to Pack for Bromo & Ijen"
+    sections:
+      - { type: rich_text }
 
   # ── FILE 006 — Verify & Policy ──────────────────────────────────────────────
   - route: /verify-jvto
