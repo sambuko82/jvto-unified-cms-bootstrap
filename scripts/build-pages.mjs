@@ -194,7 +194,40 @@ const richness = (row) => {
   const body = typeof c.body_md === 'string' ? c.body_md.length : 0;
   return sec * 1000 + faq * 500 + Math.floor(body / 50);
 };
-const overlay = { matched: 0, seo: 0, iaOnly: [], candidateNewUrls: [], clusterOverride: [] };
+// A2 — per-field best-of merge. A page's copy can be split across extracts (design-system
+// carries a body_md blob; jvto-db a structured sections[]/faq contract). Keep the richest
+// base row, then additively adopt the longer PROSE body and any faq/sections[] the base
+// lacks from the other extract, so no dimension is lost. Two safety gates keep the merge
+// governance-clean: never adopt a display-schema stub as a body, and never adopt copy
+// asserting the owner-locked-disputed PT-incorporation year "2016" (open since PR #7) or
+// the retired "Travel Credit" term — so a merge can never reintroduce disputed content.
+const isProse = (b) =>
+  typeof b === 'string' && b.length > 0 && !/display schema only|page data structure/i.test(b.slice(0, 300));
+const DISPUTED = /\b2016\b|travel credit/i;
+const adoptableBody = (b) => isProse(b) && !DISPUTED.test(b);
+const clean = (v) => !DISPUTED.test(JSON.stringify(v ?? ''));
+function mergeContent(base, other) {
+  const out = { ...base };
+  if (adoptableBody(other.body_md) && other.body_md.length > (adoptableBody(out.body_md) ? out.body_md.length : 0)) {
+    out.body_md = other.body_md;
+  }
+  if (!(Array.isArray(out.faq) && out.faq.length) && Array.isArray(other.faq) && other.faq.length && clean(other.faq)) {
+    out.faq = other.faq;
+  }
+  if (!(Array.isArray(out.sections) && out.sections.length) && Array.isArray(other.sections) && other.sections.length && clean(other.sections)) {
+    out.sections = other.sections;
+  }
+  return out;
+}
+const mergeSeo = (base, other) => {
+  const out = {};
+  for (const k of ['title', 'description', 'schema_type']) {
+    const v = base[k] != null && base[k] !== '' ? base[k] : other[k];
+    if (v) out[k] = v;
+  }
+  return out;
+};
+const overlay = { matched: 0, seo: 0, iaOnly: [], candidateNewUrls: [], clusterOverride: [], merged: 0 };
 if (fs.existsSync(dbPath)) {
   const live = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
   const liveByRoute = new Map((live.rows || []).map((r) => [r.route, r]));
@@ -210,26 +243,28 @@ if (fs.existsSync(dbPath)) {
   const consumedLive = new Set();
   for (const p of pages) {
     const liveRoute = p.route;
-    let row;
+    const dsRow = liveByRoute.get(liveRoute);
+    const dbRow = clusterByRoute.get(liveRoute) || clusterByAlias.get(liveRoute);
+    let base, other;
     if (isStructuredCluster(liveRoute)) {
       // Contract-locked clusters (homepage curated h1, /why-jvto sections[], /travel-guide
-      // faq, facts-lock-forced verify): keep the existing db-preferred sourcing exactly.
-      const clusterRow = clusterByRoute.get(liveRoute);
-      row = clusterRow || liveByRoute.get(liveRoute);
-      if (clusterRow) overlay.clusterOverride.push(liveRoute);
+      // faq, facts-lock-forced verify): jvto-db stays the base; design-system only enriches.
+      base = dbRow || dsRow;
+      other = base === dbRow ? dsRow : null;
+      if (dbRow) overlay.clusterOverride.push(liveRoute);
     } else {
-      // Everything else: richest-wins across design-system + jvto-db (matched by route or
-      // by destination alias), so rich jvto-db tour/destination/FAQ copy is actually used.
-      const dsRow = liveByRoute.get(liveRoute);
-      const dbRow = clusterByRoute.get(liveRoute) || clusterByAlias.get(liveRoute);
-      if (richness(dbRow) > richness(dsRow)) { row = dbRow; overlay.clusterOverride.push(liveRoute); }
-      else row = dsRow;
+      // Richest row is the base (matched by route or destination alias); the other extract
+      // enriches it per-field so rich jvto-db copy AND long design-system prose both land.
+      if (richness(dbRow) > richness(dsRow)) { base = dbRow; other = dsRow; overlay.clusterOverride.push(liveRoute); }
+      else { base = dsRow; other = dbRow; }
     }
-    if (!row) { overlay.iaOnly.push(p.route); continue; }
+    if (!base) { overlay.iaOnly.push(liveRoute); continue; }
     consumedLive.add(liveRoute);
     overlay.matched++;
-    const lseo = row.seo || {};
-    const lcontent = row.content || {};
+    const baseContent = base.content || {};
+    const lcontent = mergeContent(baseContent, other ? other.content || {} : {});
+    if (other && JSON.stringify(lcontent) !== JSON.stringify(baseContent)) overlay.merged++;
+    const lseo = mergeSeo(base.seo || {}, other ? other.seo || {} : {});
     p.seo = {
       ...(p.seo || {}),
       ...(lseo.title ? { title: lseo.title } : {}),
@@ -238,7 +273,7 @@ if (fs.existsSync(dbPath)) {
     };
     if (lseo.description) overlay.seo++;
     if (lcontent.h1) p.h1 = lcontent.h1;
-    // lossless real page copy (body_md/faq/lede/sections/…) as one section
+    // best-of real page copy (body_md/faq/lede/sections/…) merged into one section
     p.sections.push({
       type: 'page_content',
       variant: (lcontent.schema_version != null ? String(lcontent.schema_version) : 'live'),
@@ -289,6 +324,7 @@ const outDoc = {
     redirects: (cfg.redirects || []).length,
     liveOverlay: {
       matched: overlay.matched,
+      mergedPerField: overlay.merged,
       withSeoDescription: overlay.seo,
       clusterOverride: overlay.clusterOverride,
       scaffoldOnly: overlay.iaOnly,
@@ -304,7 +340,7 @@ console.log(
     `${outDoc.counts.sections} sections, ${outDoc.counts.redirects} redirects, 0 dangling refs.`,
 );
 console.log(
-  `Content overlay (richest-wins): ${overlay.matched} pages enriched (${overlay.seo} with real seo.description); ` +
+  `Content overlay (best-of per-field): ${overlay.matched} pages enriched (${overlay.seo} with real seo.description, ${overlay.merged} merged from both extracts); ` +
     `${overlay.clusterOverride.length} route(s) sourced from jvto-db [${overlay.clusterOverride.join(', ') || 'none'}]; ` +
     `${overlay.iaOnly.length} scaffold-only [${overlay.iaOnly.join(', ') || 'none'}]; ` +
     `${overlay.candidateNewUrls.length} extract routes with content but no SSOT page (candidate new URLs).`,
