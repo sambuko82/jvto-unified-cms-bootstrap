@@ -10,18 +10,19 @@
 //   PATCH /pages/<route>                   edit page fields { seo?, h1?, status? }
 //   PUT   /pages/<route>/sections/<type>   replace a section's { content }
 //
-// buildServer() is a factory so tests can drive it with app.inject(); the
-// import.meta.url main-guard starts a listener only when run directly.
+// buildServer() is a factory so tests can drive it with app.inject(), and so the
+// actual listener lives in the separate src/start.ts entrypoint (importing this
+// module must never have the side effect of starting a listener).
 
 import { readFileSync } from 'node:fs';
-import { fileURLToPath, pathToFileURL } from 'node:url';
+import { fileURLToPath } from 'node:url';
 import { randomBytes } from 'node:crypto';
 import Fastify from 'fastify';
 import type { FastifyInstance } from 'fastify';
 import fastifyCookie from '@fastify/cookie';
 import fastifyFormbody from '@fastify/formbody';
 import { parse as parseYaml } from 'yaml';
-import { query, closePool } from './db.js';
+import { query } from './db.js';
 import { resolvePage, toPublicEntity, normalizeRoute } from './resolvePage.js';
 import type { EntityRow } from './resolvePage.js';
 import { normalizeSlug } from './integration/canonical.js';
@@ -47,7 +48,9 @@ const ENTITY_COLUMNS =
   'entity_type, canonical_key, slug, title, data, source, editable';
 
 export function buildServer(): FastifyInstance {
-  const app = Fastify({ logger: false });
+  // trustProxy: this runs behind a reverse proxy (Nginx) in every real deployment,
+  // so Fastify must read X-Forwarded-Proto to know a request arrived over TLS.
+  const app = Fastify({ logger: false, trustProxy: true });
   // Signed cookies (admin session + CSRF) keyed off the admin token; a random
   // per-start secret when unset (login still requires the token, so no session forms).
   app.register(fastifyCookie, { secret: adminToken() ?? randomBytes(32).toString('hex') });
@@ -172,31 +175,4 @@ export function buildServer(): FastifyInstance {
   });
 
   return app;
-}
-
-// ── Entrypoint (only when executed directly, not when imported by tests) ───────
-
-const invokedDirectly =
-  process.argv[1] !== undefined && import.meta.url === pathToFileURL(process.argv[1]).href;
-
-if (invokedDirectly) {
-  if (!process.env.DATABASE_URL) {
-    // eslint-disable-next-line no-console
-    console.error('DATABASE_URL is not set — refusing to start the CMS runtime.');
-    process.exit(1);
-  }
-  const app = buildServer();
-  const port = Number(process.env.PORT ?? 3000);
-  app
-    .listen({ port, host: '0.0.0.0' })
-    .then((address) => {
-      // eslint-disable-next-line no-console
-      console.log(`CMS read-runtime listening on ${address}`);
-    })
-    .catch(async (err) => {
-      // eslint-disable-next-line no-console
-      console.error(err);
-      await closePool();
-      process.exit(1);
-    });
 }
