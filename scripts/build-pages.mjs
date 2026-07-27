@@ -173,6 +173,27 @@ const isStructuredCluster = (route) =>
   route.startsWith('/why-jvto') ||
   route.startsWith('/travel-guide') ||
   FACTS_LOCK_FORCED.has(route);
+// jvto-db uses long destination slugs; the SSOT IA uses short ones. Index those rows
+// under the short route too, so a destination page can consume its rich jvto-db prose.
+const ROUTE_ALIAS = {
+  '/destinations/ijen-crater': '/destinations/ijen',
+  '/destinations/madakaripura-waterfall': '/destinations/madakaripura',
+  '/destinations/tumpak-sewu-waterfall': '/destinations/tumpak-sewu',
+  '/destinations/papuma-beach': '/destinations/papuma',
+};
+// Content-richness score. A jvto-db row carries its copy as a structured contract
+// (sections[]/faq); a design-system row as one body_md blob. Prefer the richer
+// structured source, then longer prose. This is the A1 unification: the richest
+// available copy wins per route, so jvto-db's rich tour/destination/FAQ rows stop
+// going unused (previously a crude cluster hack picked design-system for them).
+const richness = (row) => {
+  if (!row) return -1;
+  const c = row.content || {};
+  const sec = Array.isArray(c.sections) ? c.sections.length : 0;
+  const faq = Array.isArray(c.faq) ? c.faq.length : 0;
+  const body = typeof c.body_md === 'string' ? c.body_md.length : 0;
+  return sec * 1000 + faq * 500 + Math.floor(body / 50);
+};
 const overlay = { matched: 0, seo: 0, iaOnly: [], candidateNewUrls: [], clusterOverride: [] };
 if (fs.existsSync(dbPath)) {
   const live = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
@@ -181,15 +202,30 @@ if (fs.existsSync(dbPath)) {
     ? JSON.parse(fs.readFileSync(clusterPath, 'utf8'))
     : { rows: [] };
   const clusterByRoute = new Map((clusterDoc.rows || []).map((r) => [r.route, r]));
+  const clusterByAlias = new Map();
+  for (const r of clusterDoc.rows || []) {
+    const ia = ROUTE_ALIAS[r.route];
+    if (ia) clusterByAlias.set(ia, r);
+  }
   const consumedLive = new Set();
   for (const p of pages) {
     const liveRoute = p.route;
-    // Structured clusters prefer the jvto-db row (carries sections[]/h1/faq); every
-    // other route — and cluster routes jvto-db lacks — use the design-system row.
-    const clusterRow = isStructuredCluster(liveRoute) ? clusterByRoute.get(liveRoute) : undefined;
-    const row = clusterRow || liveByRoute.get(liveRoute);
+    let row;
+    if (isStructuredCluster(liveRoute)) {
+      // Contract-locked clusters (homepage curated h1, /why-jvto sections[], /travel-guide
+      // faq, facts-lock-forced verify): keep the existing db-preferred sourcing exactly.
+      const clusterRow = clusterByRoute.get(liveRoute);
+      row = clusterRow || liveByRoute.get(liveRoute);
+      if (clusterRow) overlay.clusterOverride.push(liveRoute);
+    } else {
+      // Everything else: richest-wins across design-system + jvto-db (matched by route or
+      // by destination alias), so rich jvto-db tour/destination/FAQ copy is actually used.
+      const dsRow = liveByRoute.get(liveRoute);
+      const dbRow = clusterByRoute.get(liveRoute) || clusterByAlias.get(liveRoute);
+      if (richness(dbRow) > richness(dsRow)) { row = dbRow; overlay.clusterOverride.push(liveRoute); }
+      else row = dsRow;
+    }
     if (!row) { overlay.iaOnly.push(p.route); continue; }
-    if (clusterRow) overlay.clusterOverride.push(p.route);
     consumedLive.add(liveRoute);
     overlay.matched++;
     const lseo = row.seo || {};
@@ -210,7 +246,7 @@ if (fs.existsSync(dbPath)) {
       entity_refs: [],
     });
   }
-  // live routes with real copy but no SSOT page yet = candidate NEW SSOT URLs
+  // design-system routes with real copy but no SSOT page yet = candidate NEW SSOT URLs
   // (content-drives-URL: add them to the IA in a follow-on pass, don't force now).
   overlay.candidateNewUrls = (live.rows || []).map((r) => r.route).filter((r) => !consumedLive.has(r)).sort();
 }
@@ -268,8 +304,8 @@ console.log(
     `${outDoc.counts.sections} sections, ${outDoc.counts.redirects} redirects, 0 dangling refs.`,
 );
 console.log(
-  `Design-system overlay: ${overlay.matched} pages enriched (${overlay.seo} with real seo.description); ` +
-    `${overlay.clusterOverride.length} structured-cluster route(s) sourced from jvto-db [${overlay.clusterOverride.join(', ') || 'none'}]; ` +
+  `Content overlay (richest-wins): ${overlay.matched} pages enriched (${overlay.seo} with real seo.description); ` +
+    `${overlay.clusterOverride.length} route(s) sourced from jvto-db [${overlay.clusterOverride.join(', ') || 'none'}]; ` +
     `${overlay.iaOnly.length} scaffold-only [${overlay.iaOnly.join(', ') || 'none'}]; ` +
     `${overlay.candidateNewUrls.length} extract routes with content but no SSOT page (candidate new URLs).`,
 );
