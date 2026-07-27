@@ -682,6 +682,108 @@
     "status": "published"
   },
   {
+    "route": "/travel-guide/best-time-to-visit",
+    "file_group": "005",
+    "sort_order": 9,
+    "cluster": "hybrid",
+    "page_type": "travel_guide",
+    "template": "travel-guide",
+    "visual_mode": "hybrid",
+    "hub_route": "/travel-guide",
+    "title": "Best Time to Visit East Java",
+    "h1": "Best Time to Visit — East Java Destinations",
+    "seo": {
+      "title": "Best Time to Visit East Java",
+      "description": "There is no universally bad time to visit East Java — but there is a best window for each destination, and knowing the seasonal patterns helps you choose…"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/travel-guide/bromo-ijen-itinerary-guide",
+    "file_group": "005",
+    "sort_order": 10,
+    "cluster": "hybrid",
+    "page_type": "travel_guide",
+    "template": "travel-guide",
+    "visual_mode": "hybrid",
+    "hub_route": "/travel-guide",
+    "title": "Bromo & Ijen Itinerary Guide",
+    "h1": "Bromo & Ijen Itinerary Guide — How Many Days Do You Need?",
+    "seo": {
+      "title": "Bromo & Ijen Itinerary Guide",
+      "description": "JVTO operates 16 private tour packages across East Java. The right one depends on how many days you have, which destinations matter to you, and where you…"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/travel-guide/bromo-vs-ijen-comparison",
+    "file_group": "005",
+    "sort_order": 11,
+    "cluster": "hybrid",
+    "page_type": "travel_guide",
+    "template": "travel-guide",
+    "visual_mode": "hybrid",
+    "hub_route": "/travel-guide",
+    "title": "Mount Bromo vs Mount Ijen",
+    "h1": "Mount Bromo vs Mount Ijen: Which Volcano Tour is Best for You?",
+    "seo": {
+      "title": "Mount Bromo vs Mount Ijen",
+      "description": "Choosing between East Java’s two iconic active volcanoes depends on your physical fitness level, what landscapes you want to see, and your overall travel…"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/travel-guide/private-vs-shared-tour-comparison",
+    "file_group": "005",
+    "sort_order": 12,
+    "cluster": "hybrid",
+    "page_type": "travel_guide",
+    "template": "travel-guide",
+    "visual_mode": "hybrid",
+    "hub_route": "/travel-guide",
+    "title": "Private vs Shared Volcano Tours",
+    "h1": "Private vs. Shared Volcano Tours: Why Execution Control Matters",
+    "seo": {
+      "title": "Private vs Shared Volcano Tours",
+      "description": "When planning a tour to Mount Bromo and Mount Ijen, you will choose between a 100% private tour and a shared tour (open trip). While shared tours attract…"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/travel-guide/surabaya-vs-bali-starting-point",
+    "file_group": "005",
+    "sort_order": 13,
+    "cluster": "hybrid",
+    "page_type": "travel_guide",
+    "template": "travel-guide",
+    "visual_mode": "hybrid",
+    "hub_route": "/travel-guide",
+    "title": "Starting from Surabaya vs Bali",
+    "h1": "Starting from Surabaya vs Bali",
+    "seo": {
+      "title": "Starting from Surabaya vs Bali",
+      "description": "JVTO operates 16 private tour packages — 12 departing from Surabaya, 4 from Bali. The destinations are the same volcanoes and waterfalls. The difference…"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/travel-guide/what-to-pack-bromo-ijen",
+    "file_group": "005",
+    "sort_order": 14,
+    "cluster": "hybrid",
+    "page_type": "travel_guide",
+    "template": "travel-guide",
+    "visual_mode": "hybrid",
+    "hub_route": "/travel-guide",
+    "title": "What to Pack for Bromo & Ijen",
+    "h1": "What to Pack for Your Bromo & Ijen Volcano Tour",
+    "seo": {
+      "title": "What to Pack for Bromo & Ijen",
+      "description": "East Java’s volcanic terrain demands careful packing. In a single day, you will experience temperatures near freezing (5°C to 10°C) before dawn at high…"
+    },
+    "status": "published"
+  },
+  {
     "route": "/verify-jvto",
     "file_group": "006",
     "sort_order": 1,
