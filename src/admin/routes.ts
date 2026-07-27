@@ -28,6 +28,9 @@ import type { PageRow, GroupBlock, EditorPage, EditorSection, Flash } from './vi
 const CSRF_COOKIE = 'cms_csrf';
 const ADMIN_ACTOR = 'admin-console';
 const execFileAsync = promisify(execFile);
+// Real deployments always sit behind TLS (Nginx); only withhold Secure in dev/test
+// so cookies still work over plain http://localhost.
+const SECURE_COOKIES = process.env.NODE_ENV === 'production';
 
 function loadGroupLabels(): Record<string, { label: string }> {
   const p = fileURLToPath(new URL('../../config/pages.yaml', import.meta.url));
@@ -37,7 +40,13 @@ function loadGroupLabels(): Record<string, { label: string }> {
 
 function issueCsrf(reply: FastifyReply): string {
   const token = randomBytes(16).toString('hex');
-  reply.setCookie(CSRF_COOKIE, token, { path: '/admin', httpOnly: true, sameSite: 'strict', signed: true });
+  reply.setCookie(CSRF_COOKIE, token, {
+    path: '/admin',
+    httpOnly: true,
+    sameSite: 'strict',
+    secure: SECURE_COOKIES,
+    signed: true,
+  });
   return token;
 }
 
@@ -108,6 +117,7 @@ export function registerAdmin(app: FastifyInstance): void {
       path: '/',
       httpOnly: true,
       sameSite: 'strict',
+      secure: SECURE_COOKIES,
       signed: true,
       maxAge: 8 * 3600,
     });
