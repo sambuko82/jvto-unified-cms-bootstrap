@@ -94,9 +94,22 @@ sql += '\n-- pages\n';
 for (const p of pages)
   sql += `INSERT INTO pages (route, file_group, sort_order, cluster, page_type, template, visual_mode, hub_route, title, h1, seo, status, editable) VALUES (${q(p.route)}, ${q(p.file_group)}, ${p.sort_order}, ${q(p.cluster)}, ${q(p.page_type)}, ${q(p.template)}, ${q(p.visual_mode)}, ${q(p.hub_route)}, ${q(p.title)}, ${q(p.h1)}, ${j(p.seo)}, ${q(p.status)}, false) ON CONFLICT (route) DO UPDATE SET file_group = EXCLUDED.file_group, sort_order = EXCLUDED.sort_order, cluster = EXCLUDED.cluster, page_type = EXCLUDED.page_type, template = EXCLUDED.template, visual_mode = EXCLUDED.visual_mode, hub_route = EXCLUDED.hub_route, title = EXCLUDED.title, h1 = EXCLUDED.h1, seo = EXCLUDED.seo WHERE pages.editable IS NOT TRUE;\n`;
 
+// Prune synced pages whose route left the IA (e.g. a slug rename: /destinations/bromo
+// -> /destinations/mount-bromo). Without this the stale page lingers and — because the
+// resolver returns a page before ever checking redirects (src/resolvePage.ts) — it
+// SHADOWS the short->long redirect. Console-authored pages (editable=true) are preserved;
+// page_sections cascade on delete (schema.sql: ON DELETE CASCADE).
+sql += '\n-- prune pages whose route left the seed (renames / removals)\n';
+sql += `DELETE FROM pages WHERE editable IS NOT TRUE AND route <> ALL(${arr(pages.map((p) => p.route))});\n`;
+
 sql += '\n-- redirects\n';
 for (const r of redirects)
   sql += `INSERT INTO redirects (from_path, to_path, code) VALUES (${q(r.from_path)}, ${q(r.to_path)}, ${r.code}) ON CONFLICT (from_path) DO UPDATE SET to_path = EXCLUDED.to_path, code = EXCLUDED.code;\n`;
+
+// Prune synced redirects removed from the IA (redirects carry no editable flag —
+// they are wholly seed-owned, so any row not in the seed is stale).
+sql += '\n-- prune redirects no longer in the seed\n';
+sql += `DELETE FROM redirects WHERE from_path <> ALL(${arr(redirects.map((r) => r.from_path))});\n`;
 
 sql += '\n-- page_sections (page_id resolved by route)\n';
 for (const s of sections)
