@@ -194,7 +194,7 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     const { rows: redirects } = await db.query<{ from_path: string; to_path: string }>(
       'SELECT from_path, to_path FROM redirects',
     );
-    expect(redirects.length).toBe(7);
+    expect(redirects.length).toBe(12);
     for (const red of redirects) {
       const targetExists =
         (await db.query('SELECT 1 FROM pages WHERE route = $1', [red.to_path])).rows.length > 0;
@@ -274,11 +274,11 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(res.statusCode).toBe(404);
   });
 
-  it('GET /redirects -> 7 rows ordered by from_path', async () => {
+  it('GET /redirects -> 12 rows ordered by from_path', async () => {
     const res = await app.inject({ method: 'GET', url: '/redirects' });
     expect(res.statusCode).toBe(200);
     const rows = res.json() as Array<{ from_path: string }>;
-    expect(rows.length).toBe(7);
+    expect(rows.length).toBe(12);
     const paths = rows.map((r) => r.from_path);
     expect([...paths].sort()).toEqual(paths); // already ordered
   });

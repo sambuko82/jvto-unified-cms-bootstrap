@@ -5091,7 +5091,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/bromo",
+    "route": "/destinations/mount-bromo",
     "sort_order": 1,
     "section_type": "dest_facts",
     "variant": null,
@@ -5102,7 +5102,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/bromo",
+    "route": "/destinations/mount-bromo",
     "sort_order": 2,
     "section_type": "rich_text",
     "variant": null,
@@ -5113,7 +5113,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/bromo",
+    "route": "/destinations/mount-bromo",
     "sort_order": 3,
     "section_type": "section_head",
     "variant": null,
@@ -5124,7 +5124,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/bromo",
+    "route": "/destinations/mount-bromo",
     "sort_order": 4,
     "section_type": "card_grid",
     "variant": "package",
@@ -5149,7 +5149,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/bromo",
+    "route": "/destinations/mount-bromo",
     "sort_order": 5,
     "section_type": "page_content",
     "variant": "live",
@@ -5247,7 +5247,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/ijen",
+    "route": "/destinations/ijen-crater",
     "sort_order": 1,
     "section_type": "dest_facts",
     "variant": null,
@@ -5258,7 +5258,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/ijen",
+    "route": "/destinations/ijen-crater",
     "sort_order": 2,
     "section_type": "rich_text",
     "variant": null,
@@ -5269,7 +5269,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/ijen",
+    "route": "/destinations/ijen-crater",
     "sort_order": 3,
     "section_type": "callout",
     "variant": "lime",
@@ -5280,7 +5280,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/ijen",
+    "route": "/destinations/ijen-crater",
     "sort_order": 4,
     "section_type": "section_head",
     "variant": null,
@@ -5291,7 +5291,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/ijen",
+    "route": "/destinations/ijen-crater",
     "sort_order": 5,
     "section_type": "card_grid",
     "variant": "package",
@@ -5314,116 +5314,21 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/ijen",
+    "route": "/destinations/ijen-crater",
     "sort_order": 6,
     "section_type": "page_content",
     "variant": "live",
     "content": {
-      "h1": "Kawah Ijen: Blue Fire, Crater Lake & Sulfur Miners",
-      "sections": [
-        {
-          "id": "overview",
-          "title": "At a glance",
-          "bullets": [
-            "Region: Bondowoso",
-            "Province: East Java",
-            "Altitude: 2769 m a.s.l.",
-            "Category: Volcano",
-            "Best time to visit: April–October",
-            "Temperature range: 5-10°C at night, 15-25°C during day",
-            "Coordinates: -8.058, 114.242"
-          ]
-        },
-        {
-          "id": "ratings",
-          "title": "Experience profile",
-          "bullets": [
-            "Physical demand: ★★★★☆ (Moderate)",
-            "Cultural depth: ★★★★☆",
-            "Photo potential: ★★★★★",
-            "Duration on-site: 4–5 hours round trip"
-          ]
-        },
-        {
-          "id": "permits",
-          "title": "Entry fees & permits",
-          "bullets": [
-            "JVTO includes all listed entrance fees and permits in your tour price.",
-            "Guide required on-site: Yes"
-          ],
-          "paragraphs": [
-            "Available at Paltuding entry gate. Foreign tourists: IDR 100,000 (weekdays), IDR 150,000 (weekends). Domestic: IDR 5,000-15,000."
-          ]
-        },
-        {
-          "id": "gear",
-          "title": "Gear provided by JVTO",
-          "bullets": [
-            "Gas masks (Ijen)",
-            "Headlamps",
-            "Trekking poles"
-          ]
-        },
-        {
-          "id": "culture",
-          "title": "Culture & local communities",
-          "bullets": [
-            "Local communities: Osing, Java, Madura",
-            "Cultural event: Petik Laut Suro",
-            "Cultural event: Kenduri Gunung",
-            "Cultural event: Sesajen Suro"
-          ]
-        },
-        {
-          "id": "highlights",
-          "title": "What makes Ijen different",
-          "paragraphs": [
-            "Kawah Ijen contains the world's largest acidic crater lake (pH ~0.5) and is one of only two locations globally where the blue fire phenomenon is reliably visible — caused by ignited sulfuric gas emerging at 600°C.",
-            "The night hike starts around midnight from Paltuding gate. JVTO includes gas masks, headlamps, and trekking poles — and mandatory health screening before departure.",
-            "Sulfur miners carry loads of 60–100 kg from the crater floor twice daily. Guides provide context without making the hike a spectacle."
-          ]
-        },
-        {
-          "id": "slug-note",
-          "title": "Slug alignment note",
-          "_internal": true,
-          "paragraphs": [
-            "CRITICAL: DB slug=ijen-crater but canonical sitemap route=/destinations/ijen-crater. DB slug should be updated to ijen-crater before deploy."
-          ]
-        },
-        {
-          "id": "tours",
-          "title": "Private tours including Ijen Crater",
-          "bullets": [
-            "/tours/from-surabaya/ijen-2d1n",
-            "/tours/from-surabaya/ijen-bromo-madakaripura-3d2n",
-            "/tours/from-bali/bromo-ijen-3d2n"
-          ],
-          "paragraphs": [
-            "All JVTO tours including this destination are private, all-inclusive packages. Pricing requires contact — tours section in development."
-          ]
-        }
-      ],
-      "cross_links": {
-        "tours": "/tours",
-        "safety": "/travel-guide/safety-on-tours",
-        "verify": "/verify-jvto",
-        "contact": "/contact",
-        "packing": "/travel-guide/packing-and-fitness",
-        "ijen_screening": "/travel-guide/ijen-health-screening",
-        "police_safety_verify": "/verify-jvto/police-safety"
-      },
-      "intro_paragraphs": [
-        "Kawah Ijen is the world's largest acidic crater lake and one of only two places where natural blue fire appears at night.",
-        "All JVTO tours to Ijen Crater are private and all-inclusive. Permits, transport, and local guides are included unless stated otherwise.",
-        "Official channels: Website https://javavolcano-touroperator.com • WhatsApp +6282244788833 • Email hello@javavolcano-touroperator.com."
-      ]
+      "h1": "Kawah Ijen (Ijen Crater)",
+      "body_md": "# Kawah Ijen (Ijen Crater)\n\n**Meta description:**\nKawah Ijen is an active volcano at 2,386 m with the world's highest-volume acidic crater lake. Famous for the pre-dawn blue fire sulfuric-gas phenomenon — visible only in suitable weather and gas conditions. Access from Paltuding trailhead via a steep ~3 km night hike. BBKSDA East Java is the regulatory authority.\n\n## Overview\nKawah Ijen is an active volcano at 2,386 m with the world's highest-volume acidic crater lake. Famous for the pre-dawn blue fire sulfuric-gas phenomenon — visible only in suitable weather and gas conditions. Access from Paltuding trailhead via a steep ~3 km night hike. BBKSDA East Java is the regulatory authority.\n\nVolcano on Banyuwangi-Bondowoso border at 2,386 m. World-famous for rare blue fire phenomenon from igniting sulfuric gases and turquoise acidic crater lake.\n\n## Quick Facts\n- **Elevation:** 2,386 m\n- **Location:** Banyuwangi / Bondowoso Regency, East Java, Indonesia\n- **Type:** Active stratovolcano\n- **Difficulty:** Moderate\n- **Best season:** Dry season: April–October\n- **Access:** Night hike from Paltuding trailhead (~3 km, ~90 min ascent)\n- **Crater lake:** Turquoise, highly acidic (≈ pH 0) — highest-volume acidic crater lake on Earth\n- **Famous for:** Blue fire phenomenon, acidic lake, sulfur mining\n- **Regulatory authority:** BBKSDA East Java — https://bbksdajatim.org\n\n## Best Time to Visit\nMay–October (dry season). Begin trek at 01:00–02:00 AM for blue fire and sunrise.\n\nDry Season (May–October): 10°C–20°C, ideal trekking. Wet Season: 12°C–22°C, higher humidity, muddy trails.\n\n## The Trail\n~6 km round trip. 1.5–2 hours to crater rim. Optional 30-min rocky descent to blue fire site and lake shore.\n\nModerate fitness for 3–4 hour steep hike. Not suitable for severe asthma or respiratory issues.\n\n## What to See\nBlue fire phenomenon (visible midnight–04:00 AM), turquoise acidic crater lake, sunrise volcanic vistas.\n\n## The Blue Fire\nBlue Fire is a natural phenomenon subject to weather and gas activity.\n\n## Health Certificate Coordination\nA health certificate is mandatory for every guest before Kawah Ijen crater entry per BBKSDA SE.1658/KSA.9/2024. JVTO coordinates the mandatory clinic workflow. See the full protocol at [Ijen Health Screening](/travel-guide/ijen-health-screening).\n\n## Gear & Tips\n**Gear:** Thermal layers, waterproof jacket, sturdy trekking boots, gas mask (for sulfur fumes), headlamp, warm hat.\n\n**Tips:** Pack gas mask (essential at crater). Wear warm, waterproof layers. Avoid trekking alone. Bring snacks and water.",
+      "elevation_m": 2386,
+      "source": "llm-wiki:trust-bundle/destinations#kawah-ijen"
     },
     "entity_refs": [],
     "asset_refs": []
   },
   {
-    "route": "/destinations/tumpak-sewu",
+    "route": "/destinations/tumpak-sewu-waterfall",
     "sort_order": 1,
     "section_type": "dest_facts",
     "variant": null,
@@ -5434,7 +5339,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/tumpak-sewu",
+    "route": "/destinations/tumpak-sewu-waterfall",
     "sort_order": 2,
     "section_type": "rich_text",
     "variant": null,
@@ -5445,7 +5350,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/tumpak-sewu",
+    "route": "/destinations/tumpak-sewu-waterfall",
     "sort_order": 3,
     "section_type": "section_head",
     "variant": null,
@@ -5456,7 +5361,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/tumpak-sewu",
+    "route": "/destinations/tumpak-sewu-waterfall",
     "sort_order": 4,
     "section_type": "card_grid",
     "variant": "package",
@@ -5472,94 +5377,20 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/tumpak-sewu",
+    "route": "/destinations/tumpak-sewu-waterfall",
     "sort_order": 5,
     "section_type": "page_content",
     "variant": "live",
     "content": {
-      "h1": "Tumpak Sewu: Java's Thousand-Stream Waterfall",
-      "sections": [
-        {
-          "id": "overview",
-          "title": "At a glance",
-          "bullets": [
-            "Region: Lumajang–Malang Border",
-            "Province: East Java",
-            "Altitude: 500 m a.s.l.",
-            "Category: Waterfall",
-            "Best time to visit: May–July",
-            "Temperature range: 18-25°C in canyon, 22-30°C outside",
-            "Coordinates: -8.227, 112.915"
-          ]
-        },
-        {
-          "id": "ratings",
-          "title": "Experience profile",
-          "bullets": [
-            "Physical demand: ★★★★☆ (Hard / Challenging)",
-            "Cultural depth: ★★★☆☆",
-            "Photo potential: ★★★★★",
-            "Duration on-site: 2–3 hours"
-          ]
-        },
-        {
-          "id": "permits",
-          "title": "Entry fees & permits",
-          "bullets": [
-            "JVTO includes all listed entrance fees and permits in your tour price.",
-            "Guide required on-site: Yes"
-          ],
-          "paragraphs": [
-            "Entry fee: IDR 20,000-30,000 per person. Additional guide fee for canyon descent. JVTO includes all fees."
-          ]
-        },
-        {
-          "id": "culture",
-          "title": "Culture & local communities",
-          "bullets": [
-            "Local communities: Java, Madura",
-            "Cultural event: Water Thanksgiving"
-          ]
-        },
-        {
-          "id": "highlights",
-          "title": "What makes Tumpak Sewu exceptional",
-          "paragraphs": [
-            "The panoramic viewpoint at the canyon rim shows the full semicircular cascade with Mount Semeru (3,676 m) as backdrop. The canyon descent via bamboo ladders and ropes to the base pool requires good physical condition — JVTO rates this as hard.",
-            "Formed by volcanic erosion from Semeru's eruptions over millennia. The multi-stream curtain effect is most dramatic May–July (high water season)."
-          ]
-        },
-        {
-          "id": "tours",
-          "title": "Private tours including Tumpak Sewu Waterfall",
-          "bullets": [
-            "/tours/from-surabaya/ijen-papuma-tumpak-sewu-bromo-4d3n",
-            "/tours/from-bali/ijen-papuma-tumpak-sewu-bromo-4d3n"
-          ],
-          "paragraphs": [
-            "All JVTO tours including this destination are private, all-inclusive packages. Pricing requires contact — tours section in development."
-          ]
-        }
-      ],
-      "cross_links": {
-        "tours": "/tours",
-        "safety": "/travel-guide/safety-on-tours",
-        "verify": "/verify-jvto",
-        "contact": "/contact",
-        "packing": "/travel-guide/packing-and-fitness",
-        "ijen_screening": "/travel-guide/ijen-health-screening"
-      },
-      "intro_paragraphs": [
-        "A multi-stream semicircular waterfall formed by Mount Semeru's volcanic erosion, known for its canyon trail and panoramic viewpoint with Semeru backdrop.",
-        "All JVTO tours to Tumpak Sewu Waterfall are private and all-inclusive. Permits, transport, and local guides are included unless stated otherwise.",
-        "Official channels: Website https://javavolcano-touroperator.com • WhatsApp +6282244788833 • Email hello@javavolcano-touroperator.com."
-      ]
+      "h1": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu)",
+      "body_md": "# Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu)\n\n**Meta description:**\nTumpak Sewu is a multi-tiered canyon waterfall (~120 m) in Lumajang, East Java. Nicknamed 'Java's Niagara' for its curtain of streams cascading over a curved cliff face into a canyon. Accessed via rim viewpoint or steep canyon descent (~300 steps).\n\n## Overview\nTumpak Sewu is a multi-tiered canyon waterfall (~120 m) in Lumajang, East Java. Nicknamed 'Java's Niagara' for its curtain of streams cascading over a curved cliff face into a canyon. Accessed via rim viewpoint or steep canyon descent (~300 steps).\n\n120-meter tiered waterfall between Lumajang-Malang regencies. Unique curtain-like flow across 120-meter width. Near Semeru volcano.\n\n## Quick Facts\n- **Location:** Lumajang Regency, East Java, Indonesia\n- **Type:** Multi-tiered curtain waterfall\n- **Difficulty:** Moderate\n\n## Best Time to Visit\nMay–October (dry season). Morning for best light and fewer crowds.\n\nDry Season (May–October): 22°C–30°C, clear skies. Wet Season: Frequent rain, slippery trails.\n\n## The Trail\n~1 km round trip. 30–45 min descent on steep, slippery path with bamboo ladders and rocky sections.\n\nModerate fitness. Steep descent and wet rocky terrain. Not suitable for those with knee problems.\n\n## What to See\nHorseshoe-shaped multi-tiered waterfall, Kapas Biru downstream pool, Semeru volcano backdrop.\n\n## Gear & Tips\n**Gear:** Quick-dry clothing, non-slip shoes/sandals, poncho, waterproof bag for valuables, trekking poles optional.\n\n**Tips:** Hire local guide (required). Wear waterproof footwear. Avoid after heavy rain.",
+      "source": "llm-wiki:trust-bundle/destinations#tumpak-sewu"
     },
     "entity_refs": [],
     "asset_refs": []
   },
   {
-    "route": "/destinations/madakaripura",
+    "route": "/destinations/madakaripura-waterfall",
     "sort_order": 1,
     "section_type": "dest_facts",
     "variant": null,
@@ -5570,7 +5401,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/madakaripura",
+    "route": "/destinations/madakaripura-waterfall",
     "sort_order": 2,
     "section_type": "rich_text",
     "variant": null,
@@ -5581,7 +5412,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/madakaripura",
+    "route": "/destinations/madakaripura-waterfall",
     "sort_order": 3,
     "section_type": "section_head",
     "variant": null,
@@ -5592,7 +5423,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/madakaripura",
+    "route": "/destinations/madakaripura-waterfall",
     "sort_order": 4,
     "section_type": "card_grid",
     "variant": "package",
@@ -5608,102 +5439,20 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/madakaripura",
+    "route": "/destinations/madakaripura-waterfall",
     "sort_order": 5,
     "section_type": "page_content",
     "variant": "live",
     "content": {
-      "h1": "Madakaripura Waterfall: Gajah Mada's Sacred Canyon",
-      "sections": [
-        {
-          "id": "overview",
-          "title": "At a glance",
-          "bullets": [
-            "Region: Lumbang, Probolinggo",
-            "Province: East Java",
-            "Altitude: 620 m a.s.l.",
-            "Category: Waterfall",
-            "Best time to visit: May–October",
-            "Temperature range: 20-25°C in canyon, 25-30°C outside",
-            "Coordinates: -7.933, 113.008"
-          ]
-        },
-        {
-          "id": "ratings",
-          "title": "Experience profile",
-          "bullets": [
-            "Physical demand: ★★★☆☆ (Moderate)",
-            "Cultural depth: ★★★★★",
-            "Photo potential: ★★★★☆",
-            "Duration on-site: 1.5–2 hours"
-          ]
-        },
-        {
-          "id": "permits",
-          "title": "Entry fees & permits",
-          "bullets": [
-            "JVTO includes all listed entrance fees and permits in your tour price.",
-            "Guide required on-site: Yes"
-          ],
-          "paragraphs": [
-            "Local entry ticket required: IDR 15,000-25,000 per person. JVTO includes all entrance fees."
-          ]
-        },
-        {
-          "id": "gear",
-          "title": "Gear provided by JVTO",
-          "bullets": [
-            "Helmet"
-          ]
-        },
-        {
-          "id": "culture",
-          "title": "Culture & local communities",
-          "bullets": [
-            "Local communities: Java, Madura",
-            "Cultural event: Sesajen for Gajah Mada",
-            "Cultural event: Water Blessing Ceremony"
-          ]
-        },
-        {
-          "id": "highlights",
-          "title": "What makes Madakaripura worth visiting",
-          "paragraphs": [
-            "The canyon approach involves wading through a shallow river, walking on slippery stones, and navigating narrow passages under waterfall spray. JVTO provides helmets and guides handle the path.",
-            "Gajah Mada — the 14th-century Majapahit prime minister and unifier of the archipelago — is said to have meditated here before retreating from public life. The site carries significant cultural weight for Javanese visitors."
-          ]
-        },
-        {
-          "id": "tours",
-          "title": "Private tours including Madakaripura Waterfall",
-          "bullets": [
-            "/tours/from-surabaya/bromo-madakaripura-ijen-3d2n",
-            "/tours/from-surabaya/ijen-bromo-madakaripura-3d2n"
-          ],
-          "paragraphs": [
-            "All JVTO tours including this destination are private, all-inclusive packages. Pricing requires contact — tours section in development."
-          ]
-        }
-      ],
-      "cross_links": {
-        "tours": "/tours",
-        "safety": "/travel-guide/safety-on-tours",
-        "verify": "/verify-jvto",
-        "contact": "/contact",
-        "packing": "/travel-guide/packing-and-fitness",
-        "ijen_screening": "/travel-guide/ijen-health-screening"
-      },
-      "intro_paragraphs": [
-        "A sacred 200-meter canyon waterfall believed to be the final meditation site of Gajah Mada, symbolizing loyalty and unity from the Majapahit legacy.",
-        "All JVTO tours to Madakaripura Waterfall are private and all-inclusive. Permits, transport, and local guides are included unless stated otherwise.",
-        "Official channels: Website https://javavolcano-touroperator.com • WhatsApp +6282244788833 • Email hello@javavolcano-touroperator.com."
-      ]
+      "h1": "Madakaripura Waterfall (Air Terjun Madakaripura)",
+      "body_md": "# Madakaripura Waterfall (Air Terjun Madakaripura)\n\n**Meta description:**\nMadakaripura is Java's tallest waterfall in Probolinggo, East Java. A narrow canyon gorge leads to a horseshoe curtain waterfall fed from multiple directions. Historical context: said to be the final meditation site of Gajah Mada, Majapahit prime minister. Easy ~20 min trek from roadside parking.\n\n## Overview\nMadakaripura is Java's tallest waterfall in Probolinggo, East Java. A narrow canyon gorge leads to a horseshoe curtain waterfall fed from multiple directions. Historical context: said to be the final meditation site of Gajah Mada, Majapahit prime minister. Easy ~20 min trek from roadside parking.\n\n200-meter waterfall in Probolinggo. Tallest on Java Island and second-tallest in Indonesia. Located within Bromo Tengger Semeru National Park buffer zone.\n\n## Quick Facts\n- **Location:** Probolinggo Regency, East Java, Indonesia\n- **Type:** Horseshoe curtain waterfall in narrow canyon\n- **Difficulty:** Moderate\n- **Access:** Easy ~20 min trek from roadside parking (~1.5 km canyon walk); horse option available\n\n## Best Time to Visit\nMay–October. Morning or early afternoon for best light.\n\nDry Season (May–October): Best for visits with safer, less slippery trails. Wet Season: Higher water flow but muddy, hazardous paths.\n\n## The Trail\n~1 km trail; ~30 minutes walk to waterfall. Rocky paths, river crossings, must navigate water cascades near fall.\n\nModerate fitness. Requires balance on wet rocky terrain. Not suitable for those with mobility issues.\n\n## What to See\n200 m tall horseshoe waterfall, cave-like cliffsides, mystical jungle atmosphere.\n\n## Gear & Tips\n**Gear:** Quick-dry clothing, waterproof bag, water shoes/sandals, poncho (expect to get fully wet), snacks.\n\n**Tips:** WILL get wet. Bring dry change of clothes. Avoid during/after heavy rain due to flash flood risk.",
+      "source": "llm-wiki:trust-bundle/destinations#madakaripura"
     },
     "entity_refs": [],
     "asset_refs": []
   },
   {
-    "route": "/destinations/papuma",
+    "route": "/destinations/papuma-beach",
     "sort_order": 1,
     "section_type": "dest_facts",
     "variant": null,
@@ -5714,7 +5463,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/papuma",
+    "route": "/destinations/papuma-beach",
     "sort_order": 2,
     "section_type": "rich_text",
     "variant": null,
@@ -5725,7 +5474,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/papuma",
+    "route": "/destinations/papuma-beach",
     "sort_order": 3,
     "section_type": "section_head",
     "variant": null,
@@ -5736,7 +5485,7 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/papuma",
+    "route": "/destinations/papuma-beach",
     "sort_order": 4,
     "section_type": "card_grid",
     "variant": "package",
@@ -5751,88 +5500,18 @@
     "asset_refs": []
   },
   {
-    "route": "/destinations/papuma",
+    "route": "/destinations/papuma-beach",
     "sort_order": 5,
     "section_type": "page_content",
     "variant": "live",
     "content": {
-      "h1": "Papuma Beach: White Sand & Turquoise Waters in Jember",
-      "sections": [
-        {
-          "id": "overview",
-          "title": "At a glance",
-          "bullets": [
-            "Region: Jember",
-            "Province: East Java",
-            "Altitude: 5 m a.s.l.",
-            "Category: Beach",
-            "Best time to visit: April–October (dry season)",
-            "Temperature range: 28-32°C year-round",
-            "Coordinates: -8.4725, 113.4562"
-          ]
-        },
-        {
-          "id": "ratings",
-          "title": "Experience profile",
-          "bullets": [
-            "Physical demand: ★☆☆☆☆ (Easy)",
-            "Cultural depth: ★★☆☆☆",
-            "Photo potential: ★★★★☆",
-            "Duration on-site: 2–4 hours"
-          ]
-        },
-        {
-          "id": "permits",
-          "title": "Entry fees & permits",
-          "bullets": [
-            "JVTO includes all listed entrance fees and permits in your tour price.",
-            "Guide required on-site: No — JVTO provides one regardless"
-          ],
-          "paragraphs": [
-            "Entrance fee: IDR 40,000 per person included in package."
-          ]
-        },
-        {
-          "id": "culture",
-          "title": "Culture & local communities",
-          "bullets": [
-            "Local communities: Java, Madura",
-            "Cultural event: Beach Cleanup Events"
-          ]
-        },
-        {
-          "id": "highlights",
-          "title": "What makes Papuma different from typical beach stops",
-          "paragraphs": [
-            "Papuma sits within a protected forested area in Jember — accessed through forest road rather than resort strip. The rock formations are unusually shaped volcanic outcrops that frame the beach for photography.",
-            "For JVTO tours, Papuma typically appears in multi-day itineraries as a contrast stop between Ijen and Tumpak Sewu — offering a full rest day on a quiet beach before or after demanding hikes."
-          ]
-        },
-        {
-          "id": "tours",
-          "title": "Private tours including Papuma Beach",
-          "bullets": [
-            "/tours/from-surabaya/ijen-papuma-tumpak-sewu-bromo-4d3n",
-            "/tours/from-bali/ijen-papuma-tumpak-sewu-bromo-4d3n"
-          ],
-          "paragraphs": [
-            "All JVTO tours including this destination are private, all-inclusive packages. Pricing requires contact — tours section in development."
-          ]
-        }
-      ],
-      "cross_links": {
-        "tours": "/tours",
-        "safety": "/travel-guide/safety-on-tours",
-        "verify": "/verify-jvto",
-        "contact": "/contact",
-        "packing": "/travel-guide/packing-and-fitness",
-        "ijen_screening": "/travel-guide/ijen-health-screening"
+      "h1": "Papuma Beach (Pantai Papuma)",
+      "body_md": "# Papuma Beach (Pantai Papuma)\n\n**Meta description:**\nPapuma Beach in Jember offers white sand and dramatic coastal rock formations. JVTO includes it as a coastal contrast stop on Papuma-family packages (4D+). Best for guests who want a beach break on an otherwise volcano-focused East Java itinerary.\n\n## Overview\nPapuma Beach in Jember offers white sand and dramatic coastal rock formations. JVTO includes it as a coastal contrast stop on Papuma-family packages (4D+). Best for guests who want a beach break on an otherwise volcano-focused East Java itinerary.\n\nPopular beach in Jember Regency. Name abbreviates 'Pasir Putih Malikan' (Malikan White Sand). Located in Lojejer Village, Wuluhan.\n\n## Quick Facts\n- **Elevation:** 86 m (cape headland)\n- **Location:** Jember Regency, East Java, Indonesia\n- **Type:** White-sand beach with rocky cape (Tanjung Papuma)\n- **Difficulty:** Easy\n\n## Best Time to Visit\nMay–October. Late afternoon for sunset views.\n\nDry Season (May–October): Clear skies, 24°C–32°C. Wet Season: Occasional rain, rough sea.\n\n## The Trail\nPaved path to beach. Optional short hike to Siti Hinggil Hill viewpoint (20–30 min).\n\nMinimal. Suitable for all ages.\n\n## What to See\nKarst limestone cliff formations, crystal clear water, Siti Hinggil Hill panoramic view, sunset views.\n\n## Gear & Tips\n**Gear:** Light clothing, sandals, sunscreen, hat, water, camera.\n\n**Tips:** Bring cash for local food stalls. Avoid swimming in rough conditions.",
+      "elevation_m": {
+        "beach": 0,
+        "cape_headland": 86
       },
-      "intro_paragraphs": [
-        "Beautiful white sand beach with unique rock formations and clear turquoise waters in Jember, East Java",
-        "All JVTO tours to Papuma Beach are private and all-inclusive. Permits, transport, and local guides are included unless stated otherwise.",
-        "Official channels: Website https://javavolcano-touroperator.com • WhatsApp +6282244788833 • Email hello@javavolcano-touroperator.com."
-      ]
+      "source": "llm-wiki:trust-bundle/destinations#papuma-beach"
     },
     "entity_refs": [],
     "asset_refs": []
@@ -7311,11 +6990,11 @@
     "route": "/travel-guide/best-time-to-visit",
     "sort_order": 2,
     "section_type": "page_content",
-    "variant": "design-system",
+    "variant": "live",
     "content": {
       "h1": "Best Time to Visit — East Java Destinations",
       "body_md": "# Best Time to Visit — East Java Destinations\n\nThere is no universally bad time to visit East Java — but there is a best window for each destination, and knowing the seasonal patterns helps you choose dates that match what you are hoping to experience.\n\n---\n\n## Dry Season vs Wet Season — Overview\n\nEast Java has two main seasons:\n\n| Season | Approximate months | What to expect |\n|---|---|---|\n| **Dry season** | April – October | Lower rainfall, clearer skies, better road and trail conditions. Recommended for Bromo and Ijen. |\n| **Wet season** | November – March | Higher rainfall, possible cloud cover at viewpoints, some trail conditions more variable. Canyon destinations remain popular. |\n\nThe key practical difference for volcano tours: Bromo and Ijen activities happen between late night and early morning — before the heavier rain that is more common later in the day. Weather is never fully predictable, but the dry season significantly improves the probability of clear conditions at both viewpoints.\n\n---\n\n## Kawah Ijen\n\n**Best season**: April – October (dry season)\n\nThe Ijen night hike begins around midnight; the Blue Fire viewing window closes around dawn. Cloud cover and rainfall are lower in the dry season, which improves visibility at the crater floor and the rim viewpoint.\n\nBlue Fire is a natural phenomenon subject to weather and gas activity — clear skies are helpful but not the only variable. Gas venting direction and wind conditions also affect visibility, independent of rainfall.\n\nIjen is also subject to closure on the **first Friday of every month** (scheduled BBKSDA closure) and may close additionally when gas levels or safety conditions require it. Check bbksdajatim.org for current announcements.\n\nTemperatures at the Ijen crater rim: 10–15°C (50–59°F) at the midnight departure window.\n\n---\n\n## Mount Bromo\n\n**Best season**: April – October (dry season)\n\nBromo's main activity is the pre-dawn sunrise at Penanjakan viewpoint (2,770 m) and the jeep traverse across the Sea of Sand caldera floor. The dry season gives the best chance of clear skies for the sunrise view across the Tengger caldera.\n\nThe annual Kasada festival (date varies by lunar calendar) falls in the dry season and can restrict or crowd Bromo crater access for a short period each year. JVTO activates its Plan-B SOP for bookings during this window. Contact us when you enquire and we will check whether your dates overlap.\n\nTemperatures at Bromo viewpoints pre-dawn: 5–15°C (41–59°F). Warm layers are essential.\n\n---\n\n## Tumpak Sewu\n\n**Year-round destination.** Tumpak Sewu is a wet-terrain experience at any time of year — the canyon descent involves ropes, handholds, and river crossings regardless of season. During the wet season (November–March), water flow at the falls is typically higher and more dramatic. During the dry season, the trail is somewhat less slippery.\n\nMany guests specifically choose the wet season for Tumpak Sewu because the waterfall volume is at its peak. Either season works; the choice depends on whether you prioritise dramatic water volume or more manageable trail conditions.\n\n---\n\n## Madakaripura\n\n**Year-round destination.** Madakaripura canyon is a wading and canyon experience in all conditions. You will get wet regardless of season. Wet season visits may see higher water levels in the stream approach; dry season visits are more predictable but still involve water.\n\n---\n\n## Booking Timing\n\nFor dry-season departures (April–October), particularly June through August, dates fill earlier than the rest of the year. If you are targeting a specific departure date in peak season, we recommend enquiring at least 4–6 weeks in advance.\n\nFor all bookings, the standard deposit is 20% of the total. Full payment deadlines: card no later than 5 days before Day 1; bank wire or Wise no later than 3 days before Day 1.\n\nTo check availability for your preferred dates, contact JVTO via WhatsApp (+62 822 4478 8833) or email (hello@javavolcano-touroperator.com).",
-      "schema_version": "design-system"
+      "source": "llm-wiki:pages/travel-guide/best-time-to-visit"
     },
     "entity_refs": [],
     "asset_refs": []
@@ -7613,71 +7292,9 @@
     "section_type": "page_content",
     "variant": "live",
     "content": {
-      "h1": "Legal & Accountability Proof",
-      "faq": [
-        {
-          "a": "Because trust is stronger when travelers can verify who they are dealing with before they commit funds or enter a remote travel route.",
-          "q": "Why put legal identity on the website at all?"
-        },
-        {
-          "a": "No. Legal identity is only one layer. It becomes much stronger when combined with continuity, reviews, safety systems, and independent context.",
-          "q": "Is legal identity enough by itself?"
-        },
-        {
-          "a": "If you want to check how long the operation has existed, go to History Artifacts. If you want to check the safety-related trust layer, go to Police & Safety Proof.",
-          "q": "What should I read after this page?"
-        }
-      ],
-      "lede": [
-        "The first trust question many travelers ask is the simplest one: is this operator real, traceable, and accountable? This page exists to answer that question clearly. It focuses on the legal identity behind JVTO and the reason that identity matters in a market where many operators remain vague or difficult to verify."
-      ],
-      "sections": [
-        {
-          "copy": "JVTO operates through a real business identity rather than a loose booking presence. That matters because traceability changes the risk profile for the traveler. A company with legal structure, public-facing channels, and visible accountability is fundamentally different from an operator that exists only through chat messages and ads.",
-          "items": [
-            {
-              "copy": "The legal operating entity behind the brand should remain visible, consistent, and tied to the business identity used across trust materials.",
-              "title": "Legal Name"
-            },
-            {
-              "copy": "The canonical business identifier is a critical trust anchor and should remain stable across the website and proof system.",
-              "title": "Business Identifier"
-            },
-            {
-              "copy": "Guests should always be able to understand who they are dealing with before payment, not after a problem appears.",
-              "title": "Traceability"
-            }
-          ],
-          "title": "Business Identity"
-        },
-        {
-          "copy": "Legal traceability is not an abstract corporate detail. In practice, it reduces scam anxiety, clarifies accountability, and gives travelers a more rational basis for choosing an operator in a region where trust quality can vary widely.",
-          "items": [],
-          "title": "Why This Matters"
-        },
-        {
-          "copy": "This proof layer is here to support verification, not to overwhelm the guest with file clutter. If your main concern is legitimacy, use this page as the starting point, then move to the historical, safety, or press pages as needed.",
-          "items": [],
-          "title": "Document Access"
-        }
-      ],
-      "nextLinks": [
-        {
-          "href": "/verify-jvto/history-artifacts",
-          "label": "Open History Artifacts",
-          "description": "Continue into continuity and artifact-based proof."
-        },
-        {
-          "href": "/verify-jvto/police-safety",
-          "label": "Open Police & Safety Proof",
-          "description": "Continue into safety authority and operational seriousness."
-        },
-        {
-          "href": "/verify-jvto",
-          "label": "Back to Verify JVTO",
-          "description": "Return to the full proof library."
-        }
-      ]
+      "h1": "Verify JVTO — Legal",
+      "body_md": "# Verify JVTO — Legal\n\nAll registration records and credentials listed below are independently verifiable. SHA-256 hashes are published in `public/llms.txt` on the JVTO website for forensic integrity checks.\n\n---\n\n## Business Registration\n\n| Credential | Number / Value | Issued | Verification URL |\n|---|---|---|---|\n| **Legal name** | PT Java Volcano Rendezvous | — | https://ahu.go.id/pencarian/perseroan |\n| **NIB** (Nomor Induk Berusaha) | 1102230032918 | — | https://oss.go.id |\n| **TDUP** (Tanda Daftar Usaha Pariwisata) | 1102230032918 | 2023-02-11 | https://oss.go.id (Sistem Tanda Daftar OSS) |\n\n---\n\n## KBLI Business Activity Codes\n\n| KBLI Code | Activity Description |\n|---|---|\n| **79121** | Travel Agency (Agen Perjalanan Wisata) |\n| **79911** | Tour Operator (Penyelenggara Wisata) |\n| **62019** | Other computer programming / IT services |\n| **79120** | Travel agency activities (related) |\n| **79921** | Tour guide activities (Pemanduan Wisata) |\n\n---\n\n## Tourism & Safety Credentials\n\n| Credential | Identifier | Issuing Authority | Function |\n|---|---|---|---|\n| **HPWKI** | AHU-0001072.AH.01.07.TAHUN 2024 | State-recognized association (AHU) | Himpunan Pelaku Wisata Khusus Ijen — Ijen specialist guide association. Membership confirms completion of BBKSDA-supervised volcanic safety training including SAR and PPGD (emergency medical response). Verify: https://ahu.go.id/sabh/perkumpulan/qrcode/?kode=NjAyNDAxMjczNTEwMTM2MV8wXzA3IEZlYnJ1YXJpIDIwMjRfMjcgSmFudWFyeSAyMDI0 |\n| **POLPAR** | Founder is active Tourist Police officer — Bripka Agung Sambuko | Indonesian National Police (Polri) — Ditpamobvit | Tourist Police affiliation. See documentary evidence: SPRIN POLPAR + SPRIN WAL TRAVEL. See -> [[people/agung-sambuko]] |\n| **BBKSDA clearance** | Operator clearance — Bromo Tengger Semeru National Park + Kawah Ijen | BBKSDA Jawa Timur | National park operator authorization. Verify: https://bbksdajatim.org |\n| **ISIC** | Provider ID 259268 | UNESCO-endorsed | Official ISIC provider — student-pricing eligibility via Alive Verify API. Verify: https://www.isic.org/discounts/?providerId=259268 |\n| **INDECON** | Live member | NGO — Indonesian Ecotourism Network | Validates community-based tourism and Local Boys employment policy. Verify: https://www.indecon.id/spotlight-networks/java-volcano-tour-operator |\n\n---\n\n## Medical Credential\n\n| Credential | Identifier | Authority | Verification URLs |\n|---|---|---|---|\n| **Dr. Ahmad Irwandanu SIP** | On file, SHA-256 anchored | Kemenkes RI · SatuSehat SDMK · KKI | STR lookup: https://satusehat.kemkes.go.id/sdmk/nakes/QN00001073380217 · KKI register: https://www.kki.go.id/cekdokter/form |\n\n---\n\n## SHA-256 Forensic Anchors\n\nHashes published in `public/llms.txt` on the JVTO website. Each hash allows independent verification that the credential document presented matches the original file.\n\n| Asset | SHA-256 Hash | Image |\n|---|---|---|\n| NIB 1102230032918 | `fa20dde31bb75e46b061ed14cc6d003f6960c02a9a82c20d8603b0cbf6f7b1b7` | https://javavolcano-touroperator.com/legal/NIB-1102230032918-preview.png |\n| TDUP 1102230032918 | `27252d512ddfa74de22a3e3ec10aa3dd40ef88da3eb57349fcd2137411551ee3` | https://javavolcano-touroperator.com/legal/TDUP-1102230032918-preview.png |\n| HPWKI Approval | `ca1fb1a48b550a7748d400f165899f12a356e6941aacdde9c043427698aaf63b` | https://javavolcano-touroperator.com/legal/HPWKI-approval-preview.png |\n| SPRIN POLPAR | `03c8578dc22956faa366d957badecfe38868d4760359cd8059fb2d6b145dfeab` | https://javavolcano-touroperator.com/legal/SPRIN-POLPAR.png |\n| SPRIN WAL TRAVEL 2024-02-12 | `179b061eae558943fdccc51d2ea3c8233a704b61f03ca3d212433f3e8d6f3bd3` | https://javavolcano-touroperator.com/legal/SPRIN-WAL-TRAVEL-2024-02-12.png |\n| Press — Detik.com 2021-03-14 | `b257b75b3d2b9edebf07c9af89a6c6aa9a4e01d6a716ef3f7c4ca75deda64b77` | https://javavolcano-touroperator.com/press/screencapture-news-detik-berita-jawa-timur-d-5492690-suka-duka-polisi-pariwisata-bondowoso-tegakkan-prokes-sambil-lawan-dingin-2026-01-14-02_48_41.png |\n| Press — Radar Jember 2021-03-24 | `2a60eb168274004283b2b9939ccbf5982c12a7db854fda014308a2494ee2abf4` | https://javavolcano-touroperator.com/press/screenshot-radarjember.jawapos.com-polpar-dibentuk-untuk-mendukung-ijen-geopark.png |\n\n---\n\n## Verification Summary\n\n| Credential | Verification method |\n|---|---|\n| NIB / TDUP | Search business registration at oss.go.id |\n| PT Java Volcano Rendezvous | Search company registry at ahu.go.id/pencarian/perseroan |\n| HPWKI | AHU QR code link above (SABH association registry) |\n| POLPAR / SPRIN | SHA-256 anchors + independent press coverage (see /verify-jvto/press-recognition) |\n| BBKSDA | Operator listed at bbksdajatim.org |\n| ISIC Provider | isic.org/discounts/?providerId=259268 |\n| INDECON | indecon.id/spotlight-networks/java-volcano-tour-operator |\n| Dr. Ahmad Irwandanu SIP | satusehat.kemkes.go.id/sdmk/nakes/QN00001073380217 + kki.go.id |\n| SHA-256 hashes | public/llms.txt on javavolcano-touroperator.com |\n\nSource: -> [[credentials/legal-licenses]] | -> [[credentials/trust-signals]]",
+      "source": "llm-wiki:pages/verify-jvto/legal"
     },
     "entity_refs": [],
     "asset_refs": []
