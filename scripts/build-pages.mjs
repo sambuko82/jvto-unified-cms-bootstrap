@@ -156,6 +156,35 @@ for (const name of gd.only) {
   });
 }
 
+// ── generated crew profile detail pages (one per crew member with a jvto-db /team row) ──
+// Activates the per-person crew story: the structured public_person_profile entity hydrates
+// via `self`, and the jvto-db /team/{slug} page copy (name → h1, bio, review evidence,
+// knowsAbout) is overlaid by ROUTE MATCH in the block below — so a rich detail page needs no
+// new overlay code. The entity name is absent in the projection for operational crew (a
+// source gap the overlay fills from jvto-db); title falls back to the capitalized slug.
+const gm = cfg.generate.team;
+if (gm) {
+  for (const slug of gm.only) {
+    const selfKey = `public_person_profile:${slug}`;
+    if (!byKey.has(selfKey)) { dangling.push(selfKey); continue; }
+    const nameVal = byKey.get(selfKey).fields?.name?.value;
+    const title = nameVal || slug.charAt(0).toUpperCase() + slug.slice(1);
+    push({
+      route: `/team/${slug}`,
+      file_group: gm.file_group,
+      cluster: cfg.groups[gm.file_group].cluster,
+      page_type: gm.page_type,
+      template: gm.template,
+      visual_mode: gm.visual_mode,
+      hub_route: gm.hub_route,
+      title,
+      h1: nameVal || null,
+      seo: { title: nameVal || null },
+      sections: gm.sections.map((s) => section(s, { selfKey })),
+    });
+  }
+}
+
 // ── overlay real page copy: DESIGN-SYSTEM extract is the canonical source (jvto_dev
 // out), carrying the full page copy losslessly as one `page_content` section so the
 // SSOT actually HOLDS the real copy (not just {title} scaffolds). Deterministic: reads

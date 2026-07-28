@@ -35,7 +35,7 @@ old 28-table governance schema has been removed.
 ```bash
 createdb jvto_cms
 psql jvto_cms -f db/core/schema.sql
-psql jvto_cms -f output/seed/load.sql   # 172 entities · 58 pages · 266 sections · 7 redirects · 19 facts
+psql jvto_cms -f output/seed/load.sql   # 172 entities · 69 pages · 288 sections · 7 redirects · 19 facts
 ```
 
 Idempotent (upserts; sections regenerated each load). Verified locally on PostgreSQL 16.
