@@ -72,9 +72,27 @@
     "status": "published"
   },
   {
-    "route": "/tours/from-bali/bromo-ijen-3d2n",
+    "route": "/isic/student-package",
     "file_group": "002",
     "sort_order": 4,
+    "cluster": "travel",
+    "page_type": "narrative",
+    "template": "narrative",
+    "visual_mode": "hybrid",
+    "hub_route": "/tours",
+    "title": "ISIC Student Package",
+    "h1": "ISIC Student Package",
+    "seo": {
+      "title": "ISIC Student Package – Verified Student Pricing | JVTO",
+      "description": "Official ISIC student package: check eligibility, verification steps, applicable tours, and how to book with your ISIC card at Java Volcano Tour Operator.",
+      "schema_type": "CollectionPage"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/tours/from-bali/bromo-ijen-3d2n",
+    "file_group": "002",
+    "sort_order": 5,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -92,7 +110,7 @@
   {
     "route": "/tours/from-bali/ijen-bromo-madakaripura-3d2n",
     "file_group": "002",
-    "sort_order": 5,
+    "sort_order": 6,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -110,7 +128,7 @@
   {
     "route": "/tours/from-bali/ijen-papuma-tumpak-sewu-bromo-4d3n",
     "file_group": "002",
-    "sort_order": 6,
+    "sort_order": 7,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -128,7 +146,7 @@
   {
     "route": "/tours/from-bali/ijen-papuma-tumpak-sewu-bromo-5d4n",
     "file_group": "002",
-    "sort_order": 7,
+    "sort_order": 8,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -146,7 +164,7 @@
   {
     "route": "/tours/from-surabaya/bromo-1d1n",
     "file_group": "002",
-    "sort_order": 8,
+    "sort_order": 9,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -164,7 +182,7 @@
   {
     "route": "/tours/from-surabaya/bromo-2d1n",
     "file_group": "002",
-    "sort_order": 9,
+    "sort_order": 10,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -182,7 +200,7 @@
   {
     "route": "/tours/from-surabaya/bromo-madakaripura-ijen-3d2n",
     "file_group": "002",
-    "sort_order": 10,
+    "sort_order": 11,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -200,7 +218,7 @@
   {
     "route": "/tours/from-surabaya/ijen-2d1n",
     "file_group": "002",
-    "sort_order": 11,
+    "sort_order": 12,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -218,7 +236,7 @@
   {
     "route": "/tours/from-surabaya/ijen-bromo-madakaripura-3d2n",
     "file_group": "002",
-    "sort_order": 12,
+    "sort_order": 13,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -236,7 +254,7 @@
   {
     "route": "/tours/from-surabaya/ijen-bromo-madakaripura-4d3n",
     "file_group": "002",
-    "sort_order": 13,
+    "sort_order": 14,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -254,7 +272,7 @@
   {
     "route": "/tours/from-surabaya/ijen-bromo-madakaripura-malang-5d4n",
     "file_group": "002",
-    "sort_order": 14,
+    "sort_order": 15,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -272,7 +290,7 @@
   {
     "route": "/tours/from-surabaya/ijen-papuma-tumpak-sewu-bromo-4d3n",
     "file_group": "002",
-    "sort_order": 15,
+    "sort_order": 16,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -290,7 +308,7 @@
   {
     "route": "/tours/from-surabaya/ijen-papuma-tumpak-sewu-bromo-5d4n",
     "file_group": "002",
-    "sort_order": 16,
+    "sort_order": 17,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -308,7 +326,7 @@
   {
     "route": "/tours/from-surabaya/ijen-papuma-tumpak-sewu-bromo-malang-6d5n",
     "file_group": "002",
-    "sort_order": 17,
+    "sort_order": 18,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -326,7 +344,7 @@
   {
     "route": "/tours/from-surabaya/taman-safari-prigen-bromo-madakaripura-3d2n",
     "file_group": "002",
-    "sort_order": 18,
+    "sort_order": 19,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -344,7 +362,7 @@
   {
     "route": "/tours/from-surabaya/tumpak-sewu-bromo-ijen-4d3n",
     "file_group": "002",
-    "sort_order": 19,
+    "sort_order": 20,
     "cluster": "travel",
     "page_type": "tour",
     "template": "tour",
@@ -387,10 +405,11 @@
     "visual_mode": "travel",
     "hub_route": "/destinations",
     "title": "Mount Bromo (Gunung Bromo)",
-    "h1": "Mount Bromo — East Java's Most Iconic Volcano",
+    "h1": "Mount Bromo: Sunrise, Sea of Sand & Tenggerese Culture",
     "seo": {
-      "title": "Mount Bromo (Gunung Bromo)",
-      "description": "Private Bromo sunrise tours from Surabaya. Penanjakan viewpoint, sea-of-sand 4WD jeep, overnight option. Tourist Police-led. Licensed operator NIB 1102230032918. From IDR 1,550,000/person."
+      "title": "Mount Bromo Sunrise Tour – Complete Tengger Caldera Guide | JVTO",
+      "description": "Mount Bromo: East Java's iconic active volcano. Sunrise at Penanjakan, Sea of Sand, Tenggerese culture. Trekking guide — permits, best time to visit.",
+      "schema_type": "Volcano"
     },
     "status": "published"
   },
@@ -1021,9 +1040,27 @@
     "status": "published"
   },
   {
-    "route": "/team/anjas",
+    "route": "/team",
     "file_group": "009",
     "sort_order": 1,
+    "cluster": "trust",
+    "page_type": "hub",
+    "template": "collection",
+    "visual_mode": "hybrid",
+    "hub_route": null,
+    "title": "JVTO Team Registry",
+    "h1": "Local field crew behind JVTO's private volcano operations.",
+    "seo": {
+      "title": "JVTO Team Registry | Local Guides & Drivers",
+      "description": "Meet JVTO's East Java field team: local guides and drivers connected to the proof-first safety system behind private Bromo, Ijen, and Tumpak Sewu tours.",
+      "schema_type": "CollectionPage"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/team/anjas",
+    "file_group": "009",
+    "sort_order": 2,
     "cluster": "trust",
     "page_type": "crew_profile",
     "template": "crew_profile",
@@ -1041,7 +1078,7 @@
   {
     "route": "/team/boy",
     "file_group": "009",
-    "sort_order": 2,
+    "sort_order": 3,
     "cluster": "trust",
     "page_type": "crew_profile",
     "template": "crew_profile",
@@ -1059,7 +1096,7 @@
   {
     "route": "/team/fauzi",
     "file_group": "009",
-    "sort_order": 3,
+    "sort_order": 4,
     "cluster": "trust",
     "page_type": "crew_profile",
     "template": "crew_profile",
@@ -1077,7 +1114,7 @@
   {
     "route": "/team/fredi",
     "file_group": "009",
-    "sort_order": 4,
+    "sort_order": 5,
     "cluster": "trust",
     "page_type": "crew_profile",
     "template": "crew_profile",
@@ -1095,7 +1132,7 @@
   {
     "route": "/team/gufron",
     "file_group": "009",
-    "sort_order": 5,
+    "sort_order": 6,
     "cluster": "trust",
     "page_type": "crew_profile",
     "template": "crew_profile",
@@ -1113,7 +1150,7 @@
   {
     "route": "/team/holili",
     "file_group": "009",
-    "sort_order": 6,
+    "sort_order": 7,
     "cluster": "trust",
     "page_type": "crew_profile",
     "template": "crew_profile",
@@ -1131,7 +1168,7 @@
   {
     "route": "/team/joyo",
     "file_group": "009",
-    "sort_order": 7,
+    "sort_order": 8,
     "cluster": "trust",
     "page_type": "crew_profile",
     "template": "crew_profile",
@@ -1149,7 +1186,7 @@
   {
     "route": "/team/kiki",
     "file_group": "009",
-    "sort_order": 8,
+    "sort_order": 9,
     "cluster": "trust",
     "page_type": "crew_profile",
     "template": "crew_profile",
@@ -1167,7 +1204,7 @@
   {
     "route": "/team/rendi",
     "file_group": "009",
-    "sort_order": 9,
+    "sort_order": 10,
     "cluster": "trust",
     "page_type": "crew_profile",
     "template": "crew_profile",
@@ -1185,7 +1222,7 @@
   {
     "route": "/team/taufik",
     "file_group": "009",
-    "sort_order": 10,
+    "sort_order": 11,
     "cluster": "trust",
     "page_type": "crew_profile",
     "template": "crew_profile",
@@ -1203,7 +1240,7 @@
   {
     "route": "/team/yandi",
     "file_group": "009",
-    "sort_order": 11,
+    "sort_order": 12,
     "cluster": "trust",
     "page_type": "crew_profile",
     "template": "crew_profile",

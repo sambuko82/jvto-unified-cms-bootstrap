@@ -7,7 +7,7 @@ import type { FastifyInstance } from 'fastify';
 import { hasDb, loadSchemaAndSeed } from './_db.js';
 
 const TOUR_ROUTE = '/tours/from-bali/bromo-ijen-3d2n';
-const EXPECTED_GROUP_COUNTS = [1, 19, 6, 6, 14, 9, 1, 2, 11]; // 001..009, total 69 (009 = 11 crew profiles)
+const EXPECTED_GROUP_COUNTS = [1, 20, 6, 6, 14, 9, 1, 2, 12]; // 001..009, total 71 (+/isic in 002, +/team hub in 009)
 const ADMIN_BEARER = 'admin-bearer-local-9x';
 const authHeaders = { authorization: `Bearer ${ADMIN_BEARER}` };
 
@@ -39,10 +39,10 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
               (SELECT count(*) FROM pages) p,
               (SELECT count(*) FROM page_sections) s`,
     );
-    // s = 220 designed IA sections (209 + 11 crew `profile` sections) + 68 `page_content`
-    // sections (57 + 11 crew profiles' jvto-db copy overlaid by route match); only
-    // /blog/why-not-unlicensed-ijen-operator stays scaffold-only.
-    expect(rows[0]).toEqual({ e: '172', p: '69', s: '288' });
+    // 71 pages: +/isic/student-package (002) and +/team hub (009), both adopted from the
+    // live site with copy already in the extracts. 293 sections; only
+    // /blog/why-not-unlicensed-ijen-operator stays scaffold-only (70/71 fully rendered).
+    expect(rows[0]).toEqual({ e: '172', p: '71', s: '293' });
   });
 
   it('resolves the graded tour route with ordered sections + hydrated entities + JSON-LD', async () => {
@@ -88,9 +88,9 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(Object.keys(r.jsonld).length).toBeGreaterThan(3);
   });
 
-  it('resolves every one of the 69 pages without throwing (0 orphan pages)', async () => {
+  it('resolves every one of the 71 pages without throwing (0 orphan pages)', async () => {
     const { rows } = await db.query<{ route: string }>('SELECT route FROM pages ORDER BY route');
-    expect(rows.length).toBe(69);
+    expect(rows.length).toBe(71);
     for (const { route } of rows) {
       const resolved = await rp.resolvePage(route);
       expect(resolved, `resolve ${route}`).not.toBeNull();
@@ -131,6 +131,23 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
       (e) => typeof e.data['name'] === 'string' && (e.data['name'] as string).length > 0,
     );
     expect(named.length).toBeGreaterThanOrEqual(14);
+  });
+
+  it('resolves the adopted live routes /team hub + /isic/student-package', async () => {
+    // Phase 1: routes live on help.jvto whose copy already sat in the extracts, now
+    // wired into the IA so the CMS holds them (crew grid + overlaid index copy).
+    const team = await rp.resolvePage('/team');
+    expect(team, '/team hub resolves').not.toBeNull();
+    expect(team?.page.file_group).toBe('009');
+    const grid = team?.sections.find((s) => s.variant === 'crew');
+    expect(grid?.entities.length ?? 0).toBeGreaterThanOrEqual(14);
+    const pc = team?.sections.find((s) => s.type === 'page_content');
+    expect(pc?.content['lede'] || pc?.content['members'], '/team index copy overlaid').toBeTruthy();
+
+    const isic = await rp.resolvePage('/isic/student-package');
+    expect(isic, '/isic/student-package resolves').not.toBeNull();
+    const ipc = isic?.sections.find((s) => s.type === 'page_content');
+    expect(Object.keys(ipc?.content ?? {}).length, '/isic copy overlaid').toBeGreaterThan(0);
   });
 
   it('has zero dangling entity_refs across all sections', async () => {
@@ -192,13 +209,13 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(res.json()).toMatchObject({ status: 'ok' });
   });
 
-  it('GET /pages -> 9 file-groups, 69 routes, correct counts + labels', async () => {
+  it('GET /pages -> 9 file-groups, 71 routes, correct counts + labels', async () => {
     const res = await app.inject({ method: 'GET', url: '/pages' });
     expect(res.statusCode).toBe(200);
     const groups = res.json() as Array<{ file_group: string; label: string; count: number; pages: unknown[] }>;
     expect(groups.map((g) => g.file_group)).toEqual(['001', '002', '003', '004', '005', '006', '007', '008', '009']);
     expect(groups.map((g) => g.count)).toEqual(EXPECTED_GROUP_COUNTS);
-    expect(groups.reduce((n, g) => n + g.count, 0)).toBe(69);
+    expect(groups.reduce((n, g) => n + g.count, 0)).toBe(71);
     expect(groups[0]?.label).toBe('Home');
     expect(groups[1]?.label).toBe('Tours');
     expect(groups[8]?.label).toBe('Team');

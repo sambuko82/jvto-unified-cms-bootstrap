@@ -214,6 +214,7 @@ const isStructuredCluster = (route) =>
 // jvto-db uses long destination slugs; the SSOT IA uses short ones. Index those rows
 // under the short route too, so a destination page can consume its rich jvto-db prose.
 const ROUTE_ALIAS = {
+  '/destinations/mount-bromo': '/destinations/bromo',
   '/destinations/ijen-crater': '/destinations/ijen',
   '/destinations/madakaripura-waterfall': '/destinations/madakaripura',
   '/destinations/tumpak-sewu-waterfall': '/destinations/tumpak-sewu',
@@ -265,7 +266,7 @@ const mergeSeo = (base, other) => {
   }
   return out;
 };
-const overlay = { matched: 0, seo: 0, iaOnly: [], candidateNewUrls: [], clusterOverride: [], merged: 0 };
+const overlay = { matched: 0, seo: 0, iaOnly: [], candidateNewUrls: [], candidateJvtoDbUrls: [], clusterOverride: [], merged: 0 };
 if (fs.existsSync(dbPath)) {
   const live = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
   const liveByRoute = new Map((live.rows || []).map((r) => [r.route, r]));
@@ -319,9 +320,15 @@ if (fs.existsSync(dbPath)) {
       entity_refs: [],
     });
   }
-  // design-system routes with real copy but no SSOT page yet = candidate NEW SSOT URLs
-  // (content-drives-URL: add them to the IA in a follow-on pass, don't force now).
+  // Extract routes with real copy but no SSOT page yet = candidate NEW SSOT URLs
+  // (content-drives-URL: add them to the IA). Report BOTH extracts so a live jvto-db
+  // page with no CMS route can never be silently dropped (a jvto-db row is "consumed"
+  // when its aliased IA route is a page).
   overlay.candidateNewUrls = (live.rows || []).map((r) => r.route).filter((r) => !consumedLive.has(r)).sort();
+  overlay.candidateJvtoDbUrls = (clusterDoc.rows || [])
+    .map((r) => r.route)
+    .filter((r) => !consumedLive.has(ROUTE_ALIAS[r] || r))
+    .sort();
 }
 
 // RENDER-CONTRACT guard: /why-jvto/[slug] calls notFound() when its page_content lacks
@@ -367,6 +374,7 @@ const outDoc = {
       clusterOverride: overlay.clusterOverride,
       scaffoldOnly: overlay.iaOnly,
       candidateNewUrls: overlay.candidateNewUrls,
+      candidateJvtoDbUrls: overlay.candidateJvtoDbUrls,
     },
   },
   pages,
@@ -381,5 +389,6 @@ console.log(
   `Content overlay (best-of per-field): ${overlay.matched} pages enriched (${overlay.seo} with real seo.description, ${overlay.merged} merged from both extracts); ` +
     `${overlay.clusterOverride.length} route(s) sourced from jvto-db [${overlay.clusterOverride.join(', ') || 'none'}]; ` +
     `${overlay.iaOnly.length} scaffold-only [${overlay.iaOnly.join(', ') || 'none'}]; ` +
-    `${overlay.candidateNewUrls.length} extract routes with content but no SSOT page (candidate new URLs).`,
+    `${overlay.candidateNewUrls.length} design-system + ${overlay.candidateJvtoDbUrls.length} jvto-db extract routes with content but no SSOT page ` +
+    `(jvto-db candidates: [${overlay.candidateJvtoDbUrls.join(', ') || 'none'}]).`,
 );

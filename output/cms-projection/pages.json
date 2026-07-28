@@ -1,24 +1,24 @@
 {
   "generatedAt": "2026-07-22T00:00:00.000Z",
   "counts": {
-    "pages": 69,
+    "pages": 71,
     "byGroup": {
       "001": 1,
-      "002": 19,
+      "002": 20,
       "003": 6,
       "004": 6,
       "005": 14,
       "006": 9,
       "007": 1,
       "008": 2,
-      "009": 11
+      "009": 12
     },
-    "sections": 288,
+    "sections": 293,
     "redirects": 7,
     "liveOverlay": {
-      "matched": 68,
-      "mergedPerField": 29,
-      "withSeoDescription": 68,
+      "matched": 70,
+      "mergedPerField": 31,
+      "withSeoDescription": 70,
       "clusterOverride": [
         "/",
         "/tours",
@@ -49,6 +49,8 @@
         "/policy/inclusions-exclusions",
         "/policy/privacy",
         "/contact",
+        "/team",
+        "/isic/student-package",
         "/tours/from-bali/bromo-ijen-3d2n",
         "/tours/from-bali/ijen-bromo-madakaripura-3d2n",
         "/tours/from-bali/ijen-papuma-tumpak-sewu-bromo-4d3n",
@@ -65,6 +67,7 @@
         "/tours/from-surabaya/ijen-papuma-tumpak-sewu-bromo-malang-6d5n",
         "/tours/from-surabaya/taman-safari-prigen-bromo-madakaripura-3d2n",
         "/tours/from-surabaya/tumpak-sewu-bromo-ijen-4d3n",
+        "/destinations/bromo",
         "/destinations/ijen",
         "/destinations/tumpak-sewu",
         "/destinations/madakaripura",
@@ -85,13 +88,22 @@
         "/blog/why-not-unlicensed-ijen-operator"
       ],
       "candidateNewUrls": [
-        "/isic/student-package",
         "/tours/student-package/bromo-ijen-3d2n",
         "/tours/student-package/bromo-ijen-3d2n-to-bali",
         "/tours/student-package/ijen-bromo-3d2n",
         "/tours/student-package/ijen-bromo-madakaripura-night-market-4d3n",
         "/tours/student-package/ijen-papuma-tumpak-sewu-bromo-4d3n",
         "/tours/student-package/ijen-papuma-tumpak-sewu-bromo-5d4n"
+      ],
+      "candidateJvtoDbUrls": [
+        "/insights",
+        "/insights/choose-legal-operator",
+        "/insights/combine-destinations",
+        "/insights/ijen-screening-explained",
+        "/insights/isic-student-fairness",
+        "/travel-guide/mount-bromo-logistics",
+        "/travel-guide/packing-list",
+        "/travel-guide/tumpak-sewu-logistics"
       ]
     }
   },
@@ -783,6 +795,113 @@
       "sort_order": 3
     },
     {
+      "route": "/isic/student-package",
+      "file_group": "002",
+      "cluster": "travel",
+      "page_type": "narrative",
+      "template": "narrative",
+      "visual_mode": "hybrid",
+      "hub_route": "/tours",
+      "title": "ISIC Student Package",
+      "h1": "ISIC Student Package",
+      "seo": {
+        "title": "ISIC Student Package – Verified Student Pricing | JVTO",
+        "description": "Official ISIC student package: check eligibility, verification steps, applicable tours, and how to book with your ISIC card at Java Volcano Tour Operator.",
+        "schema_type": "CollectionPage"
+      },
+      "sections": [
+        {
+          "type": "rich_text",
+          "variant": null,
+          "content": {},
+          "entity_refs": []
+        },
+        {
+          "type": "page_content",
+          "variant": "live",
+          "content": {
+            "h1": "ISIC Student Package",
+            "sections": [
+              {
+                "id": "eligibility",
+                "title": "Eligibility & Verification",
+                "bullets": [
+                  "Valid ISIC card required",
+                  "Lead guest identity must match booking record",
+                  "Verification may be requested again before departure"
+                ],
+                "paragraphs": [
+                  "Student packages are available for selected routes and dates only.",
+                  "Guests must provide a valid ISIC identity and matching personal information before voucher issuance."
+                ]
+              },
+              {
+                "id": "coverage",
+                "title": "What Student Packages Include",
+                "bullets": [
+                  "Private transport and driver for booked route",
+                  "Route-specific permits and operational support where listed",
+                  "Accommodation and meals as written in the chosen package",
+                  "Ijen screening inclusion for routes containing Ijen night hike (when applicable)"
+                ],
+                "paragraphs": [
+                  "Inclusions depend on the selected itinerary and are confirmed in writing in your quotation and Official E-Voucher."
+                ]
+              },
+              {
+                "id": "how-to-claim",
+                "title": "How to Claim Student Pricing",
+                "bullets": [
+                  "Choose a qualifying tour on /tours",
+                  "Submit ISIC details during enquiry/booking step",
+                  "Receive final verified quote and payment link",
+                  "Booking is confirmed only after payment and voucher issuance"
+                ],
+                "paragraphs": [
+                  "Use the official flow below to avoid booking delays."
+                ]
+              },
+              {
+                "id": "policy-linkage",
+                "items": [
+                  {
+                    "route": "/policy/booking-payment-cancellation",
+                    "title": "Booking, Payment & Cancellation Policy"
+                  },
+                  {
+                    "route": "/verify-jvto",
+                    "title": "Verify JVTO credentials"
+                  },
+                  {
+                    "route": "/travel-guide/ijen-health-screening",
+                    "title": "Ijen Health Screening guide"
+                  }
+                ],
+                "title": "Policy and Trust References",
+                "paragraphs": [
+                  "Student pricing changes commercial terms, not safety or legal standards. All bookings remain bound by the same policy framework and verification architecture."
+                ]
+              }
+            ],
+            "cross_links": {
+              "tours": "/tours",
+              "policy": "/policy/booking-payment-cancellation",
+              "verify": "/verify-jvto",
+              "contact": "/contact",
+              "booking_information": "/travel-guide/booking-information"
+            },
+            "intro_paragraphs": [
+              "JVTO collaborates with ISIC to provide selected student-focused packages for eligible cardholders. This page explains who qualifies, what documents are required, and how student pricing is applied.",
+              "Student pricing is valid only after identity and card verification. Final booking terms still follow your Official E-Voucher and the Booking, Payment & Cancellation Policy."
+            ],
+            "body_md": "# Student Packages — ISIC Verified\n\n## Hero\n\nJVTO is an official ISIC provider (Provider ID 259268). If you hold a valid ISIC card, you have access to student-priced East Java volcano tours — same private vehicle, same licensed guide, same all-inclusive format as the standard packages, at reduced per-person rates.\n\nStudent pricing is verified at checkout via the Alive Verify API. Your card must be valid and current. No card, no discount — no exceptions.\n\n---\n\n## What Is ISIC?\n\nThe International Student Identity Card (ISIC) is the only internationally recognised student identity document, endorsed by UNESCO and accepted in 130+ countries. It confirms full-time student status for enrolled students — card validity is confirmed via the Alive Verify API at the time of booking.\n\nISIC verifies provider eligibility through its Alive Verify API — a real-time authentication check. JVTO is a registered provider in the ISIC network: [isic.org/discounts/?providerId=259268](https://www.isic.org/discounts/?providerId=259268).\n\nIf you are not yet an ISIC cardholder, cards are issued through national student unions and ISIC offices worldwide. Visit [isic.org](https://www.isic.org) to apply.\n\n---\n\n## How ISIC Verification Works at JVTO\n\n1. Share your ISIC card number when you book on the JVTO website.\n2. JVTO runs an Alive Verify API check against the ISIC database.\n3. If the card returns valid, student pricing is confirmed for your booking.\n4. Card must be valid on the date of verification — not just on travel date.\n\nNo workarounds. The API check is live and automated.\n\n---\n\n## Student Package Pricing\n\nSix ISIC-eligible packages are available. All prices are per person in IDR. All packages are 100% private — dedicated vehicle, driver, and English-speaking guide. No shared groups.\n\n---\n\n### 3D2N Bromo + Ijen (Surabaya origin, return to Surabaya or to Bali)\n\nRoute: `tours/student-package/bromo-ijen-3d2n` and `bromo-ijen-3d2n-to-bali`\n\n| Group size | IDR/person |\n|---|---|\n| 1 (solo) | 5,400,000 |\n| 2 | 3,050,000 |\n| 3 | 2,850,000 |\n| 4–5 | 2,650,000 |\n| 6–7 | 2,450,000 |\n| 8–10 | 2,250,000 |\n| 11+ | 2,050,000 |\n\n---\n\n### 3D2N Ijen + Bromo (Bali origin)\n\nRoute: `tours/student-package/ijen-bromo-3d2n`\n\n| Group size | IDR/person |\n|---|---|\n| 2 | 2,900,000 |\n| 3 | 2,700,000 |\n| 4–5 | 2,500,000 |\n| 6–7 | 2,300,000 |\n| 8–10 | 2,100,000 |\n| 11+ | 1,900,000 |\n\n---\n\n### 4D3N Ijen + Bromo + Madakaripura + Night Market (Surabaya origin)\n\nRoute: `tours/student-package/ijen-bromo-madakaripura-night-market-4d3n`\n\n| Group size | IDR/person |\n|---|---|\n| 1 (solo) | 6,500,000 |\n| 2 | 3,700,000 |\n| 3 | 3,500,000 |\n| 4–5 | 3,300,000 |\n| 6–7 | 3,100,000 |\n| 8–10 | 2,900,000 |\n| 11+ | 2,700,000 |\n\n---\n\n### 4D3N Ijen + Papuma + Tumpak Sewu + Bromo (Surabaya origin)\n\nRoute: `tours/student-package/ijen-papuma-tumpak-sewu-bromo-4d3n`\n\n| Group size | IDR/person |\n|---|---|\n| 1 (solo) | 7,150,000 |\n| 2 | 4,100,000 |\n| 3 | 3,900,000 |\n| 4–5 | 3,600,000 |\n| 6–7 | 3,350,000 |\n| 8–10 | 3,000,000 |\n| 11+ | 2,900,000 |\n\n---\n\n### 5D4N Ijen + Papuma + Tumpak Sewu + Bromo (Surabaya origin)\n\nRoute: `tours/student-package/ijen-papuma-tumpak-sewu-bromo-5d4n`\n\n| Group size | IDR/person |\n|---|---|\n| 2 | 4,050,000 |\n| 3 | 3,850,000 |\n| 4–5 | 3,650,000 |\n| 6–7 | 3,450,000 |\n| 8–10 | 3,250,000 |\n| 11+ | 3,050,000 |\n\n*Solo pricing: not available for this package. Minimum 2 pax.*\n\n---\n\n## What's Included — Same as Standard Packages\n\nStudent packages carry the same inclusions as the canonical JVTO packages:\n\n- Private vehicle and driver for the full duration\n- English-speaking licensed guide\n- Hotel accommodation with breakfast\n- All entrance fees\n- Drinking water throughout\n- Parking, fuel, road tolls\n- Gas masks on Ijen-inclusive routes\n- Bromo 4WD jeep on Bromo-inclusive routes\n- Mandatory health-certificate screening coordination for every guest on Ijen routes (BBKSDA SE.1658/KSA.9/2024)\n\n**Not included**: international flights, travel insurance, personal trekking gear, tips, optional on-site extras (horse riding at Bromo, trolley ojek at Ijen).\n\n---\n\nNote: Packages marked 'Night Market' include an evening local market visit in the East Java itinerary.\n\n---\n\n## Book a Student Package\n\nSend your ISIC card number and intended travel dates via WhatsApp. We will run the verification check and confirm pricing.\n\n**WhatsApp: +62 822 4478 8833**\n[Message us →](https://wa.me/6282244788833)\n\nJVTO is operated by PT Java Volcano Rendezvous, NIB 1102230032918, Bondowoso, East Java."
+          },
+          "entity_refs": []
+        }
+      ],
+      "sort_order": 4
+    },
+    {
       "route": "/tours/from-bali/bromo-ijen-3d2n",
       "file_group": "002",
       "cluster": "travel",
@@ -1030,7 +1149,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 4
+      "sort_order": 5
     },
     {
       "route": "/tours/from-bali/ijen-bromo-madakaripura-3d2n",
@@ -1285,7 +1404,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 5
+      "sort_order": 6
     },
     {
       "route": "/tours/from-bali/ijen-papuma-tumpak-sewu-bromo-4d3n",
@@ -1546,7 +1665,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 6
+      "sort_order": 7
     },
     {
       "route": "/tours/from-bali/ijen-papuma-tumpak-sewu-bromo-5d4n",
@@ -1808,7 +1927,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 7
+      "sort_order": 8
     },
     {
       "route": "/tours/from-surabaya/bromo-1d1n",
@@ -2038,7 +2157,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 8
+      "sort_order": 9
     },
     {
       "route": "/tours/from-surabaya/bromo-2d1n",
@@ -2279,7 +2398,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 9
+      "sort_order": 10
     },
     {
       "route": "/tours/from-surabaya/bromo-madakaripura-ijen-3d2n",
@@ -2534,7 +2653,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 10
+      "sort_order": 11
     },
     {
       "route": "/tours/from-surabaya/ijen-2d1n",
@@ -2774,7 +2893,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 11
+      "sort_order": 12
     },
     {
       "route": "/tours/from-surabaya/ijen-bromo-madakaripura-3d2n",
@@ -3028,7 +3147,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 12
+      "sort_order": 13
     },
     {
       "route": "/tours/from-surabaya/ijen-bromo-madakaripura-4d3n",
@@ -3287,7 +3406,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 13
+      "sort_order": 14
     },
     {
       "route": "/tours/from-surabaya/ijen-bromo-madakaripura-malang-5d4n",
@@ -3547,7 +3666,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 14
+      "sort_order": 15
     },
     {
       "route": "/tours/from-surabaya/ijen-papuma-tumpak-sewu-bromo-4d3n",
@@ -3807,7 +3926,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 15
+      "sort_order": 16
     },
     {
       "route": "/tours/from-surabaya/ijen-papuma-tumpak-sewu-bromo-5d4n",
@@ -4072,7 +4191,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 16
+      "sort_order": 17
     },
     {
       "route": "/tours/from-surabaya/ijen-papuma-tumpak-sewu-bromo-malang-6d5n",
@@ -4339,7 +4458,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 17
+      "sort_order": 18
     },
     {
       "route": "/tours/from-surabaya/taman-safari-prigen-bromo-madakaripura-3d2n",
@@ -4587,7 +4706,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 18
+      "sort_order": 19
     },
     {
       "route": "/tours/from-surabaya/tumpak-sewu-bromo-ijen-4d3n",
@@ -4848,7 +4967,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 19
+      "sort_order": 20
     },
     {
       "route": "/destinations",
@@ -5009,10 +5128,11 @@
       "visual_mode": "travel",
       "hub_route": "/destinations",
       "title": "Mount Bromo (Gunung Bromo)",
-      "h1": "Mount Bromo — East Java's Most Iconic Volcano",
+      "h1": "Mount Bromo: Sunrise, Sea of Sand & Tenggerese Culture",
       "seo": {
-        "title": "Mount Bromo (Gunung Bromo)",
-        "description": "Private Bromo sunrise tours from Surabaya. Penanjakan viewpoint, sea-of-sand 4WD jeep, overnight option. Tourist Police-led. Licensed operator NIB 1102230032918. From IDR 1,550,000/person."
+        "title": "Mount Bromo Sunrise Tour – Complete Tengger Caldera Guide | JVTO",
+        "description": "Mount Bromo: East Java's iconic active volcano. Sunrise at Penanjakan, Sea of Sand, Tenggerese culture. Trekking guide — permits, best time to visit.",
+        "schema_type": "Volcano"
       },
       "sections": [
         {
@@ -5063,11 +5183,96 @@
         },
         {
           "type": "page_content",
-          "variant": "design-system",
+          "variant": "live",
           "content": {
-            "h1": "Mount Bromo — East Java's Most Iconic Volcano",
-            "body_md": "# Mount Bromo — East Java's Most Iconic Volcano\n\n**Meta description:**\nPrivate Bromo sunrise tours from Surabaya. Penanjakan viewpoint, sea-of-sand 4WD jeep, overnight option. Tourist Police-led. Licensed operator NIB 1102230032918. From IDR 1,550,000/person.\n\n---\n\n## Hero\n\n**Headline:**\nThe Sea of Sand, the Smoking Crater, the Sunrise That Justifies a 03:00 Start.\n\n**Credibility sentence:**\nJVTO holds BBKSDA national-park operator clearance and a POLPAR licence issued to a serving Tourist Police officer — every piece of documentation is publicly verifiable before you pay.\n\n---\n\n## Destination Overview\n\nMount Bromo (2,329 m) sits inside the vast Tengger Caldera in Probolinggo Regency, East Java — one of the most recognisable volcanic landscapes on earth. The caldera floor is a ~10 km² expanse of grey volcanic sand that gives the \"Sea of Sand\" its name. Across this open plain, Bromo's crater vents a near-constant smoke plume while the higher rim of the caldera frames the horizon.\n\nThe draw is three-layered: the **Penanjakan viewpoint** at 2,770 m delivers the signature pre-dawn panorama over the entire caldera system; the **4WD jeep traverse** across the sea of sand is not an access road but the experience itself — a 20-minute crossing through volcanic silence; and the **crater approach** offers a close view of an actively smoking vent. Most guests come for the sunrise. Many say the crater walk is the moment they remember.\n\nThe optimal window is narrow: 03:00 departure from accommodation, on the road to Penanjakan before first light, in position for the colour transition at sunrise, then down to the caldera floor by 07:00. JVTO pre-arranges the 4WD jeep so guests arrive at the parking area and transfer directly — no on-the-day negotiation.\n\n---\n\n## Volcanic Status — Conditional Notice\n\n> [stale?] The alert-level content below was accurate as of 2026-05-16 (Level II Waspada). No active update feed exists. Verify current PVMBG/BBKSDA status before publishing this section. If Level I, remove this block or replace with the generic closure SOP text.\n\n**Current alert level: Level II — Waspada (Elevated), effective 2026-05-16 (verify before publishing).**\n\nPVMBG (Indonesian Centre for Volcanology and Geological Hazard Mitigation) raised Mount Bromo to Level II Waspada on 16 May 2026, establishing a 1 km exclusion zone around the crater rim. This means the trail to the crater lip is currently restricted.\n\n**What remains fully accessible:** The Penanjakan sunrise viewpoint (2,770 m) is outside the exclusion zone and operates as normal. The sea-of-sand jeep traverse and the Pura Luhur Poten temple area on the caldera floor are also outside the 1 km radius and remain open to visitors.\n\n**What is currently restricted:** The final approach to the crater rim itself — the viewpoint directly over the active vent — falls within the 1 km exclusion zone. JVTO will not take guests to the crater lip while Level II is in effect.\n\n**Effect on JVTO's standard Bromo itinerary:** Minimal. The Penanjakan sunrise, sea-of-sand crossing, and caldera floor exploration are the primary experiences of a JVTO Bromo tour and are unaffected. JVTO's Plan-B framework is active: your guide contacts you before arrival to confirm the adjusted itinerary. No day is lost.\n\n---\n\n## Why JVTO for Bromo\n\nJVTO's founder, Mr. Sam (Bripka Agung Sambuko), is an active officer of the Indonesian Tourist Police (Ditpamobvit East Java). No other licensed East Java tour operator has this structure at its head. The consequence for guests: route decisions are made by someone who answers to police protocol, not marketing metrics.\n\nEvery JVTO Bromo tour is 100% private. Your group receives its own vehicle, driver, and dedicated crew — no shared jeeps, no strangers, no compromise on timing. JVTO holds BBKSDA national-park operator authorisation: guests enter Bromo Tengger Semeru National Park without paperwork friction or queuing at a separate permit counter.\n\nAll-inclusive means all-inclusive. Private transport, entrance fees, the Bromo 4WD jeep, accommodation and breakfast, mineral water, and a JVTO travel T-shirt are bundled. There are no surprise local payments. The written inclusions and exclusions are published on the booking page — read them before you pay.\n\nNIB 1102230032918 is checkable at the OSS portal. POLPAR, BBKSDA, and HPWKI credentials are listed on the credentials page. Trustpilot rating: 4.8/5 from 51 verified reviews.\n\n---\n\n## Bromo Tour Packages\n\nAll packages depart from Surabaya unless stated. Pricing is per-person; lower rates apply to larger groups.\n\n**1 Day Bromo Midnight Experience** (`bromo-1d1n`)\nMidnight departure, Penanjakan sunrise, sea-of-sand jeep, crater area, return to Surabaya same day.\nFrom IDR 1,000,000/person (11+ pax) · IDR 1,550,000/person (2 pax)\n\n**2 Day Bromo Sunrise Adventure** (`bromo-2d1n`)\nOvernight in Cemoro Lawang, extended caldera time, milky-way stargazing on clear nights (weather permitting).\nPricing available on the package page.\n\n**Multi-destination packages (Bromo + Ijen and/or Madakaripura)**\nJVTO offers eleven additional packages combining Bromo with Kawah Ijen, Madakaripura Waterfall, Tumpak Sewu, and Bali transfer — ranging from 3D2N to 6D5N. See the full package list for pricing by group size.\n\n---\n\n## Practical Information\n\n**Best season:** Dry season, April–October. Clear skies and firm volcanic sand. Wet season brings mist and muddy access roads — sunrise views may be obstructed.\n\n**Temperature at Penanjakan (pre-dawn):** 5–15°C (41–59°F). Warm layers are required — wind chill at the viewpoint is significant regardless of daytime temperature at lower elevation.\n\n**Travel time from Surabaya:** Approximately 3 hours to Cemoro Lawang. Standard departure from Surabaya is around midnight to reach Penanjakan before first light.\n\n**Physical requirements:** The crater approach (currently restricted under Level II Waspada) involves a short walk or optional horse ride on uneven volcanic terrain. The Penanjakan viewpoint and sea-of-sand jeep portion have no significant physical demands beyond normal mobility.\n\n**What's included on all Bromo-inclusive JVTO packages:**\nPrivate transport (AC vehicle, fuel, tolls, parking) · Dedicated driver and guide · BBKSDA national-park entrance fees · Bromo 4WD private jeep · Accommodation and breakfast (overnight packages) · Mineral water (daily) · JVTO travel T-shirt\n\n**What's not included:** International or domestic flights · Gratuities (guest discretion) · Horse riding at the crater (optional, arranged on-site, extra cost) · Personal expenses\n\n---\n\n## Book a Bromo Tour\n\nPrivate Bromo tours depart year-round. Availability is confirmed directly via WhatsApp.\n\nWhatsApp: +62 822-4478-8833\nEmail: hello@javavolcano-touroperator.com\n\nInquiry process: message with your dates, group size, and preferred package. JVTO confirms availability and sends a price quotation based on your group size. A 20% deposit secures the booking.",
-            "schema_version": "design-system"
+            "h1": "Mount Bromo: Sunrise, Sea of Sand & Tenggerese Culture",
+            "sections": [
+              {
+                "id": "overview",
+                "title": "At a glance",
+                "bullets": [
+                  "Region: Tengger Highlands",
+                  "Province: East Java",
+                  "Altitude: 2329 m a.s.l.",
+                  "Category: Volcano",
+                  "Best time to visit: April–September",
+                  "Temperature range: 5-15°C at night/sunrise, 15-25°C during day",
+                  "Coordinates: -7.942, 112.953"
+                ]
+              },
+              {
+                "id": "ratings",
+                "title": "Experience profile",
+                "bullets": [
+                  "Physical demand: ★★★☆☆ (Moderate)",
+                  "Cultural depth: ★★★★★",
+                  "Photo potential: ★★★★★",
+                  "Duration on-site: 5–6 hours including sunrise"
+                ]
+              },
+              {
+                "id": "permits",
+                "title": "Entry fees & permits",
+                "bullets": [
+                  "JVTO includes all listed entrance fees and permits in your tour price.",
+                  "Guide required on-site: No — JVTO provides one regardless"
+                ],
+                "paragraphs": [
+                  "National Park entry fee: Foreign tourists IDR 220,000 (weekdays), IDR 320,000 (weekends). Domestic: IDR 25,000-50,000. JVTO includes all permits."
+                ]
+              },
+              {
+                "id": "culture",
+                "title": "Culture & local communities",
+                "bullets": [
+                  "Local communities: Tenggerese",
+                  "Cultural event: Yadnya Kasada Festival",
+                  "Cultural event: Karo Festival",
+                  "Cultural event: Unan-Unan Ceremony"
+                ]
+              },
+              {
+                "id": "highlights",
+                "title": "What makes Bromo worth a private tour",
+                "paragraphs": [
+                  "The Tengger Caldera covers 5,800 hectares of volcanic sand sea — traversed by 4WD jeep to the viewpoint and crater rim. Sunrise from Kingkong Hill is the primary photographic moment, timed to cloud conditions.",
+                  "Pura Luhur Poten, the Hindu temple at the base of the crater, is an active worship site for the Tenggerese — one of the last Hindu communities in Java. JVTO guides provide accurate cultural context, not generic scripts."
+                ]
+              },
+              {
+                "id": "slug-conflict-note",
+                "title": "A note on the slug",
+                "paragraphs": [
+                  "The canonical URL for this page is /destinations/mount-bromo — matching the sitemap."
+                ]
+              },
+              {
+                "id": "tours",
+                "title": "Private tours including Mount Bromo",
+                "bullets": [
+                  "/tours/from-surabaya/bromo-1d1n",
+                  "/tours/from-surabaya/bromo-2d1n",
+                  "/tours/from-surabaya/bromo-madakaripura-ijen-3d2n"
+                ],
+                "paragraphs": [
+                  "All JVTO tours including this destination are private, all-inclusive packages. Pricing requires contact — tours section in development."
+                ]
+              }
+            ],
+            "cross_links": {
+              "tours": "/tours",
+              "safety": "/travel-guide/safety-on-tours",
+              "verify": "/verify-jvto",
+              "contact": "/contact",
+              "packing": "/travel-guide/packing-and-fitness",
+              "ijen_screening": "/travel-guide/ijen-health-screening"
+            },
+            "intro_paragraphs": [
+              "Mount Bromo is an active volcano within the Tengger Caldera, famed for its sunrise views from Kingkong Hill, the Sea of Sand jeep adventure, and the Tenggerese Hindu rituals at Pura Luhur Poten.",
+              "All JVTO tours to Mount Bromo are private and all-inclusive. Permits, transport, and local guides are included unless stated otherwise.",
+              "Official channels: Website https://javavolcano-touroperator.com • WhatsApp +6282244788833 • Email hello@javavolcano-touroperator.com."
+            ],
+            "body_md": "# Mount Bromo — East Java's Most Iconic Volcano\n\n**Meta description:**\nPrivate Bromo sunrise tours from Surabaya. Penanjakan viewpoint, sea-of-sand 4WD jeep, overnight option. Tourist Police-led. Licensed operator NIB 1102230032918. From IDR 1,550,000/person.\n\n---\n\n## Hero\n\n**Headline:**\nThe Sea of Sand, the Smoking Crater, the Sunrise That Justifies a 03:00 Start.\n\n**Credibility sentence:**\nJVTO holds BBKSDA national-park operator clearance and a POLPAR licence issued to a serving Tourist Police officer — every piece of documentation is publicly verifiable before you pay.\n\n---\n\n## Destination Overview\n\nMount Bromo (2,329 m) sits inside the vast Tengger Caldera in Probolinggo Regency, East Java — one of the most recognisable volcanic landscapes on earth. The caldera floor is a ~10 km² expanse of grey volcanic sand that gives the \"Sea of Sand\" its name. Across this open plain, Bromo's crater vents a near-constant smoke plume while the higher rim of the caldera frames the horizon.\n\nThe draw is three-layered: the **Penanjakan viewpoint** at 2,770 m delivers the signature pre-dawn panorama over the entire caldera system; the **4WD jeep traverse** across the sea of sand is not an access road but the experience itself — a 20-minute crossing through volcanic silence; and the **crater approach** offers a close view of an actively smoking vent. Most guests come for the sunrise. Many say the crater walk is the moment they remember.\n\nThe optimal window is narrow: 03:00 departure from accommodation, on the road to Penanjakan before first light, in position for the colour transition at sunrise, then down to the caldera floor by 07:00. JVTO pre-arranges the 4WD jeep so guests arrive at the parking area and transfer directly — no on-the-day negotiation.\n\n---\n\n## Volcanic Status — Conditional Notice\n\n> [stale?] The alert-level content below was accurate as of 2026-05-16 (Level II Waspada). No active update feed exists. Verify current PVMBG/BBKSDA status before publishing this section. If Level I, remove this block or replace with the generic closure SOP text.\n\n**Current alert level: Level II — Waspada (Elevated), effective 2026-05-16 (verify before publishing).**\n\nPVMBG (Indonesian Centre for Volcanology and Geological Hazard Mitigation) raised Mount Bromo to Level II Waspada on 16 May 2026, establishing a 1 km exclusion zone around the crater rim. This means the trail to the crater lip is currently restricted.\n\n**What remains fully accessible:** The Penanjakan sunrise viewpoint (2,770 m) is outside the exclusion zone and operates as normal. The sea-of-sand jeep traverse and the Pura Luhur Poten temple area on the caldera floor are also outside the 1 km radius and remain open to visitors.\n\n**What is currently restricted:** The final approach to the crater rim itself — the viewpoint directly over the active vent — falls within the 1 km exclusion zone. JVTO will not take guests to the crater lip while Level II is in effect.\n\n**Effect on JVTO's standard Bromo itinerary:** Minimal. The Penanjakan sunrise, sea-of-sand crossing, and caldera floor exploration are the primary experiences of a JVTO Bromo tour and are unaffected. JVTO's Plan-B framework is active: your guide contacts you before arrival to confirm the adjusted itinerary. No day is lost.\n\n---\n\n## Why JVTO for Bromo\n\nJVTO's founder, Mr. Sam (Bripka Agung Sambuko), is an active officer of the Indonesian Tourist Police (Ditpamobvit East Java). No other licensed East Java tour operator has this structure at its head. The consequence for guests: route decisions are made by someone who answers to police protocol, not marketing metrics.\n\nEvery JVTO Bromo tour is 100% private. Your group receives its own vehicle, driver, and dedicated crew — no shared jeeps, no strangers, no compromise on timing. JVTO holds BBKSDA national-park operator authorisation: guests enter Bromo Tengger Semeru National Park without paperwork friction or queuing at a separate permit counter.\n\nAll-inclusive means all-inclusive. Private transport, entrance fees, the Bromo 4WD jeep, accommodation and breakfast, mineral water, and a JVTO travel T-shirt are bundled. There are no surprise local payments. The written inclusions and exclusions are published on the booking page — read them before you pay.\n\nNIB 1102230032918 is checkable at the OSS portal. POLPAR, BBKSDA, and HPWKI credentials are listed on the credentials page. Trustpilot rating: 4.8/5 from 51 verified reviews.\n\n---\n\n## Bromo Tour Packages\n\nAll packages depart from Surabaya unless stated. Pricing is per-person; lower rates apply to larger groups.\n\n**1 Day Bromo Midnight Experience** (`bromo-1d1n`)\nMidnight departure, Penanjakan sunrise, sea-of-sand jeep, crater area, return to Surabaya same day.\nFrom IDR 1,000,000/person (11+ pax) · IDR 1,550,000/person (2 pax)\n\n**2 Day Bromo Sunrise Adventure** (`bromo-2d1n`)\nOvernight in Cemoro Lawang, extended caldera time, milky-way stargazing on clear nights (weather permitting).\nPricing available on the package page.\n\n**Multi-destination packages (Bromo + Ijen and/or Madakaripura)**\nJVTO offers eleven additional packages combining Bromo with Kawah Ijen, Madakaripura Waterfall, Tumpak Sewu, and Bali transfer — ranging from 3D2N to 6D5N. See the full package list for pricing by group size.\n\n---\n\n## Practical Information\n\n**Best season:** Dry season, April–October. Clear skies and firm volcanic sand. Wet season brings mist and muddy access roads — sunrise views may be obstructed.\n\n**Temperature at Penanjakan (pre-dawn):** 5–15°C (41–59°F). Warm layers are required — wind chill at the viewpoint is significant regardless of daytime temperature at lower elevation.\n\n**Travel time from Surabaya:** Approximately 3 hours to Cemoro Lawang. Standard departure from Surabaya is around midnight to reach Penanjakan before first light.\n\n**Physical requirements:** The crater approach (currently restricted under Level II Waspada) involves a short walk or optional horse ride on uneven volcanic terrain. The Penanjakan viewpoint and sea-of-sand jeep portion have no significant physical demands beyond normal mobility.\n\n**What's included on all Bromo-inclusive JVTO packages:**\nPrivate transport (AC vehicle, fuel, tolls, parking) · Dedicated driver and guide · BBKSDA national-park entrance fees · Bromo 4WD private jeep · Accommodation and breakfast (overnight packages) · Mineral water (daily) · JVTO travel T-shirt\n\n**What's not included:** International or domestic flights · Gratuities (guest discretion) · Horse riding at the crater (optional, arranged on-site, extra cost) · Personal expenses\n\n---\n\n## Book a Bromo Tour\n\nPrivate Bromo tours depart year-round. Availability is confirmed directly via WhatsApp.\n\nWhatsApp: +62 822-4478-8833\nEmail: hello@javavolcano-touroperator.com\n\nInquiry process: message with your dates, group size, and preferred package. JVTO confirms availability and sends a price quotation based on your group size. A 20% deposit secures the booking."
           },
           "entity_refs": []
         }
@@ -8602,6 +8807,354 @@
       "sort_order": 2
     },
     {
+      "route": "/team",
+      "file_group": "009",
+      "cluster": "trust",
+      "page_type": "hub",
+      "template": "collection",
+      "visual_mode": "hybrid",
+      "hub_route": null,
+      "title": "JVTO Team Registry",
+      "h1": "Local field crew behind JVTO's private volcano operations.",
+      "seo": {
+        "title": "JVTO Team Registry | Local Guides & Drivers",
+        "description": "Meet JVTO's East Java field team: local guides and drivers connected to the proof-first safety system behind private Bromo, Ijen, and Tumpak Sewu tours.",
+        "schema_type": "CollectionPage"
+      },
+      "sections": [
+        {
+          "type": "section_head",
+          "variant": null,
+          "content": {
+            "title": "Local field crew"
+          },
+          "entity_refs": []
+        },
+        {
+          "type": "card_grid",
+          "variant": "crew",
+          "content": {},
+          "entity_refs": [
+            "public_person_profile:anjas",
+            "public_person_profile:boy",
+            "public_person_profile:dika",
+            "public_person_profile:fauzi",
+            "public_person_profile:fredi",
+            "public_person_profile:gufron",
+            "public_person_profile:holili",
+            "public_person_profile:joyo",
+            "public_person_profile:kiki",
+            "public_person_profile:pras",
+            "public_person_profile:rendi",
+            "public_person_profile:taufik",
+            "public_person_profile:yandi",
+            "public_person_profile:yusuf"
+          ]
+        },
+        {
+          "type": "page_content",
+          "variant": "1",
+          "content": {
+            "h1": "Local field crew behind JVTO's private volcano operations.",
+            "lede": "JVTO's trust layer is not only documents. It is also the people running night pickups, mountain approaches, health-screening logistics, and guest support across East Java.",
+            "source": "JVTO_SSOT_v4_0_CLEAN.json crew_registry",
+            "members": [
+              {
+                "id": "dika",
+                "url": "https://javavolcano-touroperator.com/team/dika",
+                "name": "Dika",
+                "role": "Driver",
+                "evidence": [],
+                "position": 1,
+                "knowsAbout": [
+                  "Friendly & fun",
+                  "Safety-first",
+                  "Great logistics",
+                  "Knowledgeable guide"
+                ],
+                "description": "Dika is part of JVTO's East Java field team, focused on Friendly & fun, Safety-first, Great logistics."
+              },
+              {
+                "id": "fredi",
+                "url": "https://javavolcano-touroperator.com/team/fredi",
+                "name": "Fredi",
+                "role": "Driver",
+                "evidence": [
+                  {
+                    "claim": "Reliability",
+                    "quote": "Always on time no matter what time of the day. Exceptional driving skills.",
+                    "source_author": "Pooja Prakash",
+                    "source_platform": "Google Reviews"
+                  }
+                ],
+                "position": 2,
+                "knowsAbout": [
+                  "Friendly & fun",
+                  "Great logistics",
+                  "Always on time",
+                  "Safety-first",
+                  "Knowledgeable guide",
+                  "Great photos"
+                ],
+                "description": "Experienced Tour Driver committed to making your travels memorable. I combine safe driving skills with a friendly, helpful attitude to provide a stress-free experience. Whether it's a short trip or a long tour, I prioritize guest comfort and reliable service at all times."
+              },
+              {
+                "id": "holili",
+                "url": "https://javavolcano-touroperator.com/team/holili",
+                "name": "Holili",
+                "role": "Driver",
+                "evidence": [],
+                "position": 3,
+                "knowsAbout": [
+                  "Friendly & fun",
+                  "Safety-first",
+                  "Great logistics"
+                ],
+                "description": "I am a Java Volcano driver who dedicates myself to serving all Java Volcano customers wholeheartedly."
+              },
+              {
+                "id": "joyo",
+                "url": "https://javavolcano-touroperator.com/team/joyo",
+                "name": "Joyo",
+                "role": "Driver",
+                "evidence": [],
+                "position": 4,
+                "knowsAbout": [
+                  "Friendly & fun",
+                  "Safety-first",
+                  "Great logistics",
+                  "Knowledgeable guide"
+                ],
+                "description": "I'm a professional driver who combines speed with precision and care. I drive fast, but always cleanly, smoothly, and safely. My vehicle is kept in impeccable condition inside and out; cleanliness and comfort are non-negotiable for every single ride. Clients frequently tell me I'm their number one choice, \"Customer Number 1\", because they know they'll get to their destination quickly without ever feeling rushed or unsafe. I take pride in being punctual, reliable, and genuinely attentive to what each passenger needs, whether it's a daily commute, an important business trip, airport transfer, or a special occasion."
+              },
+              {
+                "id": "pras",
+                "url": "https://javavolcano-touroperator.com/team/pras",
+                "name": "Pras",
+                "role": "Driver",
+                "evidence": [
+                  {
+                    "claim": "Language Skills",
+                    "quote": "Excellent English... made interactions seamless. Best guide I've ever had.",
+                    "source_author": "Filwyn Ma",
+                    "source_platform": "Google Reviews"
+                  },
+                  {
+                    "claim": "Safe Driving",
+                    "quote": "Driving technique is superb... responsible and trustworthy.",
+                    "source_author": "Ki Wing Chu",
+                    "source_platform": "Google Reviews"
+                  }
+                ],
+                "position": 5,
+                "knowsAbout": [
+                  "Friendly & fun",
+                  "Great logistics",
+                  "Safety-first",
+                  "Knowledgeable guide",
+                  "Always on time",
+                  "Great photos"
+                ],
+                "description": "Pras is part of JVTO's East Java field team, focused on Friendly & fun, Great logistics, Safety-first."
+              },
+              {
+                "id": "yandi",
+                "url": "https://javavolcano-touroperator.com/team/yandi",
+                "name": "Yandi",
+                "role": "Driver",
+                "evidence": [],
+                "position": 6,
+                "knowsAbout": [
+                  "Friendly & fun",
+                  "Great logistics",
+                  "Knowledgeable guide",
+                  "Always on time",
+                  "Safety-first",
+                  "Great photos"
+                ],
+                "description": "Love meeting people from different backgrounds and making every trip feel easy and enjoyable. I like to have new friend especially from overseas because can share about our unique culture. always make sure safety during the trip and make unforgettable moment along a journey."
+              },
+              {
+                "id": "yusuf",
+                "url": "https://javavolcano-touroperator.com/team/yusuf",
+                "name": "Yusuf",
+                "role": "Driver",
+                "evidence": [],
+                "position": 7,
+                "knowsAbout": [
+                  "Friendly & fun",
+                  "Great photos",
+                  "Great logistics"
+                ],
+                "description": "Yusuf is part of JVTO's East Java field team, focused on Friendly & fun, Great photos, Great logistics."
+              },
+              {
+                "id": "anjas",
+                "url": "https://javavolcano-touroperator.com/team/anjas",
+                "name": "Anjas",
+                "role": "Guide",
+                "evidence": [
+                  {
+                    "claim": "Creative",
+                    "quote": "Creative at taking fun photos... Anjas was the highlight for the trip.",
+                    "source_author": "Wang Zhe",
+                    "source_platform": "Google Reviews"
+                  }
+                ],
+                "position": 8,
+                "knowsAbout": [
+                  "Friendly & fun",
+                  "Great logistics",
+                  "Great photos",
+                  "Knowledgeable guide",
+                  "Safety-first",
+                  "Always on time"
+                ],
+                "description": "m a chill guy and nerdy enough to talk about brainrote meme. love playing games and listening to any kind of music. let me show you around how beautiful east java is."
+              },
+              {
+                "id": "boy",
+                "url": "https://javavolcano-touroperator.com/team/boy",
+                "name": "Boy (Ahboy)",
+                "role": "Guide",
+                "evidence": [
+                  {
+                    "claim": "Knowledge",
+                    "quote": "Incredibly knowledgeable and went out of his way to make sure everything we needed was sorted.",
+                    "source_author": "Jason Li",
+                    "source_platform": "Trustpilot"
+                  }
+                ],
+                "position": 9,
+                "knowsAbout": [
+                  "Friendly & fun",
+                  "Knowledgeable guide",
+                  "Safety-first",
+                  "Great logistics",
+                  "Always on time",
+                  "Great photos"
+                ],
+                "description": "I am a local resident who enjoys welcoming visitors and sharing stories about this area. I'm happy to help travelers explore the natural beauty, local culture, and unique experiences so they feel comfortable and truly enjoy their visit."
+              },
+              {
+                "id": "fauzi",
+                "url": "https://javavolcano-touroperator.com/team/fauzi",
+                "name": "Fauzi",
+                "role": "Guide",
+                "evidence": [],
+                "position": 10,
+                "knowsAbout": [
+                  "Friendly & fun",
+                  "Knowledgeable guide",
+                  "Great logistics",
+                  "Great photos",
+                  "Safety-first"
+                ],
+                "description": "I'm a friendly guide who loves taking photos for guests and quickly connects with people. I enjoy making trips fun, relaxed, and memorable."
+              },
+              {
+                "id": "gufron",
+                "url": "https://javavolcano-touroperator.com/team/gufron",
+                "name": "Gufron",
+                "role": "Guide",
+                "evidence": [
+                  {
+                    "claim": "Great Photos",
+                    "quote": "Always willing to help you get your best photo.",
+                    "source_author": "Adrián Martínez",
+                    "source_platform": "Google Reviews"
+                  },
+                  {
+                    "claim": "Knowledgeable",
+                    "quote": "He chooses good spots for photos and is full of positive energy.",
+                    "source_author": "Sofiane",
+                    "source_platform": "Google Reviews"
+                  }
+                ],
+                "position": 11,
+                "knowsAbout": [
+                  "Friendly & fun",
+                  "Knowledgeable guide",
+                  "Great logistics",
+                  "Safety-first",
+                  "Great photos",
+                  "Always on time"
+                ],
+                "description": "I'm someone who enjoys meaningful conversations on virtually any topic. In my professional life, I place the highest priority on safety and risk management - what some might call strict, I view as a fundamental matter of integrity and responsibility. I have a strong intuitive sense that helps me read situations quickly and accurately. Inside of work, I'm passionate about photography, where I enjoy capturing moments with attention to detail and composition. I'm also an avid music enthusiast with a diverse playlist spanning multiple genres, and I love singing along whenever the mood strikes."
+              },
+              {
+                "id": "kiki",
+                "url": "https://javavolcano-touroperator.com/team/kiki",
+                "name": "Kiki",
+                "role": "Guide",
+                "evidence": [],
+                "position": 12,
+                "knowsAbout": [
+                  "Friendly & fun",
+                  "Knowledgeable guide",
+                  "Great logistics",
+                  "Great photos",
+                  "Safety-first"
+                ],
+                "description": "\"It is He who made the earth manageable for you - so walk among its slopes and eat of His provision - and to Him is the resurrection.\" (67:15)"
+              },
+              {
+                "id": "rendi",
+                "url": "https://javavolcano-touroperator.com/team/rendi",
+                "name": "Rendi",
+                "role": "Guide",
+                "evidence": [
+                  {
+                    "claim": "Physical Support",
+                    "quote": "When we went down the steep crater, he held our hands to prevent us from falling.",
+                    "source_author": "Wing Shan Lui",
+                    "source_platform": "Google Reviews"
+                  },
+                  {
+                    "claim": "Safety First",
+                    "quote": "Kept asking about our condition... makes our journey safe.",
+                    "source_author": "Michelle Jeon",
+                    "source_platform": "Google Reviews"
+                  }
+                ],
+                "position": 13,
+                "knowsAbout": [
+                  "Friendly & fun",
+                  "Safety-first",
+                  "Great logistics",
+                  "Knowledgeable guide",
+                  "Great photos",
+                  "Always on time"
+                ],
+                "description": "Love meeting people from different backgrounds and making every trip feel easy and enjoyable. I like to have new friend especially from overseas because can share about our unique culture. always make sure safety during the trip and make unforgettable moment along a journey."
+              },
+              {
+                "id": "taufik",
+                "url": "https://javavolcano-touroperator.com/team/taufik",
+                "name": "Taufik",
+                "role": "Guide",
+                "evidence": [],
+                "position": 14,
+                "knowsAbout": [
+                  "Friendly & fun",
+                  "Knowledgeable guide",
+                  "Great logistics",
+                  "Safety-first",
+                  "Always on time",
+                  "Great photos"
+                ],
+                "description": "Reliable and organized individual with strong communication skills. I thrive in dynamic environments and enjoy taking on new challenges. My goal is to add value through hard work and a positive, proactive attitude."
+              }
+            ],
+            "merged_at": "2026-04-15T17:32:49.989Z",
+            "schema_version": 1
+          },
+          "entity_refs": []
+        }
+      ],
+      "sort_order": 1
+    },
+    {
       "route": "/team/anjas",
       "file_group": "009",
       "cluster": "trust",
@@ -8656,7 +9209,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 1
+      "sort_order": 2
     },
     {
       "route": "/team/boy",
@@ -8713,7 +9266,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 2
+      "sort_order": 3
     },
     {
       "route": "/team/fauzi",
@@ -8762,7 +9315,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 3
+      "sort_order": 4
     },
     {
       "route": "/team/fredi",
@@ -8819,7 +9372,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 4
+      "sort_order": 5
     },
     {
       "route": "/team/gufron",
@@ -8882,7 +9435,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 5
+      "sort_order": 6
     },
     {
       "route": "/team/holili",
@@ -8929,7 +9482,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 6
+      "sort_order": 7
     },
     {
       "route": "/team/joyo",
@@ -8977,7 +9530,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 7
+      "sort_order": 8
     },
     {
       "route": "/team/kiki",
@@ -9026,7 +9579,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 8
+      "sort_order": 9
     },
     {
       "route": "/team/rendi",
@@ -9089,7 +9642,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 9
+      "sort_order": 10
     },
     {
       "route": "/team/taufik",
@@ -9139,7 +9692,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 10
+      "sort_order": 11
     },
     {
       "route": "/team/yandi",
@@ -9189,7 +9742,7 @@
           "entity_refs": []
         }
       ],
-      "sort_order": 11
+      "sort_order": 12
     }
   ],
   "redirects": [
