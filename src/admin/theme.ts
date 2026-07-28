@@ -58,12 +58,17 @@ const STYLE = `
   .flash ul { margin:6px 0 0; padding-left:18px; }
   .muted { color:#475569; } .ro-field { color:#94a3b8; font-family:ui-monospace,monospace; font-size:12px; }
   code { font-family:ui-monospace,monospace; color:#93c5fd; }
+  .metrics { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; margin:0 0 24px; }
+  .metric { border:1px solid #1e293b; border-radius:10px; background:#0f172a; padding:14px 16px; }
+  .metric .n { font-size:26px; font-weight:700; color:#f8fafc; line-height:1.1; }
+  .metric .k { font-size:11px; color:#94a3b8; text-transform:uppercase; letter-spacing:.05em; margin-top:5px; }
+  .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; } @media (max-width:640px){ .split { grid-template-columns:1fr; } }
 `;
 
 export function layout(opts: { title: string; crumbs?: string; authed?: boolean; body: string }): string {
   const nav = opts.authed
     ? `<span class="crumbs">${esc(opts.crumbs ?? '')}</span><span class="spacer"></span>
-       <a href="/admin">Dashboard</a> · <a href="/admin/entities">Entities</a> · <a href="/admin/publishing">Publishing</a> ·
+       <a href="/admin">Dashboard</a> · <a href="/admin/overview">Overview</a> · <a href="/admin/entities">Entities</a> · <a href="/admin/publishing">Publishing</a> ·
        <form method="POST" action="/admin/logout" style="display:inline;margin:0">
          <button class="secondary" style="margin:0;padding:4px 10px">Log out</button></form>`
     : `<span class="crumbs">${esc(opts.crumbs ?? '')}</span>`;

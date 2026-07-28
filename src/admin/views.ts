@@ -228,6 +228,76 @@ export function entityDetail(e: EntityDetailRow): string {
   });
 }
 
+// ── Governance overview (PRD §20 health/metrics surface, live-DB only) ────────
+export interface GovernanceMetrics {
+  totals: { entities: number; pages: number; sections: number; redirects: number; facts: number; claims: number; sources: number };
+  entitiesByType: Array<{ entity_type: string; n: number }>;
+  sources: Array<{ source: string; owned: number; produced: number }>;
+  pagesByStatus: Array<{ status: string; n: number }>;
+  pagesEditable: number;
+  pagesReadOnly: number;
+  audit: Array<{ at: string; actor: string; action: string; target: string; summary: string | null }>;
+}
+
+/** A read-only health/metrics dashboard, computed from live aggregate queries only. */
+export function governanceOverview(m: GovernanceMetrics): string {
+  const tile = (n: number, k: string) => `<div class="metric"><div class="n">${n}</div><div class="k">${esc(k)}</div></div>`;
+  const tiles = `<div class="metrics">
+    ${tile(m.totals.entities, 'Entities')}
+    ${tile(m.totals.pages, 'Pages')}
+    ${tile(m.totals.sections, 'Sections')}
+    ${tile(m.totals.claims, 'Trust claims')}
+    ${tile(m.totals.facts, 'Governance facts')}
+    ${tile(m.totals.redirects, 'Redirects')}
+    ${tile(m.totals.sources, 'Sources')}
+  </div>`;
+
+  const typeRows = m.entitiesByType
+    .map((r) => `<tr><td class="ro-field">${esc(r.entity_type)}</td><td>${r.n}</td></tr>`)
+    .join('');
+  const entitiesBlock = `<div class="card"><h3>Entities by type <span class="count">${m.totals.entities}</span></h3>
+    <table><thead><tr><th>type</th><th>count</th></tr></thead><tbody>${typeRows}</tbody></table></div>`;
+
+  const sourceRows = m.sources
+    .map(
+      (r) => `<tr><td class="ro-field">${esc(r.source)}</td><td>${r.owned}</td>
+      <td>${r.produced}${r.owned === 0 ? ' <span class="muted">(field-level)</span>' : ''}</td></tr>`,
+    )
+    .join('');
+  const sourcesBlock = `<div class="card"><h3>Sources in use <span class="count">${m.sources.length}</span></h3>
+    <p class="muted">Every source that produced data — entities it dominantly <strong>owns</strong>, and individual <strong>fields</strong> it produced (from provenance). A source can contribute fields without owning any entity.</p>
+    <table><thead><tr><th>source</th><th>owns</th><th>fields</th></tr></thead><tbody>${sourceRows}</tbody></table></div>`;
+
+  const statusRows = m.pagesByStatus
+    .map((r) => `<tr><td>${badge(r.status)}</td><td>${r.n}</td></tr>`)
+    .join('');
+  const pagesBlock = `<div class="card"><h3>Pages</h3>
+    <table><thead><tr><th>status</th><th>count</th></tr></thead><tbody>${statusRows}</tbody></table>
+    <p style="margin:12px 0 0">${badge('editable')} ${m.pagesEditable} console-editable · ${badge('read_only')} ${m.pagesReadOnly} synced</p></div>`;
+
+  const auditRows = m.audit.length
+    ? `<table><thead><tr><th>when</th><th>actor</th><th>action</th><th>target</th><th>note</th></tr></thead><tbody>${m.audit
+        .map(
+          (a) => `<tr><td class="ro-field">${esc(a.at)}</td><td>${esc(a.actor)}</td><td class="ro-field">${esc(a.action)}</td>
+        <td class="route">${esc(a.target)}</td><td>${esc(a.summary ?? '')}</td></tr>`,
+        )
+        .join('')}</tbody></table>`
+    : '<p class="muted">No console writes recorded yet — edits and publishes appear here.</p>';
+  const auditBlock = `<div class="card"><h3>Recent activity <span class="count">${m.audit.length}</span></h3>${auditRows}</div>`;
+
+  return layout({
+    title: 'Governance overview',
+    crumbs: 'Dashboard › Overview',
+    authed: true,
+    body: `<h2>Governance overview</h2>
+      <p class="muted">Live health of the control plane — every number is an aggregate query against <code>jvto_cms</code>, computed on request.</p>
+      ${tiles}
+      <div class="split">${entitiesBlock}${sourcesBlock}</div>
+      ${pagesBlock}
+      ${auditBlock}`,
+  });
+}
+
 export function publishResult(opts: { ok: boolean; output: string; diff: string; outDir: string }): string {
   const pre = (text: string, color: string) =>
     `<pre style="margin:0;white-space:pre-wrap;font-size:12px;color:${color}">${esc(text)}</pre>`;
