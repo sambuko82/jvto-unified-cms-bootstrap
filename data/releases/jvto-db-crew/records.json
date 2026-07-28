@@ -1,0 +1,170 @@
+[
+  {
+    "source": "jvto-db-crew",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "anjas",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:anjas",
+    "payload": {
+      "name": "Anjas",
+      "bio": "m a chill guy and nerdy enough to talk about brainrote meme. love playing games and listening to any kind of music. let me show you around how beautiful east java is."
+    },
+    "payloadSha256": "38ab3d38c3223db268134bb078ce51537a75705115b541bc896c98485e290706"
+  },
+  {
+    "source": "jvto-db-crew",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "boy",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:boy",
+    "payload": {
+      "name": "Boy (Ahboy)",
+      "bio": "I am a local resident who enjoys welcoming visitors and sharing stories about this area. I'm happy to help travelers explore the natural beauty, local culture, and unique experiences so they feel comfortable and truly enjoy their visit."
+    },
+    "payloadSha256": "82beefe95ed98cbb3a299bd315c490f9b943f876efdc29ba5bcb7323f943d848"
+  },
+  {
+    "source": "jvto-db-crew",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "dika",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:dika",
+    "payload": {
+      "name": "Dika",
+      "bio": "Dika is part of JVTO's East Java field team, focused on Friendly & fun, Safety-first, Great logistics."
+    },
+    "payloadSha256": "e7cc1031cc7a324375d52f5393f839dd833181af25d1e8dabbe8f4c35c644c3d"
+  },
+  {
+    "source": "jvto-db-crew",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "fauzi",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:fauzi",
+    "payload": {
+      "name": "Fauzi",
+      "bio": "I'm a friendly guide who loves taking photos for guests and quickly connects with people. I enjoy making trips fun, relaxed, and memorable."
+    },
+    "payloadSha256": "6f65668ccc9ff6e935c61dc0cb2a3635766204cc8b786d38179664c44a782ad3"
+  },
+  {
+    "source": "jvto-db-crew",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "fredi",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:fredi",
+    "payload": {
+      "name": "Fredi",
+      "bio": "Experienced Tour Driver committed to making your travels memorable. I combine safe driving skills with a friendly, helpful attitude to provide a stress-free experience. Whether it's a short trip or a long tour, I prioritize guest comfort and reliable service at all times."
+    },
+    "payloadSha256": "2faf72be34d7992839661b4d16f5394d50f95df23261ac4c031902bb0cd1f71c"
+  },
+  {
+    "source": "jvto-db-crew",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "gufron",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:gufron",
+    "payload": {
+      "name": "Gufron",
+      "bio": "I'm someone who enjoys meaningful conversations on virtually any topic. In my professional life, I place the highest priority on safety and risk management - what some might call strict, I view as a fundamental matter of integrity and responsibility. I have a strong intuitive sense that helps me read situations quickly and accurately. Inside of work, I'm passionate about photography, where I enjoy capturing moments with attention to detail and composition. I'm also an avid music enthusiast with a diverse playlist spanning multiple genres, and I love singing along whenever the mood strikes."
+    },
+    "payloadSha256": "d81b81dc1ad406ad5aa3d63d3065455d6c5ae73f6d908160adb34e2d4109d982"
+  },
+  {
+    "source": "jvto-db-crew",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "holili",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:holili",
+    "payload": {
+      "name": "Holili",
+      "bio": "I am a Java Volcano driver who dedicates myself to serving all Java Volcano customers wholeheartedly."
+    },
+    "payloadSha256": "a6f629efff63bab319e102a27ff670bb984edf7061d42ba55404666aaa19a641"
+  },
+  {
+    "source": "jvto-db-crew",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "joyo",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:joyo",
+    "payload": {
+      "name": "Joyo",
+      "bio": "I'm a professional driver who combines speed with precision and care. I drive fast, but always cleanly, smoothly, and safely. My vehicle is kept in impeccable condition inside and out; cleanliness and comfort are non-negotiable for every single ride. Clients frequently tell me I'm their number one choice, \"Customer Number 1\", because they know they'll get to their destination quickly without ever feeling rushed or unsafe. I take pride in being punctual, reliable, and genuinely attentive to what each passenger needs, whether it's a daily commute, an important business trip, airport transfer, or a special occasion."
+    },
+    "payloadSha256": "71752c935a155bf759031a7a0042df2965c404df08dd44fecc3c339f2a2c31cf"
+  },
+  {
+    "source": "jvto-db-crew",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "kiki",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:kiki",
+    "payload": {
+      "name": "Kiki",
+      "bio": "\"It is He who made the earth manageable for you - so walk among its slopes and eat of His provision - and to Him is the resurrection.\" (67:15)"
+    },
+    "payloadSha256": "d47970f15484e4b9e73c3085c587eb2e54cfaad0bef9b84921c0bdc0039a69ff"
+  },
+  {
+    "source": "jvto-db-crew",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "pras",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:pras",
+    "payload": {
+      "name": "Pras",
+      "bio": "Pras is part of JVTO's East Java field team, focused on Friendly & fun, Great logistics, Safety-first."
+    },
+    "payloadSha256": "6e9ea160e211284c1909182a50f3c9c55d10da513fd7890b3b912bee5934b90a"
+  },
+  {
+    "source": "jvto-db-crew",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "rendi",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:rendi",
+    "payload": {
+      "name": "Rendi",
+      "bio": "Love meeting people from different backgrounds and making every trip feel easy and enjoyable. I like to have new friend especially from overseas because can share about our unique culture. always make sure safety during the trip and make unforgettable moment along a journey."
+    },
+    "payloadSha256": "dcfbb5fb89db8f5aca532acc4adaffe5dc5e2f86e7b8d78f0cab114408993edc"
+  },
+  {
+    "source": "jvto-db-crew",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "taufik",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:taufik",
+    "payload": {
+      "name": "Taufik",
+      "bio": "Reliable and organized individual with strong communication skills. I thrive in dynamic environments and enjoy taking on new challenges. My goal is to add value through hard work and a positive, proactive attitude."
+    },
+    "payloadSha256": "7d9bcdcff4304c61133ed81060c0b2511be1b0405f6de26a350f212ffed6c0ee"
+  },
+  {
+    "source": "jvto-db-crew",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "yandi",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:yandi",
+    "payload": {
+      "name": "Yandi",
+      "bio": "Love meeting people from different backgrounds and making every trip feel easy and enjoyable. I like to have new friend especially from overseas because can share about our unique culture. always make sure safety during the trip and make unforgettable moment along a journey."
+    },
+    "payloadSha256": "863d517fac50e31db2aecedb1c29c9f94eb40f1f74d35d883aa7d5be4bbe8439"
+  },
+  {
+    "source": "jvto-db-crew",
+    "releaseVersion": "2026.07.21.1",
+    "externalKey": "yusuf",
+    "entityType": "public_person_profile",
+    "canonicalKey": "public_person_profile:yusuf",
+    "payload": {
+      "name": "Yusuf",
+      "bio": "Yusuf is part of JVTO's East Java field team, focused on Friendly & fun, Great photos, Great logistics."
+    },
+    "payloadSha256": "b90f8ff8d54d262ed64f12d576c984ab7d97953a81f8128209a30baa435bedab"
+  }
+]

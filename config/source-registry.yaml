@@ -80,6 +80,19 @@ sources:
     manifest_required: true
     checksum_required: true
 
+  # Operational crew registry (JVTO_SSOT crew_registry, pulled into the jvto-db
+  # extract). Supplies crew DISPLAY IDENTITY — name + bio — which the llm-wiki-trust
+  # trust bundle does not carry. public_person_profile.* is owned by llm-wiki-trust
+  # with conflict_policy prefer_owner, so these non-owner values STAGE and fill the
+  # empty name/bio gap without overwriting any owned field (no field-ownership change).
+  - code: jvto-db-crew
+    name: JVTO Operational Crew Registry (name + bio)
+    role: compiler
+    source_type: database
+    authority_rank: 88
+    manifest_required: true
+    checksum_required: true
+
   - code: canonical-facts
     name: JVTO Canonical Facts Lock (adjudicated)
     role: governance_contract

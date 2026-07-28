@@ -25,6 +25,10 @@
     {
       "source": "canonical-facts",
       "records": 1
+    },
+    {
+      "source": "jvto-db-crew",
+      "records": 14
     }
   ]
 }

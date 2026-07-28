@@ -3955,7 +3955,7 @@
     "entity_type": "public_person_profile",
     "canonical_key": "public_person_profile:anjas",
     "slug": "anjas",
-    "title": null,
+    "title": "Anjas",
     "data": {
       "role": "Guide",
       "kta": "KTA-G-2024-006",
@@ -3966,7 +3966,9 @@
       "strengths": "Astrophotography, volcanic terrain navigation, East Java cultural heritage",
       "review_count": 12,
       "review_rating": 4.91,
-      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768270423657-690185912-anjas.png"
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768270423657-690185912-anjas.png",
+      "name": "Anjas",
+      "bio": "m a chill guy and nerdy enough to talk about brainrote meme. love playing games and listening to any kind of music. let me show you around how beautiful east java is."
     },
     "provenance": {
       "role": "llm-wiki-trust",
@@ -3975,7 +3977,9 @@
       "strengths": "llm-wiki-trust",
       "review_count": "llm-wiki-trust",
       "review_rating": "llm-wiki-trust",
-      "portrait_url": "llm-wiki-trust"
+      "portrait_url": "llm-wiki-trust",
+      "name": "jvto-db-crew",
+      "bio": "jvto-db-crew"
     },
     "source": "llm-wiki-trust",
     "editable": false
@@ -3984,7 +3988,7 @@
     "entity_type": "public_person_profile",
     "canonical_key": "public_person_profile:boy",
     "slug": "boy",
-    "title": null,
+    "title": "Boy (Ahboy)",
     "data": {
       "role": "Guide",
       "kta": "KTA-G-2024-004",
@@ -3994,7 +3998,9 @@
       ],
       "strengths": "Friendly, safety-first, logistics, great photos, local knowledge",
       "review_count": 23,
-      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768228191022-893381041-boy.png"
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768228191022-893381041-boy.png",
+      "name": "Boy (Ahboy)",
+      "bio": "I am a local resident who enjoys welcoming visitors and sharing stories about this area. I'm happy to help travelers explore the natural beauty, local culture, and unique experiences so they feel comfortable and truly enjoy their visit."
     },
     "provenance": {
       "role": "llm-wiki-trust",
@@ -4002,7 +4008,9 @@
       "languages": "llm-wiki-trust",
       "strengths": "llm-wiki-trust",
       "review_count": "llm-wiki-trust",
-      "portrait_url": "llm-wiki-trust"
+      "portrait_url": "llm-wiki-trust",
+      "name": "jvto-db-crew",
+      "bio": "jvto-db-crew"
     },
     "source": "llm-wiki-trust",
     "editable": false
@@ -4011,20 +4019,24 @@
     "entity_type": "public_person_profile",
     "canonical_key": "public_person_profile:dika",
     "slug": "dika",
-    "title": null,
+    "title": "Dika",
     "data": {
       "role": "Driver",
       "kta": null,
       "languages": [
         "ID"
       ],
-      "review_count": 3
+      "review_count": 3,
+      "name": "Dika",
+      "bio": "Dika is part of JVTO's East Java field team, focused on Friendly & fun, Safety-first, Great logistics."
     },
     "provenance": {
       "role": "llm-wiki-trust",
       "kta": "llm-wiki-trust",
       "languages": "llm-wiki-trust",
-      "review_count": "llm-wiki-trust"
+      "review_count": "llm-wiki-trust",
+      "name": "jvto-db-crew",
+      "bio": "jvto-db-crew"
     },
     "source": "llm-wiki-trust",
     "editable": false
@@ -4051,7 +4063,7 @@
     "entity_type": "public_person_profile",
     "canonical_key": "public_person_profile:fauzi",
     "slug": "fauzi",
-    "title": null,
+    "title": "Fauzi",
     "data": {
       "role": "Guide",
       "kta": "KTA-G-2024-010",
@@ -4060,7 +4072,9 @@
       ],
       "strengths": "Photography, attentive, safety-first, finding uncrowded spots",
       "review_count": 6,
-      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768226003889-338819579-fauzi.png"
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768226003889-338819579-fauzi.png",
+      "name": "Fauzi",
+      "bio": "I'm a friendly guide who loves taking photos for guests and quickly connects with people. I enjoy making trips fun, relaxed, and memorable."
     },
     "provenance": {
       "role": "llm-wiki-trust",
@@ -4068,7 +4082,9 @@
       "languages": "llm-wiki-trust",
       "strengths": "llm-wiki-trust",
       "review_count": "llm-wiki-trust",
-      "portrait_url": "llm-wiki-trust"
+      "portrait_url": "llm-wiki-trust",
+      "name": "jvto-db-crew",
+      "bio": "jvto-db-crew"
     },
     "source": "llm-wiki-trust",
     "editable": false
@@ -4077,7 +4093,7 @@
     "entity_type": "public_person_profile",
     "canonical_key": "public_person_profile:fredi",
     "slug": "fredi",
-    "title": null,
+    "title": "Fredi",
     "data": {
       "role": "Driver",
       "kta": "KTA-D-2024-005",
@@ -4087,7 +4103,9 @@
       ],
       "strengths": "Punctuality, safe driving, professional attitude",
       "review_count": 20,
-      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768276791622-262250680-freddy.png"
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768276791622-262250680-freddy.png",
+      "name": "Fredi",
+      "bio": "Experienced Tour Driver committed to making your travels memorable. I combine safe driving skills with a friendly, helpful attitude to provide a stress-free experience. Whether it's a short trip or a long tour, I prioritize guest comfort and reliable service at all times."
     },
     "provenance": {
       "role": "llm-wiki-trust",
@@ -4095,7 +4113,9 @@
       "languages": "llm-wiki-trust",
       "strengths": "llm-wiki-trust",
       "review_count": "llm-wiki-trust",
-      "portrait_url": "llm-wiki-trust"
+      "portrait_url": "llm-wiki-trust",
+      "name": "jvto-db-crew",
+      "bio": "jvto-db-crew"
     },
     "source": "llm-wiki-trust",
     "editable": false
@@ -4104,7 +4124,7 @@
     "entity_type": "public_person_profile",
     "canonical_key": "public_person_profile:gufron",
     "slug": "gufron",
-    "title": null,
+    "title": "Gufron",
     "data": {
       "role": "Guide",
       "kta": "KTA-G-2024-001",
@@ -4114,7 +4134,9 @@
       ],
       "strengths": "Volcano photography, geology, Ijen crater safety, East Java cultural heritage",
       "review_count": 20,
-      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768225567764-405955176-gufron.png"
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768225567764-405955176-gufron.png",
+      "name": "Gufron",
+      "bio": "I'm someone who enjoys meaningful conversations on virtually any topic. In my professional life, I place the highest priority on safety and risk management - what some might call strict, I view as a fundamental matter of integrity and responsibility. I have a strong intuitive sense that helps me read situations quickly and accurately. Inside of work, I'm passionate about photography, where I enjoy capturing moments with attention to detail and composition. I'm also an avid music enthusiast with a diverse playlist spanning multiple genres, and I love singing along whenever the mood strikes."
     },
     "provenance": {
       "role": "llm-wiki-trust",
@@ -4122,7 +4144,9 @@
       "languages": "llm-wiki-trust",
       "strengths": "llm-wiki-trust",
       "review_count": "llm-wiki-trust",
-      "portrait_url": "llm-wiki-trust"
+      "portrait_url": "llm-wiki-trust",
+      "name": "jvto-db-crew",
+      "bio": "jvto-db-crew"
     },
     "source": "llm-wiki-trust",
     "editable": false
@@ -4131,7 +4155,7 @@
     "entity_type": "public_person_profile",
     "canonical_key": "public_person_profile:holili",
     "slug": "holili",
-    "title": null,
+    "title": "Holili",
     "data": {
       "role": "Driver",
       "kta": "KTA-D-2024-009",
@@ -4139,14 +4163,18 @@
         "ID"
       ],
       "review_count": 6,
-      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768277053384-470130286-holili.jpg"
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768277053384-470130286-holili.jpg",
+      "name": "Holili",
+      "bio": "I am a Java Volcano driver who dedicates myself to serving all Java Volcano customers wholeheartedly."
     },
     "provenance": {
       "role": "llm-wiki-trust",
       "kta": "llm-wiki-trust",
       "languages": "llm-wiki-trust",
       "review_count": "llm-wiki-trust",
-      "portrait_url": "llm-wiki-trust"
+      "portrait_url": "llm-wiki-trust",
+      "name": "jvto-db-crew",
+      "bio": "jvto-db-crew"
     },
     "source": "llm-wiki-trust",
     "editable": false
@@ -4155,7 +4183,7 @@
     "entity_type": "public_person_profile",
     "canonical_key": "public_person_profile:joyo",
     "slug": "joyo",
-    "title": null,
+    "title": "Joyo",
     "data": {
       "role": "Driver",
       "kta": "KTA-D-2024-011",
@@ -4163,14 +4191,18 @@
         "ID"
       ],
       "review_count": 19,
-      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768277336049-911840775-joyo.png"
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768277336049-911840775-joyo.png",
+      "name": "Joyo",
+      "bio": "I'm a professional driver who combines speed with precision and care. I drive fast, but always cleanly, smoothly, and safely. My vehicle is kept in impeccable condition inside and out; cleanliness and comfort are non-negotiable for every single ride. Clients frequently tell me I'm their number one choice, \"Customer Number 1\", because they know they'll get to their destination quickly without ever feeling rushed or unsafe. I take pride in being punctual, reliable, and genuinely attentive to what each passenger needs, whether it's a daily commute, an important business trip, airport transfer, or a special occasion."
     },
     "provenance": {
       "role": "llm-wiki-trust",
       "kta": "llm-wiki-trust",
       "languages": "llm-wiki-trust",
       "review_count": "llm-wiki-trust",
-      "portrait_url": "llm-wiki-trust"
+      "portrait_url": "llm-wiki-trust",
+      "name": "jvto-db-crew",
+      "bio": "jvto-db-crew"
     },
     "source": "llm-wiki-trust",
     "editable": false
@@ -4179,7 +4211,7 @@
     "entity_type": "public_person_profile",
     "canonical_key": "public_person_profile:kiki",
     "slug": "kiki",
-    "title": null,
+    "title": "Kiki",
     "data": {
       "role": "Guide",
       "kta": "KTA-G-2024-008",
@@ -4189,7 +4221,9 @@
       ],
       "strengths": "Photography, friendly, logistics, safety-first",
       "review_count": 17,
-      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768271545598-834784538-kiki.png"
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768271545598-834784538-kiki.png",
+      "name": "Kiki",
+      "bio": "\"It is He who made the earth manageable for you - so walk among its slopes and eat of His provision - and to Him is the resurrection.\" (67:15)"
     },
     "provenance": {
       "role": "llm-wiki-trust",
@@ -4197,7 +4231,9 @@
       "languages": "llm-wiki-trust",
       "strengths": "llm-wiki-trust",
       "review_count": "llm-wiki-trust",
-      "portrait_url": "llm-wiki-trust"
+      "portrait_url": "llm-wiki-trust",
+      "name": "jvto-db-crew",
+      "bio": "jvto-db-crew"
     },
     "source": "llm-wiki-trust",
     "editable": false
@@ -4206,7 +4242,7 @@
     "entity_type": "public_person_profile",
     "canonical_key": "public_person_profile:pras",
     "slug": "pras",
-    "title": null,
+    "title": "Pras",
     "data": {
       "role": "Driver",
       "kta": null,
@@ -4214,13 +4250,17 @@
         "EN",
         "ID"
       ],
-      "review_count": 6
+      "review_count": 6,
+      "name": "Pras",
+      "bio": "Pras is part of JVTO's East Java field team, focused on Friendly & fun, Great logistics, Safety-first."
     },
     "provenance": {
       "role": "llm-wiki-trust",
       "kta": "llm-wiki-trust",
       "languages": "llm-wiki-trust",
-      "review_count": "llm-wiki-trust"
+      "review_count": "llm-wiki-trust",
+      "name": "jvto-db-crew",
+      "bio": "jvto-db-crew"
     },
     "source": "llm-wiki-trust",
     "editable": false
@@ -4229,7 +4269,7 @@
     "entity_type": "public_person_profile",
     "canonical_key": "public_person_profile:rendi",
     "slug": "rendi",
-    "title": null,
+    "title": "Rendi",
     "data": {
       "role": "Guide",
       "kta": "KTA-G-2024-002",
@@ -4240,7 +4280,9 @@
       "strengths": "Mountain rescue, first aid, expedition safety, Ijen crater safety procedures",
       "review_count": 22,
       "review_rating": 5,
-      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768228514527-518051332-rendi.png"
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768228514527-518051332-rendi.png",
+      "name": "Rendi",
+      "bio": "Love meeting people from different backgrounds and making every trip feel easy and enjoyable. I like to have new friend especially from overseas because can share about our unique culture. always make sure safety during the trip and make unforgettable moment along a journey."
     },
     "provenance": {
       "role": "llm-wiki-trust",
@@ -4249,7 +4291,9 @@
       "strengths": "llm-wiki-trust",
       "review_count": "llm-wiki-trust",
       "review_rating": "llm-wiki-trust",
-      "portrait_url": "llm-wiki-trust"
+      "portrait_url": "llm-wiki-trust",
+      "name": "jvto-db-crew",
+      "bio": "jvto-db-crew"
     },
     "source": "llm-wiki-trust",
     "editable": false
@@ -4258,7 +4302,7 @@
     "entity_type": "public_person_profile",
     "canonical_key": "public_person_profile:taufik",
     "slug": "taufik",
-    "title": null,
+    "title": "Taufik",
     "data": {
       "role": "Guide",
       "kta": "KTA-G-2024-007",
@@ -4268,7 +4312,9 @@
       ],
       "strengths": "Safety-first, logistics, punctuality, photography",
       "review_count": 8,
-      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768228083285-919198019-taufik_1_.png"
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768228083285-919198019-taufik_1_.png",
+      "name": "Taufik",
+      "bio": "Reliable and organized individual with strong communication skills. I thrive in dynamic environments and enjoy taking on new challenges. My goal is to add value through hard work and a positive, proactive attitude."
     },
     "provenance": {
       "role": "llm-wiki-trust",
@@ -4276,7 +4322,9 @@
       "languages": "llm-wiki-trust",
       "strengths": "llm-wiki-trust",
       "review_count": "llm-wiki-trust",
-      "portrait_url": "llm-wiki-trust"
+      "portrait_url": "llm-wiki-trust",
+      "name": "jvto-db-crew",
+      "bio": "jvto-db-crew"
     },
     "source": "llm-wiki-trust",
     "editable": false
@@ -4285,7 +4333,7 @@
     "entity_type": "public_person_profile",
     "canonical_key": "public_person_profile:yandi",
     "slug": "yandi",
-    "title": null,
+    "title": "Yandi",
     "data": {
       "role": "Driver",
       "kta": "KTA-D-2024-003",
@@ -4294,14 +4342,18 @@
         "ID"
       ],
       "review_count": 16,
-      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768270364125-144711646-yandi.png"
+      "portrait_url": "https://javavolcano-touroperator.com/uploads/1768270364125-144711646-yandi.png",
+      "name": "Yandi",
+      "bio": "Love meeting people from different backgrounds and making every trip feel easy and enjoyable. I like to have new friend especially from overseas because can share about our unique culture. always make sure safety during the trip and make unforgettable moment along a journey."
     },
     "provenance": {
       "role": "llm-wiki-trust",
       "kta": "llm-wiki-trust",
       "languages": "llm-wiki-trust",
       "review_count": "llm-wiki-trust",
-      "portrait_url": "llm-wiki-trust"
+      "portrait_url": "llm-wiki-trust",
+      "name": "jvto-db-crew",
+      "bio": "jvto-db-crew"
     },
     "source": "llm-wiki-trust",
     "editable": false
@@ -4310,20 +4362,24 @@
     "entity_type": "public_person_profile",
     "canonical_key": "public_person_profile:yusuf",
     "slug": "yusuf",
-    "title": null,
+    "title": "Yusuf",
     "data": {
       "role": "Driver",
       "kta": null,
       "languages": [
         "ID"
       ],
-      "review_count": 7
+      "review_count": 7,
+      "name": "Yusuf",
+      "bio": "Yusuf is part of JVTO's East Java field team, focused on Friendly & fun, Great photos, Great logistics."
     },
     "provenance": {
       "role": "llm-wiki-trust",
       "kta": "llm-wiki-trust",
       "languages": "llm-wiki-trust",
-      "review_count": "llm-wiki-trust"
+      "review_count": "llm-wiki-trust",
+      "name": "jvto-db-crew",
+      "bio": "jvto-db-crew"
     },
     "source": "llm-wiki-trust",
     "editable": false

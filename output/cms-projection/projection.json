@@ -2,7 +2,7 @@
   "generatedAt": "2026-07-21T00:00:00.000Z",
   "releaseVersion": "2026.07.21.1",
   "counts": {
-    "records": 182,
+    "records": 196,
     "entities": 176,
     "byType": {
       "activity": 18,
@@ -32,7 +32,8 @@
       "itinerary-core": "2026.07.21.1",
       "knowledge-catalog-okf": "2026.07.21.1",
       "design-system": "2026.07.21.1",
-      "canonical-facts": "2026.07.21.1"
+      "canonical-facts": "2026.07.21.1",
+      "jvto-db-crew": "2026.07.21.1"
     },
     "items": [
       {
@@ -5500,6 +5501,14 @@
         "portrait_url": {
           "value": "https://javavolcano-touroperator.com/uploads/1768270423657-690185912-anjas.png",
           "source": "llm-wiki-trust"
+        },
+        "name": {
+          "value": "Anjas",
+          "source": "jvto-db-crew"
+        },
+        "bio": {
+          "value": "m a chill guy and nerdy enough to talk about brainrote meme. love playing games and listening to any kind of music. let me show you around how beautiful east java is.",
+          "source": "jvto-db-crew"
         }
       }
     },
@@ -5533,6 +5542,14 @@
         "portrait_url": {
           "value": "https://javavolcano-touroperator.com/uploads/1768228191022-893381041-boy.png",
           "source": "llm-wiki-trust"
+        },
+        "name": {
+          "value": "Boy (Ahboy)",
+          "source": "jvto-db-crew"
+        },
+        "bio": {
+          "value": "I am a local resident who enjoys welcoming visitors and sharing stories about this area. I'm happy to help travelers explore the natural beauty, local culture, and unique experiences so they feel comfortable and truly enjoy their visit.",
+          "source": "jvto-db-crew"
         }
       }
     },
@@ -5557,6 +5574,14 @@
         "review_count": {
           "value": 3,
           "source": "llm-wiki-trust"
+        },
+        "name": {
+          "value": "Dika",
+          "source": "jvto-db-crew"
+        },
+        "bio": {
+          "value": "Dika is part of JVTO's East Java field team, focused on Friendly & fun, Safety-first, Great logistics.",
+          "source": "jvto-db-crew"
         }
       }
     },
@@ -5607,6 +5632,14 @@
         "portrait_url": {
           "value": "https://javavolcano-touroperator.com/uploads/1768226003889-338819579-fauzi.png",
           "source": "llm-wiki-trust"
+        },
+        "name": {
+          "value": "Fauzi",
+          "source": "jvto-db-crew"
+        },
+        "bio": {
+          "value": "I'm a friendly guide who loves taking photos for guests and quickly connects with people. I enjoy making trips fun, relaxed, and memorable.",
+          "source": "jvto-db-crew"
         }
       }
     },
@@ -5640,6 +5673,14 @@
         "portrait_url": {
           "value": "https://javavolcano-touroperator.com/uploads/1768276791622-262250680-freddy.png",
           "source": "llm-wiki-trust"
+        },
+        "name": {
+          "value": "Fredi",
+          "source": "jvto-db-crew"
+        },
+        "bio": {
+          "value": "Experienced Tour Driver committed to making your travels memorable. I combine safe driving skills with a friendly, helpful attitude to provide a stress-free experience. Whether it's a short trip or a long tour, I prioritize guest comfort and reliable service at all times.",
+          "source": "jvto-db-crew"
         }
       }
     },
@@ -5673,6 +5714,14 @@
         "portrait_url": {
           "value": "https://javavolcano-touroperator.com/uploads/1768225567764-405955176-gufron.png",
           "source": "llm-wiki-trust"
+        },
+        "name": {
+          "value": "Gufron",
+          "source": "jvto-db-crew"
+        },
+        "bio": {
+          "value": "I'm someone who enjoys meaningful conversations on virtually any topic. In my professional life, I place the highest priority on safety and risk management - what some might call strict, I view as a fundamental matter of integrity and responsibility. I have a strong intuitive sense that helps me read situations quickly and accurately. Inside of work, I'm passionate about photography, where I enjoy capturing moments with attention to detail and composition. I'm also an avid music enthusiast with a diverse playlist spanning multiple genres, and I love singing along whenever the mood strikes.",
+          "source": "jvto-db-crew"
         }
       }
     },
@@ -5701,6 +5750,14 @@
         "portrait_url": {
           "value": "https://javavolcano-touroperator.com/uploads/1768277053384-470130286-holili.jpg",
           "source": "llm-wiki-trust"
+        },
+        "name": {
+          "value": "Holili",
+          "source": "jvto-db-crew"
+        },
+        "bio": {
+          "value": "I am a Java Volcano driver who dedicates myself to serving all Java Volcano customers wholeheartedly.",
+          "source": "jvto-db-crew"
         }
       }
     },
@@ -5729,6 +5786,14 @@
         "portrait_url": {
           "value": "https://javavolcano-touroperator.com/uploads/1768277336049-911840775-joyo.png",
           "source": "llm-wiki-trust"
+        },
+        "name": {
+          "value": "Joyo",
+          "source": "jvto-db-crew"
+        },
+        "bio": {
+          "value": "I'm a professional driver who combines speed with precision and care. I drive fast, but always cleanly, smoothly, and safely. My vehicle is kept in impeccable condition inside and out; cleanliness and comfort are non-negotiable for every single ride. Clients frequently tell me I'm their number one choice, \"Customer Number 1\", because they know they'll get to their destination quickly without ever feeling rushed or unsafe. I take pride in being punctual, reliable, and genuinely attentive to what each passenger needs, whether it's a daily commute, an important business trip, airport transfer, or a special occasion.",
+          "source": "jvto-db-crew"
         }
       }
     },
@@ -5762,6 +5827,14 @@
         "portrait_url": {
           "value": "https://javavolcano-touroperator.com/uploads/1768271545598-834784538-kiki.png",
           "source": "llm-wiki-trust"
+        },
+        "name": {
+          "value": "Kiki",
+          "source": "jvto-db-crew"
+        },
+        "bio": {
+          "value": "\"It is He who made the earth manageable for you - so walk among its slopes and eat of His provision - and to Him is the resurrection.\" (67:15)",
+          "source": "jvto-db-crew"
         }
       }
     },
@@ -5787,6 +5860,14 @@
         "review_count": {
           "value": 6,
           "source": "llm-wiki-trust"
+        },
+        "name": {
+          "value": "Pras",
+          "source": "jvto-db-crew"
+        },
+        "bio": {
+          "value": "Pras is part of JVTO's East Java field team, focused on Friendly & fun, Great logistics, Safety-first.",
+          "source": "jvto-db-crew"
         }
       }
     },
@@ -5824,6 +5905,14 @@
         "portrait_url": {
           "value": "https://javavolcano-touroperator.com/uploads/1768228514527-518051332-rendi.png",
           "source": "llm-wiki-trust"
+        },
+        "name": {
+          "value": "Rendi",
+          "source": "jvto-db-crew"
+        },
+        "bio": {
+          "value": "Love meeting people from different backgrounds and making every trip feel easy and enjoyable. I like to have new friend especially from overseas because can share about our unique culture. always make sure safety during the trip and make unforgettable moment along a journey.",
+          "source": "jvto-db-crew"
         }
       }
     },
@@ -5857,6 +5946,14 @@
         "portrait_url": {
           "value": "https://javavolcano-touroperator.com/uploads/1768228083285-919198019-taufik_1_.png",
           "source": "llm-wiki-trust"
+        },
+        "name": {
+          "value": "Taufik",
+          "source": "jvto-db-crew"
+        },
+        "bio": {
+          "value": "Reliable and organized individual with strong communication skills. I thrive in dynamic environments and enjoy taking on new challenges. My goal is to add value through hard work and a positive, proactive attitude.",
+          "source": "jvto-db-crew"
         }
       }
     },
@@ -5886,6 +5983,14 @@
         "portrait_url": {
           "value": "https://javavolcano-touroperator.com/uploads/1768270364125-144711646-yandi.png",
           "source": "llm-wiki-trust"
+        },
+        "name": {
+          "value": "Yandi",
+          "source": "jvto-db-crew"
+        },
+        "bio": {
+          "value": "Love meeting people from different backgrounds and making every trip feel easy and enjoyable. I like to have new friend especially from overseas because can share about our unique culture. always make sure safety during the trip and make unforgettable moment along a journey.",
+          "source": "jvto-db-crew"
         }
       }
     },
@@ -5910,6 +6015,14 @@
         "review_count": {
           "value": 7,
           "source": "llm-wiki-trust"
+        },
+        "name": {
+          "value": "Yusuf",
+          "source": "jvto-db-crew"
+        },
+        "bio": {
+          "value": "Yusuf is part of JVTO's East Java field team, focused on Friendly & fun, Great photos, Great logistics.",
+          "source": "jvto-db-crew"
         }
       }
     },
