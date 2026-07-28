@@ -1,0 +1,81 @@
+name: deploy-prod
+
+# Applies the committed, drift-guarded seed to the PRODUCTION jvto_cms database on
+# every push to main, so merged content (pages / sections / entities) goes live
+# automatically — this is what makes changes verifiable on the production CMS.
+#
+# Both scripts are idempotent and safe to re-run:
+#   • db/core/schema.sql  — CREATE ... IF NOT EXISTS / ADD COLUMN IF NOT EXISTS only.
+#   • output/seed/load.sql — upserts entities + pages (ON CONFLICT DO UPDATE) and
+#     regenerates NON-editable sections (DELETE ... WHERE editable IS NOT TRUE, then
+#     re-insert). Operator edits made in the admin console (editable = true) are
+#     PRESERVED. CI's verify:projection guarantees load.sql matches source, so what
+#     deploys is exactly what was reviewed.
+#
+# ── SETUP (owner, one-time) ─────────────────────────────────────────────────────
+# Add a repository secret PROD_DATABASE_URL (Settings → Secrets and variables →
+# Actions) with the production connection string, e.g.
+#   postgresql://USER:PASSWORD@HOST:5432/jvto_cms?sslmode=require
+# Until the secret is set this job SKIPS (no-op). The production database must be
+# reachable from GitHub-hosted runners. Trigger a first run any time from the
+# Actions tab (Run workflow) after adding the secret, or it runs on the next merge.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'output/seed/**'
+      - 'db/core/schema.sql'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch: {}
+
+# Never let two prod applies overlap.
+concurrency:
+  group: deploy-prod
+  cancel-in-progress: false
+
+jobs:
+  seed-prod:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Guard — require PROD_DATABASE_URL secret
+        id: guard
+        env:
+          PROD_DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
+        run: |
+          if [ -z "${PROD_DATABASE_URL}" ]; then
+            echo "::notice::PROD_DATABASE_URL not set — skipping prod seed. Add it in Settings → Secrets to enable auto-deploy."
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install psql client
+        if: steps.guard.outputs.enabled == 'true'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends postgresql-client
+
+      - name: Apply schema + seed (idempotent, preserves operator edits)
+        if: steps.guard.outputs.enabled == 'true'
+        env:
+          PROD_DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
+        run: |
+          set -euo pipefail
+          echo "→ db/core/schema.sql"
+          psql "$PROD_DATABASE_URL" -v ON_ERROR_STOP=1 -q -f db/core/schema.sql
+          echo "→ output/seed/load.sql"
+          psql "$PROD_DATABASE_URL" -v ON_ERROR_STOP=1 -q -f output/seed/load.sql
+
+      - name: Verify counts in prod (proof of apply)
+        if: steps.guard.outputs.enabled == 'true'
+        env:
+          PROD_DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
+        run: |
+          set -euo pipefail
+          psql "$PROD_DATABASE_URL" -At -c "SELECT 'pages='       || count(*) FROM pages"
+          psql "$PROD_DATABASE_URL" -At -c "SELECT 'sections='    || count(*) FROM page_sections"
+          psql "$PROD_DATABASE_URL" -At -c "SELECT 'entities='    || count(*) FROM entities"
+          psql "$PROD_DATABASE_URL" -At -c "SELECT 'named_crew='  || count(*) FROM entities WHERE entity_type='public_person_profile' AND (data->>'name') IS NOT NULL"
