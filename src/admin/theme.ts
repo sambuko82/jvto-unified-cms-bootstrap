@@ -14,7 +14,10 @@ export function esc(value: unknown): string {
 const BADGES: Record<string, { label: string; color: string; bg: string }> = {
   editable: { label: 'Editable', color: '#34d399', bg: 'rgba(16,185,129,.12)' },
   read_only: { label: 'Synced · read-only', color: '#38bdf8', bg: 'rgba(14,165,233,.12)' },
+  operational_only: { label: 'Operational', color: '#fbbf24', bg: 'rgba(245,158,11,.12)' },
   compliance_only: { label: 'Facts-locked', color: '#fb7185', bg: 'rgba(244,63,94,.12)' },
+  override_with_approval: { label: 'Override w/ approval', color: '#c084fc', bg: 'rgba(168,85,247,.12)' },
+  developer_only: { label: 'Developer-only', color: '#94a3b8', bg: 'rgba(148,163,184,.12)' },
   published: { label: 'Published', color: '#34d399', bg: 'rgba(16,185,129,.12)' },
   draft: { label: 'Draft', color: '#fbbf24', bg: 'rgba(245,158,11,.12)' },
   context: { label: '—', color: '#64748b', bg: 'rgba(100,116,139,.10)' },
@@ -68,7 +71,7 @@ const STYLE = `
 export function layout(opts: { title: string; crumbs?: string; authed?: boolean; body: string }): string {
   const nav = opts.authed
     ? `<span class="crumbs">${esc(opts.crumbs ?? '')}</span><span class="spacer"></span>
-       <a href="/admin">Dashboard</a> · <a href="/admin/overview">Overview</a> · <a href="/admin/entities">Entities</a> · <a href="/admin/publishing">Publishing</a> ·
+       <a href="/admin">Dashboard</a> · <a href="/admin/overview">Overview</a> · <a href="/admin/entities">Entities</a> · <a href="/admin/sources">Sources</a> · <a href="/admin/publishing">Publishing</a> ·
        <form method="POST" action="/admin/logout" style="display:inline;margin:0">
          <button class="secondary" style="margin:0;padding:4px 10px">Log out</button></form>`
     : `<span class="crumbs">${esc(opts.crumbs ?? '')}</span>`;
