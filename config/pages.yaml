@@ -392,6 +392,29 @@ pages:
     sections:
       - { type: rich_text, entity_refs: ["claim:c5", "policy_document:anti-fraud"] }
 
+  # ── Adopted from the live site (help.javavolcano-touroperator.com); copy already in the extracts ──
+  # /team registry hub: the crew card_grid (14 named crew) + the jvto-db /team index copy
+  # (h1 / lede / members) overlaid by route. Its detail pages already live under 009 (C2).
+  - route: /team
+    file_group: "009"
+    page_type: hub
+    template: collection
+    visual_mode: hybrid
+    title: JVTO Team Registry
+    sections:
+      - { type: section_head, content: { title: "Local field crew" } }
+      - { type: card_grid, variant: crew, ref_query: "crew:all" }
+  # ISIC student package — copy present in both the jvto-db and design-system extracts.
+  - route: /isic/student-package
+    file_group: "002"
+    hub_route: /tours
+    page_type: narrative
+    template: narrative
+    visual_mode: hybrid
+    title: ISIC Student Package
+    sections:
+      - { type: rich_text }
+
 # Generated DETAIL pages (build-pages.mjs expands these from entities).
 generate:
   tours:
