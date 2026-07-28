@@ -989,6 +989,24 @@
     "status": "published"
   },
   {
+    "route": "/trust",
+    "file_group": "006",
+    "sort_order": 10,
+    "cluster": "trust",
+    "page_type": "narrative",
+    "template": "narrative",
+    "visual_mode": "trust",
+    "hub_route": "/verify-jvto",
+    "title": "Trust Bundle",
+    "h1": "Trust Bundle.",
+    "seo": {
+      "title": "Trust Bundle — Claims, Evidence, and Verification",
+      "description": "Single-page index of JVTO&#x27;s verifiable trust claims, evidence registry, and structured AEO/GEO signals. Compiled from the JVTO knowledge wiki.",
+      "schema_type": "TravelAgency"
+    },
+    "status": "published"
+  },
+  {
     "route": "/contact",
     "file_group": "007",
     "sort_order": 1,
@@ -1036,6 +1054,42 @@
     "h1": "Why Not an Unlicensed Ijen Operator",
     "seo": {
       "title": "Why Not an Unlicensed Ijen Operator"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/blog/2026-06-11-kawah-ijen-guide",
+    "file_group": "008",
+    "sort_order": 3,
+    "cluster": "hybrid",
+    "page_type": "blog",
+    "template": "narrative",
+    "visual_mode": "hybrid",
+    "hub_route": "/blog",
+    "title": "Your Complete Kawah Ijen Guide",
+    "h1": "Your Complete Kawah Ijen Guide: Blue Fire, Health & Safety",
+    "seo": {
+      "title": "Kawah Ijen Complete Guide 2026 | JVTO",
+      "description": "Everything you need to know before hiking Kawah Ijen — blue fire timing, health requirements, safety zones, and what to expect from a police-led private tour.",
+      "schema_type": "TravelAgency"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/blog/2026-06-11-ijen-medical-checkup-requirement",
+    "file_group": "008",
+    "sort_order": 4,
+    "cluster": "hybrid",
+    "page_type": "blog",
+    "template": "narrative",
+    "visual_mode": "hybrid",
+    "hub_route": "/blog",
+    "title": "Why Ijen Trekking Requires a Medical Checkup",
+    "h1": "Why Ijen Trekking Requires a Medical Checkup — And What Actually Happens",
+    "seo": {
+      "title": "Ijen Medical Checkup Requirement 2026 | What Trekkers Need to Know",
+      "description": "Before you hike Kawah Ijen, a local health certificate is mandatory for every guest under BBKSDA regulations. Here&#x27;s what the screening involves, who issues it, and what happens if you don&#x27;t pass.",
+      "schema_type": "TravelAgency"
     },
     "status": "published"
   },
@@ -1252,6 +1306,42 @@
       "title": "Yandi | JVTO Driver",
       "description": "Love meeting people from different backgrounds and making every trip feel easy and enjoyable. I like to have new friend especially from overseas because can share about our unique culture. always make sure safety during the trip and make unforgettable moment along a journey.",
       "schema_type": "ProfilePage"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/markets/singapore",
+    "file_group": "010",
+    "sort_order": 1,
+    "cluster": "hybrid",
+    "page_type": "narrative",
+    "template": "narrative",
+    "visual_mode": "hybrid",
+    "hub_route": null,
+    "title": "Bromo & Ijen Private Tours for Singapore Travelers",
+    "h1": "Bromo & Ijen Private Tours for Singapore Travelers",
+    "seo": {
+      "title": "Bromo & Ijen Tours for Singapore Travelers | Private East Java Volcano Tours | JVTO",
+      "description": "Private Bromo, Ijen, Tumpak Sewu and Papuma tours for Singapore travelers. Start from Bali or Surabaya, pay securely in IDR, and verify JVTO licenses and reviews before booking.",
+      "schema_type": "TravelAgency"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/markets/malaysia",
+    "file_group": "010",
+    "sort_order": 2,
+    "cluster": "hybrid",
+    "page_type": "narrative",
+    "template": "narrative",
+    "visual_mode": "hybrid",
+    "hub_route": null,
+    "title": "Bromo & Ijen Private Tours for Malaysia Travelers",
+    "h1": "Bromo & Ijen Private Tours for Malaysia Travelers",
+    "seo": {
+      "title": "Bromo & Ijen Tours for Malaysia Travelers | Private East Java Volcano Tours | JVTO",
+      "description": "Private, all-inclusive Bromo, Ijen, Tumpak Sewu and Papuma tours for Malaysian travelers. Managed ferry crossings, DPS or SUB entry, halal-friendly meal stops, secure IDR payment.",
+      "schema_type": "TravelAgency"
     },
     "status": "published"
   }

@@ -1,0 +1,315 @@
+{
+  "scrapedAt": "2026-07-28T00:00:00.000Z",
+  "source": "https://help.javavolcano-touroperator.com",
+  "count": 5,
+  "rows": [
+    {
+      "route": "/blog/2026-06-11-ijen-medical-checkup-requirement",
+      "lang": "en",
+      "seo": {
+        "title": "Ijen Medical Checkup Requirement 2026 | What Trekkers Need to Know",
+        "description": "Before you hike Kawah Ijen, a local health certificate is mandatory for every guest under BBKSDA regulations. Here&#x27;s what the screening involves, who issues it, and what happens if you don&#x27;t pass.",
+        "schema_type": "TravelAgency"
+      },
+      "content": {
+        "h1": "Why Ijen Trekking Requires a Medical Checkup — And What Actually Happens",
+        "lede": [
+          "Kawah Ijen is one of the most extraordinary hikes in Southeast Asia. A 3 km night ascent to a 2,386 m crater rim, a pre-dawn descent toward the world's largest acidic lake, and — if conditions allow — the blue fire phenomenon that draws travelers from every continent.",
+          "It is also a hike with a documented history of cardiac emergencies.",
+          "Since 2015, seven tourist incidents have been recorded at Ijen — including four fatalities. Half of those deaths were fitness-related: a 68-year-old who collapsed from exhaustion and respiratory distress, a 64-year-old who suffered a heart attack at Post 3. These are not freak accidents. They are predictable outcomes on a steep, high-altitude, sulfurous trail for guests whose baseline health was never assessed before the climb.",
+          "That is precisely why BBKSDA East Java — the government authority controlling all access to Kawah Ijen — issued Surat Edaran SE.1658/KSA.9/2024 : the regulation under which every trekker must present a local health certificate before entering the crater zone."
+        ],
+        "sections": [
+          {
+            "title": "Who Requires the Health Certificate — BBKSDA, Not JVTO",
+            "body": "This is the first thing to understand: JVTO does not unilaterally impose a health screening requirement. The rule originates with BBKSDA East Java (Balai Besar Konservasi Sumber Daya Alam), the Nature Conservation Agency that manages the Kawah Ijen nature reserve.\n\nUnder SE.1658/KSA.9/2024, BBKSDA requires every visitor to carry a verifiable health certificate. No valid certificate = no crater access. The gate has a QR reader.\n\nJVTO's role is coordination: JVTO arranges the mandatory screening workflow so guests arrive at Paltuding ready to enter. The session is included in the package price and scheduled before the night departure. It is a service, not an arbitrary gatekeeping policy.\n\nYou can verify the BBKSDA ticket terms directly at tiket.bbksdajatim.org — the health certificate requirement is stated in the public-facing crater access terms."
+          },
+          {
+            "title": "What Gets Measured in the Screening",
+            "body": "The Ijen health screening runs through the Ijen Digital Health Security System (health.mountijen.com). It takes approximately 15–20 minutes and measures four data points:\n\nIf all four metrics are within safe parameters, the doctor issues a surat sehat (health certificate): a QR-coded document linked to the licensed physician's identity. The QR code is scanned by the BBKSDA gate officer at Paltuding. The certificate cannot be forged — it carries the doctor's SIP number and is tied to a government-verifiable registry."
+          },
+          {
+            "title": "Who Issues the Certificate — Dr. Ahmad Irwandanu",
+            "body": "The licensed physician coordinating Ijen health certificates through JVTO is Dr. Ahmad Irwandanu , based in Bondowoso, East Java.\n\nHis credentials are publicly verifiable — no trust required:\n\nThis matters because the certificate he issues carries real legal weight. An illegitimate practitioner's QR code would fail at the BBKSDA gate reader. The auditable credential chain — KKI registry → Kemenkes SatuSehat → SIP number → QR certificate → BBKSDA gate scan — is what makes the system tamper-resistant.\n\nThe screening takes place at one of two partner facilities:\n\nFor guests on JVTO packages, the session is coordinated to fit the pre-departure timeline."
+          },
+          {
+            "title": "What Happens If You Don't Pass",
+            "body": "If the screening assessment finds you are not fit for the climb, the trek is cancelled for that individual — not for the group.\n\nThat distinction matters. If a couple is traveling together and one guest passes while the other does not, the group does not have to abandon the hike. The guest assessed as unfit can wait at base camp or the designated safe zone while the rest of the group continues.\n\nThe cost of the screening session itself is non-refundable. The assessment was performed, the clinical time was spent. This applies across all Ijen health-certificate providers — it is not a JVTO-specific policy.\n\nThis outcome is governed by regulatory protocol, not operator discretion. JVTO has no mechanism to override a BBKSDA access rule or a doctor's fitness assessment."
+          },
+          {
+            "title": "Why This Exists: The Incident Data",
+            "body": "Between 2015 and 2026, documented Ijen incidents include:\n\nBoth deaths occurred in the fitness-risk category that health screening specifically targets: SpO2, blood pressure, cardiovascular baseline. A basic vitals assessment before the climb would have flagged the elevated risk.\n\nThe other incidents on record — the 2024 cliff fall that led to Hutan Mati zone closure, two motorcycle accidents on the Sengkan Gandrung descent road in 2025, and the 2026 SAR operation for a lost hiker — fall into different risk categories: terrain, navigation, and transport. That is why JVTO also provides certified guides, professional drivers with certified vehicles, and route supervision alongside the health coordination.\n\nThe health certificate is one layer of a multi-layer safety system."
+          },
+          {
+            "title": "What This Looks Like in Practice (On a JVTO Package)",
+            "body": "For guests on an Ijen-relevant JVTO package, the screening workflow runs as follows:\n\nThe session adds roughly 15–20 minutes to pre-hike logistics. JVTO builds this into the departure timeline so it does not affect the midnight climb window targeting the blue-fire viewing slot.\n\nOf JVTO's 16 tour packages, 12 are Ijen-relevant and include this mandatory health-screening coordination workflow — a certificate is required for every guest before crater entry. Only the three non-Ijen packages (Bromo day trips and Taman Safari) operate outside this protocol."
+          },
+          {
+            "title": "The Short Version",
+            "body": "A BBKSDA-mandated local health certificate is required for every guest before Ijen crater access. JVTO coordinates the certification workflow through licensed physician Dr. Ahmad Irwandanu — credentials publicly verifiable via Kemenkes SatuSehat and KKI. The screening measures four vitals, takes 15–20 minutes, and issues a QR-verified certificate. Guests who do not pass cannot enter the crater zone — individual cancellation, not group cancellation. The screening cost is non-refundable.\n\nThis is not a bureaucratic formality. It is the mechanism designed to catch the fitness risks that have historically ended in fatalities on this trail.\n\nSources: [[people/dr-ahmad-irwandanu]] · [[destinations/kawah-ijen]] · [[products/packages-overview]] · [[credentials/trust-signals]]"
+          }
+        ],
+        "faq": [],
+        "source": "scraped:https://help.javavolcano-touroperator.com/blog/2026-06-11-ijen-medical-checkup-requirement",
+        "scraped_at": "2026-07-28T00:00:00.000Z"
+      }
+    },
+    {
+      "route": "/blog/2026-06-11-kawah-ijen-guide",
+      "lang": "en",
+      "seo": {
+        "title": "Kawah Ijen Complete Guide 2026 | JVTO",
+        "description": "Everything you need to know before hiking Kawah Ijen — blue fire timing, health requirements, safety zones, and what to expect from a police-led private tour.",
+        "schema_type": "TravelAgency"
+      },
+      "content": {
+        "h1": "Your Complete Kawah Ijen Guide: Blue Fire, Health & Safety",
+        "lede": [
+          "Kawah Ijen is an active stratovolcano at 2,386m, home to the world's highest-volume acidic crater lake and a pre-dawn blue fire phenomenon that draws thousands of hikers every year. Seven documented tourist incidents at Ijen between 2015 and 2026 — including four fatalities — mean the preparation you do before the trailhead matters as much as the gear you carry.",
+          "This guide covers what to expect on the hike, how the health certificate process works, what the restricted zones are, and why the choice of operator changes your risk profile."
+        ],
+        "sections": [
+          {
+            "title": "What Is the Blue Fire — and Why It's Not Guaranteed",
+            "body": "The blue fire at Kawah Ijen is a natural phenomenon. Ignited sulfuric gases vent from the crater floor and combust on contact with oxygen, producing an electric-blue flame visible only in darkness. When conditions align, it is extraordinary.\n\nBut it is subject to weather and gas activity . Thick fog, rain, or elevated gas readings can make the crater inaccessible or the fire invisible. No reputable operator can guarantee you will see it. JVTO plans around the optimal departure window (midnight from Paltuding), but the outcome is the volcano's to decide.\n\nWhat you can count on: the hike itself, the turquoise acidic crater lake, sunrise from the rim at 2,386m, and the sulfur miners who have worked this crater for over a century."
+          },
+          {
+            "title": "The Hike: What You're Actually Signing Up For",
+            "body": "The trail is not technical climbing. It is steep, uneven, and done in darkness, cold, and volcanic gas. Gas masks and headlamps are standard JVTO inclusions — not optional upgrades."
+          },
+          {
+            "title": "Health Certificates: The Regulatory Reality",
+            "body": "Since 2024, BBKSDA East Java (Surat Edaran SE.1658/KSA.9/2024) has established conditions under which crater access requires a recent local health certificate. When those conditions apply, a valid QR code is the entry requirement: no certificate, no crater access .\n\nJVTO coordinates the health-screening workflow through the Ijen Digital Health Security System (health.mountijen.com). The process before your hike:\n\nThe data above is not bureaucratic overhead. Of the four fatal incidents at Kawah Ijen since 2015, two were fitness-related: a 68-year-old who died from exhaustion and respiratory distress, and a 64-year-old cardiac arrest at the mid-trail rest post. The screening is built to identify exactly these risk profiles before the trailhead — not after.\n\nIf a guest is assessed unfit, the climb is cancelled for that individual. This is a regulatory outcome, not operator discretion."
+          },
+          {
+            "title": "The Sulfur Miners",
+            "body": "Approximately 200–300 miners work the Kawah Ijen crater, carrying 70–90 kg sulfur loads twice daily in direct SO₂ exposure. They share the trail with tourists and have been doing so for over a century.\n\nJVTO briefs every guest before departure:\n\nThe briefing is the minimum courtesy. These are working people, not scenery."
+          },
+          {
+            "title": "Why the Operator Choice Matters",
+            "body": "JVTO's founder, Agung \"Mr. Sam\" Sambuko, is an active Tourist Police officer (Ditpamobvit) — the only East Java operator with this credential. The company holds NIB 1102230032918, TDUP, HPWKI membership, POLPAR, and BBKSDA operator clearance. All are independently verifiable at /verify-jvto .\n\nEvery JVTO Ijen tour is:\n\nThe company has operated at Kawah Ijen since 2015. Across Trustpilot (4.8/5, 51 reviews), Google Maps (4.9/5, 123 reviews), and TripAdvisor (4.95/5, 21 reviews), 195 independent reviews reflect a decade of operations at this specific volcano."
+          },
+          {
+            "title": "Plan Your Ijen Trip",
+            "body": "Browse Ijen packages from Surabaya or Bali at /tours . For the full credential record — licenses, police credentials, medical screening evidence — visit /verify-jvto . Health screening specifics: /travel-guide/ijen-health-screening ."
+          }
+        ],
+        "faq": [],
+        "source": "scraped:https://help.javavolcano-touroperator.com/blog/2026-06-11-kawah-ijen-guide",
+        "scraped_at": "2026-07-28T00:00:00.000Z"
+      }
+    },
+    {
+      "route": "/markets/malaysia",
+      "lang": "en",
+      "seo": {
+        "title": "Bromo & Ijen Tours for Malaysia Travelers | Private East Java Volcano Tours | JVTO",
+        "description": "Private, all-inclusive Bromo, Ijen, Tumpak Sewu and Papuma tours for Malaysian travelers. Managed ferry crossings, DPS or SUB entry, halal-friendly meal stops, secure IDR payment.",
+        "schema_type": "TravelAgency"
+      },
+      "content": {
+        "h1": "Bromo & Ijen Private Tours for Malaysia Travelers",
+        "lede": [
+          "Pakej peribadi ke Gunung Bromo, Kawah Ijen, Tumpak Sewu & Papuma — kenderaan sendiri, feri diuruskan, harga jelas, dan syarikat pelancongan yang boleh disahkan.",
+          "Fly from Malaysia to Bali or Surabaya, then let a private JVTO crew handle the whole East Java crossing — managed ferry, direct driver handovers, and one all-inclusive itinerary with no self-planning.",
+          "Licensed Indonesian tour operator · PT Java Volcano Rendezvous · NIB 1102230032918 · Trustpilot 4.8/5 (51) · Google 4.9/5 (123) · TripAdvisor 4.95/5 (21) · Founded 2015",
+          "Malaysian travelers want convenience: managed ferry crossings, direct driver handovers, and an all-inclusive package that removes cross-island planning. JVTO runs private tours only and books the Java–Bali ferry, permits, and hotels for you. AirAsia and other carriers connect Kuala Lumpur to both Denpasar (DPS) and Surabaya (SUB), so you can start in one and finish in the other without backtracking."
+        ],
+        "sections": [
+          {
+            "title": "Best route from Malaysia: Bali arrival or Surabaya arrival?",
+            "body": "AirAsia flies KUL to both Denpasar and Surabaya. Confirm the exact airline schedule before buying non-refundable flights."
+          },
+          {
+            "title": "Routes Malaysian travelers usually compare",
+            "body": "All prices are official JVTO direct rates in IDR per person (based on 2 travelers). OTA retail prices may differ because of platform markup. JVTO confirms the final price in writing before payment."
+          },
+          {
+            "title": "Private, all-inclusive — written before you pay",
+            "body": "Not included by default: international/domestic flights, travel insurance, visa/e-VOA fees, tips, souvenirs, personal snacks and drinks, and anything not written on the official voucher."
+          },
+          {
+            "title": "What Malaysian travelers say",
+            "body": "See all 195 reviews across Trustpilot, Google & TripAdvisor →"
+          }
+        ],
+        "faq": [
+          {
+            "q": "Do you manage the ferry and cross-island transfers?",
+            "a": "Yes. JVTO pre-books the Java–Bali ferry, handles the vehicle crossing, and manages the driver handover so your journey between islands is a single managed transfer written into your e-voucher."
+          },
+          {
+            "q": "Is halal food available on tour?",
+            "a": "East Java is a predominantly Muslim region, and most local restaurants and hotels used on JVTO routes serve halal food. Tell JVTO your dietary requirement on WhatsApp when booking so meal stops are planned accordingly."
+          },
+          {
+            "q": "Can I pay in MYR?",
+            "a": "JVTO official pricing and accounting are in IDR. Cards, banks, or OTAs may display or settle in another currency, but JVTO’s direct quote is IDR-based."
+          },
+          {
+            "q": "Is there a private Bromo and Ijen tour from Bali or Surabaya for Malaysians?",
+            "a": "Yes. JVTO offers private 3-day (3D2N) Bromo and Ijen tours from both Bali and Surabaya, plus longer Ijen–Papuma–Tumpak Sewu–Bromo circuits. All tours are fully private and all-inclusive: transport, driver, guide, accommodation with breakfast, park permits, Bromo 4WD jeep, Ijen gas masks, and the Java–Bali ferry when the route crosses islands."
+          },
+          {
+            "q": "Should Malaysian travelers fly to Bali (DPS) or Surabaya (SUB)?",
+            "a": "Both work — AirAsia and other carriers fly from Kuala Lumpur to both Denpasar (DPS) and Surabaya (SUB). Choose Surabaya for the shortest transfer to Bromo and Ijen; choose Bali if you want to combine the volcanoes with a Bali stay. JVTO can start in one city and finish in the other so you avoid backtracking."
+          },
+          {
+            "q": "Does JVTO manage the ferry and cross-island transfers?",
+            "a": "Yes. JVTO pre-books the Java–Bali ferry, handles the vehicle crossing, and manages the driver handover directly, so Malaysian travelers get a single managed journey with no self-planning between islands. Every transfer is written into your e-voucher."
+          },
+          {
+            "q": "Is halal food available on JVTO tours?",
+            "a": "East Java is a predominantly Muslim region, and most local restaurants and hotels used on JVTO routes serve halal food. Tell JVTO your dietary requirement on WhatsApp when you book so meal stops are planned accordingly."
+          },
+          {
+            "q": "Will we definitely see the Ijen Blue Fire?",
+            "a": "Not always. Blue Fire is a natural phenomenon subject to weather and gas activity, visible pre-dawn in suitable conditions only — it can never be promised in advance. JVTO plans around the window and follows all BBKSDA safety rules at the crater."
+          },
+          {
+            "q": "Are JVTO tours private, and is JVTO a registered operator?",
+            "a": "Every JVTO tour is private — your own vehicle, driver, and guide, never a shared group. JVTO operates as PT Java Volcano Rendezvous (NIB / TDUP 1102230032918), founded by an active Tourist Police officer, with credentials verifiable on Indonesian government registries before you pay."
+          }
+        ],
+        "source": "scraped:https://help.javavolcano-touroperator.com/markets/malaysia",
+        "scraped_at": "2026-07-28T00:00:00.000Z"
+      }
+    },
+    {
+      "route": "/markets/singapore",
+      "lang": "en",
+      "seo": {
+        "title": "Bromo & Ijen Tours for Singapore Travelers | Private East Java Volcano Tours | JVTO",
+        "description": "Private Bromo, Ijen, Tumpak Sewu and Papuma tours for Singapore travelers. Start from Bali or Surabaya, pay securely in IDR, and verify JVTO licenses and reviews before booking.",
+        "schema_type": "TravelAgency"
+      },
+      "content": {
+        "h1": "Bromo & Ijen Private Tours for Singapore Travelers",
+        "lede": [
+          "Fly from Singapore to Bali or Surabaya, then cross East Java with a private JVTO crew. Premium logistics, a dedicated vehicle and guide, ferry crossings arranged, and written inclusions before you pay.",
+          "Licensed Indonesian tour operator · PT Java Volcano Rendezvous · NIB 1102230032918 · Trustpilot 4.8/5 (51) · Google 4.9/5 (123) · TripAdvisor 4.95/5 (21) · Founded 2015",
+          "Singapore travelers usually pair a Bali holiday with a private volcano extension — and want it organized, safe, and premium rather than a budget join-in group. JVTO runs private tours only: your own vehicle, your own driver and guide, pre-booked ferry crossings, and a written itinerary. Fly into Bali (DPS) for the easiest arrival and an overland extension, or Surabaya (SUB) for the shortest transfer to Bromo."
+        ],
+        "sections": [
+          {
+            "title": "Best route from Singapore: Bali arrival or Surabaya arrival?",
+            "body": "Singapore has direct flights to both Denpasar and Surabaya. Confirm the exact airline schedule before buying non-refundable flights."
+          },
+          {
+            "title": "Routes Singapore travelers usually compare",
+            "body": "All prices are official JVTO direct rates in IDR per person (based on 2 travelers). OTA retail prices may differ because of platform markup. JVTO confirms the final price in writing before payment."
+          },
+          {
+            "title": "Private, all-inclusive — written before you pay",
+            "body": "Not included by default: international/domestic flights, travel insurance, visa/e-VOA fees, tips, souvenirs, personal snacks and drinks, and anything not written on the official voucher."
+          },
+          {
+            "title": "What Singapore travelers say",
+            "body": "See all 195 reviews across Trustpilot, Google & TripAdvisor →"
+          }
+        ],
+        "faq": [
+          {
+            "q": "Should I start from Bali or Surabaya?",
+            "a": "Start from Bali if your easiest flight is SIN→DPS or Bali is already part of your holiday. Start from Surabaya for the shortest route to Bromo and a clean East-Java-only itinerary."
+          },
+          {
+            "q": "Can I end in Surabaya and fly home the same day?",
+            "a": "Do not book a tight same-day connection after Bromo sunrise. Use a late flight only if JVTO confirms the timing is realistic, or stay one night in Surabaya."
+          },
+          {
+            "q": "Can I pay in SGD?",
+            "a": "JVTO official pricing and accounting are in IDR. Cards, banks, or OTAs may display or settle in another currency, but JVTO’s direct quote is IDR-based."
+          },
+          {
+            "q": "Can Singaporeans book a private Bromo and Ijen tour from Bali?",
+            "a": "Yes. JVTO runs private 3-day (3D2N) Bromo and Ijen tours that start and finish in Bali, as well as one-way Bali-to-Surabaya overland routes. Every tour is 100% private — your own air-conditioned vehicle, driver, and guide — with the Java–Bali ferry, park permits, Bromo 4WD jeep, and Ijen health-screening coordination included. No shared groups."
+          },
+          {
+            "q": "Should Singapore travelers start from Bali or Surabaya?",
+            "a": "Start from Bali (DPS) if your trip already includes a Bali holiday or your easiest flight is SIN–Denpasar — the overland volcano route then extends your Bali stay. Start from Surabaya (SUB) if you want the shortest land transfer to Bromo and a clean East-Java-only loop. Singapore has direct flights to both airports."
+          },
+          {
+            "q": "Is the Java–Bali ferry crossing arranged for me?",
+            "a": "Yes. On any route that crosses between Bali and Java, JVTO pre-arranges the ferry ticket and handles the vehicle crossing and driver handover, so you never queue or coordinate transfers yourself. It is written into your e-voucher before you pay."
+          },
+          {
+            "q": "How do Singapore travelers pay JVTO safely?",
+            "a": "JVTO is a registered Indonesian company (PT Java Volcano Rendezvous, NIB 1102230032918) that confirms your package and IDR price in writing before any payment, then issues an official e-voucher / invoice PDF. JVTO never asks for your CVV, OTP, full card number, or banking password over chat. You can verify the company on Indonesian government registries before sending a deposit."
+          },
+          {
+            "q": "Will we definitely see the Ijen Blue Fire?",
+            "a": "Not always. Blue Fire is a natural phenomenon subject to weather and gas activity, visible pre-dawn in suitable conditions only — it can never be promised in advance. JVTO plans around the viewing window and follows every BBKSDA safety decision at the crater."
+          },
+          {
+            "q": "Are JVTO tours private or shared?",
+            "a": "Every JVTO tour is private. Your group has its own vehicle, driver, and guide from pickup to drop-off — you are never mixed into a join-in group. Singapore travelers who reviewed JVTO on Trustpilot specifically cited the safe, dedicated, personal service."
+          }
+        ],
+        "source": "scraped:https://help.javavolcano-touroperator.com/markets/singapore",
+        "scraped_at": "2026-07-28T00:00:00.000Z"
+      }
+    },
+    {
+      "route": "/trust",
+      "lang": "en",
+      "seo": {
+        "title": "Trust Bundle — Claims, Evidence, and Verification",
+        "description": "Single-page index of JVTO&#x27;s verifiable trust claims, evidence registry, and structured AEO/GEO signals. Compiled from the JVTO knowledge wiki.",
+        "schema_type": "TravelAgency"
+      },
+      "content": {
+        "h1": "Trust Bundle.",
+        "lede": [
+          "Single-page index of JVTO's verifiable trust claims, evidence registry, and structured AEO/GEO signals. Compiled from the JVTO knowledge wiki.",
+          "Compiled 2026-07-07 from 9 claims, 18 evidence items, 50 entities."
+        ],
+        "sections": [
+          {
+            "title": "Safety-Led Operations",
+            "body": "Safety-led planning. Clear boundaries. Plan B when conditions change."
+          },
+          {
+            "title": "Private Tours (Execution Control)",
+            "body": "Private tours only. Your own vehicle. Your own pace (within safety limits). No mixed groups by default."
+          },
+          {
+            "title": "All-Inclusive Clarity",
+            "body": "All-inclusive by default. Clear inclusions. Fewer surprise costs. Transparent pricing, written rules."
+          },
+          {
+            "title": "Ijen Health-Screening Coordination",
+            "body": "A health certificate is mandatory for every Ijen guest — screening included and coordinated by JVTO. Real screening, clear rules."
+          },
+          {
+            "title": "Proof-First Trust (Verification Layer)",
+            "body": "Proof you can verify — licenses, partners, press, and documented references. Trust stack, not slogans."
+          },
+          {
+            "title": "Reviews Registry (Independent Validation)",
+            "body": "Reviews as a registry, not a quote wall. Check patterns across platforms."
+          },
+          {
+            "title": "Our Team (Personality Economy + Operational Credibility)",
+            "body": "Meet the people behind your trip — with proof from reviews. Team profiles linked to real guest language."
+          },
+          {
+            "title": "Partners as Context (HPWKI / INDECON / ISIC)",
+            "body": "Partners for context: competence, sustainability, and verification. Not logos — real functions."
+          },
+          {
+            "title": "Press & Recognition (Third-Party Context)",
+            "body": "Press and recognition, explained with context. Third-party references you can evaluate."
+          },
+          {
+            "title": "Want the underlying proof?",
+            "body": "The Verify hub holds the document evidence — NIB, TDUP, HPWKI, police credentials, and press coverage."
+          }
+        ],
+        "faq": [],
+        "source": "scraped:https://help.javavolcano-touroperator.com/trust",
+        "scraped_at": "2026-07-28T00:00:00.000Z"
+      }
+    }
+  ]
+}

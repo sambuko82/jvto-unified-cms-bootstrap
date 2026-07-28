@@ -50,6 +50,7 @@ function resolveRefQuery(q) {
   }
   if (kind === 'destinations' && arg === 'real') return Object.values(TOKEN_TO_DEST).filter((v, i, a) => a.indexOf(v) === i);
   if (kind === 'faq') return byType.faq.map((e) => e.canonicalKey);
+  if (kind === 'claims' && arg === 'all') return (byType.claim || []).map((e) => e.canonicalKey);
   if (kind === 'crew')
     // The operational crew = Guides + Drivers (the Founder and Medical Officer surface on
     // dedicated pages). No profile carries the literal role 'Crew', so match the real roles.
@@ -266,7 +267,7 @@ const mergeSeo = (base, other) => {
   }
   return out;
 };
-const overlay = { matched: 0, seo: 0, iaOnly: [], candidateNewUrls: [], candidateJvtoDbUrls: [], clusterOverride: [], merged: 0 };
+const overlay = { matched: 0, seo: 0, iaOnly: [], candidateNewUrls: [], candidateJvtoDbUrls: [], candidateHelpLiveUrls: [], clusterOverride: [], merged: 0 };
 if (fs.existsSync(dbPath)) {
   const live = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
   const liveByRoute = new Map((live.rows || []).map((r) => [r.route, r]));
@@ -279,6 +280,13 @@ if (fs.existsSync(dbPath)) {
     const ia = ROUTE_ALIAS[r.route];
     if (ia) clusterByAlias.set(ia, r);
   }
+  // help-live: pages HARDCODED in jvto-web (absent from both DB extracts) scraped from the
+  // live server-rendered site (scripts/scrape-help-live.mjs) — /markets/*, /trust, blog
+  // posts. Third overlay source; it only fills routes neither design-system nor jvto-db
+  // has, so it never overrides curated copy.
+  const helpPath = path.join(root, 'data/releases/help-live/content-pages.json');
+  const helpDoc = fs.existsSync(helpPath) ? JSON.parse(fs.readFileSync(helpPath, 'utf8')) : { rows: [] };
+  const helpByRoute = new Map((helpDoc.rows || []).map((r) => [r.route, r]));
   const consumedLive = new Set();
   for (const p of pages) {
     const liveRoute = p.route;
@@ -296,6 +304,11 @@ if (fs.existsSync(dbPath)) {
       // enriches it per-field so rich jvto-db copy AND long design-system prose both land.
       if (richness(dbRow) > richness(dsRow)) { base = dbRow; other = dsRow; overlay.clusterOverride.push(liveRoute); }
       else { base = dsRow; other = dbRow; }
+    }
+    // Fallback to the scraped live copy only when neither DB extract has the route.
+    if (!base) {
+      const helpRow = helpByRoute.get(liveRoute);
+      if (helpRow) { base = helpRow; other = null; overlay.clusterOverride.push(liveRoute); }
     }
     if (!base) { overlay.iaOnly.push(liveRoute); continue; }
     consumedLive.add(liveRoute);
@@ -328,6 +341,10 @@ if (fs.existsSync(dbPath)) {
   overlay.candidateJvtoDbUrls = (clusterDoc.rows || [])
     .map((r) => r.route)
     .filter((r) => !consumedLive.has(ROUTE_ALIAS[r] || r))
+    .sort();
+  overlay.candidateHelpLiveUrls = (helpDoc.rows || [])
+    .map((r) => r.route)
+    .filter((r) => !consumedLive.has(r))
     .sort();
 }
 
@@ -375,6 +392,7 @@ const outDoc = {
       scaffoldOnly: overlay.iaOnly,
       candidateNewUrls: overlay.candidateNewUrls,
       candidateJvtoDbUrls: overlay.candidateJvtoDbUrls,
+      candidateHelpLiveUrls: overlay.candidateHelpLiveUrls,
     },
   },
   pages,
