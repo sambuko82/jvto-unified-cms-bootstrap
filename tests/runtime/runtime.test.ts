@@ -570,4 +570,64 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
       rmSync(outDir, { recursive: true, force: true });
     }
   });
+
+  // ── Seed prune: a slug rename must not leave an orphan page shadowing its redirect ──
+  it('load.sql prunes synced pages/redirects that left the seed, keeping editable rows', async () => {
+    const { readFileSync } = await import('node:fs');
+    const { fileURLToPath } = await import('node:url');
+    const loadSql = readFileSync(
+      fileURLToPath(new URL('../../output/seed/load.sql', import.meta.url)),
+      'utf8',
+    );
+    // The generated prune statements, applied verbatim (this asserts the real artifact,
+    // not a reconstruction). Each is a single self-contained line in load.sql.
+    const pagePrune = loadSql
+      .split('\n')
+      .find((l) => l.startsWith('DELETE FROM pages WHERE editable IS NOT TRUE AND route <> ALL('));
+    const redirectPrune = loadSql
+      .split('\n')
+      .find((l) => l.startsWith('DELETE FROM redirects WHERE from_path <> ALL('));
+    expect(pagePrune, 'load.sql carries the page prune').toBeTruthy();
+    expect(redirectPrune, 'load.sql carries the redirect prune').toBeTruthy();
+
+    // Reproduce the slug-rename fallout: a stale SYNCED page sitting on the OLD short slug
+    // (/destinations/bromo, itself a redirect from_path) SHADOWS the redirect — resolvePage
+    // returns a page before it ever consults redirects. Plus a console-authored (editable)
+    // page and a stale synced redirect, both at throwaway routes not in the seed.
+    await db.query(
+      `INSERT INTO pages (route, file_group, page_type, editable) VALUES
+         ('/destinations/bromo', '003', 'destination', false),
+         ('/zz-prune-editable', '099', 'narrative', true)
+       ON CONFLICT (route) DO UPDATE SET editable = EXCLUDED.editable, file_group = EXCLUDED.file_group`,
+    );
+    await db.query(
+      `INSERT INTO redirects (from_path, to_path, code) VALUES ('/zz-prune-redirect', '/', 301)
+       ON CONFLICT (from_path) DO NOTHING`,
+    );
+
+    // BEFORE the prune: the orphan shadows its own redirect (resolves to itself).
+    const shadowed = await rp.resolvePage('/destinations/bromo');
+    expect(shadowed?.page.route, 'orphan page shadows the redirect before pruning').toBe(
+      '/destinations/bromo',
+    );
+
+    await db.query(pagePrune!);
+    await db.query(redirectPrune!);
+
+    const count = async (sql: string, p: string) => (await db.query(sql, [p])).rows.length;
+    // synced orphan page pruned; console-edited (editable) page preserved
+    expect(await count('SELECT 1 FROM pages WHERE route = $1', '/destinations/bromo')).toBe(0);
+    expect(await count('SELECT 1 FROM pages WHERE route = $1', '/zz-prune-editable')).toBe(1);
+    // synced orphan redirect pruned; the real short->long redirect preserved
+    expect(await count('SELECT 1 FROM redirects WHERE from_path = $1', '/zz-prune-redirect')).toBe(0);
+    expect(await count('SELECT 1 FROM redirects WHERE from_path = $1', '/destinations/bromo')).toBe(1);
+
+    // AFTER the prune: the short slug now 301-follows to the canonical long slug (the fix).
+    const followed = await rp.resolvePage('/destinations/bromo');
+    expect(followed?.page.route, 'short slug follows redirect after pruning').toBe(
+      '/destinations/mount-bromo',
+    );
+
+    await db.query(`DELETE FROM pages WHERE route = '/zz-prune-editable'`); // cleanup survivor
+  });
 });
