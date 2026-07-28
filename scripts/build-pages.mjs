@@ -267,7 +267,7 @@ const mergeSeo = (base, other) => {
   }
   return out;
 };
-const overlay = { matched: 0, seo: 0, iaOnly: [], candidateNewUrls: [], candidateJvtoDbUrls: [], candidateHelpLiveUrls: [], clusterOverride: [], merged: 0 };
+const overlay = { matched: 0, seo: 0, iaOnly: [], candidateNewUrls: [], candidateJvtoDbUrls: [], candidateHelpLiveUrls: [], clusterOverride: [], wikiSourced: [], merged: 0 };
 if (fs.existsSync(dbPath)) {
   const live = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
   const liveByRoute = new Map((live.rows || []).map((r) => [r.route, r]));
@@ -287,13 +287,39 @@ if (fs.existsSync(dbPath)) {
   const helpPath = path.join(root, 'data/releases/help-live/content-pages.json');
   const helpDoc = fs.existsSync(helpPath) ? JSON.parse(fs.readFileSync(helpPath, 'utf8')) : { rows: [] };
   const helpByRoute = new Map((helpDoc.rows || []).map((r) => [r.route, r]));
+  // llm-wiki-website: the STRUCTURED SSOT page copy that jvto-web renders
+  // (scripts/build-llm-wiki-website-extract.mjs — prose bodies + composed destination facts).
+  // AUTHORITATIVE for the audited GAP routes only — routes whose current CMS copy is
+  // stale/generic vs live (thin destinations w/ the wrong 2,769 m, the generic verify-jvto/legal
+  // shell, the reworded best-time page). It wins the base there; every already-correct page
+  // keeps its existing source, so this cannot churn the ~85% that already mirrors live.
+  const wikiPath = path.join(root, 'data/releases/llm-wiki-website/content-pages.json');
+  const wikiDoc = fs.existsSync(wikiPath) ? JSON.parse(fs.readFileSync(wikiPath, 'utf8')) : { rows: [] };
+  const wikiByRoute = new Map((wikiDoc.rows || []).map((r) => [r.route, r]));
+  const GAP_ROUTES = new Set([
+    '/verify-jvto/legal',
+    '/travel-guide/best-time-to-visit',
+    '/destinations/ijen-crater',
+    '/destinations/tumpak-sewu-waterfall',
+    '/destinations/madakaripura-waterfall',
+    '/destinations/papuma-beach',
+  ]);
   const consumedLive = new Set();
   for (const p of pages) {
     const liveRoute = p.route;
-    const dsRow = liveByRoute.get(liveRoute);
+    // IA destination routes now use the canonical LONG slug (= jvto-db + live). jvto-db matches
+    // directly; design-system still uses the old SHORT slug, so bridge it via ROUTE_ALIAS so a
+    // realigned page keeps its design-system enrichment (mount-bromo stays live-depth).
+    const dsRow = liveByRoute.get(liveRoute) || liveByRoute.get(ROUTE_ALIAS[liveRoute]);
     const dbRow = clusterByRoute.get(liveRoute) || clusterByAlias.get(liveRoute);
+    const wikiRow = wikiByRoute.get(liveRoute);
     let base, other;
-    if (isStructuredCluster(liveRoute)) {
+    if (GAP_ROUTES.has(liveRoute) && wikiRow && (wikiRow.content?.body_md || '').length > 0) {
+      // Audited gap: the llm-wiki SSOT copy is authoritative — replace the stale/generic base.
+      base = wikiRow;
+      other = null;
+      overlay.wikiSourced.push(liveRoute);
+    } else if (isStructuredCluster(liveRoute)) {
       // Contract-locked clusters (homepage curated h1, /why-jvto sections[], /travel-guide
       // faq, facts-lock-forced verify): jvto-db stays the base; design-system only enriches.
       base = dbRow || dsRow;
@@ -340,7 +366,7 @@ if (fs.existsSync(dbPath)) {
   overlay.candidateNewUrls = (live.rows || []).map((r) => r.route).filter((r) => !consumedLive.has(r)).sort();
   overlay.candidateJvtoDbUrls = (clusterDoc.rows || [])
     .map((r) => r.route)
-    .filter((r) => !consumedLive.has(ROUTE_ALIAS[r] || r))
+    .filter((r) => !consumedLive.has(r)) // IA destination routes now equal the jvto-db long slugs → match directly
     .sort();
   overlay.candidateHelpLiveUrls = (helpDoc.rows || [])
     .map((r) => r.route)
@@ -386,6 +412,7 @@ const outDoc = {
     redirects: (cfg.redirects || []).length,
     liveOverlay: {
       matched: overlay.matched,
+      wikiSourced: overlay.wikiSourced,
       mergedPerField: overlay.merged,
       withSeoDescription: overlay.seo,
       clusterOverride: overlay.clusterOverride,
@@ -405,6 +432,7 @@ console.log(
 );
 console.log(
   `Content overlay (best-of per-field): ${overlay.matched} pages enriched (${overlay.seo} with real seo.description, ${overlay.merged} merged from both extracts); ` +
+    `${overlay.wikiSourced.length} GAP route(s) sourced from llm-wiki SSOT [${overlay.wikiSourced.join(', ') || 'none'}]; ` +
     `${overlay.clusterOverride.length} route(s) sourced from jvto-db [${overlay.clusterOverride.join(', ') || 'none'}]; ` +
     `${overlay.iaOnly.length} scaffold-only [${overlay.iaOnly.join(', ') || 'none'}]; ` +
     `${overlay.candidateNewUrls.length} design-system + ${overlay.candidateJvtoDbUrls.length} jvto-db extract routes with content but no SSOT page ` +

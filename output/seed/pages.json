@@ -396,7 +396,7 @@
     "status": "published"
   },
   {
-    "route": "/destinations/bromo",
+    "route": "/destinations/mount-bromo",
     "file_group": "003",
     "sort_order": 2,
     "cluster": "travel",
@@ -414,7 +414,7 @@
     "status": "published"
   },
   {
-    "route": "/destinations/ijen",
+    "route": "/destinations/ijen-crater",
     "file_group": "003",
     "sort_order": 3,
     "cluster": "travel",
@@ -423,16 +423,15 @@
     "visual_mode": "travel",
     "hub_route": "/destinations",
     "title": "Kawah Ijen (Ijen Crater)",
-    "h1": "Kawah Ijen: Blue Fire, Crater Lake & Sulfur Miners",
+    "h1": "Kawah Ijen (Ijen Crater)",
     "seo": {
-      "title": "Kawah Ijen Blue Fire Volcano – Complete Trekking Guide | JVTO",
-      "description": "Kawah Ijen: blue fire phenomenon, acidic turquoise crater lake, active sulfur mining. Complete trekking guide — trail, permits, safety, best time to visit.",
-      "schema_type": "Volcano"
+      "title": "Kawah Ijen (Ijen Crater) — East Java | JVTO",
+      "description": "Kawah Ijen is an active volcano at 2,386 m with the world's highest-volume acidic crater lake. Famous for the pre-dawn blue fire sulfuric-gas phenomenon — "
     },
     "status": "published"
   },
   {
-    "route": "/destinations/tumpak-sewu",
+    "route": "/destinations/tumpak-sewu-waterfall",
     "file_group": "003",
     "sort_order": 4,
     "cluster": "travel",
@@ -441,16 +440,15 @@
     "visual_mode": "travel",
     "hub_route": "/destinations",
     "title": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu)",
-    "h1": "Tumpak Sewu: Java's Thousand-Stream Waterfall",
+    "h1": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu)",
     "seo": {
-      "title": "Tumpak Sewu Waterfall – Java's Most Spectacular Canyon | JVTO",
-      "description": "Tumpak Sewu: the thousand-stream waterfall with Mount Semeru backdrop. Complete adventure guide — canyon descent, best season, what to expect.",
-      "schema_type": "Park"
+      "title": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu) — East Java | JVTO",
+      "description": "Tumpak Sewu is a multi-tiered canyon waterfall (~120 m) in Lumajang, East Java. Nicknamed 'Java's Niagara' for its curtain of streams cascading over a curv"
     },
     "status": "published"
   },
   {
-    "route": "/destinations/madakaripura",
+    "route": "/destinations/madakaripura-waterfall",
     "file_group": "003",
     "sort_order": 5,
     "cluster": "travel",
@@ -459,16 +457,15 @@
     "visual_mode": "travel",
     "hub_route": "/destinations",
     "title": "Madakaripura Waterfall (Air Terjun Madakaripura)",
-    "h1": "Madakaripura Waterfall: Gajah Mada's Sacred Canyon",
+    "h1": "Madakaripura Waterfall (Air Terjun Madakaripura)",
     "seo": {
-      "title": "Madakaripura Waterfall – Gajah Mada's Sacred Sanctuary | JVTO",
-      "description": "Madakaripura: the 200-metre waterfall where Gajah Mada meditated. Sacred site in East Java. Guide to visiting — trek, what to wear, cultural context.",
-      "schema_type": "Park"
+      "title": "Madakaripura Waterfall (Air Terjun Madakaripura) — East Java | JVTO",
+      "description": "Madakaripura is Java's tallest waterfall in Probolinggo, East Java. A narrow canyon gorge leads to a horseshoe curtain waterfall fed from multiple directio"
     },
     "status": "published"
   },
   {
-    "route": "/destinations/papuma",
+    "route": "/destinations/papuma-beach",
     "file_group": "003",
     "sort_order": 6,
     "cluster": "travel",
@@ -477,11 +474,10 @@
     "visual_mode": "travel",
     "hub_route": "/destinations",
     "title": "Papuma Beach (Pantai Papuma)",
-    "h1": "Papuma Beach: White Sand & Turquoise Waters in Jember",
+    "h1": "Papuma Beach (Pantai Papuma)",
     "seo": {
-      "title": "Papuma Beach Jember – White Sand Paradise in East Java | JVTO",
-      "description": "Papuma Beach, Jember: white sand, turquoise waters, unique rock formations. East Java's best coastal stop — pairs well with Ijen or Tumpak Sewu tours.",
-      "schema_type": "Beach"
+      "title": "Papuma Beach (Pantai Papuma) — East Java | JVTO",
+      "description": "Papuma Beach in Jember offers white sand and dramatic coastal rock formations. JVTO includes it as a coastal contrast stop on Papuma-family packages (4D+)."
     },
     "status": "published"
   },
@@ -736,8 +732,7 @@
     "title": "Best Time to Visit East Java",
     "h1": "Best Time to Visit — East Java Destinations",
     "seo": {
-      "title": "Best Time to Visit East Java",
-      "description": "There is no universally bad time to visit East Java — but there is a best window for each destination, and knowing the seasonal patterns helps you choose…"
+      "title": "Best Time to Visit — East Java Destinations"
     },
     "status": "published"
   },
@@ -854,11 +849,9 @@
     "visual_mode": "trust",
     "hub_route": "/verify-jvto",
     "title": "Legal & Licenses",
-    "h1": "Legal & Accountability Proof",
+    "h1": "Verify JVTO — Legal",
     "seo": {
-      "title": "Legal Verification — NIB & TDUP | JVTO",
-      "description": "Verify PT Java Volcano Rendezvous: NIB 1102230032918, TDUP issued 2023-02-11, AHU corporate registry.",
-      "schema_type": "WebPage"
+      "title": "Verify JVTO — Legal"
     },
     "status": "published"
   },

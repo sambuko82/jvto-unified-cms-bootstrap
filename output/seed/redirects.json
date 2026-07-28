@@ -33,5 +33,30 @@
     "from_path": "/terms-and-condition",
     "to_path": "/policy",
     "code": 301
+  },
+  {
+    "from_path": "/destinations/bromo",
+    "to_path": "/destinations/mount-bromo",
+    "code": 301
+  },
+  {
+    "from_path": "/destinations/ijen",
+    "to_path": "/destinations/ijen-crater",
+    "code": 301
+  },
+  {
+    "from_path": "/destinations/madakaripura",
+    "to_path": "/destinations/madakaripura-waterfall",
+    "code": 301
+  },
+  {
+    "from_path": "/destinations/tumpak-sewu",
+    "to_path": "/destinations/tumpak-sewu-waterfall",
+    "code": 301
+  },
+  {
+    "from_path": "/destinations/papuma",
+    "to_path": "/destinations/papuma-beach",
+    "code": 301
   }
 ]
