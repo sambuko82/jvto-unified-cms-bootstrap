@@ -51,7 +51,11 @@ function resolveRefQuery(q) {
   if (kind === 'destinations' && arg === 'real') return Object.values(TOKEN_TO_DEST).filter((v, i, a) => a.indexOf(v) === i);
   if (kind === 'faq') return byType.faq.map((e) => e.canonicalKey);
   if (kind === 'crew')
-    return byType.public_person_profile.filter((e) => (e.fields?.role?.value || '') === 'Crew').map((e) => e.canonicalKey);
+    // The operational crew = Guides + Drivers (the Founder and Medical Officer surface on
+    // dedicated pages). No profile carries the literal role 'Crew', so match the real roles.
+    return byType.public_person_profile
+      .filter((e) => ['Guide', 'Driver'].includes(e.fields?.role?.value))
+      .map((e) => e.canonicalKey);
   return [];
 }
 
@@ -64,6 +68,7 @@ function section(spec, ctx = {}) {
   if (spec.ref_query) refs.push(...resolveRefQuery(spec.ref_query));
   if (spec.refs_from === 'destination_tokens' && ctx.destRefs) refs.push(...ctx.destRefs);
   if (spec.refs_from === 'packages_with_destination' && ctx.pkgRefs) refs.push(...ctx.pkgRefs);
+  if (spec.refs_from === 'itinerary_route' && ctx.routeRef) refs.push(...ctx.routeRef);
   return {
     type: spec.type,
     variant: spec.variant ?? null,
@@ -106,6 +111,10 @@ for (const e of byType.package) {
   const origin = key.startsWith('bali-') ? 'bali' : 'surabaya';
   const slug = key.slice(origin.length + 1);
   const destRefs = keep(pkgTokens(e).map((t) => TOKEN_TO_DEST[t]).filter(Boolean));
+  // Fold the matching itinerary `route` entity (route_sequence / route_legs / dropoff) onto
+  // this tour. The route key is the slug, with a `-bali` variant for Bali-origin tours;
+  // keep() drops it if absent (no dangling), so a tour lacking a route just gets no ref.
+  const routeRef = keep([`route:${slug}${origin === 'bali' ? '-bali' : ''}`]);
   push({
     route: `/tours/from-${origin}/${slug}`,
     file_group: gt.file_group,
@@ -117,7 +126,7 @@ for (const e of byType.package) {
     title: e.fields?.profile?.value?.title ?? e.title ?? slug,
     h1: e.fields?.profile?.value?.title ?? null,
     seo: { title: e.fields?.profile?.value?.title ?? null },
-    sections: gt.sections.map((s) => section(s, { selfKey: e.canonicalKey, destRefs })),
+    sections: gt.sections.map((s) => section(s, { selfKey: e.canonicalKey, destRefs, routeRef })),
   });
 }
 

@@ -403,7 +403,7 @@ generate:
     hub_by_origin: { surabaya: /tours/from-surabaya, bali: /tours/from-bali }
     sections:                            # entity_refs auto: the package + its destinations + booking policy
       - { type: hero,       self: true }
-      - { type: steps,      self: true }
+      - { type: steps,      self: true, refs_from: itinerary_route }
       - { type: vantage,    refs: ["general_module:inclusion-all-inclusive-baseline", "general_module:exclusion-standard"] }
       - { type: section_head, content: { title: "Destinations on this route" } }
       - { type: card_grid,  variant: landscape, refs_from: destination_tokens }
