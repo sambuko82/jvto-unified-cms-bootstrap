@@ -153,6 +153,81 @@ export function publishingView(
   return layout({ title: 'Publishing', crumbs: 'Dashboard › Publishing', authed: true, body });
 }
 
+// ── Entity Registry + provenance (PRD §8/§9 module surface) ──────────────────
+export interface EntityRow {
+  canonical_key: string;
+  entity_type: string;
+  title: string | null;
+  source: string;
+  editable: boolean;
+}
+export interface EntityDetailRow extends EntityRow {
+  data: Record<string, unknown> | null;
+  provenance: Record<string, string> | null;
+}
+
+/** Browse every content atom grouped by entity_type; each links to its provenance detail. */
+export function entitiesIndex(rows: EntityRow[]): string {
+  const byType = new Map<string, EntityRow[]>();
+  for (const r of rows) {
+    const list = byType.get(r.entity_type) ?? [];
+    list.push(r);
+    byType.set(r.entity_type, list);
+  }
+  const blocks = [...byType.keys()]
+    .sort()
+    .map((t) => {
+      const list = byType.get(t) ?? [];
+      const trs = list
+        .map(
+          (e) => `<tr>
+        <td class="route"><a href="/admin/entities/${esc(e.canonical_key)}">${esc(e.canonical_key)}</a></td>
+        <td>${esc(e.title ?? '')}</td>
+        <td class="ro-field">${esc(e.source)}</td>
+        <td>${e.editable ? badge('editable') : badge('read_only')}</td></tr>`,
+        )
+        .join('');
+      return `<div class="group"><h3>${esc(t)}<span class="count">${list.length}</span></h3>
+      <table><thead><tr><th>canonical key</th><th>title</th><th>dominant source</th><th>state</th></tr></thead><tbody>${trs}</tbody></table></div>`;
+    })
+    .join('');
+  return layout({
+    title: 'Entity Registry',
+    crumbs: 'Dashboard › Entities',
+    authed: true,
+    body: `<h2>Entity Registry <span class="count">${rows.length} atoms</span></h2>
+      <p class="muted">Every content atom, grouped by type. Open one to see which source produced each field — the CMS never erases where a fact came from.</p>${blocks}`,
+  });
+}
+
+/** One entity: every field's value + the SOURCE that produced it (provenance). */
+export function entityDetail(e: EntityDetailRow): string {
+  const data = e.data ?? {};
+  const prov = e.provenance ?? {};
+  const fieldRows = Object.keys(data)
+    .sort()
+    .map((f) => {
+      const raw = data[f];
+      const val = typeof raw === 'string' ? raw : JSON.stringify(raw);
+      const shown = val.length > 140 ? val.slice(0, 140) + '…' : val;
+      const src = prov[f] ?? '—';
+      return `<tr><td class="ro-field">${esc(f)}</td><td>${esc(shown)}</td><td class="ro-field">${esc(src)}</td></tr>`;
+    })
+    .join('');
+  return layout({
+    title: e.canonical_key,
+    crumbs: `Dashboard › Entities › ${e.canonical_key}`,
+    authed: true,
+    body: `<h2>${esc(e.canonical_key)} ${e.editable ? badge('editable') : badge('read_only')}</h2>
+      <div class="card"><h3>${esc(e.title ?? e.canonical_key)}</h3>
+        <div class="ro">type <span class="ro-field">${esc(e.entity_type)}</span> · dominant source <span class="ro-field">${esc(e.source)}</span></div></div>
+      <div class="card"><h3>Fields &amp; provenance <span class="count">${Object.keys(data).length}</span></h3>
+        <p class="muted">Each field's value and the source that produced it.</p>
+        <table><thead><tr><th>field</th><th>value</th><th>produced by</th></tr></thead><tbody>${fieldRows}</tbody></table></div>
+      <p><a href="/admin/entities">← All entities</a></p>`,
+  });
+}
+
 export function publishResult(opts: { ok: boolean; output: string; diff: string; outDir: string }): string {
   const pre = (text: string, color: string) =>
     `<pre style="margin:0;white-space:pre-wrap;font-size:12px;color:${color}">${esc(text)}</pre>`;
