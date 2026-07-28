@@ -17,6 +17,7 @@ groups:
   "006": { label: Verify & Policy, cluster: trust }
   "007": { label: Contact,         cluster: hybrid }
   "008": { label: Blog,            cluster: hybrid }
+  "009": { label: Team,            cluster: trust }
 
 # Section vocabulary (section_type): hero, section_head, rich_text, callout,
 # steps, vantage, dest_facts, data_box, timeline, faq_list, card_grid, cta.
@@ -428,6 +429,23 @@ generate:
       - { type: callout,    variant: lime, when_ijen: true, refs: ["general_module:policy-ijen-health-screening"] }
       - { type: section_head, content: { title: "Packages that include it" } }
       - { type: card_grid,  variant: package, refs_from: packages_with_destination }
+  team:
+    from: public_person_profile           # one page per operational crew member
+    file_group: "009"
+    page_type: crew_profile
+    template: crew_profile
+    visual_mode: hybrid
+    route: "/team/{slug}"                  # matches the jvto-db /team/{slug} rows + the Person-schema @id URLs
+    hub_route: /why-jvto/our-team          # the crew card_grid on our-team is the hub; these are its detail pages
+    # The 11 crew that carry a rich jvto-db /team/{slug} profile row. Their structured fields
+    # (role / KTA / languages / strengths / review rating / portrait) hydrate from the
+    # public_person_profile entity via `self`; the name (→ h1), bio, review evidence, and
+    # knowsAbout page copy is overlaid by route match in build-pages — no new overlay code.
+    # (dika/pras/yusuf have no per-person source row yet, so they get no page — added when a
+    # source row exists; the our-team grid still lists all 14.)
+    only: [anjas, boy, fauzi, fredi, gufron, holili, joyo, kiki, rendi, taufik, yandi]
+    sections:
+      - { type: profile, self: true }      # hydrates public_person_profile:{slug}; page_content auto-overlaid
 
 redirects:
   - { from: /about, to: /why-jvto/our-story }

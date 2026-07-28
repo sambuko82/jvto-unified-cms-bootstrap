@@ -8222,5 +8222,452 @@
       "policy_document:anti-fraud"
     ],
     "asset_refs": []
+  },
+  {
+    "route": "/team/anjas",
+    "sort_order": 1,
+    "section_type": "profile",
+    "variant": null,
+    "content": {},
+    "entity_refs": [
+      "public_person_profile:anjas"
+    ],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/anjas",
+    "sort_order": 2,
+    "section_type": "page_content",
+    "variant": "1",
+    "content": {
+      "h1": "Anjas",
+      "role": "Guide",
+      "source": "JVTO_SSOT_v4_0_CLEAN.json crew_registry",
+      "ssot_id": "anjas",
+      "evidence": [
+        {
+          "claim": "Creative",
+          "quote": "Creative at taking fun photos... Anjas was the highlight for the trip.",
+          "source_author": "Wang Zhe",
+          "source_platform": "Google Reviews"
+        }
+      ],
+      "merged_at": "2026-04-15T17:32:50.983Z",
+      "knowsAbout": [
+        "Friendly & fun",
+        "Great logistics",
+        "Great photos",
+        "Knowledgeable guide",
+        "Safety-first",
+        "Always on time"
+      ],
+      "description": "m a chill guy and nerdy enough to talk about brainrote meme. love playing games and listening to any kind of music. let me show you around how beautiful east java is.",
+      "schema_version": 1
+    },
+    "entity_refs": [],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/boy",
+    "sort_order": 1,
+    "section_type": "profile",
+    "variant": null,
+    "content": {},
+    "entity_refs": [
+      "public_person_profile:boy"
+    ],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/boy",
+    "sort_order": 2,
+    "section_type": "page_content",
+    "variant": "1",
+    "content": {
+      "h1": "Boy (Ahboy)",
+      "role": "Guide",
+      "source": "JVTO_SSOT_v4_0_CLEAN.json crew_registry",
+      "ssot_id": "boy",
+      "evidence": [
+        {
+          "claim": "Knowledge",
+          "quote": "Incredibly knowledgeable and went out of his way to make sure everything we needed was sorted.",
+          "source_author": "Jason Li",
+          "source_platform": "Trustpilot"
+        }
+      ],
+      "merged_at": "2026-04-15T17:32:51.045Z",
+      "knowsAbout": [
+        "Friendly & fun",
+        "Knowledgeable guide",
+        "Safety-first",
+        "Great logistics",
+        "Always on time",
+        "Great photos"
+      ],
+      "description": "I am a local resident who enjoys welcoming visitors and sharing stories about this area. I'm happy to help travelers explore the natural beauty, local culture, and unique experiences so they feel comfortable and truly enjoy their visit.",
+      "schema_version": 1
+    },
+    "entity_refs": [],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/fauzi",
+    "sort_order": 1,
+    "section_type": "profile",
+    "variant": null,
+    "content": {},
+    "entity_refs": [
+      "public_person_profile:fauzi"
+    ],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/fauzi",
+    "sort_order": 2,
+    "section_type": "page_content",
+    "variant": "1",
+    "content": {
+      "h1": "Fauzi",
+      "role": "Guide",
+      "source": "JVTO_SSOT_v4_0_CLEAN.json crew_registry",
+      "ssot_id": "fauzi",
+      "evidence": [],
+      "merged_at": "2026-04-15T17:32:51.103Z",
+      "knowsAbout": [
+        "Friendly & fun",
+        "Knowledgeable guide",
+        "Great logistics",
+        "Great photos",
+        "Safety-first"
+      ],
+      "description": "I'm a friendly guide who loves taking photos for guests and quickly connects with people. I enjoy making trips fun, relaxed, and memorable.",
+      "schema_version": 1
+    },
+    "entity_refs": [],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/fredi",
+    "sort_order": 1,
+    "section_type": "profile",
+    "variant": null,
+    "content": {},
+    "entity_refs": [
+      "public_person_profile:fredi"
+    ],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/fredi",
+    "sort_order": 2,
+    "section_type": "page_content",
+    "variant": "1",
+    "content": {
+      "h1": "Fredi",
+      "role": "Driver",
+      "source": "JVTO_SSOT_v4_0_CLEAN.json crew_registry",
+      "ssot_id": "fredi",
+      "evidence": [
+        {
+          "claim": "Reliability",
+          "quote": "Always on time no matter what time of the day. Exceptional driving skills.",
+          "source_author": "Pooja Prakash",
+          "source_platform": "Google Reviews"
+        }
+      ],
+      "merged_at": "2026-04-15T17:32:50.374Z",
+      "knowsAbout": [
+        "Friendly & fun",
+        "Great logistics",
+        "Always on time",
+        "Safety-first",
+        "Knowledgeable guide",
+        "Great photos"
+      ],
+      "description": "Experienced Tour Driver committed to making your travels memorable. I combine safe driving skills with a friendly, helpful attitude to provide a stress-free experience. Whether it's a short trip or a long tour, I prioritize guest comfort and reliable service at all times.",
+      "schema_version": 1
+    },
+    "entity_refs": [],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/gufron",
+    "sort_order": 1,
+    "section_type": "profile",
+    "variant": null,
+    "content": {},
+    "entity_refs": [
+      "public_person_profile:gufron"
+    ],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/gufron",
+    "sort_order": 2,
+    "section_type": "page_content",
+    "variant": "1",
+    "content": {
+      "h1": "Gufron",
+      "role": "Guide",
+      "source": "JVTO_SSOT_v4_0_CLEAN.json crew_registry",
+      "ssot_id": "gufron",
+      "evidence": [
+        {
+          "claim": "Great Photos",
+          "quote": "Always willing to help you get your best photo.",
+          "source_author": "Adrián Martínez",
+          "source_platform": "Google Reviews"
+        },
+        {
+          "claim": "Knowledgeable",
+          "quote": "He chooses good spots for photos and is full of positive energy.",
+          "source_author": "Sofiane",
+          "source_platform": "Google Reviews"
+        }
+      ],
+      "merged_at": "2026-04-15T17:32:51.155Z",
+      "knowsAbout": [
+        "Friendly & fun",
+        "Knowledgeable guide",
+        "Great logistics",
+        "Safety-first",
+        "Great photos",
+        "Always on time"
+      ],
+      "description": "I'm someone who enjoys meaningful conversations on virtually any topic. In my professional life, I place the highest priority on safety and risk management - what some might call strict, I view as a fundamental matter of integrity and responsibility. I have a strong intuitive sense that helps me read situations quickly and accurately. Inside of work, I'm passionate about photography, where I enjoy capturing moments with attention to detail and composition. I'm also an avid music enthusiast with a diverse playlist spanning multiple genres, and I love singing along whenever the mood strikes.",
+      "schema_version": 1
+    },
+    "entity_refs": [],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/holili",
+    "sort_order": 1,
+    "section_type": "profile",
+    "variant": null,
+    "content": {},
+    "entity_refs": [
+      "public_person_profile:holili"
+    ],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/holili",
+    "sort_order": 2,
+    "section_type": "page_content",
+    "variant": "1",
+    "content": {
+      "h1": "Holili",
+      "role": "Driver",
+      "source": "JVTO_SSOT_v4_0_CLEAN.json crew_registry",
+      "ssot_id": "holili",
+      "evidence": [],
+      "merged_at": "2026-04-15T17:32:50.430Z",
+      "knowsAbout": [
+        "Friendly & fun",
+        "Safety-first",
+        "Great logistics"
+      ],
+      "description": "I am a Java Volcano driver who dedicates myself to serving all Java Volcano customers wholeheartedly.",
+      "schema_version": 1
+    },
+    "entity_refs": [],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/joyo",
+    "sort_order": 1,
+    "section_type": "profile",
+    "variant": null,
+    "content": {},
+    "entity_refs": [
+      "public_person_profile:joyo"
+    ],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/joyo",
+    "sort_order": 2,
+    "section_type": "page_content",
+    "variant": "1",
+    "content": {
+      "h1": "Joyo",
+      "role": "Driver",
+      "source": "JVTO_SSOT_v4_0_CLEAN.json crew_registry",
+      "ssot_id": "joyo",
+      "evidence": [],
+      "merged_at": "2026-04-15T17:32:50.484Z",
+      "knowsAbout": [
+        "Friendly & fun",
+        "Safety-first",
+        "Great logistics",
+        "Knowledgeable guide"
+      ],
+      "description": "I'm a professional driver who combines speed with precision and care. I drive fast, but always cleanly, smoothly, and safely. My vehicle is kept in impeccable condition inside and out; cleanliness and comfort are non-negotiable for every single ride. Clients frequently tell me I'm their number one choice, \"Customer Number 1\", because they know they'll get to their destination quickly without ever feeling rushed or unsafe. I take pride in being punctual, reliable, and genuinely attentive to what each passenger needs, whether it's a daily commute, an important business trip, airport transfer, or a special occasion.",
+      "schema_version": 1
+    },
+    "entity_refs": [],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/kiki",
+    "sort_order": 1,
+    "section_type": "profile",
+    "variant": null,
+    "content": {},
+    "entity_refs": [
+      "public_person_profile:kiki"
+    ],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/kiki",
+    "sort_order": 2,
+    "section_type": "page_content",
+    "variant": "1",
+    "content": {
+      "h1": "Kiki",
+      "role": "Guide",
+      "source": "JVTO_SSOT_v4_0_CLEAN.json crew_registry",
+      "ssot_id": "kiki",
+      "evidence": [],
+      "merged_at": "2026-04-15T17:32:51.213Z",
+      "knowsAbout": [
+        "Friendly & fun",
+        "Knowledgeable guide",
+        "Great logistics",
+        "Great photos",
+        "Safety-first"
+      ],
+      "description": "\"It is He who made the earth manageable for you - so walk among its slopes and eat of His provision - and to Him is the resurrection.\" (67:15)",
+      "schema_version": 1
+    },
+    "entity_refs": [],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/rendi",
+    "sort_order": 1,
+    "section_type": "profile",
+    "variant": null,
+    "content": {},
+    "entity_refs": [
+      "public_person_profile:rendi"
+    ],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/rendi",
+    "sort_order": 2,
+    "section_type": "page_content",
+    "variant": "1",
+    "content": {
+      "h1": "Rendi",
+      "role": "Guide",
+      "source": "JVTO_SSOT_v4_0_CLEAN.json crew_registry",
+      "ssot_id": "rendi",
+      "evidence": [
+        {
+          "claim": "Physical Support",
+          "quote": "When we went down the steep crater, he held our hands to prevent us from falling.",
+          "source_author": "Wing Shan Lui",
+          "source_platform": "Google Reviews"
+        },
+        {
+          "claim": "Safety First",
+          "quote": "Kept asking about our condition... makes our journey safe.",
+          "source_author": "Michelle Jeon",
+          "source_platform": "Google Reviews"
+        }
+      ],
+      "merged_at": "2026-04-15T17:32:51.269Z",
+      "knowsAbout": [
+        "Friendly & fun",
+        "Safety-first",
+        "Great logistics",
+        "Knowledgeable guide",
+        "Great photos",
+        "Always on time"
+      ],
+      "description": "Love meeting people from different backgrounds and making every trip feel easy and enjoyable. I like to have new friend especially from overseas because can share about our unique culture. always make sure safety during the trip and make unforgettable moment along a journey.",
+      "schema_version": 1
+    },
+    "entity_refs": [],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/taufik",
+    "sort_order": 1,
+    "section_type": "profile",
+    "variant": null,
+    "content": {},
+    "entity_refs": [
+      "public_person_profile:taufik"
+    ],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/taufik",
+    "sort_order": 2,
+    "section_type": "page_content",
+    "variant": "1",
+    "content": {
+      "h1": "Taufik",
+      "role": "Guide",
+      "source": "JVTO_SSOT_v4_0_CLEAN.json crew_registry",
+      "ssot_id": "taufik",
+      "evidence": [],
+      "merged_at": "2026-04-15T17:32:51.325Z",
+      "knowsAbout": [
+        "Friendly & fun",
+        "Knowledgeable guide",
+        "Great logistics",
+        "Safety-first",
+        "Always on time",
+        "Great photos"
+      ],
+      "description": "Reliable and organized individual with strong communication skills. I thrive in dynamic environments and enjoy taking on new challenges. My goal is to add value through hard work and a positive, proactive attitude.",
+      "schema_version": 1
+    },
+    "entity_refs": [],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/yandi",
+    "sort_order": 1,
+    "section_type": "profile",
+    "variant": null,
+    "content": {},
+    "entity_refs": [
+      "public_person_profile:yandi"
+    ],
+    "asset_refs": []
+  },
+  {
+    "route": "/team/yandi",
+    "sort_order": 2,
+    "section_type": "page_content",
+    "variant": "1",
+    "content": {
+      "h1": "Yandi",
+      "role": "Driver",
+      "source": "JVTO_SSOT_v4_0_CLEAN.json crew_registry",
+      "ssot_id": "yandi",
+      "evidence": [],
+      "merged_at": "2026-04-15T17:32:50.599Z",
+      "knowsAbout": [
+        "Friendly & fun",
+        "Great logistics",
+        "Knowledgeable guide",
+        "Always on time",
+        "Safety-first",
+        "Great photos"
+      ],
+      "description": "Love meeting people from different backgrounds and making every trip feel easy and enjoyable. I like to have new friend especially from overseas because can share about our unique culture. always make sure safety during the trip and make unforgettable moment along a journey.",
+      "schema_version": 1
+    },
+    "entity_refs": [],
+    "asset_refs": []
   }
 ]

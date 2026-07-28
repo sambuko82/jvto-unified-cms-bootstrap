@@ -1019,5 +1019,203 @@
       "title": "Why Not an Unlicensed Ijen Operator"
     },
     "status": "published"
+  },
+  {
+    "route": "/team/anjas",
+    "file_group": "009",
+    "sort_order": 1,
+    "cluster": "trust",
+    "page_type": "crew_profile",
+    "template": "crew_profile",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto/our-team",
+    "title": "Anjas",
+    "h1": "Anjas",
+    "seo": {
+      "title": "Anjas | JVTO Guide",
+      "description": "m a chill guy and nerdy enough to talk about brainrote meme. love playing games and listening to any kind of music. let me show you around how beautiful east java is.",
+      "schema_type": "ProfilePage"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/team/boy",
+    "file_group": "009",
+    "sort_order": 2,
+    "cluster": "trust",
+    "page_type": "crew_profile",
+    "template": "crew_profile",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto/our-team",
+    "title": "Boy",
+    "h1": "Boy (Ahboy)",
+    "seo": {
+      "title": "Boy (Ahboy) | JVTO Guide",
+      "description": "I am a local resident who enjoys welcoming visitors and sharing stories about this area. I'm happy to help travelers explore the natural beauty, local culture, and unique experiences so they feel comfortable and truly enjoy their visit.",
+      "schema_type": "ProfilePage"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/team/fauzi",
+    "file_group": "009",
+    "sort_order": 3,
+    "cluster": "trust",
+    "page_type": "crew_profile",
+    "template": "crew_profile",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto/our-team",
+    "title": "Fauzi",
+    "h1": "Fauzi",
+    "seo": {
+      "title": "Fauzi | JVTO Guide",
+      "description": "I'm a friendly guide who loves taking photos for guests and quickly connects with people. I enjoy making trips fun, relaxed, and memorable.",
+      "schema_type": "ProfilePage"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/team/fredi",
+    "file_group": "009",
+    "sort_order": 4,
+    "cluster": "trust",
+    "page_type": "crew_profile",
+    "template": "crew_profile",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto/our-team",
+    "title": "Fredi",
+    "h1": "Fredi",
+    "seo": {
+      "title": "Fredi | JVTO Driver",
+      "description": "Experienced Tour Driver committed to making your travels memorable. I combine safe driving skills with a friendly, helpful attitude to provide a stress-free experience. Whether it's a short trip or a long tour, I prioritize guest comfort and reliable service at all times.",
+      "schema_type": "ProfilePage"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/team/gufron",
+    "file_group": "009",
+    "sort_order": 5,
+    "cluster": "trust",
+    "page_type": "crew_profile",
+    "template": "crew_profile",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto/our-team",
+    "title": "Gufron",
+    "h1": "Gufron",
+    "seo": {
+      "title": "Gufron | JVTO Guide",
+      "description": "I'm someone who enjoys meaningful conversations on virtually any topic. In my professional life, I place the highest priority on safety and risk management - what some might call strict, I view as a fundamental matter of integrity and responsibility. I have a strong intuitive sense that helps me read situations quickly and accurately. Inside of work, I'm passionate about photography, where I enjoy capturing moments with attention to detail and composition. I'm also an avid music enthusiast with a diverse playlist spanning multiple genres, and I love singing along whenever the mood strikes.",
+      "schema_type": "ProfilePage"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/team/holili",
+    "file_group": "009",
+    "sort_order": 6,
+    "cluster": "trust",
+    "page_type": "crew_profile",
+    "template": "crew_profile",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto/our-team",
+    "title": "Holili",
+    "h1": "Holili",
+    "seo": {
+      "title": "Holili | JVTO Driver",
+      "description": "I am a Java Volcano driver who dedicates myself to serving all Java Volcano customers wholeheartedly.",
+      "schema_type": "ProfilePage"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/team/joyo",
+    "file_group": "009",
+    "sort_order": 7,
+    "cluster": "trust",
+    "page_type": "crew_profile",
+    "template": "crew_profile",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto/our-team",
+    "title": "Joyo",
+    "h1": "Joyo",
+    "seo": {
+      "title": "Joyo | JVTO Driver",
+      "description": "I'm a professional driver who combines speed with precision and care. I drive fast, but always cleanly, smoothly, and safely. My vehicle is kept in impeccable condition inside and out; cleanliness and comfort are non-negotiable for every single ride. Clients frequently tell me I'm their number one choice, \"Customer Number 1\", because they know they'll get to their destination quickly without ever feeling rushed or unsafe. I take pride in being punctual, reliable, and genuinely attentive to what each passenger needs, whether it's a daily commute, an important business trip, airport transfer, or a special occasion.",
+      "schema_type": "ProfilePage"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/team/kiki",
+    "file_group": "009",
+    "sort_order": 8,
+    "cluster": "trust",
+    "page_type": "crew_profile",
+    "template": "crew_profile",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto/our-team",
+    "title": "Kiki",
+    "h1": "Kiki",
+    "seo": {
+      "title": "Kiki | JVTO Guide",
+      "description": "\"It is He who made the earth manageable for you - so walk among its slopes and eat of His provision - and to Him is the resurrection.\" (67:15)",
+      "schema_type": "ProfilePage"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/team/rendi",
+    "file_group": "009",
+    "sort_order": 9,
+    "cluster": "trust",
+    "page_type": "crew_profile",
+    "template": "crew_profile",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto/our-team",
+    "title": "Rendi",
+    "h1": "Rendi",
+    "seo": {
+      "title": "Rendi | JVTO Guide",
+      "description": "Love meeting people from different backgrounds and making every trip feel easy and enjoyable. I like to have new friend especially from overseas because can share about our unique culture. always make sure safety during the trip and make unforgettable moment along a journey.",
+      "schema_type": "ProfilePage"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/team/taufik",
+    "file_group": "009",
+    "sort_order": 10,
+    "cluster": "trust",
+    "page_type": "crew_profile",
+    "template": "crew_profile",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto/our-team",
+    "title": "Taufik",
+    "h1": "Taufik",
+    "seo": {
+      "title": "Taufik | JVTO Guide",
+      "description": "Reliable and organized individual with strong communication skills. I thrive in dynamic environments and enjoy taking on new challenges. My goal is to add value through hard work and a positive, proactive attitude.",
+      "schema_type": "ProfilePage"
+    },
+    "status": "published"
+  },
+  {
+    "route": "/team/yandi",
+    "file_group": "009",
+    "sort_order": 11,
+    "cluster": "trust",
+    "page_type": "crew_profile",
+    "template": "crew_profile",
+    "visual_mode": "hybrid",
+    "hub_route": "/why-jvto/our-team",
+    "title": "Yandi",
+    "h1": "Yandi",
+    "seo": {
+      "title": "Yandi | JVTO Driver",
+      "description": "Love meeting people from different backgrounds and making every trip feel easy and enjoyable. I like to have new friend especially from overseas because can share about our unique culture. always make sure safety during the trip and make unforgettable moment along a journey.",
+      "schema_type": "ProfilePage"
+    },
+    "status": "published"
   }
 ]

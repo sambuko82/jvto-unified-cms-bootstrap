@@ -33,10 +33,10 @@ CREATE INDEX IF NOT EXISTS entities_type_idx ON entities(entity_type);
 CREATE TABLE IF NOT EXISTS pages (
   id           uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   route        text NOT NULL UNIQUE,
-  file_group   text NOT NULL,               -- 001..008 (design-system FILE grouping)
+  file_group   text NOT NULL,               -- 001..009 (design-system FILE grouping)
   sort_order   int  NOT NULL DEFAULT 0,
   cluster      text,                         -- homepage|travel|trust|hybrid
-  page_type    text NOT NULL,               -- homepage|hub|tour|destination|travel_guide|verify|policy|narrative|faq|contact|blog
+  page_type    text NOT NULL,               -- homepage|hub|tour|destination|travel_guide|verify|policy|narrative|faq|contact|blog|crew_profile
   template     text,                         -- ui_kits/website template key
   visual_mode  text,                         -- homepage|travel|trust|hybrid
   hub_route    text,                         -- parent hub (NULL for hubs / home)
