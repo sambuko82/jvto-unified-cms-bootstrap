@@ -79,7 +79,12 @@ export function buildServer(): FastifyInstance {
       `SELECT route, file_group, page_type, title, sort_order, hub_route, cluster
          FROM pages ORDER BY file_group, sort_order`,
     );
-    const order = Object.keys(groups).sort(); // "001".."008"
+    // Enumerate the file-groups from the DATA (the pages actually seeded), not from
+    // config/pages.yaml. The DB is the source of truth for what exists; deriving the
+    // list from config makes a data-only deploy (seed → DB) invisible whenever it adds
+    // a new file-group the running app's config predates (e.g. 009 "Team"). config is
+    // consulted only for the label/cluster, with a graceful fallback below.
+    const order = [...new Set(rows.map((r) => r.file_group))].sort();
     return order.map((fileGroup) => {
       const meta = groups[fileGroup];
       const pages = rows
