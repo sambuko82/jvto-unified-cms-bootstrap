@@ -7,7 +7,7 @@ import type { FastifyInstance } from 'fastify';
 import { hasDb, loadSchemaAndSeed } from './_db.js';
 
 const TOUR_ROUTE = '/tours/from-bali/bromo-ijen-3d2n';
-const EXPECTED_GROUP_COUNTS = [1, 20, 6, 6, 14, 9, 1, 2, 12]; // 001..009, total 71 (+/isic in 002, +/team hub in 009)
+const EXPECTED_GROUP_COUNTS = [1, 20, 6, 6, 14, 10, 1, 4, 12, 2]; // 001..010, total 76 (+markets(010), +/trust(006), +2 blog posts(008))
 const ADMIN_BEARER = 'admin-bearer-local-9x';
 const authHeaders = { authorization: `Bearer ${ADMIN_BEARER}` };
 
@@ -39,10 +39,10 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
               (SELECT count(*) FROM pages) p,
               (SELECT count(*) FROM page_sections) s`,
     );
-    // 71 pages: +/isic/student-package (002) and +/team hub (009), both adopted from the
-    // live site with copy already in the extracts. 293 sections; only
-    // /blog/why-not-unlicensed-ijen-operator stays scaffold-only (70/71 fully rendered).
-    expect(rows[0]).toEqual({ e: '172', p: '71', s: '293' });
+    // 76 pages: +5 scraped from the live site (/markets/singapore|malaysia in new group
+    // 010, /trust in 006, 2 blog posts in 008) via the help-live extract. 306 sections;
+    // only /blog/why-not-unlicensed-ijen-operator stays scaffold-only (75/76 rendered).
+    expect(rows[0]).toEqual({ e: '172', p: '76', s: '306' });
   });
 
   it('resolves the graded tour route with ordered sections + hydrated entities + JSON-LD', async () => {
@@ -88,9 +88,9 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(Object.keys(r.jsonld).length).toBeGreaterThan(3);
   });
 
-  it('resolves every one of the 71 pages without throwing (0 orphan pages)', async () => {
+  it('resolves every one of the 76 pages without throwing (0 orphan pages)', async () => {
     const { rows } = await db.query<{ route: string }>('SELECT route FROM pages ORDER BY route');
-    expect(rows.length).toBe(71);
+    expect(rows.length).toBe(76);
     for (const { route } of rows) {
       const resolved = await rp.resolvePage(route);
       expect(resolved, `resolve ${route}`).not.toBeNull();
@@ -148,6 +148,21 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(isic, '/isic/student-package resolves').not.toBeNull();
     const ipc = isic?.sections.find((s) => s.type === 'page_content');
     expect(Object.keys(ipc?.content ?? {}).length, '/isic copy overlaid').toBeGreaterThan(0);
+  });
+
+  it('resolves the scraped live routes /markets/* + /trust (help-live extract)', async () => {
+    // Phase 1 slice 2: pages hardcoded in jvto-web, scraped from the live server-rendered
+    // site into the help-live extract and overlaid by route — now first-class CMS pages.
+    const sg = await rp.resolvePage('/markets/singapore');
+    expect(sg?.page.file_group).toBe('010');
+    const sgpc = sg?.sections.find((s) => s.type === 'page_content');
+    expect((sgpc?.content['sections'] as unknown[])?.length ?? 0).toBeGreaterThan(0);
+
+    const trust = await rp.resolvePage('/trust');
+    expect(trust, '/trust resolves').not.toBeNull();
+    // the 9 claim entities hydrate on the /trust card_grid (claims:all)
+    const claims = trust?.sections.flatMap((s) => s.entities).filter((e) => e.entity_type === 'claim') ?? [];
+    expect(claims.length).toBe(9);
   });
 
   it('has zero dangling entity_refs across all sections', async () => {
@@ -209,16 +224,17 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(res.json()).toMatchObject({ status: 'ok' });
   });
 
-  it('GET /pages -> 9 file-groups, 71 routes, correct counts + labels', async () => {
+  it('GET /pages -> 10 file-groups, 76 routes, correct counts + labels', async () => {
     const res = await app.inject({ method: 'GET', url: '/pages' });
     expect(res.statusCode).toBe(200);
     const groups = res.json() as Array<{ file_group: string; label: string; count: number; pages: unknown[] }>;
-    expect(groups.map((g) => g.file_group)).toEqual(['001', '002', '003', '004', '005', '006', '007', '008', '009']);
+    expect(groups.map((g) => g.file_group)).toEqual(['001', '002', '003', '004', '005', '006', '007', '008', '009', '010']);
     expect(groups.map((g) => g.count)).toEqual(EXPECTED_GROUP_COUNTS);
-    expect(groups.reduce((n, g) => n + g.count, 0)).toBe(71);
+    expect(groups.reduce((n, g) => n + g.count, 0)).toBe(76);
     expect(groups[0]?.label).toBe('Home');
     expect(groups[1]?.label).toBe('Tours');
     expect(groups[8]?.label).toBe('Team');
+    expect(groups[9]?.label).toBe('Markets');
   });
 
   it('GET /pages/* resolves the tour route', async () => {

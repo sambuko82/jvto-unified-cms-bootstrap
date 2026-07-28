@@ -18,6 +18,7 @@ groups:
   "007": { label: Contact,         cluster: hybrid }
   "008": { label: Blog,            cluster: hybrid }
   "009": { label: Team,            cluster: trust }
+  "010": { label: Markets,         cluster: hybrid }
 
 # Section vocabulary (section_type): hero, section_head, rich_text, callout,
 # steps, vantage, dest_facts, data_box, timeline, faq_list, card_grid, cta.
@@ -412,6 +413,57 @@ pages:
     template: narrative
     visual_mode: hybrid
     title: ISIC Student Package
+    sections:
+      - { type: rich_text }
+
+  # ── Scraped from the live site (help-live extract) — copy hardcoded in jvto-web ──
+  # Geo-SEO market landings (new group 010). Copy overlaid from data/releases/help-live.
+  - route: /markets/singapore
+    file_group: "010"
+    page_type: narrative
+    template: narrative
+    visual_mode: hybrid
+    title: "Bromo & Ijen Private Tours for Singapore Travelers"
+    sections:
+      - { type: rich_text }
+      - { type: faq_list, ref_query: "faq:all" }
+  - route: /markets/malaysia
+    file_group: "010"
+    page_type: narrative
+    template: narrative
+    visual_mode: hybrid
+    title: "Bromo & Ijen Private Tours for Malaysia Travelers"
+    sections:
+      - { type: rich_text }
+      - { type: faq_list, ref_query: "faq:all" }
+  # Trust Bundle — the 9 claim entities + the scraped trust copy overlaid.
+  - route: /trust
+    file_group: "006"
+    hub_route: /verify-jvto
+    page_type: narrative
+    template: narrative
+    visual_mode: trust
+    title: "Trust Bundle"
+    sections:
+      - { type: rich_text }
+      - { type: card_grid, variant: claims, ref_query: "claims:all" }
+  # Live blog posts (group 008). Copy overlaid from the help-live extract.
+  - route: /blog/2026-06-11-kawah-ijen-guide
+    file_group: "008"
+    hub_route: /blog
+    page_type: blog
+    template: narrative
+    visual_mode: hybrid
+    title: "Your Complete Kawah Ijen Guide"
+    sections:
+      - { type: rich_text }
+  - route: /blog/2026-06-11-ijen-medical-checkup-requirement
+    file_group: "008"
+    hub_route: /blog
+    page_type: blog
+    template: narrative
+    visual_mode: hybrid
+    title: "Why Ijen Trekking Requires a Medical Checkup"
     sections:
       - { type: rich_text }
 
