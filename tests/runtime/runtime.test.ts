@@ -113,6 +113,26 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(Array.isArray(pc?.content['evidence'])).toBe(true);
   });
 
+  it('crew profiles carry a name + bio from the operational crew registry (C3)', async () => {
+    // C3: the operational crew registry (jvto-db-crew) fills the name/bio gap that
+    // llm-wiki-trust leaves on public_person_profile, so the crew card_grid and /team
+    // pages hydrate NAMED crew (all 14 were previously nameless).
+    const res = await app.inject({ method: 'GET', url: '/entities/public_person_profile/anjas' });
+    expect(res.statusCode).toBe(200);
+    const entity = res.json() as { data: { name?: string; bio?: string }; source?: string };
+    expect(entity.data.name).toBe('Anjas');
+    expect(typeof entity.data.bio).toBe('string');
+    expect((entity.data.bio ?? '').length).toBeGreaterThan(10);
+
+    // the /why-jvto/our-team crew grid now hydrates all 14 crew WITH names
+    const team = await rp.resolvePage('/why-jvto/our-team');
+    const grid = team?.sections.find((s) => s.variant === 'crew');
+    const named = (grid?.entities ?? []).filter(
+      (e) => typeof e.data['name'] === 'string' && (e.data['name'] as string).length > 0,
+    );
+    expect(named.length).toBeGreaterThanOrEqual(14);
+  });
+
   it('has zero dangling entity_refs across all sections', async () => {
     const { rows } = await db.query<{ missing: string }>(
       `SELECT DISTINCT k AS missing

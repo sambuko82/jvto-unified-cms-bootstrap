@@ -1,0 +1,20 @@
+{
+  "source": "jvto-db-crew",
+  "version": "2026.07.21.1",
+  "producedAt": "2026-07-21T00:00:00.000Z",
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "records.json",
+      "sha256": "7e1390052b9d7a8e3a52f417a3b34d64f959ed8a260e066ed85a1c9df03d1529",
+      "recordCount": 14
+    }
+  ],
+  "metadata": {
+    "validation": "passed",
+    "upstream": {
+      "source": "jvto-db /team crew_registry (JVTO_SSOT crew_registry)",
+      "field_scope": "name + bio"
+    }
+  }
+}
