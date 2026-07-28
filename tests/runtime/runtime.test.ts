@@ -429,9 +429,30 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(detail.body).toContain('produced by');
     expect(detail.body).toContain('jvto-db-crew');
     expect(detail.body).toContain('llm-wiki-trust');
+    // slice 3: owner + policy columns make producer≠owner visible — anjas.name is
+    // produced by jvto-db-crew but OWNED by llm-wiki-trust (a staged gap-fill).
+    expect(detail.body).toContain('owned by');
+    expect(detail.body).toContain('gap-fill');
     // unknown key 404s
     const missing = await app.inject({ method: 'GET', url: '/admin/entities/nope:nothing', cookies: { cms_session: session } });
     expect(missing.statusCode).toBe(404);
+  });
+
+  it('admin Sources & ownership surfaces the registry + field-ownership rules', async () => {
+    const noSession = await app.inject({ method: 'GET', url: '/admin/sources' });
+    expect(noSession.statusCode).toBe(302);
+    const session = await login();
+    const res = await app.inject({ method: 'GET', url: '/admin/sources', cookies: { cms_session: session } });
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toContain('Registered sources');
+    expect(res.body).toContain('Field-ownership rules');
+    // registry codes (read from config/source-registry.yaml)
+    expect(res.body).toContain('knowledge-catalog-okf');
+    expect(res.body).toContain('jvto-db-crew');
+    // a registered-but-dormant source is cross-referenced against real production
+    expect(res.body).toContain('not producing');
+    // field-ownership rule fields (read from config/field-ownership.yaml)
+    expect(res.body).toContain('prefer_owner');
   });
 
   it('admin Governance overview reports live-DB metrics', async () => {

@@ -22,8 +22,8 @@ import {
   SESSION_VALUE,
 } from '../auth.js';
 import { layout, esc } from './theme.js';
-import { loginPage, dashboard, pageEditor, publishingView, publishResult, entitiesIndex, entityDetail, governanceOverview } from './views.js';
-import type { PageRow, GroupBlock, EditorPage, EditorSection, Flash, EntityRow, EntityDetailRow, GovernanceMetrics } from './views.js';
+import { loginPage, dashboard, pageEditor, publishingView, publishResult, entitiesIndex, entityDetail, governanceOverview, sourcesAndOwnership } from './views.js';
+import type { PageRow, GroupBlock, EditorPage, EditorSection, Flash, EntityRow, EntityDetailRow, GovernanceMetrics, OwnershipRule, SourceDef } from './views.js';
 
 const CSRF_COOKIE = 'cms_csrf';
 const ADMIN_ACTOR = 'admin-console';
@@ -36,6 +36,38 @@ function loadGroupLabels(): Record<string, { label: string }> {
   const p = fileURLToPath(new URL('../../config/pages.yaml', import.meta.url));
   const parsed = parseYaml(readFileSync(p, 'utf8')) as { groups?: Record<string, { label: string }> };
   return parsed.groups ?? {};
+}
+
+// The established sources + field-ownership, read at runtime exactly as the group
+// labels are (parseYaml(readFileSync)). Surfaced read-only; never copied into the DB.
+function loadSources(): SourceDef[] {
+  const p = fileURLToPath(new URL('../../config/source-registry.yaml', import.meta.url));
+  const parsed = parseYaml(readFileSync(p, 'utf8')) as { sources?: SourceDef[] };
+  return parsed.sources ?? [];
+}
+
+function loadOwnershipRules(): OwnershipRule[] {
+  const p = fileURLToPath(new URL('../../config/field-ownership.yaml', import.meta.url));
+  const parsed = parseYaml(readFileSync(p, 'utf8')) as { rules?: OwnershipRule[] };
+  return parsed.rules ?? [];
+}
+
+// Union dominant-owner counts with field-level producer counts (used by the
+// overview + sources modules) so a field-level-only source still shows as in use.
+async function sourceUsage(): Promise<Array<{ source: string; owned: number; produced: number }>> {
+  const [dominant, producers] = await Promise.all([
+    query<{ source: string; n: number }>(
+      'SELECT source, count(*)::int AS n FROM entities WHERE source IS NOT NULL GROUP BY source',
+    ),
+    query<{ source: string; n: number }>(
+      'SELECT src AS source, count(*)::int AS n FROM entities e, jsonb_each_text(e.provenance) AS p(field, src) GROUP BY src',
+    ),
+  ]);
+  const owned = new Map(dominant.rows.map((r) => [r.source, r.n]));
+  const produced = new Map(producers.rows.map((r) => [r.source, r.n]));
+  return [...new Set([...owned.keys(), ...produced.keys()])]
+    .map((s) => ({ source: s, owned: owned.get(s) ?? 0, produced: produced.get(s) ?? 0 }))
+    .sort((a, b) => b.produced - a.produced || b.owned - a.owned || a.source.localeCompare(b.source));
 }
 
 function issueCsrf(reply: FastifyReply): string {
@@ -95,6 +127,8 @@ async function editorHtml(reply: FastifyReply, route: string, flash?: Flash): Pr
 
 export function registerAdmin(app: FastifyInstance): void {
   const groupLabels = loadGroupLabels();
+  const sourceDefs = loadSources();
+  const ownershipRules = loadOwnershipRules();
 
   // ── Session ─────────────────────────────────────────────────────────────────
   app.get('/admin/login', async (_req, reply) => {
@@ -164,23 +198,22 @@ export function registerAdmin(app: FastifyInstance): void {
     );
     const entity = rows[0];
     if (!entity) return reply.code(404).type('text/html').send(notFound(key));
-    return reply.type('text/html').send(entityDetail(entity));
+    return reply.type('text/html').send(entityDetail(entity, ownershipRules));
+  });
+
+  // ── Sources & ownership (established config, surfaced read-only) ─────────────
+  app.get('/admin/sources', { preHandler: requireSession }, async (_req, reply) => {
+    const usage = await sourceUsage();
+    return reply.type('text/html').send(sourcesAndOwnership(sourceDefs, ownershipRules, usage));
   });
 
   // ── Governance overview (live-DB health metrics) ─────────────────────────────
   app.get('/admin/overview', { preHandler: requireSession }, async (_req, reply) => {
-    const [byType, dominant, producers, byStatus, byEditable, sections, redirects, facts, audit] = await Promise.all([
+    const [byType, sources, byStatus, byEditable, sections, redirects, facts, audit] = await Promise.all([
       query<{ entity_type: string; n: number }>(
         'SELECT entity_type, count(*)::int AS n FROM entities GROUP BY entity_type ORDER BY n DESC, entity_type',
       ),
-      // dominant ownership: entities.source is the single owning source per atom
-      query<{ source: string; n: number }>(
-        'SELECT source, count(*)::int AS n FROM entities WHERE source IS NOT NULL GROUP BY source',
-      ),
-      // field-level production: every source named in any entity's provenance map
-      query<{ source: string; n: number }>(
-        'SELECT src AS source, count(*)::int AS n FROM entities e, jsonb_each_text(e.provenance) AS p(field, src) GROUP BY src',
-      ),
+      sourceUsage(), // dominant-owner ∪ field-level producer counts per source
       query<{ status: string; n: number }>(
         'SELECT status, count(*)::int AS n FROM pages GROUP BY status ORDER BY status',
       ),
@@ -196,13 +229,6 @@ export function registerAdmin(app: FastifyInstance): void {
     const claims = byType.rows.find((r) => r.entity_type === 'claim')?.n ?? 0;
     const pagesEditable = byEditable.rows.find((r) => r.editable)?.n ?? 0;
     const pagesReadOnly = byEditable.rows.find((r) => !r.editable)?.n ?? 0;
-    // Union dominant-owner counts with field-level producer counts so a source that
-    // only produces fields (e.g. jvto-db-crew → crew name/bio) is still "in use".
-    const owned = new Map(dominant.rows.map((r) => [r.source, r.n]));
-    const produced = new Map(producers.rows.map((r) => [r.source, r.n]));
-    const sources = [...new Set([...owned.keys(), ...produced.keys()])]
-      .map((s) => ({ source: s, owned: owned.get(s) ?? 0, produced: produced.get(s) ?? 0 }))
-      .sort((a, b) => b.produced - a.produced || b.owned - a.owned || a.source.localeCompare(b.source));
     const metrics: GovernanceMetrics = {
       totals: {
         entities,

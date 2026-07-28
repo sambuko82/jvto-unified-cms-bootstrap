@@ -166,6 +166,36 @@ export interface EntityDetailRow extends EntityRow {
   provenance: Record<string, string> | null;
 }
 
+// ── Established sources + field ownership (config/*.yaml, surfaced read-only) ──
+export interface OwnershipRule {
+  entity_type: string;
+  field_path: string;
+  owner_source: string;
+  write_policy: string;
+  conflict_policy: string;
+}
+export interface SourceDef {
+  code: string;
+  name?: string;
+  role?: string;
+  source_type?: string;
+  authority_rank?: number;
+  repository?: string;
+}
+
+/** Resolve a field's ownership rule: exact entity::field, else entity::* wildcard.
+ *  Mirrors scripts/render-cms.mjs `fieldPolicy` so the console matches the projection. */
+export function fieldPolicy(
+  rules: OwnershipRule[],
+  entityType: string,
+  field: string,
+): { owner: string | null; policy: string } {
+  const exact = rules.find((r) => r.entity_type === entityType && r.field_path === field);
+  const wild = rules.find((r) => r.entity_type === entityType && r.field_path === '*');
+  const rule = exact ?? wild;
+  return rule ? { owner: rule.owner_source, policy: rule.write_policy } : { owner: null, policy: 'context' };
+}
+
 /** Browse every content atom grouped by entity_type; each links to its provenance detail. */
 export function entitiesIndex(rows: EntityRow[]): string {
   const byType = new Map<string, EntityRow[]>();
@@ -200,10 +230,13 @@ export function entitiesIndex(rows: EntityRow[]): string {
   });
 }
 
-/** One entity: every field's value + the SOURCE that produced it (provenance). */
-export function entityDetail(e: EntityDetailRow): string {
+/** One entity: every field's value, the SOURCE that PRODUCED it (provenance), the
+ *  configured OWNER + write policy (field-ownership). When producer ≠ owner the
+ *  field was filled by a non-owner staged value (e.g. crew name/bio). */
+export function entityDetail(e: EntityDetailRow, rules: OwnershipRule[] = []): string {
   const data = e.data ?? {};
   const prov = e.provenance ?? {};
+  let gapFills = 0;
   const fieldRows = Object.keys(data)
     .sort()
     .map((f) => {
@@ -211,9 +244,20 @@ export function entityDetail(e: EntityDetailRow): string {
       const val = typeof raw === 'string' ? raw : JSON.stringify(raw);
       const shown = val.length > 140 ? val.slice(0, 140) + '…' : val;
       const src = prov[f] ?? '—';
-      return `<tr><td class="ro-field">${esc(f)}</td><td>${esc(shown)}</td><td class="ro-field">${esc(src)}</td></tr>`;
+      const { owner, policy } = fieldPolicy(rules, e.entity_type, f);
+      const ownerShown = owner ?? '—';
+      const mismatch = owner && src !== '—' && owner !== src;
+      if (mismatch) gapFills++;
+      const ownerCell = `<span class="ro-field">${esc(ownerShown)}</span>${
+        mismatch ? ' <span class="badge" style="color:#fbbf24;background:rgba(245,158,11,.12);border-color:#fbbf2455">gap-fill</span>' : ''
+      }`;
+      return `<tr><td class="ro-field">${esc(f)}</td><td>${esc(shown)}</td>
+        <td class="ro-field">${esc(src)}</td><td>${ownerCell}</td><td>${badge(policy)}</td></tr>`;
     })
     .join('');
+  const gapNote = gapFills
+    ? `<p class="muted" style="margin:0 0 10px">${gapFills} field(s) marked <span class="badge" style="color:#fbbf24;background:rgba(245,158,11,.12);border-color:#fbbf2455">gap-fill</span>: produced by a non-owner source that filled an empty owned field (staged under <code>prefer_owner</code>) — the owner never gets overwritten.</p>`
+    : '';
   return layout({
     title: e.canonical_key,
     crumbs: `Dashboard › Entities › ${e.canonical_key}`,
@@ -221,10 +265,58 @@ export function entityDetail(e: EntityDetailRow): string {
     body: `<h2>${esc(e.canonical_key)} ${e.editable ? badge('editable') : badge('read_only')}</h2>
       <div class="card"><h3>${esc(e.title ?? e.canonical_key)}</h3>
         <div class="ro">type <span class="ro-field">${esc(e.entity_type)}</span> · dominant source <span class="ro-field">${esc(e.source)}</span></div></div>
-      <div class="card"><h3>Fields &amp; provenance <span class="count">${Object.keys(data).length}</span></h3>
-        <p class="muted">Each field's value and the source that produced it.</p>
-        <table><thead><tr><th>field</th><th>value</th><th>produced by</th></tr></thead><tbody>${fieldRows}</tbody></table></div>
-      <p><a href="/admin/entities">← All entities</a></p>`,
+      <div class="card"><h3>Fields · provenance · ownership <span class="count">${Object.keys(data).length}</span></h3>
+        <p class="muted">Each field's value, the source that <strong>produced</strong> it, and the configured <strong>owner</strong> + write policy (<code>config/field-ownership.yaml</code>).</p>
+        ${gapNote}
+        <table><thead><tr><th>field</th><th>value</th><th>produced by</th><th>owned by</th><th>policy</th></tr></thead><tbody>${fieldRows}</tbody></table></div>
+      <p><a href="/admin/entities">← All entities</a> · <a href="/admin/sources">Sources &amp; ownership →</a></p>`,
+  });
+}
+
+/** Sources & ownership: the established registry + field-ownership rules, surfaced
+ *  read-only and cross-referenced with which sources actually produced data. */
+export function sourcesAndOwnership(
+  sources: SourceDef[],
+  rules: OwnershipRule[],
+  usage: Array<{ source: string; owned: number; produced: number }>,
+): string {
+  const use = new Map(usage.map((u) => [u.source, u]));
+  const srcRows = [...sources]
+    .sort((a, b) => (b.authority_rank ?? 0) - (a.authority_rank ?? 0) || a.code.localeCompare(b.code))
+    .map((s) => {
+      const u = use.get(s.code);
+      const inUse = u && (u.owned > 0 || u.produced > 0);
+      const usageCell = inUse
+        ? `${u!.owned} owned · ${u!.produced} fields`
+        : '<span class="muted">not producing</span>';
+      return `<tr><td class="ro-field">${esc(s.code)}</td><td>${esc(s.name ?? '')}</td>
+        <td class="ro-field">${esc(s.role ?? '—')}</td><td>${s.authority_rank ?? '—'}</td>
+        <td>${usageCell}</td></tr>`;
+    })
+    .join('');
+
+  const ruleRows = [...rules]
+    .sort((a, b) => a.entity_type.localeCompare(b.entity_type) || a.field_path.localeCompare(b.field_path))
+    .map(
+      (r) => `<tr><td class="ro-field">${esc(r.entity_type)}</td><td class="ro-field">${esc(r.field_path)}</td>
+      <td class="ro-field">${esc(r.owner_source)}</td><td>${badge(r.write_policy)}</td>
+      <td class="ro-field">${esc(r.conflict_policy)}</td></tr>`,
+    )
+    .join('');
+
+  return layout({
+    title: 'Sources & ownership',
+    crumbs: 'Dashboard › Sources',
+    authed: true,
+    body: `<h2>Sources &amp; ownership <span class="count">${sources.length} sources · ${rules.length} rules</span></h2>
+      <p class="muted">The established source registry and field-ownership rules that govern consolidation — read straight from <code>config/source-registry.yaml</code> and <code>config/field-ownership.yaml</code>, cross-referenced with the data each source actually produced.</p>
+      <div class="card"><h3>Registered sources <span class="count">${sources.length}</span></h3>
+        <p class="muted">Ordered by <strong>authority rank</strong> (higher wins conflicts). "Owned" = entities this source dominates; "fields" = individual values it produced (provenance).</p>
+        <table><thead><tr><th>code</th><th>name</th><th>role</th><th>rank</th><th>in use</th></tr></thead><tbody>${srcRows}</tbody></table></div>
+      <div class="card"><h3>Field-ownership rules <span class="count">${rules.length}</span></h3>
+        <p class="muted">Which source owns each field, its write policy, and what happens when a non-owner proposes a change.</p>
+        <table><thead><tr><th>entity type</th><th>field</th><th>owner</th><th>policy</th><th>on conflict</th></tr></thead><tbody>${ruleRows}</tbody></table></div>
+      <p><a href="/admin/entities">← Entities</a></p>`,
   });
 }
 
