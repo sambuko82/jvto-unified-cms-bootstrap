@@ -22,8 +22,8 @@ import {
   SESSION_VALUE,
 } from '../auth.js';
 import { layout, esc } from './theme.js';
-import { loginPage, dashboard, pageEditor, publishingView, publishResult } from './views.js';
-import type { PageRow, GroupBlock, EditorPage, EditorSection, Flash } from './views.js';
+import { loginPage, dashboard, pageEditor, publishingView, publishResult, entitiesIndex, entityDetail } from './views.js';
+import type { PageRow, GroupBlock, EditorPage, EditorSection, Flash, EntityRow, EntityDetailRow } from './views.js';
 
 const CSRF_COOKIE = 'cms_csrf';
 const ADMIN_ACTOR = 'admin-console';
@@ -146,6 +146,25 @@ export function registerAdmin(app: FastifyInstance): void {
       pages: byGroup.get(fg) ?? [],
     }));
     return reply.type('text/html').send(dashboard(groups));
+  });
+
+  // ── Entity Registry + provenance ────────────────────────────────────────────
+  app.get('/admin/entities', { preHandler: requireSession }, async (_req, reply) => {
+    const { rows } = await query<EntityRow>(
+      'SELECT canonical_key, entity_type, title, source, editable FROM entities ORDER BY entity_type, canonical_key',
+    );
+    return reply.type('text/html').send(entitiesIndex(rows));
+  });
+
+  app.get('/admin/entities/*', { preHandler: requireSession }, async (req, reply) => {
+    const key = (req.params as Record<string, string>)['*'] ?? '';
+    const { rows } = await query<EntityDetailRow>(
+      'SELECT canonical_key, entity_type, title, source, editable, data, provenance FROM entities WHERE canonical_key = $1',
+      [key],
+    );
+    const entity = rows[0];
+    if (!entity) return reply.code(404).type('text/html').send(notFound(key));
+    return reply.type('text/html').send(entityDetail(entity));
   });
 
   // ── Page editor ─────────────────────────────────────────────────────────────

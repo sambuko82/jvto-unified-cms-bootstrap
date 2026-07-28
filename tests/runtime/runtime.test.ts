@@ -412,6 +412,28 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(dash.body).toContain(`/admin/pages${TOUR_ROUTE}`);
   });
 
+  it('admin Entity Registry surfaces per-field provenance', async () => {
+    const session = await login();
+    // index groups atoms by type and links to each
+    const idx = await app.inject({ method: 'GET', url: '/admin/entities', cookies: { cms_session: session } });
+    expect(idx.statusCode).toBe(200);
+    expect(idx.body).toContain('public_person_profile');
+    expect(idx.body).toContain('/admin/entities/public_person_profile:anjas');
+    // detail shows each field's producing source; anjas.name/bio came from jvto-db-crew (C3)
+    const detail = await app.inject({
+      method: 'GET',
+      url: '/admin/entities/public_person_profile:anjas',
+      cookies: { cms_session: session },
+    });
+    expect(detail.statusCode).toBe(200);
+    expect(detail.body).toContain('produced by');
+    expect(detail.body).toContain('jvto-db-crew');
+    expect(detail.body).toContain('llm-wiki-trust');
+    // unknown key 404s
+    const missing = await app.inject({ method: 'GET', url: '/admin/entities/nope:nothing', cookies: { cms_session: session } });
+    expect(missing.statusCode).toBe(404);
+  });
+
   it('editing page_content through the console form sets editable=true', async () => {
     const session = await login();
     const { cookie, token } = await csrfFor(`/admin/pages${TOUR_ROUTE}`, session);
