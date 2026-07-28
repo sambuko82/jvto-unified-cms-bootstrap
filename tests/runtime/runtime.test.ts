@@ -434,6 +434,23 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(missing.statusCode).toBe(404);
   });
 
+  it('admin Governance overview reports live-DB metrics', async () => {
+    // requires a session
+    const noSession = await app.inject({ method: 'GET', url: '/admin/overview' });
+    expect(noSession.statusCode).toBe(302);
+    const session = await login();
+    const res = await app.inject({ method: 'GET', url: '/admin/overview', cookies: { cms_session: session } });
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toContain('Governance overview');
+    // metric tiles
+    expect(res.body).toContain('Trust claims');
+    expect(res.body).toContain('Governance facts');
+    // entities-by-type and sources-in-use are computed from real seeded rows
+    expect(res.body).toContain('public_person_profile');
+    expect(res.body).toContain('jvto-db-crew'); // the C3 source shows up under "Sources in use"
+    expect(res.body).toContain('llm-wiki-trust');
+  });
+
   it('editing page_content through the console form sets editable=true', async () => {
     const session = await login();
     const { cookie, token } = await csrfFor(`/admin/pages${TOUR_ROUTE}`, session);
