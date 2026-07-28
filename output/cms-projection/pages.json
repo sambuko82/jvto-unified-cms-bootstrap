@@ -799,7 +799,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:bali-bromo-ijen-3d2n"
+            "package:bali-bromo-ijen-3d2n",
+            "route:bromo-ijen-3d2n-bali"
           ]
         },
         {
@@ -1048,7 +1049,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:bali-ijen-bromo-madakaripura-3d2n"
+            "package:bali-ijen-bromo-madakaripura-3d2n",
+            "route:ijen-bromo-madakaripura-3d2n-bali"
           ]
         },
         {
@@ -1302,7 +1304,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:bali-ijen-papuma-tumpak-sewu-bromo-4d3n"
+            "package:bali-ijen-papuma-tumpak-sewu-bromo-4d3n",
+            "route:ijen-papuma-tumpak-sewu-bromo-4d3n-bali"
           ]
         },
         {
@@ -1562,7 +1565,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:bali-ijen-papuma-tumpak-sewu-bromo-5d4n"
+            "package:bali-ijen-papuma-tumpak-sewu-bromo-5d4n",
+            "route:ijen-papuma-tumpak-sewu-bromo-5d4n-bali"
           ]
         },
         {
@@ -1823,7 +1827,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:surabaya-bromo-1d1n"
+            "package:surabaya-bromo-1d1n",
+            "route:bromo-1d1n"
           ]
         },
         {
@@ -2052,7 +2057,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:surabaya-bromo-2d1n"
+            "package:surabaya-bromo-2d1n",
+            "route:bromo-2d1n"
           ]
         },
         {
@@ -2292,7 +2298,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:surabaya-bromo-madakaripura-ijen-3d2n"
+            "package:surabaya-bromo-madakaripura-ijen-3d2n",
+            "route:bromo-madakaripura-ijen-3d2n"
           ]
         },
         {
@@ -2546,7 +2553,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:surabaya-ijen-2d1n"
+            "package:surabaya-ijen-2d1n",
+            "route:ijen-2d1n"
           ]
         },
         {
@@ -2785,7 +2793,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:surabaya-ijen-bromo-madakaripura-3d2n"
+            "package:surabaya-ijen-bromo-madakaripura-3d2n",
+            "route:ijen-bromo-madakaripura-3d2n"
           ]
         },
         {
@@ -3038,7 +3047,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:surabaya-ijen-bromo-madakaripura-4d3n"
+            "package:surabaya-ijen-bromo-madakaripura-4d3n",
+            "route:ijen-bromo-madakaripura-4d3n"
           ]
         },
         {
@@ -3296,7 +3306,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:surabaya-ijen-bromo-madakaripura-malang-5d4n"
+            "package:surabaya-ijen-bromo-madakaripura-malang-5d4n",
+            "route:ijen-bromo-madakaripura-malang-5d4n"
           ]
         },
         {
@@ -3555,7 +3566,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:surabaya-ijen-papuma-tumpak-sewu-bromo-4d3n"
+            "package:surabaya-ijen-papuma-tumpak-sewu-bromo-4d3n",
+            "route:ijen-papuma-tumpak-sewu-bromo-4d3n"
           ]
         },
         {
@@ -3814,7 +3826,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:surabaya-ijen-papuma-tumpak-sewu-bromo-5d4n"
+            "package:surabaya-ijen-papuma-tumpak-sewu-bromo-5d4n",
+            "route:ijen-papuma-tumpak-sewu-bromo-5d4n"
           ]
         },
         {
@@ -4078,7 +4091,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:surabaya-ijen-papuma-tumpak-sewu-bromo-malang-6d5n"
+            "package:surabaya-ijen-papuma-tumpak-sewu-bromo-malang-6d5n",
+            "route:ijen-papuma-tumpak-sewu-bromo-malang-6d5n"
           ]
         },
         {
@@ -4344,7 +4358,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:surabaya-taman-safari-prigen-bromo-madakaripura-3d2n"
+            "package:surabaya-taman-safari-prigen-bromo-madakaripura-3d2n",
+            "route:taman-safari-prigen-bromo-madakaripura-3d2n"
           ]
         },
         {
@@ -4591,7 +4606,8 @@
           "variant": null,
           "content": {},
           "entity_refs": [
-            "package:surabaya-tumpak-sewu-bromo-ijen-4d3n"
+            "package:surabaya-tumpak-sewu-bromo-ijen-4d3n",
+            "route:tumpak-sewu-bromo-ijen-4d3n"
           ]
         },
         {
@@ -6214,7 +6230,22 @@
           "type": "card_grid",
           "variant": "crew",
           "content": {},
-          "entity_refs": []
+          "entity_refs": [
+            "public_person_profile:anjas",
+            "public_person_profile:boy",
+            "public_person_profile:dika",
+            "public_person_profile:fauzi",
+            "public_person_profile:fredi",
+            "public_person_profile:gufron",
+            "public_person_profile:holili",
+            "public_person_profile:joyo",
+            "public_person_profile:kiki",
+            "public_person_profile:pras",
+            "public_person_profile:rendi",
+            "public_person_profile:taufik",
+            "public_person_profile:yandi",
+            "public_person_profile:yusuf"
+          ]
         },
         {
           "type": "page_content",
