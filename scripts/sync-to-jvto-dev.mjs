@@ -34,12 +34,26 @@ const OUT_DIR = path.join(root, 'output/sync');
 if (!CMS_URL) { console.error('CMS_DATABASE_URL (or DATABASE_URL) is required (source jvto_cms).'); process.exit(2); }
 if (!DEV_URL) { console.error('JVTO_DEV_DATABASE_URL is required (target jvto_dev).'); process.exit(2); }
 
+// A managed/remote Postgres (not localhost) usually needs TLS; accept its cert
+// (rejectUnauthorized:false) since we connect by IP. localhost/test → no TLS.
+// sslmode=disable in the URL forces it off; sslmode=require/prefer forces it on.
+function pgClient(connectionString) {
+  const u = new URL(connectionString);
+  const local = ['localhost', '127.0.0.1', '::1'].includes(u.hostname);
+  const mode = u.searchParams.get('sslmode');
+  let ssl = false;
+  if (mode === 'require' || mode === 'prefer' || mode === 'verify-ca' || mode === 'verify-full') ssl = { rejectUnauthorized: false };
+  else if (mode === 'disable') ssl = false;
+  else if (!local) ssl = { rejectUnauthorized: false };
+  return new pg.Client({ connectionString, ssl });
+}
+
 const sqlLit = (v) => (v === null || v === undefined ? 'NULL' : `'${String(v).replace(/'/g, "''")}'`);
 const jLit = (v) => `'${JSON.stringify(v ?? null).replace(/'/g, "''")}'::jsonb`;
 
 // ── 1) READ the source (jvto_cms) ─────────────────────────────────────────────
 async function readSource() {
-  const src = new pg.Client({ connectionString: CMS_URL });
+  const src = pgClient(CMS_URL);
   await src.connect();
   try {
     // page_render pre-assembles {route, seo, sections[]}; the page_content section carries
@@ -86,7 +100,7 @@ function orgOverrides(assets, facts) {
 // ── 2) WRITE to the target (jvto_dev), transactional, with pre-image capture ───
 async function main() {
   const source = await readSource();
-  const dev = new pg.Client({ connectionString: DEV_URL });
+  const dev = pgClient(DEV_URL);
   await dev.connect();
   const report = { run_id: RUN_ID, mode: PLAN ? 'plan' : 'apply', tables: {}, preserved: {} };
   const rollback = [`-- output/sync/rollback.sql — restores jvto_dev to its pre-sync state (run ${RUN_ID}).`, 'BEGIN;'];

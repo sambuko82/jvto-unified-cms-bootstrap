@@ -28,6 +28,11 @@ on:
         type: choice
         options: [plan, apply]
         default: plan
+  # GitOps trigger (used because an automation token cannot call workflow_dispatch):
+  # commit the single word `plan` or `apply` to ops/sync-jvto-dev.run to run it.
+  push:
+    branches: [main]
+    paths: ['ops/sync-jvto-dev.run']
 
 # Never let two syncs to the live DB overlap.
 concurrency:
@@ -61,7 +66,17 @@ jobs:
         if: steps.guard.outputs.enabled == 'true'
         run: npm ci
 
-      - name: Sync jvto_cms → jvto_dev (${{ inputs.mode }})
+      - name: Resolve mode (dispatch input, or ops/sync-jvto-dev.run on push)
+        id: mode
+        if: steps.guard.outputs.enabled == 'true'
+        run: |
+          M="${{ inputs.mode }}"
+          [ -z "$M" ] && M="$(head -n1 ops/sync-jvto-dev.run 2>/dev/null | tr -d '[:space:]')"
+          [ "$M" = "apply" ] || M="plan"
+          echo "mode=$M" >> "$GITHUB_OUTPUT"
+          echo "resolved mode: $M"
+
+      - name: Sync jvto_cms → jvto_dev
         if: steps.guard.outputs.enabled == 'true'
         env:
           CMS_DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
@@ -70,19 +85,19 @@ jobs:
         run: |
           set -euo pipefail
           FLAG=""
-          [ "${{ inputs.mode }}" = "plan" ] && FLAG="--plan"
+          [ "${{ steps.mode.outputs.mode }}" = "plan" ] && FLAG="--plan"
           node scripts/sync-to-jvto-dev.mjs $FLAG
 
       - name: Upload audit report + rollback.sql
         if: steps.guard.outputs.enabled == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: jvto-dev-sync-${{ inputs.mode }}-${{ github.run_id }}
+          name: jvto-dev-sync-${{ steps.mode.outputs.mode }}-${{ github.run_id }}
           path: output/sync/
           if-no-files-found: warn
 
       - name: Summary
         if: steps.guard.outputs.enabled == 'true'
         run: |
-          echo "### jvto_cms → jvto_dev sync (${{ inputs.mode }})" >> "$GITHUB_STEP_SUMMARY"
+          echo "### jvto_cms → jvto_dev sync (${{ steps.mode.outputs.mode }})" >> "$GITHUB_STEP_SUMMARY"
           cat output/sync/jvto-dev-report.md >> "$GITHUB_STEP_SUMMARY" || true
