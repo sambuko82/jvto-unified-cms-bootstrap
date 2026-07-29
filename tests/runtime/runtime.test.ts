@@ -45,6 +45,18 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(rows[0]).toEqual({ e: '172', p: '76', s: '306' });
   });
 
+  it('seed loads the asset media registry (54 images, stable keys, link metadata)', async () => {
+    const { rows } = await db.query<{ n: string; keyed: string; images: string }>(
+      `SELECT count(*) n, count(key) keyed, count(*) FILTER (WHERE kind = 'image') images FROM assets`,
+    );
+    expect(rows[0]).toEqual({ n: '54', keyed: '54', images: '54' });
+    // each asset carries the link that tells the jvto_dev sync where to attach it
+    const org = await db.query<{ field: string | null }>(
+      `SELECT meta->'link'->>'field' AS field FROM assets WHERE key = 'brand_identity/01-jvto-hero-landscape.webp'`,
+    );
+    expect(org.rows[0]?.field).toBe('hero_image_url');
+  });
+
   it('resolves the graded tour route with ordered sections + hydrated entities + JSON-LD', async () => {
     const r = await rp.resolvePage(TOUR_ROUTE);
     expect(r).not.toBeNull();

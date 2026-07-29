@@ -1,0 +1,88 @@
+name: sync-jvto-dev
+
+# Push the jvto_cms edit-master (pages + org + asset registry) into the LIVE jvto-web
+# database (jvto_dev) — the reverse of deploy-prod. Manual, mode-gated, fully audited.
+#
+#   SOURCE  jvto_cms  = secrets.PROD_DATABASE_URL          (read-only here)
+#   TARGET  jvto_dev  = secrets.JVTO_DEV_DATABASE_URL      (upserted)
+#
+# scripts/sync-to-jvto-dev.mjs is idempotent and NEVER truncates: it upserts
+# content_pages / organization_profile / assets, PRESERVES every jvto_dev-only row,
+# mirrors the CMS model into an additive `cms` schema, and writes an audit report +
+# rollback.sql (uploaded as artifacts). Console image swaps / page edits (editable=true)
+# ride along because the sync reads the live jvto_cms rows.
+#
+# ── SETUP (owner, one-time) ─────────────────────────────────────────────────────
+# Add repository secret JVTO_DEV_DATABASE_URL (Settings → Secrets and variables →
+# Actions), URL-encoding '@' in the password as %40, e.g.
+#   postgresql://postgres:PASS%40word@HOST:5432/jvto_dev
+# PROD_DATABASE_URL (already set for deploy-prod) is the source. Until both secrets are
+# set this job SKIPS. Run from the Actions tab: choose mode = plan (dry run, writes
+# NOTHING) first to review the report, then mode = apply to write jvto_dev.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'plan = dry run (no writes); apply = write jvto_dev'
+        type: choice
+        options: [plan, apply]
+        default: plan
+
+# Never let two syncs to the live DB overlap.
+concurrency:
+  group: sync-jvto-dev
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Guard — require PROD_DATABASE_URL (source) + JVTO_DEV_DATABASE_URL (target)
+        id: guard
+        env:
+          PROD_DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
+          JVTO_DEV_DATABASE_URL: ${{ secrets.JVTO_DEV_DATABASE_URL }}
+        run: |
+          if [ -z "${PROD_DATABASE_URL}" ] || [ -z "${JVTO_DEV_DATABASE_URL}" ]; then
+            echo "::notice::PROD_DATABASE_URL and/or JVTO_DEV_DATABASE_URL not set — skipping. Add both in Settings → Secrets."
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install dependencies
+        if: steps.guard.outputs.enabled == 'true'
+        run: npm ci
+
+      - name: Sync jvto_cms → jvto_dev (${{ inputs.mode }})
+        if: steps.guard.outputs.enabled == 'true'
+        env:
+          CMS_DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
+          JVTO_DEV_DATABASE_URL: ${{ secrets.JVTO_DEV_DATABASE_URL }}
+          SYNC_RUN_ID: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          FLAG=""
+          [ "${{ inputs.mode }}" = "plan" ] && FLAG="--plan"
+          node scripts/sync-to-jvto-dev.mjs $FLAG
+
+      - name: Upload audit report + rollback.sql
+        if: steps.guard.outputs.enabled == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: jvto-dev-sync-${{ inputs.mode }}-${{ github.run_id }}
+          path: output/sync/
+          if-no-files-found: warn
+
+      - name: Summary
+        if: steps.guard.outputs.enabled == 'true'
+        run: |
+          echo "### jvto_cms → jvto_dev sync (${{ inputs.mode }})" >> "$GITHUB_STEP_SUMMARY"
+          cat output/sync/jvto-dev-report.md >> "$GITHUB_STEP_SUMMARY" || true

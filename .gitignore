@@ -8,3 +8,6 @@ coverage/
 .DS_Store
 .vscode/
 .idea/
+
+# jvto_dev sync run artifacts (audit report + rollback; uploaded by the workflow)
+output/sync/

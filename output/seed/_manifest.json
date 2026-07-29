@@ -9,6 +9,7 @@
     "page_sections.json",
     "redirects.json",
     "governance_facts.json",
+    "assets.json",
     "load.sql"
   ],
   "counts": {
@@ -28,6 +29,7 @@
     "sections": 306,
     "redirects": 12,
     "governance_facts": 19,
+    "assets": 54,
     "routes_fully_rendered": 75,
     "routes_scaffold_only": 1
   },

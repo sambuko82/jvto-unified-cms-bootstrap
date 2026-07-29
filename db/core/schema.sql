@@ -74,13 +74,15 @@ CREATE TABLE IF NOT EXISTS governance_facts (
   value jsonb NOT NULL
 );
 
--- ── 5) Assets (minimal media registry) ────────────────────────────────────────
+-- ── 5) Assets (media registry: images/banners; synced upstream, console-editable) ─
 CREATE TABLE IF NOT EXISTS assets (
-  id    uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-  kind  text,
-  url   text NOT NULL,
-  alt   text,
-  meta  jsonb NOT NULL DEFAULT '{}'::jsonb
+  id       uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  key      text UNIQUE,                    -- stable identity (e.g. "crew_portraits/03-joyo.jpg"); sync/upsert key
+  kind     text,                           -- image | video | document
+  url      text NOT NULL,
+  alt      text,
+  meta     jsonb NOT NULL DEFAULT '{}'::jsonb,  -- { title, caption, group, source_field, link{...}, recommended_pages }
+  editable boolean NOT NULL DEFAULT false  -- true = console-edited (operator image swap); upstream refresh must NOT clobber
 );
 
 -- ── 6) Audit log (console write/publish actions; no secrets or personal data) ──
@@ -98,6 +100,9 @@ CREATE TABLE IF NOT EXISTS audit_log (
 --  are added here.) `editable` marks console-edited rows the upstream refresh keeps.
 ALTER TABLE pages         ADD COLUMN IF NOT EXISTS editable boolean NOT NULL DEFAULT false;
 ALTER TABLE page_sections ADD COLUMN IF NOT EXISTS editable boolean NOT NULL DEFAULT false;
+ALTER TABLE assets        ADD COLUMN IF NOT EXISTS key      text;
+ALTER TABLE assets        ADD COLUMN IF NOT EXISTS editable boolean NOT NULL DEFAULT false;
+CREATE UNIQUE INDEX IF NOT EXISTS assets_key_key ON assets(key);
 
 -- ── Read model: page + ordered sections (resolver hydrates entity_refs in app) ─
 CREATE OR REPLACE VIEW page_render AS
