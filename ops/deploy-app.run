@@ -2,4 +2,4 @@ inspect
 # ^ mode word on line 1: inspect (read-only discovery) | deploy (write + restart).
 # Editing this file and pushing to main runs .github/workflows/deploy-app.yml.
 # The paths filter needs a real diff each run, so bump the counter below when re-firing.
-# run-counter: 0
+# run-counter: 1
