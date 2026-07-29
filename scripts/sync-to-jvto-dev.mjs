@@ -34,18 +34,23 @@ const OUT_DIR = path.join(root, 'output/sync');
 if (!CMS_URL) { console.error('CMS_DATABASE_URL (or DATABASE_URL) is required (source jvto_cms).'); process.exit(2); }
 if (!DEV_URL) { console.error('JVTO_DEV_DATABASE_URL is required (target jvto_dev).'); process.exit(2); }
 
-// A managed/remote Postgres (not localhost) usually needs TLS; accept its cert
-// (rejectUnauthorized:false) since we connect by IP. localhost/test → no TLS.
-// sslmode=disable in the URL forces it off; sslmode=require/prefer forces it on.
+// Build the pg client from EXPLICIT fields (never pass connectionString together with
+// ssl — the URL's sslmode would override our ssl object and force cert verification,
+// which fails on jvto_dev's self-signed cert: DEPTH_ZERO_SELF_SIGNED_CERT).
+// Remote host (not localhost) → TLS but accept the self-signed cert (we connect by IP).
+// localhost/test → plaintext. sslmode=disable in the URL forces TLS off.
 function pgClient(connectionString) {
   const u = new URL(connectionString);
   const local = ['localhost', '127.0.0.1', '::1'].includes(u.hostname);
-  const mode = u.searchParams.get('sslmode');
-  let ssl = false;
-  if (mode === 'require' || mode === 'prefer' || mode === 'verify-ca' || mode === 'verify-full') ssl = { rejectUnauthorized: false };
-  else if (mode === 'disable') ssl = false;
-  else if (!local) ssl = { rejectUnauthorized: false };
-  return new pg.Client({ connectionString, ssl });
+  const disable = u.searchParams.get('sslmode') === 'disable';
+  return new pg.Client({
+    host: u.hostname,
+    port: u.port ? Number(u.port) : 5432,
+    user: decodeURIComponent(u.username),
+    password: decodeURIComponent(u.password),
+    database: u.pathname.replace(/^\//, '') || 'postgres',
+    ssl: local || disable ? false : { rejectUnauthorized: false },
+  });
 }
 
 const sqlLit = (v) => (v === null || v === undefined ? 'NULL' : `'${String(v).replace(/'/g, "''")}'`);
