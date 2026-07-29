@@ -78,6 +78,63 @@ export async function patchPage(
   return { status: 200, body: { ok: true, route, editable: true, fields: fieldNames } };
 }
 
+/** Swap an asset's { url?, alt? } (operator image replacement). Sets editable=true;
+ * the jvto_dev sync then carries the swap to the live site. `actor` recorded in audit_log. */
+export async function putAsset(
+  key: string,
+  fields: { url?: unknown; alt?: unknown },
+  actor: string,
+): Promise<WriteResult> {
+  if (!key) return { status: 400, body: { error: 'Bad Request', message: 'Missing asset key.' } };
+  const setClauses: string[] = [];
+  const fieldNames: string[] = [];
+  const values: unknown[] = [];
+
+  if (fields.url !== undefined) {
+    if (typeof fields.url !== 'string' || !/^https?:\/\/\S+$/i.test(fields.url)) {
+      return { status: 400, body: { error: 'Bad Request', message: 'url must be an http(s) URL.' } };
+    }
+    values.push(fields.url);
+    setClauses.push(`url = $${values.length}`);
+    fieldNames.push('url');
+  }
+  if (fields.alt !== undefined) {
+    if (typeof fields.alt !== 'string') {
+      return { status: 400, body: { error: 'Bad Request', message: 'alt must be a string.' } };
+    }
+    values.push(fields.alt);
+    setClauses.push(`alt = $${values.length}`);
+    fieldNames.push('alt');
+  }
+  if (setClauses.length === 0) {
+    return { status: 400, body: { error: 'Bad Request', message: 'Provide url and/or alt.' } };
+  }
+
+  // alt is customer-visible prose → facts-locked (url is not scanned as prose)
+  const gate = await checkWritePayload({ alt: fields.alt });
+  if (!gate.ok) return { status: 400, body: { error: 'Facts-lock violation', violations: gate.violations } };
+
+  values.push(key);
+  const updated = await withTransaction(async (client) => {
+    const res = await client.query(
+      `UPDATE assets SET ${setClauses.join(', ')}, editable = true WHERE key = $${values.length} RETURNING key`,
+      values,
+    );
+    const rowCount = res.rowCount ?? 0;
+    if (rowCount > 0) {
+      await client.query('INSERT INTO audit_log (actor, action, target, summary) VALUES ($1, $2, $3, $4)', [
+        actor,
+        'put_asset',
+        key,
+        `fields: ${fieldNames.join(', ')}`,
+      ]);
+    }
+    return rowCount;
+  });
+  if (updated === 0) return { status: 404, body: { error: 'Not Found', key } };
+  return { status: 200, body: { ok: true, key, editable: true, fields: fieldNames } };
+}
+
 /** Replace a section's content jsonb. `actor` is recorded in audit_log. */
 export async function putSection(
   rawRoute: string,

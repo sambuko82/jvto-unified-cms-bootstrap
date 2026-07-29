@@ -55,6 +55,24 @@ for (const p of pagesDoc.pages) {
 }
 const redirects = (pagesDoc.redirects || []).map((r) => ({ from_path: r.from, to_path: r.to, code: r.code ?? 301 }));
 
+// ── assets (media registry from the SSOT image map; console-editable image swaps) ──
+// Optional: skipped if the extract has not been built (data/releases/assets/assets.json).
+let assets = [];
+try {
+  const assetDoc = JSON.parse(fs.readFileSync(path.join(root, 'data/releases/assets/assets.json'), 'utf8'));
+  assets = (assetDoc.rows || []).map((a) => ({
+    key: a.key,
+    kind: a.kind || 'image',
+    url: a.url,
+    alt: a.alt ?? null,
+    meta: {
+      title: a.title ?? null, caption: a.caption ?? null, group: a.group ?? null,
+      source_field: a.source_field ?? null, source_category: a.source_category ?? null,
+      recommended_pages: a.recommended_pages ?? [], link: a.link ?? null,
+    },
+  }));
+} catch { /* asset extract optional (manual, committed) */ }
+
 // ── governance facts (flatten adjudicated_facts + forbidden_values) ──
 const facts = [];
 for (const [k, v] of Object.entries(lock.adjudicated_facts)) facts.push({ key: k, value: v });
@@ -67,6 +85,7 @@ write('pages.json', pages);
 write('page_sections.json', sections);
 write('redirects.json', redirects);
 write('governance_facts.json', facts);
+write('assets.json', assets);
 
 // ── load.sql (idempotent) ──
 const q = (v) => (v === null || v === undefined ? 'NULL' : `'${String(v).replace(/'/g, "''")}'`);
@@ -89,6 +108,12 @@ for (const f of facts)
 sql += '\n-- entities\n';
 for (const e of entities)
   sql += `INSERT INTO entities (entity_type, canonical_key, slug, title, data, provenance, source, editable) VALUES (${q(e.entity_type)}, ${q(e.canonical_key)}, ${q(e.slug)}, ${q(e.title)}, ${j(e.data)}, ${j(e.provenance)}, ${q(e.source)}, ${e.editable}) ON CONFLICT (canonical_key) DO UPDATE SET data = EXCLUDED.data, provenance = EXCLUDED.provenance, title = EXCLUDED.title, source = EXCLUDED.source, updated_at = now();\n`;
+
+sql += '\n-- assets (media registry; operator image swaps set editable=true and survive reloads)\n';
+for (const a of assets)
+  sql += `INSERT INTO assets (key, kind, url, alt, meta, editable) VALUES (${q(a.key)}, ${q(a.kind)}, ${q(a.url)}, ${q(a.alt)}, ${j(a.meta)}, false) ON CONFLICT (key) DO UPDATE SET kind = EXCLUDED.kind, url = EXCLUDED.url, alt = EXCLUDED.alt, meta = EXCLUDED.meta WHERE assets.editable IS NOT TRUE;\n`;
+sql += '\n-- prune synced assets removed from the seed (editable=true operator swaps survive)\n';
+sql += `DELETE FROM assets WHERE editable IS NOT TRUE AND key <> ALL(${arr(assets.map((a) => a.key))});\n`;
 
 sql += '\n-- pages\n';
 for (const p of pages)
@@ -152,7 +177,7 @@ const manifest = {
   schema_version: 'cms-seed/v1',
   source: 'jvto-unified-cms-bootstrap',
   generated_at: projection.generatedAt ?? projection.generated_at ?? null,
-  files: ['entities.json', 'pages.json', 'page_sections.json', 'redirects.json', 'governance_facts.json', 'load.sql'],
+  files: ['entities.json', 'pages.json', 'page_sections.json', 'redirects.json', 'governance_facts.json', 'assets.json', 'load.sql'],
   counts: {
     entities: entities.length,
     entities_by_type: byType,
@@ -160,6 +185,7 @@ const manifest = {
     sections: sections.length,
     redirects: redirects.length,
     governance_facts: facts.length,
+    assets: assets.length,
     routes_fully_rendered: fullyRendered.length,
     routes_scaffold_only: scaffoldOnly.length,
   },
@@ -175,6 +201,6 @@ if (validation !== 'pass') {
 
 console.log(
   `Seed pack → output/seed/: ${entities.length} entities, ${pages.length} pages, ${sections.length} sections, ` +
-    `${redirects.length} redirects, ${facts.length} governance_facts. load.sql ${(sql.length / 1024).toFixed(0)}KB. ` +
+    `${redirects.length} redirects, ${facts.length} governance_facts, ${assets.length} assets. load.sql ${(sql.length / 1024).toFixed(0)}KB. ` +
     `_manifest: validation=${validation}, fully_rendered=${fullyRendered.length}/${pages.length}, scaffold_only=[${scaffoldOnly.join(', ')}].`,
 );

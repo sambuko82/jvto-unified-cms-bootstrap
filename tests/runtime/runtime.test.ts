@@ -45,6 +45,18 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(rows[0]).toEqual({ e: '172', p: '76', s: '306' });
   });
 
+  it('seed loads the asset media registry (54 images, stable keys, link metadata)', async () => {
+    const { rows } = await db.query<{ n: string; keyed: string; images: string }>(
+      `SELECT count(*) n, count(key) keyed, count(*) FILTER (WHERE kind = 'image') images FROM assets`,
+    );
+    expect(rows[0]).toEqual({ n: '54', keyed: '54', images: '54' });
+    // each asset carries the link that tells the jvto_dev sync where to attach it
+    const org = await db.query<{ field: string | null }>(
+      `SELECT meta->'link'->>'field' AS field FROM assets WHERE key = 'brand_identity/01-jvto-hero-landscape.webp'`,
+    );
+    expect(org.rows[0]?.field).toBe('hero_image_url');
+  });
+
   it('resolves the graded tour route with ordered sections + hydrated entities + JSON-LD', async () => {
     const r = await rp.resolvePage(TOUR_ROUTE);
     expect(r).not.toBeNull();
@@ -410,6 +422,28 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     const dash = await app.inject({ method: 'GET', url: '/admin', cookies: { cms_session: session } });
     expect(dash.statusCode).toBe(200);
     expect(dash.body).toContain(`/admin/pages${TOUR_ROUTE}`);
+  });
+
+  it('media library lists assets and a console image swap sets editable=true', async () => {
+    const session = await login();
+    const lib = await app.inject({ method: 'GET', url: '/admin/media', cookies: { cms_session: session } });
+    expect(lib.statusCode).toBe(200);
+    expect(lib.body).toContain('brand_identity/01-jvto-hero-landscape.webp');
+    // swap the hero image URL through the console form
+    const { cookie, token } = await csrfFor('/admin/media', session);
+    const res = await app.inject({
+      method: 'POST',
+      url: '/admin/media/brand_identity/01-jvto-hero-landscape.webp',
+      cookies: { cms_session: session, cms_csrf: cookie },
+      headers: FORM,
+      payload: `csrf=${token}&url=${encodeURIComponent('https://cdn.example.com/new-hero.webp')}&alt=New+hero+image`,
+    });
+    expect(res.statusCode).toBe(200);
+    const { rows } = await db.query<{ editable: boolean; url: string }>(
+      `SELECT editable, url FROM assets WHERE key = 'brand_identity/01-jvto-hero-landscape.webp'`,
+    );
+    expect(rows[0]?.editable).toBe(true);
+    expect(rows[0]?.url).toBe('https://cdn.example.com/new-hero.webp');
   });
 
   it('admin Entity Registry surfaces per-field provenance', async () => {
