@@ -12,7 +12,7 @@ import type { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify';
 import { parse as parseYaml } from 'yaml';
 import { query } from '../db.js';
 import { normalizeRoute } from '../resolvePage.js';
-import { patchPage, putSection } from '../writes.js';
+import { patchPage, putSection, putAsset } from '../writes.js';
 import type { WriteResult } from '../writes.js';
 import {
   adminToken,
@@ -22,8 +22,8 @@ import {
   SESSION_VALUE,
 } from '../auth.js';
 import { layout, esc } from './theme.js';
-import { loginPage, dashboard, pageEditor, publishingView, publishResult, entitiesIndex, entityDetail, governanceOverview, sourcesAndOwnership } from './views.js';
-import type { PageRow, GroupBlock, EditorPage, EditorSection, Flash, EntityRow, EntityDetailRow, GovernanceMetrics, OwnershipRule, SourceDef } from './views.js';
+import { loginPage, dashboard, pageEditor, publishingView, publishResult, entitiesIndex, entityDetail, governanceOverview, sourcesAndOwnership, mediaLibrary } from './views.js';
+import type { PageRow, GroupBlock, EditorPage, EditorSection, Flash, EntityRow, EntityDetailRow, GovernanceMetrics, OwnershipRule, SourceDef, AssetRow } from './views.js';
 
 const CSRF_COOKIE = 'cms_csrf';
 const ADMIN_ACTOR = 'admin-console';
@@ -199,6 +199,32 @@ export function registerAdmin(app: FastifyInstance): void {
     const entity = rows[0];
     if (!entity) return reply.code(404).type('text/html').send(notFound(key));
     return reply.type('text/html').send(entityDetail(entity, ownershipRules));
+  });
+
+  // ── Media library: swap images shown on the site (operator image replacement) ─
+  const loadAssets = () =>
+    query<AssetRow>('SELECT key, kind, url, alt, editable, meta FROM assets WHERE key IS NOT NULL ORDER BY key');
+
+  app.get('/admin/media', { preHandler: requireSession }, async (_req, reply) => {
+    const { rows } = await loadAssets();
+    const csrf = issueCsrf(reply);
+    return reply.type('text/html').send(mediaLibrary(rows, csrf));
+  });
+
+  app.post('/admin/media/*', { preHandler: requireSession }, async (req, reply) => {
+    if (!csrfOk(req)) {
+      return reply.code(403).type('text/html').send(layout({ title: 'Error', authed: true, body: '<div class="flash err">Invalid or expired form token — go back and retry.</div>' }));
+    }
+    const key = (req.params as Record<string, string>)['*'] ?? '';
+    const body = (req.body ?? {}) as Record<string, unknown>;
+    const fields: { url?: unknown; alt?: unknown } = {};
+    if (typeof body['url'] === 'string') fields.url = body['url'];
+    if (typeof body['alt'] === 'string') fields.alt = body['alt'];
+    const result = await putAsset(key, fields, ADMIN_ACTOR);
+    const { rows } = await loadAssets();
+    const csrf = issueCsrf(reply);
+    const flash: Flash = result.status === 200 ? { ok: true, messages: [] } : { ok: false, messages: violations(result) };
+    return reply.code(result.status).type('text/html').send(mediaLibrary(rows, csrf, flash));
   });
 
   // ── Sources & ownership (established config, surfaced read-only) ─────────────

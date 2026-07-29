@@ -424,6 +424,28 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(dash.body).toContain(`/admin/pages${TOUR_ROUTE}`);
   });
 
+  it('media library lists assets and a console image swap sets editable=true', async () => {
+    const session = await login();
+    const lib = await app.inject({ method: 'GET', url: '/admin/media', cookies: { cms_session: session } });
+    expect(lib.statusCode).toBe(200);
+    expect(lib.body).toContain('brand_identity/01-jvto-hero-landscape.webp');
+    // swap the hero image URL through the console form
+    const { cookie, token } = await csrfFor('/admin/media', session);
+    const res = await app.inject({
+      method: 'POST',
+      url: '/admin/media/brand_identity/01-jvto-hero-landscape.webp',
+      cookies: { cms_session: session, cms_csrf: cookie },
+      headers: FORM,
+      payload: `csrf=${token}&url=${encodeURIComponent('https://cdn.example.com/new-hero.webp')}&alt=New+hero+image`,
+    });
+    expect(res.statusCode).toBe(200);
+    const { rows } = await db.query<{ editable: boolean; url: string }>(
+      `SELECT editable, url FROM assets WHERE key = 'brand_identity/01-jvto-hero-landscape.webp'`,
+    );
+    expect(rows[0]?.editable).toBe(true);
+    expect(rows[0]?.url).toBe('https://cdn.example.com/new-hero.webp');
+  });
+
   it('admin Entity Registry surfaces per-field provenance', async () => {
     const session = await login();
     // index groups atoms by type and links to each

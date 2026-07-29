@@ -402,3 +402,62 @@ export function publishResult(opts: { ok: boolean; output: string; diff: string;
     <p><a href="/admin/publishing">← Back to Publishing</a></p>`;
   return layout({ title: 'Publish result', crumbs: 'Dashboard › Publishing › Publish', authed: true, body });
 }
+
+// ── Media library: swap the images shown on the site ──────────────────────────
+export interface AssetRow {
+  key: string;
+  kind: string | null;
+  url: string;
+  alt: string | null;
+  editable: boolean;
+  meta: Record<string, unknown> | null;
+}
+
+export function mediaLibrary(assets: AssetRow[], csrf: string, flash?: Flash): string {
+  const flashHtml = flash
+    ? flash.ok
+      ? '<div class="flash ok">Saved — the swap is marked editable and reaches the live site on the next jvto_dev sync.</div>'
+      : `<div class="flash err">Could not save:<ul>${flash.messages.map((m) => `<li>${esc(m)}</li>`).join('')}</ul></div>`
+    : '';
+  const byGroup = new Map<string, AssetRow[]>();
+  for (const a of assets) {
+    const g = a.meta && typeof a.meta['group'] === 'string' ? (a.meta['group'] as string) : 'other';
+    const list = byGroup.get(g) ?? [];
+    list.push(a);
+    byGroup.set(g, list);
+  }
+  const groups = [...byGroup.keys()]
+    .sort()
+    .map((g) => {
+      const list = byGroup.get(g) ?? [];
+      const cards = list
+        .map((a) => {
+          const link = a.meta && typeof a.meta['link'] === 'object' ? (a.meta['link'] as Record<string, unknown>) : null;
+          const attaches = link
+            ? [link['type'], link['ref'], link['field']].filter(Boolean).map((x) => esc(x)).join(' · ')
+            : '—';
+          return `<div class="card"><div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap">
+            <img src="${esc(a.url)}" alt="${esc(a.alt ?? '')}" loading="lazy" referrerpolicy="no-referrer"
+                 style="width:120px;height:80px;object-fit:cover;border-radius:8px;background:#0b1120;border:1px solid #1e293b">
+            <div style="flex:1;min-width:220px">
+              <h3 style="word-break:break-all">${esc(a.key)} ${badge(a.editable ? 'editable' : 'read_only')}</h3>
+              <div class="ro">attaches to: ${attaches}</div>
+              <form method="POST" action="/admin/media/${esc(a.key)}">
+                <input type="hidden" name="csrf" value="${esc(csrf)}">
+                <label>Image URL</label>
+                <input type="text" name="url" value="${esc(a.url)}">
+                <label>Alt text</label>
+                <input type="text" name="alt" value="${esc(a.alt ?? '')}">
+                <button type="submit">Save swap</button>
+              </form>
+            </div></div></div>`;
+        })
+        .join('');
+      return `<div class="group"><h3>${esc(g)}<span class="count">${list.length}</span></h3>${cards}</div>`;
+    })
+    .join('');
+  const body = `<h2>Media library <span class="count">${assets.length}</span></h2>
+    <p class="muted">Swap the image URL or alt text for anything shown on the site — not just text. Saved swaps are marked ${badge('editable')} and survive upstream reloads; they publish to the live site on the next <code>jvto_dev</code> sync.</p>
+    ${flashHtml}${groups}`;
+  return layout({ title: 'Media library', crumbs: 'Dashboard › Media', authed: true, body });
+}

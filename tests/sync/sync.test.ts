@@ -9,7 +9,7 @@ import { promisify } from 'node:util';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import pg from 'pg';
-import { hasDb, DB_URL, loadSchemaAndSeed } from '../runtime/_db.js';
+import { hasDb, DB_URL } from '../runtime/_db.js';
 
 const pexec = promisify(execFile);
 const root = new URL('../../', import.meta.url);
@@ -17,20 +17,29 @@ const p = (rel: string) => fileURLToPath(new URL(rel, root));
 const withDb = (base: string, db: string) => { const u = new URL(base); u.pathname = '/' + db; return u.toString(); };
 
 describe.skipIf(!hasDb)('jvto_cms -> jvto_dev sync (integration)', () => {
-  const CMS_URL = DB_URL as string;
-  const DEV_URL = withDb(CMS_URL, 'jvto_dev_local');
+  // Fully isolated from the runtime suite's shared DB: dedicated source + target.
+  const BASE = DB_URL as string;
+  const CMS_URL = withDb(BASE, 'jvto_cms_sync');
+  const DEV_URL = withDb(BASE, 'jvto_dev_local');
   let dev: pg.Client;
 
   beforeAll(async () => {
-    await loadSchemaAndSeed(); // jvto_cms_local: schema + committed seed
-
-    // (re)create the jvto_dev double
-    const admin = new pg.Client({ connectionString: withDb(CMS_URL, 'postgres') });
+    const admin = new pg.Client({ connectionString: withDb(BASE, 'postgres') });
     await admin.connect();
-    await admin.query('DROP DATABASE IF EXISTS jvto_dev_local WITH (FORCE)');
-    await admin.query('CREATE DATABASE jvto_dev_local');
+    for (const name of ['jvto_cms_sync', 'jvto_dev_local']) {
+      await admin.query(`DROP DATABASE IF EXISTS ${name} WITH (FORCE)`);
+      await admin.query(`CREATE DATABASE ${name}`);
+    }
     await admin.end();
 
+    // SOURCE jvto_cms_sync: committed schema + seed
+    const src = new pg.Client({ connectionString: CMS_URL });
+    await src.connect();
+    await src.query(readFileSync(p('db/core/schema.sql'), 'utf8'));
+    await src.query(readFileSync(p('output/seed/load.sql'), 'utf8'));
+    await src.end();
+
+    // TARGET jvto_dev_local: the live-shape double
     dev = new pg.Client({ connectionString: DEV_URL });
     await dev.connect();
     await dev.query(readFileSync(p('db/jvto-dev/target-schema.sql'), 'utf8'));
