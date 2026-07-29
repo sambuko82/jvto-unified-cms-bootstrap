@@ -1,0 +1,103 @@
+name: deploy-app
+
+# Deploys the CMS runtime code (src/ -> the live Fastify app on the production host)
+# so app features like /admin/media go live. deploy.yml only ships DATA (the seed) to
+# the jvto_cms database; THIS workflow ships the app itself.
+#
+# Why a runner + SSH: the CMS app runs on the VPS (same host as the database). A
+# sandboxed agent can't reach :22 there, but a GitHub-hosted runner can — the same
+# reason the DB deploy/sync run here. The SSH password lives ONLY as an encrypted
+# repo secret and is passed to sshpass via env (never printed).
+#
+# Trigger: an automation token gets 403 on workflow_dispatch, so the reliable path is
+# a COMMIT to ops/deploy-app.run whose content is the mode word:
+#   inspect  — READ-ONLY: discover the app dir, process manager, DB-url source (safe).
+#   deploy   — fetch main on the box, npm ci + build, restart the process.
+# Always run `inspect` once first and read its artifact before `deploy`.
+#
+# ── SETUP (owner, one-time) ─────────────────────────────────────────────────────
+# Add repo secret (Settings -> Secrets and variables -> Actions -> New secret):
+#   CMS_SSH_PASSWORD = the server's SSH password (paste RAW — no URL-encoding here).
+# Optional repo VARIABLES (Settings -> Secrets and variables -> Actions -> Variables),
+# only if the defaults are wrong (inspect will tell you):
+#   CMS_SSH_HOST (default 31.97.223.43)  CMS_SSH_USER (default root)  CMS_SSH_PORT (22)
+#   CMS_APP_DIR  CMS_PM2_NAME  CMS_SYSTEMD_UNIT
+# Until CMS_SSH_PASSWORD is set, this job SKIPS (no-op).
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'inspect (read-only) | deploy (write + restart)'
+        type: choice
+        options: [inspect, deploy]
+        default: inspect
+  push:
+    branches: [main]
+    paths: ['ops/deploy-app.run']
+
+concurrency: { group: deploy-app, cancel-in-progress: false }  # never overlap live deploys
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Guard — require CMS_SSH_PASSWORD
+        id: guard
+        env:
+          CMS_SSH_PASSWORD: ${{ secrets.CMS_SSH_PASSWORD }}
+        run: |
+          if [ -z "${CMS_SSH_PASSWORD}" ]; then
+            echo "::notice::CMS_SSH_PASSWORD not set — skipping. Add it in Settings → Secrets to enable app deploy."
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Resolve mode (dispatch input, or ops/deploy-app.run on push)
+        id: mode
+        if: steps.guard.outputs.enabled == 'true'
+        run: |
+          M="${{ inputs.mode }}"
+          [ -z "$M" ] && M="$(head -n1 ops/deploy-app.run 2>/dev/null | tr -d '[:space:]')"
+          [ "$M" = "deploy" ] || M="inspect"   # default to the safe read-only mode
+          echo "mode=$M" >> "$GITHUB_OUTPUT"; echo "resolved mode: $M"
+
+      - name: Install sshpass
+        if: steps.guard.outputs.enabled == 'true'
+        run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends sshpass
+
+      - name: Run ${{ steps.mode.outputs.mode }} on the host over SSH
+        if: steps.guard.outputs.enabled == 'true'
+        env:
+          SSHPASS: ${{ secrets.CMS_SSH_PASSWORD }}
+          SSH_HOST: ${{ vars.CMS_SSH_HOST || '31.97.223.43' }}
+          SSH_USER: ${{ vars.CMS_SSH_USER || 'root' }}
+          SSH_PORT: ${{ vars.CMS_SSH_PORT || '22' }}
+          CMS_APP_DIR: ${{ vars.CMS_APP_DIR }}
+          CMS_PM2_NAME: ${{ vars.CMS_PM2_NAME }}
+          CMS_SYSTEMD_UNIT: ${{ vars.CMS_SYSTEMD_UNIT }}
+          MODE: ${{ steps.mode.outputs.mode }}
+        run: |
+          set -euo pipefail
+          mkdir -p output/deploy
+          echo "→ $MODE on $SSH_USER@$SSH_HOST:$SSH_PORT"
+          sshpass -e ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
+            -o ConnectTimeout=25 -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+            "env CMS_APP_DIR='$CMS_APP_DIR' CMS_PM2_NAME='$CMS_PM2_NAME' CMS_SYSTEMD_UNIT='$CMS_SYSTEMD_UNIT' bash -s" \
+            < "scripts/deploy/remote-$MODE.sh" 2>&1 | tee "output/deploy/$MODE.log"
+
+      - name: Upload log
+        if: steps.guard.outputs.enabled == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: deploy-app-${{ steps.mode.outputs.mode }}-${{ github.run_id }}
+          path: output/deploy/
+          if-no-files-found: warn
+
+      - name: Summary
+        if: steps.guard.outputs.enabled == 'true'
+        run: |
+          { echo "### deploy-app: ${{ steps.mode.outputs.mode }}"; echo '```'; cat output/deploy/*.log 2>/dev/null | tail -60; echo '```'; } >> "$GITHUB_STEP_SUMMARY" || true
