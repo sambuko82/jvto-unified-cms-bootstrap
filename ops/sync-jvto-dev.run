@@ -1,3 +1,4 @@
-plan
-# plan #3: dry-run preview of jvto_cms → jvto_dev after 74 Drive destination photos
-# + hero/gallery sections landed. Writes NOTHING; review report before flipping to apply.
+apply
+# apply #3: write jvto_cms → jvto_dev — +74 Drive destination photos + hero/gallery sections.
+# Plan 30518271919 confirmed additive: content_pages ~76 upserted (17 dev-only preserved),
+# assets +74 (221 dev-only preserved), 0 deletions. rollback.sql lives in the run artifact.
