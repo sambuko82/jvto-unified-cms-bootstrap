@@ -1,5 +1,7 @@
 apply
-# apply #3 (RETRY): first attempt (run 30518926839) failed with a transient
-# `connect ETIMEDOUT 31.97.223.43:5432` — the connection never established, so NO write
-# occurred on jvto_dev (nothing to roll back). Re-firing; the sync is idempotent-upsert.
-# Plan 30518271919 confirmed additive: +74 assets, 0 deletions, 17 pages + 221 assets preserved.
+# apply #3 (ATTEMPT 3 / final auto-retry). Attempts 1 (run 30518926839) and 2 (run 30519176065)
+# both failed with `connect ETIMEDOUT 31.97.223.43:5432` — pure connect failures, NO SQL ran,
+# jvto_dev UNTOUCHED. The read-only plan (30518271919) reached the same DB fine at 06:01, and the
+# host answers on :443, so :5432 external reachability degraded after ~06:01. Runner IPs rotate;
+# this fresh-IP attempt tests IP-block vs sustained firewall. If it ALSO times out, stop and have
+# the VPS owner check the firewall/fail2ban/pg listen for 31.97.223.43:5432.
