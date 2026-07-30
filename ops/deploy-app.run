@@ -1,6 +1,6 @@
-deploy
+inspect
 # ^ mode word on line 1: inspect (read-only discovery) | deploy (write + restart).
 # Editing this file and pushing to main runs .github/workflows/deploy-app.yml.
 # The paths filter needs a real diff each run, so bump the counter below when re-firing.
-# Last deploy: afbc0d9 -> e21f139 (jvto-cms-bootstrap) Publish→Live + JVTO_DEV_DATABASE_URL(localhost) verified 2026-07-30.
-# run-counter: 9
+# Last deploy: e21f139 -> c571dcc (jvto-cms-bootstrap) P3 add-content UI verified live 2026-07-30.
+# run-counter: 10
