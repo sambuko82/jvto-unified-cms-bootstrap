@@ -14,6 +14,7 @@ import { query } from '../db.js';
 import { normalizeRoute } from '../resolvePage.js';
 import { patchPage, putSection, putAsset } from '../writes.js';
 import type { WriteResult } from '../writes.js';
+import { publishToLive } from '../publish.js';
 import {
   adminToken,
   constantTimeEqual,
@@ -22,7 +23,7 @@ import {
   SESSION_VALUE,
 } from '../auth.js';
 import { layout, esc } from './theme.js';
-import { loginPage, dashboard, pageEditor, publishingView, publishResult, entitiesIndex, entityDetail, governanceOverview, sourcesAndOwnership, mediaLibrary } from './views.js';
+import { loginPage, dashboard, pageEditor, publishingView, publishResult, livePublishResult, entitiesIndex, entityDetail, governanceOverview, sourcesAndOwnership, mediaLibrary } from './views.js';
 import type { PageRow, GroupBlock, EditorPage, EditorSection, Flash, EntityRow, EntityDetailRow, GovernanceMetrics, OwnershipRule, SourceDef, AssetRow } from './views.js';
 
 const CSRF_COOKIE = 'cms_csrf';
@@ -332,13 +333,24 @@ export function registerAdmin(app: FastifyInstance): void {
     return reply.type('text/html').send(publishingView(pages.rows, sections.rows, csrf));
   });
 
+  // Publish = push edits to the LIVE site: sync jvto_cms → jvto_dev (over localhost on the
+  // shared host, so it avoids the intermittent :5432 blocks seen from GitHub runners), then
+  // trigger the jvto-web rebuild if a deploy hook is configured. See src/publish.ts.
   app.post('/admin/publish', { preHandler: requireSession }, async (req, reply) => {
     if (!csrfOk(req)) {
       return reply.code(403).type('text/html').send(layout({ title: 'Error', authed: true, body: '<div class="flash err">Invalid form token.</div>' }));
     }
-    // Publish = export the edited jvto_cms back to the seed pack (the reverse of
-    // load.sql, via scripts/export-cms-seed.mjs). jvto-web renders that seed —
-    // this repo never touches jvto-web.
+    const result = await publishToLive();
+    const code = result.ok ? 200 : result.configured ? 500 : 400;
+    return reply.code(code).type('text/html').send(livePublishResult(result));
+  });
+
+  // Export the edited jvto_cms back to the committed seed pack (output/seed/*, the reverse of
+  // load.sql via scripts/export-cms-seed.mjs). Ops helper — not required to go live.
+  app.post('/admin/publish/seed', { preHandler: requireSession }, async (req, reply) => {
+    if (!csrfOk(req)) {
+      return reply.code(403).type('text/html').send(layout({ title: 'Error', authed: true, body: '<div class="flash err">Invalid form token.</div>' }));
+    }
     const repoRoot = fileURLToPath(new URL('../../', import.meta.url));
     const script = fileURLToPath(new URL('../../scripts/export-cms-seed.mjs', import.meta.url));
     const customOut = process.env.CMS_SEED_OUT; // deploy-time override; default output/seed

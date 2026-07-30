@@ -79,6 +79,11 @@ jobs:
           CMS_APP_DIR: ${{ vars.CMS_APP_DIR }}
           CMS_PM2_NAME: ${{ vars.CMS_PM2_NAME }}
           CMS_SYSTEMD_UNIT: ${{ vars.CMS_SYSTEMD_UNIT }}
+          # App runtime env for "Publish to live" (src/publish.ts). Reuses the same
+          # JVTO_DEV_DATABASE_URL secret as sync-jvto-dev.yml; remote-deploy.sh rewrites its
+          # host to localhost so the on-box app avoids the external :5432 firewall.
+          JVTO_DEV_DATABASE_URL: ${{ secrets.JVTO_DEV_DATABASE_URL }}
+          JVTO_WEB_DEPLOY_HOOK: ${{ secrets.JVTO_WEB_DEPLOY_HOOK }}
           MODE: ${{ steps.mode.outputs.mode }}
         run: |
           set -euo pipefail
@@ -86,7 +91,7 @@ jobs:
           echo "→ $MODE on $SSH_USER@$SSH_HOST:$SSH_PORT"
           sshpass -e ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
             -o ConnectTimeout=25 -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
-            "env CMS_APP_DIR='$CMS_APP_DIR' CMS_PM2_NAME='$CMS_PM2_NAME' CMS_SYSTEMD_UNIT='$CMS_SYSTEMD_UNIT' bash -s" \
+            "env CMS_APP_DIR='$CMS_APP_DIR' CMS_PM2_NAME='$CMS_PM2_NAME' CMS_SYSTEMD_UNIT='$CMS_SYSTEMD_UNIT' JVTO_DEV_DATABASE_URL='$JVTO_DEV_DATABASE_URL' JVTO_WEB_DEPLOY_HOOK='$JVTO_WEB_DEPLOY_HOOK' bash -s" \
             < "scripts/deploy/remote-$MODE.sh" 2>&1 | tee "output/deploy/$MODE.log"
 
       - name: Upload log

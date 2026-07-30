@@ -146,10 +146,14 @@ export function publishingView(
     <div class="card"><h3>Pending console edits <span class="count">${pendingPages.length + pendingSections.length}</span></h3>
       <label>Pages</label>${pagesHtml}
       <label>Sections</label>${secHtml}</div>
-    <div class="card"><h3>Publish</h3>
-      <p class="muted">Publishing exports <code>jvto_cms</code> → <code>output/seed/*</code> (the seed jvto-web renders). Wired in the next slice.</p>
+    <div class="card"><h3>Publish to live site</h3>
+      <p class="muted">Pushes every <code>jvto_cms</code> edit into <code>jvto_dev</code> — the database behind <code>help.javavolcano-touroperator.com</code> — over localhost, then triggers the jvto-web rebuild if a deploy hook is configured. Additive &amp; idempotent; each run keeps a rollback.</p>
       <form method="POST" action="/admin/publish"><input type="hidden" name="csrf" value="${esc(csrf)}">
-        <button type="submit">Publish edits</button></form></div>`;
+        <button type="submit">Publish to live</button></form></div>
+    <div class="card"><h3>Export seed pack</h3>
+      <p class="muted">Advanced: export <code>jvto_cms</code> → <code>output/seed/*</code> to commit the edits into the repo seed. Not required to go live.</p>
+      <form method="POST" action="/admin/publish/seed"><input type="hidden" name="csrf" value="${esc(csrf)}">
+        <button type="submit" class="secondary">Export seed</button></form></div>`;
   return layout({ title: 'Publishing', crumbs: 'Dashboard › Publishing', authed: true, body });
 }
 
@@ -401,6 +405,34 @@ export function publishResult(opts: { ok: boolean; output: string; diff: string;
     <div class="card"><h3>Export log</h3>${pre(opts.output, '#94a3b8')}</div>
     <p><a href="/admin/publishing">← Back to Publishing</a></p>`;
   return layout({ title: 'Publish result', crumbs: 'Dashboard › Publishing › Publish', authed: true, body });
+}
+
+/** Result page for "Publish to live" (sync jvto_cms → jvto_dev + optional jvto-web rebuild). */
+export function livePublishResult(d: {
+  ok: boolean;
+  configured: boolean;
+  syncLog: string;
+  report: string;
+  rebuild: { configured: boolean; ok: boolean; detail: string };
+  error?: string;
+}): string {
+  const pre = (text: string, color: string) =>
+    `<pre style="margin:0;white-space:pre-wrap;font-size:12px;color:${color}">${esc(text)}</pre>`;
+  let banner: string;
+  if (!d.configured)
+    banner = `<div class="flash err">Can't publish to live yet — <code>JVTO_DEV_DATABASE_URL</code> is not set on the app server. ${esc(d.error ?? '')}</div>`;
+  else if (!d.ok) banner = `<div class="flash err">Publish failed. ${esc(d.error ?? '')}</div>`;
+  else
+    banner = `<div class="flash ok">Live — every edit is now in <code>jvto_dev</code>, the database behind <code>help.javavolcano-touroperator.com</code>.</div>`;
+  const rebuildLine = d.rebuild.configured
+    ? `<div class="flash ${d.rebuild.ok ? 'ok' : 'err'}">jvto-web rebuild: ${esc(d.rebuild.detail)}</div>`
+    : `<p class="muted">jvto-web auto-rebuild is not configured yet — set <code>JVTO_WEB_DEPLOY_HOOK</code> so the static site regenerates on publish. The content is already in <code>jvto_dev</code>.</p>`;
+  const body = `<h2>Publish to live site</h2>${banner}
+    ${d.ok ? rebuildLine : ''}
+    ${d.report ? `<div class="card"><h3>Sync summary</h3>${pre(d.report, '#cbd5e1')}</div>` : ''}
+    ${d.syncLog ? `<div class="card"><h3>Log</h3>${pre(d.syncLog, '#94a3b8')}</div>` : ''}
+    <p><a href="/admin/publishing">← Back to Publishing</a></p>`;
+  return layout({ title: 'Publish', crumbs: 'Dashboard › Publishing › Publish', authed: true, body });
 }
 
 // ── Media library: swap the images shown on the site ──────────────────────────
