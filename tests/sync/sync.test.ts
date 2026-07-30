@@ -73,8 +73,8 @@ describe.skipIf(!hasDb)('jvto_cms -> jvto_dev sync (integration)', () => {
   });
 
   it('syncs the asset registry idempotently and preserves jvto_dev-only assets', async () => {
-    expect(await n('SELECT count(*) n FROM cms.asset_map')).toBe(54);        // 54 CMS assets mapped
-    expect(await n('SELECT count(*) n FROM assets')).toBe(56);               // 54 synced + 2 canary
+    expect(await n('SELECT count(*) n FROM cms.asset_map')).toBe(128);       // 128 CMS assets mapped (54 base + 74 Drive destination photos)
+    expect(await n('SELECT count(*) n FROM assets')).toBe(130);              // 128 synced + 2 canary
     expect(await n("SELECT count(*) n FROM assets WHERE url LIKE '%legacy.javavolcano%'")).toBe(2); // canaries
     // no duplicates after two runs
     expect(await n('SELECT count(*) n FROM (SELECT route, lang FROM content_pages GROUP BY route, lang HAVING count(*) > 1) d')).toBe(0);
