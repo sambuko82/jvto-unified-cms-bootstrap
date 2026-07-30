@@ -1,4 +1,5 @@
 apply
-# apply #3: write jvto_cms → jvto_dev — +74 Drive destination photos + hero/gallery sections.
-# Plan 30518271919 confirmed additive: content_pages ~76 upserted (17 dev-only preserved),
-# assets +74 (221 dev-only preserved), 0 deletions. rollback.sql lives in the run artifact.
+# apply #3 (RETRY): first attempt (run 30518926839) failed with a transient
+# `connect ETIMEDOUT 31.97.223.43:5432` — the connection never established, so NO write
+# occurred on jvto_dev (nothing to roll back). Re-firing; the sync is idempotent-upsert.
+# Plan 30518271919 confirmed additive: +74 assets, 0 deletions, 17 pages + 221 assets preserved.
