@@ -40,9 +40,9 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
               (SELECT count(*) FROM page_sections) s`,
     );
     // 76 pages: +5 scraped from the live site (/markets/singapore|malaysia in new group
-    // 010, /trust in 006, 2 blog posts in 008) via the help-live extract. 306 sections;
+    // 010, /trust in 006, 2 blog posts in 008) via the help-live extract. 316 sections;
     // only /blog/why-not-unlicensed-ijen-operator stays scaffold-only (75/76 rendered).
-    expect(rows[0]).toEqual({ e: '172', p: '76', s: '306' });
+    expect(rows[0]).toEqual({ e: '172', p: '76', s: '316' });
   });
 
   it('seed loads the asset media registry (128 images, stable keys, link metadata)', async () => {
@@ -98,6 +98,18 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(r.jsonld['@type']).toBe('TouristTrip');
     expect(r.jsonld['@context']).toBe('https://schema.org');
     expect(Object.keys(r.jsonld).length).toBeGreaterThan(3);
+  });
+
+  it('attaches a hydrated hero + gallery of Drive photos to destination pages', async () => {
+    const r = await rp.resolvePage('/destinations/mount-bromo');
+    expect(r).not.toBeNull();
+    if (!r) return;
+    const hero = r.sections.find((s) => s.type === 'hero');
+    expect(hero?.assets.length).toBe(1);
+    expect(hero?.assets[0]?.url).toMatch(/^https:\/\/lh3\.googleusercontent\.com\/d\//);
+    const gallery = r.sections.find((s) => s.type === 'gallery');
+    expect(gallery?.assets.length).toBe(13); // BROMO photo set
+    expect(gallery?.assets.every((a) => a.kind === 'image')).toBe(true);
   });
 
   it('resolves every one of the 76 pages without throwing (0 orphan pages)', async () => {

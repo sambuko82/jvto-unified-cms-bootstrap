@@ -14,7 +14,7 @@
       "009": 12,
       "010": 2
     },
-    "sections": 306,
+    "sections": 316,
     "redirects": 12,
     "liveOverlay": {
       "matched": 75,
@@ -5151,6 +5151,17 @@
       },
       "sections": [
         {
+          "type": "hero",
+          "variant": "destination",
+          "content": {
+            "alt": "Mount Bromo (Gunung Bromo)"
+          },
+          "entity_refs": [],
+          "asset_refs": [
+            "destination-photo/mount-bromo/01"
+          ]
+        },
+        {
           "type": "dest_facts",
           "variant": null,
           "content": {},
@@ -5194,6 +5205,29 @@
             "package:surabaya-ijen-papuma-tumpak-sewu-bromo-malang-6d5n",
             "package:surabaya-taman-safari-prigen-bromo-madakaripura-3d2n",
             "package:surabaya-tumpak-sewu-bromo-ijen-4d3n"
+          ]
+        },
+        {
+          "type": "gallery",
+          "variant": "destination",
+          "content": {
+            "title": "Mount Bromo (Gunung Bromo) gallery"
+          },
+          "entity_refs": [],
+          "asset_refs": [
+            "destination-photo/mount-bromo/01",
+            "destination-photo/mount-bromo/02",
+            "destination-photo/mount-bromo/03",
+            "destination-photo/mount-bromo/04",
+            "destination-photo/mount-bromo/05",
+            "destination-photo/mount-bromo/06",
+            "destination-photo/mount-bromo/07",
+            "destination-photo/mount-bromo/08",
+            "destination-photo/mount-bromo/09",
+            "destination-photo/mount-bromo/10",
+            "destination-photo/mount-bromo/11",
+            "destination-photo/mount-bromo/12",
+            "destination-photo/mount-bromo/13"
           ]
         },
         {
@@ -5310,6 +5344,17 @@
       },
       "sections": [
         {
+          "type": "hero",
+          "variant": "destination",
+          "content": {
+            "alt": "Kawah Ijen (Ijen Crater)"
+          },
+          "entity_refs": [],
+          "asset_refs": [
+            "destination-photo/ijen-crater/01"
+          ]
+        },
+        {
           "type": "dest_facts",
           "variant": null,
           "content": {},
@@ -5362,6 +5407,29 @@
           ]
         },
         {
+          "type": "gallery",
+          "variant": "destination",
+          "content": {
+            "title": "Kawah Ijen (Ijen Crater) gallery"
+          },
+          "entity_refs": [],
+          "asset_refs": [
+            "destination-photo/ijen-crater/01",
+            "destination-photo/ijen-crater/02",
+            "destination-photo/ijen-crater/03",
+            "destination-photo/ijen-crater/04",
+            "destination-photo/ijen-crater/05",
+            "destination-photo/ijen-crater/06",
+            "destination-photo/ijen-crater/07",
+            "destination-photo/ijen-crater/08",
+            "destination-photo/ijen-crater/09",
+            "destination-photo/ijen-crater/10",
+            "destination-photo/ijen-crater/11",
+            "destination-photo/ijen-crater/12",
+            "destination-photo/ijen-crater/13"
+          ]
+        },
+        {
           "type": "page_content",
           "variant": "live",
           "content": {
@@ -5390,6 +5458,17 @@
         "description": "Tumpak Sewu is a multi-tiered canyon waterfall (~120 m) in Lumajang, East Java. Nicknamed 'Java's Niagara' for its curtain of streams cascading over a curv"
       },
       "sections": [
+        {
+          "type": "hero",
+          "variant": "destination",
+          "content": {
+            "alt": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu)"
+          },
+          "entity_refs": [],
+          "asset_refs": [
+            "destination-photo/tumpak-sewu-waterfall/01"
+          ]
+        },
         {
           "type": "dest_facts",
           "variant": null,
@@ -5428,6 +5507,48 @@
           ]
         },
         {
+          "type": "gallery",
+          "variant": "destination",
+          "content": {
+            "title": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu) gallery"
+          },
+          "entity_refs": [],
+          "asset_refs": [
+            "destination-photo/tumpak-sewu-waterfall/01",
+            "destination-photo/tumpak-sewu-waterfall/02",
+            "destination-photo/tumpak-sewu-waterfall/03",
+            "destination-photo/tumpak-sewu-waterfall/04",
+            "destination-photo/tumpak-sewu-waterfall/05",
+            "destination-photo/tumpak-sewu-waterfall/06",
+            "destination-photo/tumpak-sewu-waterfall/07",
+            "destination-photo/tumpak-sewu-waterfall/08",
+            "destination-photo/tumpak-sewu-waterfall/09",
+            "destination-photo/tumpak-sewu-waterfall/10",
+            "destination-photo/tumpak-sewu-waterfall/11",
+            "destination-photo/tumpak-sewu-waterfall/12",
+            "destination-photo/tumpak-sewu-waterfall/13",
+            "destination-photo/tumpak-sewu-waterfall/14",
+            "destination-photo/tumpak-sewu-waterfall/15",
+            "destination-photo/tumpak-sewu-waterfall/16",
+            "destination-photo/tumpak-sewu-waterfall/17",
+            "destination-photo/tumpak-sewu-waterfall/18",
+            "destination-photo/tumpak-sewu-waterfall/19",
+            "destination-photo/tumpak-sewu-waterfall/20",
+            "destination-photo/tumpak-sewu-waterfall/21",
+            "destination-photo/tumpak-sewu-waterfall/22",
+            "destination-photo/tumpak-sewu-waterfall/23",
+            "destination-photo/tumpak-sewu-waterfall/24",
+            "destination-photo/tumpak-sewu-waterfall/25",
+            "destination-photo/tumpak-sewu-waterfall/26",
+            "destination-photo/tumpak-sewu-waterfall/27",
+            "destination-photo/tumpak-sewu-waterfall/28",
+            "destination-photo/tumpak-sewu-waterfall/29",
+            "destination-photo/tumpak-sewu-waterfall/30",
+            "destination-photo/tumpak-sewu-waterfall/31",
+            "destination-photo/tumpak-sewu-waterfall/32"
+          ]
+        },
+        {
           "type": "page_content",
           "variant": "live",
           "content": {
@@ -5455,6 +5576,17 @@
         "description": "Madakaripura is Java's tallest waterfall in Probolinggo, East Java. A narrow canyon gorge leads to a horseshoe curtain waterfall fed from multiple directio"
       },
       "sections": [
+        {
+          "type": "hero",
+          "variant": "destination",
+          "content": {
+            "alt": "Madakaripura Waterfall (Air Terjun Madakaripura)"
+          },
+          "entity_refs": [],
+          "asset_refs": [
+            "destination-photo/madakaripura-waterfall/01"
+          ]
+        },
         {
           "type": "dest_facts",
           "variant": null,
@@ -5493,6 +5625,25 @@
           ]
         },
         {
+          "type": "gallery",
+          "variant": "destination",
+          "content": {
+            "title": "Madakaripura Waterfall (Air Terjun Madakaripura) gallery"
+          },
+          "entity_refs": [],
+          "asset_refs": [
+            "destination-photo/madakaripura-waterfall/01",
+            "destination-photo/madakaripura-waterfall/02",
+            "destination-photo/madakaripura-waterfall/03",
+            "destination-photo/madakaripura-waterfall/04",
+            "destination-photo/madakaripura-waterfall/05",
+            "destination-photo/madakaripura-waterfall/06",
+            "destination-photo/madakaripura-waterfall/07",
+            "destination-photo/madakaripura-waterfall/08",
+            "destination-photo/madakaripura-waterfall/09"
+          ]
+        },
+        {
           "type": "page_content",
           "variant": "live",
           "content": {
@@ -5520,6 +5671,17 @@
         "description": "Papuma Beach in Jember offers white sand and dramatic coastal rock formations. JVTO includes it as a coastal contrast stop on Papuma-family packages (4D+)."
       },
       "sections": [
+        {
+          "type": "hero",
+          "variant": "destination",
+          "content": {
+            "alt": "Papuma Beach (Pantai Papuma)"
+          },
+          "entity_refs": [],
+          "asset_refs": [
+            "destination-photo/papuma-beach/01"
+          ]
+        },
         {
           "type": "dest_facts",
           "variant": null,
@@ -5554,6 +5716,23 @@
             "package:surabaya-ijen-papuma-tumpak-sewu-bromo-4d3n",
             "package:surabaya-ijen-papuma-tumpak-sewu-bromo-5d4n",
             "package:surabaya-ijen-papuma-tumpak-sewu-bromo-malang-6d5n"
+          ]
+        },
+        {
+          "type": "gallery",
+          "variant": "destination",
+          "content": {
+            "title": "Papuma Beach (Pantai Papuma) gallery"
+          },
+          "entity_refs": [],
+          "asset_refs": [
+            "destination-photo/papuma-beach/01",
+            "destination-photo/papuma-beach/02",
+            "destination-photo/papuma-beach/03",
+            "destination-photo/papuma-beach/04",
+            "destination-photo/papuma-beach/05",
+            "destination-photo/papuma-beach/06",
+            "destination-photo/papuma-beach/07"
           ]
         },
         {
