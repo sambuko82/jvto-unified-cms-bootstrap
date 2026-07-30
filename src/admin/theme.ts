@@ -71,7 +71,7 @@ const STYLE = `
 export function layout(opts: { title: string; crumbs?: string; authed?: boolean; body: string }): string {
   const nav = opts.authed
     ? `<span class="crumbs">${esc(opts.crumbs ?? '')}</span><span class="spacer"></span>
-       <a href="/admin">Dashboard</a> · <a href="/admin/overview">Overview</a> · <a href="/admin/entities">Entities</a> · <a href="/admin/media">Media</a> · <a href="/admin/sources">Sources</a> · <a href="/admin/publishing">Publishing</a> ·
+       <a href="/admin">Dashboard</a> · <a href="/admin/overview">Overview</a> · <a href="/admin/entities">Entities</a> · <a href="/admin/media">Media</a> · <a href="/admin/pages/new">+ New page</a> · <a href="/admin/sources">Sources</a> · <a href="/admin/publishing">Publishing</a> ·
        <form method="POST" action="/admin/logout" style="display:inline;margin:0">
          <button class="secondary" style="margin:0;padding:4px 10px">Log out</button></form>`
     : `<span class="crumbs">${esc(opts.crumbs ?? '')}</span>`;

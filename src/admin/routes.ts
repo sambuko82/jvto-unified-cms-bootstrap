@@ -12,7 +12,7 @@ import type { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify';
 import { parse as parseYaml } from 'yaml';
 import { query } from '../db.js';
 import { normalizeRoute } from '../resolvePage.js';
-import { patchPage, putSection, putAsset } from '../writes.js';
+import { patchPage, putSection, putAsset, createPage, addSection, createAsset } from '../writes.js';
 import type { WriteResult } from '../writes.js';
 import { publishToLive } from '../publish.js';
 import {
@@ -23,7 +23,7 @@ import {
   SESSION_VALUE,
 } from '../auth.js';
 import { layout, esc } from './theme.js';
-import { loginPage, dashboard, pageEditor, publishingView, publishResult, livePublishResult, entitiesIndex, entityDetail, governanceOverview, sourcesAndOwnership, mediaLibrary } from './views.js';
+import { loginPage, dashboard, pageEditor, publishingView, publishResult, livePublishResult, newPageForm, entitiesIndex, entityDetail, governanceOverview, sourcesAndOwnership, mediaLibrary } from './views.js';
 import type { PageRow, GroupBlock, EditorPage, EditorSection, Flash, EntityRow, EntityDetailRow, GovernanceMetrics, OwnershipRule, SourceDef, AssetRow } from './views.js';
 
 const CSRF_COOKIE = 'cms_csrf';
@@ -228,6 +228,22 @@ export function registerAdmin(app: FastifyInstance): void {
     return reply.code(result.status).type('text/html').send(mediaLibrary(rows, csrf, flash));
   });
 
+  // Register a NEW asset (operator-added image; editable=true, survives refresh + prune).
+  app.post('/admin/media/new', { preHandler: requireSession }, async (req, reply) => {
+    if (!csrfOk(req)) {
+      return reply.code(403).type('text/html').send(layout({ title: 'Error', authed: true, body: '<div class="flash err">Invalid or expired form token — go back and retry.</div>' }));
+    }
+    const body = (req.body ?? {}) as Record<string, unknown>;
+    const result = await createAsset(
+      { key: body['key'], url: body['url'], alt: body['alt'], kind: body['kind'], group: body['group'] },
+      ADMIN_ACTOR,
+    );
+    const { rows } = await loadAssets();
+    const csrf = issueCsrf(reply);
+    const flash: Flash = result.status === 201 ? { ok: true, messages: [] } : { ok: false, messages: violations(result) };
+    return reply.code(result.status === 201 ? 200 : result.status).type('text/html').send(mediaLibrary(rows, csrf, flash));
+  });
+
   // ── Sources & ownership (established config, surfaced read-only) ─────────────
   app.get('/admin/sources', { preHandler: requireSession }, async (_req, reply) => {
     const usage = await sourceUsage();
@@ -277,6 +293,47 @@ export function registerAdmin(app: FastifyInstance): void {
   });
 
   // ── Page editor ─────────────────────────────────────────────────────────────
+  // ── Create a NEW page (operator-authored). Static route wins over /admin/pages/*. ──
+  app.get('/admin/pages/new', { preHandler: requireSession }, async (_req, reply) => {
+    const csrf = issueCsrf(reply);
+    return reply.type('text/html').send(newPageForm(csrf));
+  });
+
+  app.post('/admin/pages/new', { preHandler: requireSession }, async (req, reply) => {
+    if (!csrfOk(req)) {
+      return reply.code(403).type('text/html').send(layout({ title: 'Error', authed: true, body: '<div class="flash err">Invalid form token.</div>' }));
+    }
+    const body = (req.body ?? {}) as Record<string, unknown>;
+    const seo: Record<string, unknown> = {};
+    if (typeof body['seo_title'] === 'string' && body['seo_title']) seo['title'] = body['seo_title'];
+    if (typeof body['seo_description'] === 'string' && body['seo_description']) seo['description'] = body['seo_description'];
+    const result = await createPage(
+      { route: body['route'], title: body['title'], page_type: body['page_type'], status: body['status'], h1: body['title'], seo: Object.keys(seo).length ? seo : undefined },
+      ADMIN_ACTOR,
+    );
+    if (result.status === 201) return reply.redirect('/admin/pages' + normalizeRoute(String(body['route'])));
+    const csrf = issueCsrf(reply);
+    return reply.code(result.status).type('text/html').send(newPageForm(csrf, { ok: false, messages: violations(result) }, body));
+  });
+
+  // ── Add a section to an existing page (operator-authored; high sort_order band). ──
+  app.post('/admin/sections', { preHandler: requireSession }, async (req, reply) => {
+    if (!csrfOk(req)) {
+      return reply.code(403).type('text/html').send(layout({ title: 'Error', authed: true, body: '<div class="flash err">Invalid form token.</div>' }));
+    }
+    const body = (req.body ?? {}) as Record<string, unknown>;
+    const route = normalizeRoute(String(body['route'] ?? ''));
+    const content: Record<string, unknown> = {};
+    if (typeof body['title'] === 'string' && body['title']) content['title'] = body['title'];
+    if (typeof body['h1'] === 'string' && body['h1']) content['h1'] = body['h1'];
+    if (typeof body['body_md'] === 'string' && body['body_md']) content['body_md'] = body['body_md'];
+    const result = await addSection(route, { section_type: body['section_type'], variant: body['variant'], content }, ADMIN_ACTOR);
+    const flash: Flash = result.status === 201 ? { ok: true, messages: [] } : { ok: false, messages: violations(result) };
+    const html = await editorHtml(reply, route, flash);
+    if (html === null) return reply.code(404).type('text/html').send(notFound(route));
+    return reply.code(result.status === 201 ? 200 : result.status).type('text/html').send(html);
+  });
+
   app.get('/admin/pages/*', { preHandler: requireSession }, async (req, reply) => {
     const rest = (req.params as Record<string, string>)['*'] ?? '';
     const route = normalizeRoute('/' + rest);

@@ -539,6 +539,84 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
     expect(rows[0]?.h1).toBe('Console edit');
   });
 
+  it('creates a new operator page (editable=true) and opens its editor', async () => {
+    const session = await login();
+    const { cookie, token } = await csrfFor('/admin/pages/new', session);
+    const NEW_ROUTE = '/travel-guide/p3-new-topic';
+    const res = await app.inject({
+      method: 'POST',
+      url: '/admin/pages/new',
+      cookies: { cms_session: session, cms_csrf: cookie },
+      headers: FORM,
+      payload: `csrf=${token}&route=${encodeURIComponent(NEW_ROUTE)}&title=P3+New+Topic&page_type=travel_guide&status=draft`,
+    });
+    expect(res.statusCode).toBe(302);
+    expect(res.headers['location']).toBe(`/admin/pages${NEW_ROUTE}`);
+    const { rows } = await db.query<{ editable: boolean; page_type: string; status: string }>(
+      'SELECT editable, page_type, status FROM pages WHERE route = $1',
+      [NEW_ROUTE],
+    );
+    expect(rows[0]?.editable).toBe(true);
+    expect(rows[0]?.page_type).toBe('travel_guide');
+    expect(rows[0]?.status).toBe('draft');
+    const editor = await app.inject({ method: 'GET', url: `/admin/pages${NEW_ROUTE}`, cookies: { cms_session: session } });
+    expect(editor.statusCode).toBe(200);
+  });
+
+  it('rejects a page with a malformed route (400) and inserts nothing', async () => {
+    const session = await login();
+    const { cookie, token } = await csrfFor('/admin/pages/new', session);
+    const res = await app.inject({
+      method: 'POST',
+      url: '/admin/pages/new',
+      cookies: { cms_session: session, cms_csrf: cookie },
+      headers: FORM,
+      payload: `csrf=${token}&route=no-leading-slash&title=Bad`,
+    });
+    expect(res.statusCode).toBe(400);
+    const { rows } = await db.query<{ n: number }>("SELECT count(*)::int AS n FROM pages WHERE title = 'Bad'");
+    expect(rows[0]?.n).toBe(0);
+  });
+
+  it('adds an operator section in the high sort_order band (editable=true)', async () => {
+    const session = await login();
+    const { cookie, token } = await csrfFor(`/admin/pages${TOUR_ROUTE}`, session);
+    const res = await app.inject({
+      method: 'POST',
+      url: '/admin/sections',
+      cookies: { cms_session: session, cms_csrf: cookie },
+      headers: FORM,
+      payload: `csrf=${token}&route=${encodeURIComponent(TOUR_ROUTE)}&section_type=rich_text&h1=Extra+note&body_md=An+operator-added+block.`,
+    });
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toContain('Saved');
+    const { rows } = await db.query<{ editable: boolean; sort_order: number }>(
+      `SELECT s.editable, s.sort_order FROM page_sections s JOIN pages p ON p.id = s.page_id
+        WHERE p.route = $1 AND s.section_type = 'rich_text' AND s.editable = true ORDER BY s.sort_order DESC LIMIT 1`,
+      [TOUR_ROUTE],
+    );
+    expect(rows[0]?.editable).toBe(true);
+    expect(rows[0]?.sort_order).toBeGreaterThanOrEqual(1000);
+  });
+
+  it('registers a new asset (editable=true) shown in the media library', async () => {
+    const session = await login();
+    const { cookie, token } = await csrfFor('/admin/media', session);
+    const KEY = 'gallery/p3-test-01';
+    const res = await app.inject({
+      method: 'POST',
+      url: '/admin/media/new',
+      cookies: { cms_session: session, cms_csrf: cookie },
+      headers: FORM,
+      payload: `csrf=${token}&key=${encodeURIComponent(KEY)}&url=${encodeURIComponent('https://lh3.googleusercontent.com/d/EXAMPLE=w1600')}&alt=Test+photo&group=operator`,
+    });
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toContain(KEY);
+    const { rows } = await db.query<{ editable: boolean; kind: string }>('SELECT editable, kind FROM assets WHERE key = $1', [KEY]);
+    expect(rows[0]?.editable).toBe(true);
+    expect(rows[0]?.kind).toBe('image');
+  });
+
   it('a facts-lock violation through the console form is rejected (400)', async () => {
     const session = await login();
     const { cookie, token } = await csrfFor(`/admin/pages${TOUR_ROUTE}`, session);

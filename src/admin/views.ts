@@ -119,11 +119,24 @@ export function pageEditor(page: EditorPage, sections: EditorSection[], csrf: st
       .join('')}</tbody></table>
     <p class="muted" style="margin-top:8px">Designed sections render from code + hydrated entities.</p></div>`;
 
+  const sectionTypes = ['rich_text', 'section_head', 'callout', 'cta', 'faq_list', 'steps', 'data_box', 'timeline'];
+  const addSectionForm = `<div class="card"><h3>Add a section ${badge('editable')}</h3>
+    <p class="muted">Appends a new operator section to this page — facts-locked on save, survives content rebuilds, renders after the designed sections.</p>
+    <form method="POST" action="/admin/sections">
+      <input type="hidden" name="csrf" value="${esc(csrf)}">
+      <input type="hidden" name="route" value="${esc(page.route)}">
+      <label>Section type</label>
+      <select name="section_type">${sectionTypes.map((t) => `<option value="${t}">${t}</option>`).join('')}</select>
+      <label>Heading (h1) <span class="muted">(optional)</span></label><input type="text" name="h1">
+      <label>Body (markdown) <span class="muted">(optional)</span></label><textarea name="body_md"></textarea>
+      <button type="submit">Add section</button>
+    </form></div>`;
+
   return layout({
     title: `Edit ${page.route}`,
     crumbs: `Dashboard › ${page.route}`,
     authed: true,
-    body: `<h2>${esc(page.title ?? page.route)}</h2>${flashHtml}${pageForm}${pcForm}${othersHtml}`,
+    body: `<h2>${esc(page.title ?? page.route)}</h2>${flashHtml}${pageForm}${pcForm}${othersHtml}${addSectionForm}`,
   });
 }
 
@@ -435,6 +448,41 @@ export function livePublishResult(d: {
   return layout({ title: 'Publish', crumbs: 'Dashboard › Publishing › Publish', authed: true, body });
 }
 
+/** Form to create a NEW operator-authored page. Prefills from `values` on a validation retry. */
+export function newPageForm(csrf: string, flash?: Flash, values?: Record<string, unknown>): string {
+  const v = (k: string) => esc(typeof values?.[k] === 'string' ? (values[k] as string) : '');
+  const sel = (k: string, opt: string) => (values?.[k] === opt ? ' selected' : '');
+  const flashHtml = flash && !flash.ok
+    ? `<div class="flash err">Could not create the page:<ul>${flash.messages.map((m) => `<li>${esc(m)}</li>`).join('')}</ul></div>`
+    : '';
+  const pageTypes = ['narrative', 'travel_guide', 'blog', 'faq', 'policy', 'hub', 'tour', 'destination', 'contact', 'verify', 'homepage', 'crew_profile'];
+  const typeOpts = pageTypes.map((t) => `<option value="${t}"${sel('page_type', t)}>${t}</option>`).join('');
+  const body = `<h2>New page</h2>${flashHtml}
+    <div class="card">
+      <p class="muted">Creates an operator-authored page, marked ${badge('editable')} so a content rebuild never removes it. Add sections after saving, then Publish to push it live.</p>
+      <form method="POST" action="/admin/pages/new">
+        <input type="hidden" name="csrf" value="${esc(csrf)}">
+        <label>Route <span class="muted">— path like /travel-guide/new-topic</span></label>
+        <input type="text" name="route" value="${v('route')}" placeholder="/travel-guide/new-topic" required>
+        <label>Title</label>
+        <input type="text" name="title" value="${v('title')}" placeholder="Page title">
+        <label>Page type</label>
+        <select name="page_type">${typeOpts}</select>
+        <label>Status</label>
+        <select name="status">
+          <option value="draft"${values?.['status'] === 'published' ? '' : ' selected'}>draft</option>
+          <option value="published"${sel('status', 'published')}>published</option>
+        </select>
+        <label>SEO title <span class="muted">(optional)</span></label>
+        <input type="text" name="seo_title" value="${v('seo_title')}">
+        <label>SEO description <span class="muted">(optional)</span></label>
+        <input type="text" name="seo_description" value="${v('seo_description')}">
+        <button type="submit">Create page</button>
+      </form>
+    </div>`;
+  return layout({ title: 'New page', crumbs: 'Dashboard › Pages › New', authed: true, body });
+}
+
 // ── Media library: swap the images shown on the site ──────────────────────────
 export interface AssetRow {
   key: string;
@@ -448,7 +496,7 @@ export interface AssetRow {
 export function mediaLibrary(assets: AssetRow[], csrf: string, flash?: Flash): string {
   const flashHtml = flash
     ? flash.ok
-      ? '<div class="flash ok">Saved — the swap is marked editable and reaches the live site on the next jvto_dev sync.</div>'
+      ? '<div class="flash ok">Saved — marked editable; survives upstream reloads and reaches the live site on the next Publish.</div>'
       : `<div class="flash err">Could not save:<ul>${flash.messages.map((m) => `<li>${esc(m)}</li>`).join('')}</ul></div>`
     : '';
   const byGroup = new Map<string, AssetRow[]>();
@@ -488,8 +536,22 @@ export function mediaLibrary(assets: AssetRow[], csrf: string, flash?: Flash): s
       return `<div class="group"><h3>${esc(g)}<span class="count">${list.length}</span></h3>${cards}</div>`;
     })
     .join('');
+  const registerForm = `<details class="card"><summary style="cursor:pointer;font-weight:600">➕ Register a new image</summary>
+    <p class="muted">Adds an image to the library — paste any public URL (e.g. a Google Drive <code>lh3.googleusercontent.com/d/&lt;id&gt;=w1600</code> link). Marked ${badge('editable')}; attach it to a page via a hero/gallery section.</p>
+    <form method="POST" action="/admin/media/new">
+      <input type="hidden" name="csrf" value="${esc(csrf)}">
+      <label>Key <span class="muted">— slug like gallery/my-photo-01</span></label>
+      <input type="text" name="key" placeholder="gallery/my-photo-01" required>
+      <label>Image URL</label>
+      <input type="text" name="url" placeholder="https://…" required>
+      <label>Alt text <span class="muted">(optional)</span></label>
+      <input type="text" name="alt">
+      <label>Group <span class="muted">(optional; groups it in this list)</span></label>
+      <input type="text" name="group" placeholder="operator">
+      <button type="submit">Register image</button>
+    </form></details>`;
   const body = `<h2>Media library <span class="count">${assets.length}</span></h2>
-    <p class="muted">Swap the image URL or alt text for anything shown on the site — not just text. Saved swaps are marked ${badge('editable')} and survive upstream reloads; they publish to the live site on the next <code>jvto_dev</code> sync.</p>
-    ${flashHtml}${groups}`;
+    <p class="muted">Swap the image URL or alt text for anything on the site, or register new images. Saved changes are marked ${badge('editable')}, survive upstream reloads, and reach the live site on the next Publish.</p>
+    ${flashHtml}${registerForm}${groups}`;
   return layout({ title: 'Media library', crumbs: 'Dashboard › Media', authed: true, body });
 }
