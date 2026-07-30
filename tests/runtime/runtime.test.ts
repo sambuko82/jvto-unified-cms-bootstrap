@@ -603,7 +603,7 @@ describe.skipIf(!hasDb)('CMS runtime — read + write (integration)', () => {
       const pub = await csrfFor('/admin/publishing', session);
       const res = await app.inject({
         method: 'POST',
-        url: '/admin/publish',
+        url: '/admin/publish/seed',
         cookies: { cms_session: session, cms_csrf: pub.cookie },
         headers: FORM,
         payload: `csrf=${pub.token}`,
