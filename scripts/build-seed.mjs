@@ -58,20 +58,26 @@ const redirects = (pagesDoc.redirects || []).map((r) => ({ from_path: r.from, to
 // ── assets (media registry from the SSOT image map; console-editable image swaps) ──
 // Optional: skipped if the extract has not been built (data/releases/assets/assets.json).
 let assets = [];
-try {
-  const assetDoc = JSON.parse(fs.readFileSync(path.join(root, 'data/releases/assets/assets.json'), 'utf8'));
-  assets = (assetDoc.rows || []).map((a) => ({
-    key: a.key,
-    kind: a.kind || 'image',
-    url: a.url,
-    alt: a.alt ?? null,
-    meta: {
-      title: a.title ?? null, caption: a.caption ?? null, group: a.group ?? null,
-      source_field: a.source_field ?? null, source_category: a.source_category ?? null,
-      recommended_pages: a.recommended_pages ?? [], link: a.link ?? null,
-    },
-  }));
-} catch { /* asset extract optional (manual, committed) */ }
+const mapAsset = (a) => ({
+  key: a.key,
+  kind: a.kind || 'image',
+  url: a.url,
+  alt: a.alt ?? null,
+  meta: {
+    title: a.title ?? null, caption: a.caption ?? null, group: a.group ?? null,
+    source_field: a.source_field ?? null, source_category: a.source_category ?? null,
+    recommended_pages: a.recommended_pages ?? [], link: a.link ?? null,
+  },
+});
+// Merge every committed asset source: the llm-wiki SSOT image map + the Google Drive
+// "Destination Photos" set (scripts/build-drive-destination-assets.mjs). Keys are unique
+// across sources; build-seed upserts by key and preserves editable operator swaps.
+for (const rel of ['data/releases/assets/assets.json', 'data/releases/assets/drive-destination-photos.json']) {
+  try {
+    const doc = JSON.parse(fs.readFileSync(path.join(root, rel), 'utf8'));
+    for (const a of doc.rows || []) assets.push(mapAsset(a));
+  } catch { /* each asset source is optional (manual, committed) */ }
+}
 
 // ── governance facts (flatten adjudicated_facts + forbidden_values) ──
 const facts = [];
