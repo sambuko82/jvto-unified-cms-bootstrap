@@ -70,6 +70,21 @@ echo "fast-forwarded: ${PREV:0:7} -> $NEW  ($BRANCH)"
 npm ci --include=dev
 npm run build
 
+# ── 4.5) app env for "Publish to live" (src/publish.ts), injected via --update-env below ─
+# The app runs ON this box, so point JVTO_DEV_DATABASE_URL at localhost:5432 — the external
+# :5432 intermittently blocks off-box clients, but localhost never does, and the sync treats
+# localhost as plaintext (TLS params ignored). We only ADD our vars; the box's own env
+# (DATABASE_URL etc. from its untracked ecosystem/.env) is left untouched.
+if [ -n "${JVTO_DEV_DATABASE_URL:-}" ]; then
+  JVTO_DEV_DATABASE_URL="$(printf '%s' "$JVTO_DEV_DATABASE_URL" | sed -E 's#@[^/@:]+(:[0-9]+)?/#@localhost:5432/#')"
+  export JVTO_DEV_DATABASE_URL
+  echo "app env: JVTO_DEV_DATABASE_URL -> localhost:5432 (Publish to live enabled)"
+fi
+if [ -n "${JVTO_WEB_DEPLOY_HOOK:-}" ]; then
+  export JVTO_WEB_DEPLOY_HOOK
+  echo "app env: JVTO_WEB_DEPLOY_HOOK set (jvto-web auto-rebuild enabled)"
+fi
+
 # ── 5) restart ONLY the pm2 process(es) running from this checkout ───────────
 # Match by pm_cwd so we touch our app and none of the other 15 on the box.
 restarted=""
