@@ -132,6 +132,14 @@ for (const e of byType.package) {
 }
 
 // ── generated destination detail pages ──
+// Destination photo galleries (Google Drive → assets): attach a hero + a gallery per
+// destination page, keyed off the committed drive-destination-photos.json set.
+const destPhotos = {};
+try {
+  const dp = JSON.parse(fs.readFileSync(path.join(root, 'data/releases/assets/drive-destination-photos.json'), 'utf8'));
+  for (const r of dp.rows || []) for (const route of r.recommended_pages || []) (destPhotos[route] ||= []).push(r.key);
+} catch { /* optional (manual, committed) */ }
+
 const gd = cfg.generate.destinations;
 for (const name of gd.only) {
   const selfKey = `destination:${name}`;
@@ -142,6 +150,13 @@ for (const name of gd.only) {
   const secs = gd.sections
     .filter((s) => !(s.when_ijen && !isIjen))
     .map((s) => section(s, { selfKey, pkgRefs }));
+  // Hero (first photo) + gallery (all photos) from the destination's Drive image set.
+  const photoKeys = destPhotos[`/destinations/${token}`] || [];
+  if (photoKeys.length > 0) {
+    const label = byKey.get(selfKey).fields?.name?.value ?? name;
+    secs.unshift({ type: 'hero', variant: 'destination', content: { alt: label }, entity_refs: [], asset_refs: [photoKeys[0]] });
+    secs.push({ type: 'gallery', variant: 'destination', content: { title: `${label} gallery` }, entity_refs: [], asset_refs: photoKeys });
+  }
   push({
     route: `/destinations/${token}`,
     file_group: gd.file_group,

@@ -5093,6 +5093,19 @@
   {
     "route": "/destinations/mount-bromo",
     "sort_order": 1,
+    "section_type": "hero",
+    "variant": "destination",
+    "content": {
+      "alt": "Mount Bromo (Gunung Bromo)"
+    },
+    "entity_refs": [],
+    "asset_refs": [
+      "destination-photo/mount-bromo/01"
+    ]
+  },
+  {
+    "route": "/destinations/mount-bromo",
+    "sort_order": 2,
     "section_type": "dest_facts",
     "variant": null,
     "content": {},
@@ -5103,7 +5116,7 @@
   },
   {
     "route": "/destinations/mount-bromo",
-    "sort_order": 2,
+    "sort_order": 3,
     "section_type": "rich_text",
     "variant": null,
     "content": {},
@@ -5114,7 +5127,7 @@
   },
   {
     "route": "/destinations/mount-bromo",
-    "sort_order": 3,
+    "sort_order": 4,
     "section_type": "section_head",
     "variant": null,
     "content": {
@@ -5125,7 +5138,7 @@
   },
   {
     "route": "/destinations/mount-bromo",
-    "sort_order": 4,
+    "sort_order": 5,
     "section_type": "card_grid",
     "variant": "package",
     "content": {},
@@ -5150,7 +5163,32 @@
   },
   {
     "route": "/destinations/mount-bromo",
-    "sort_order": 5,
+    "sort_order": 6,
+    "section_type": "gallery",
+    "variant": "destination",
+    "content": {
+      "title": "Mount Bromo (Gunung Bromo) gallery"
+    },
+    "entity_refs": [],
+    "asset_refs": [
+      "destination-photo/mount-bromo/01",
+      "destination-photo/mount-bromo/02",
+      "destination-photo/mount-bromo/03",
+      "destination-photo/mount-bromo/04",
+      "destination-photo/mount-bromo/05",
+      "destination-photo/mount-bromo/06",
+      "destination-photo/mount-bromo/07",
+      "destination-photo/mount-bromo/08",
+      "destination-photo/mount-bromo/09",
+      "destination-photo/mount-bromo/10",
+      "destination-photo/mount-bromo/11",
+      "destination-photo/mount-bromo/12",
+      "destination-photo/mount-bromo/13"
+    ]
+  },
+  {
+    "route": "/destinations/mount-bromo",
+    "sort_order": 7,
     "section_type": "page_content",
     "variant": "live",
     "content": {
@@ -5249,6 +5287,19 @@
   {
     "route": "/destinations/ijen-crater",
     "sort_order": 1,
+    "section_type": "hero",
+    "variant": "destination",
+    "content": {
+      "alt": "Kawah Ijen (Ijen Crater)"
+    },
+    "entity_refs": [],
+    "asset_refs": [
+      "destination-photo/ijen-crater/01"
+    ]
+  },
+  {
+    "route": "/destinations/ijen-crater",
+    "sort_order": 2,
     "section_type": "dest_facts",
     "variant": null,
     "content": {},
@@ -5259,7 +5310,7 @@
   },
   {
     "route": "/destinations/ijen-crater",
-    "sort_order": 2,
+    "sort_order": 3,
     "section_type": "rich_text",
     "variant": null,
     "content": {},
@@ -5270,7 +5321,7 @@
   },
   {
     "route": "/destinations/ijen-crater",
-    "sort_order": 3,
+    "sort_order": 4,
     "section_type": "callout",
     "variant": "lime",
     "content": {},
@@ -5281,7 +5332,7 @@
   },
   {
     "route": "/destinations/ijen-crater",
-    "sort_order": 4,
+    "sort_order": 5,
     "section_type": "section_head",
     "variant": null,
     "content": {
@@ -5292,7 +5343,7 @@
   },
   {
     "route": "/destinations/ijen-crater",
-    "sort_order": 5,
+    "sort_order": 6,
     "section_type": "card_grid",
     "variant": "package",
     "content": {},
@@ -5315,7 +5366,32 @@
   },
   {
     "route": "/destinations/ijen-crater",
-    "sort_order": 6,
+    "sort_order": 7,
+    "section_type": "gallery",
+    "variant": "destination",
+    "content": {
+      "title": "Kawah Ijen (Ijen Crater) gallery"
+    },
+    "entity_refs": [],
+    "asset_refs": [
+      "destination-photo/ijen-crater/01",
+      "destination-photo/ijen-crater/02",
+      "destination-photo/ijen-crater/03",
+      "destination-photo/ijen-crater/04",
+      "destination-photo/ijen-crater/05",
+      "destination-photo/ijen-crater/06",
+      "destination-photo/ijen-crater/07",
+      "destination-photo/ijen-crater/08",
+      "destination-photo/ijen-crater/09",
+      "destination-photo/ijen-crater/10",
+      "destination-photo/ijen-crater/11",
+      "destination-photo/ijen-crater/12",
+      "destination-photo/ijen-crater/13"
+    ]
+  },
+  {
+    "route": "/destinations/ijen-crater",
+    "sort_order": 8,
     "section_type": "page_content",
     "variant": "live",
     "content": {
@@ -5330,6 +5406,19 @@
   {
     "route": "/destinations/tumpak-sewu-waterfall",
     "sort_order": 1,
+    "section_type": "hero",
+    "variant": "destination",
+    "content": {
+      "alt": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu)"
+    },
+    "entity_refs": [],
+    "asset_refs": [
+      "destination-photo/tumpak-sewu-waterfall/01"
+    ]
+  },
+  {
+    "route": "/destinations/tumpak-sewu-waterfall",
+    "sort_order": 2,
     "section_type": "dest_facts",
     "variant": null,
     "content": {},
@@ -5340,7 +5429,7 @@
   },
   {
     "route": "/destinations/tumpak-sewu-waterfall",
-    "sort_order": 2,
+    "sort_order": 3,
     "section_type": "rich_text",
     "variant": null,
     "content": {},
@@ -5351,7 +5440,7 @@
   },
   {
     "route": "/destinations/tumpak-sewu-waterfall",
-    "sort_order": 3,
+    "sort_order": 4,
     "section_type": "section_head",
     "variant": null,
     "content": {
@@ -5362,7 +5451,7 @@
   },
   {
     "route": "/destinations/tumpak-sewu-waterfall",
-    "sort_order": 4,
+    "sort_order": 5,
     "section_type": "card_grid",
     "variant": "package",
     "content": {},
@@ -5378,7 +5467,51 @@
   },
   {
     "route": "/destinations/tumpak-sewu-waterfall",
-    "sort_order": 5,
+    "sort_order": 6,
+    "section_type": "gallery",
+    "variant": "destination",
+    "content": {
+      "title": "Tumpak Sewu Waterfall (Air Terjun Tumpak Sewu) gallery"
+    },
+    "entity_refs": [],
+    "asset_refs": [
+      "destination-photo/tumpak-sewu-waterfall/01",
+      "destination-photo/tumpak-sewu-waterfall/02",
+      "destination-photo/tumpak-sewu-waterfall/03",
+      "destination-photo/tumpak-sewu-waterfall/04",
+      "destination-photo/tumpak-sewu-waterfall/05",
+      "destination-photo/tumpak-sewu-waterfall/06",
+      "destination-photo/tumpak-sewu-waterfall/07",
+      "destination-photo/tumpak-sewu-waterfall/08",
+      "destination-photo/tumpak-sewu-waterfall/09",
+      "destination-photo/tumpak-sewu-waterfall/10",
+      "destination-photo/tumpak-sewu-waterfall/11",
+      "destination-photo/tumpak-sewu-waterfall/12",
+      "destination-photo/tumpak-sewu-waterfall/13",
+      "destination-photo/tumpak-sewu-waterfall/14",
+      "destination-photo/tumpak-sewu-waterfall/15",
+      "destination-photo/tumpak-sewu-waterfall/16",
+      "destination-photo/tumpak-sewu-waterfall/17",
+      "destination-photo/tumpak-sewu-waterfall/18",
+      "destination-photo/tumpak-sewu-waterfall/19",
+      "destination-photo/tumpak-sewu-waterfall/20",
+      "destination-photo/tumpak-sewu-waterfall/21",
+      "destination-photo/tumpak-sewu-waterfall/22",
+      "destination-photo/tumpak-sewu-waterfall/23",
+      "destination-photo/tumpak-sewu-waterfall/24",
+      "destination-photo/tumpak-sewu-waterfall/25",
+      "destination-photo/tumpak-sewu-waterfall/26",
+      "destination-photo/tumpak-sewu-waterfall/27",
+      "destination-photo/tumpak-sewu-waterfall/28",
+      "destination-photo/tumpak-sewu-waterfall/29",
+      "destination-photo/tumpak-sewu-waterfall/30",
+      "destination-photo/tumpak-sewu-waterfall/31",
+      "destination-photo/tumpak-sewu-waterfall/32"
+    ]
+  },
+  {
+    "route": "/destinations/tumpak-sewu-waterfall",
+    "sort_order": 7,
     "section_type": "page_content",
     "variant": "live",
     "content": {
@@ -5392,6 +5525,19 @@
   {
     "route": "/destinations/madakaripura-waterfall",
     "sort_order": 1,
+    "section_type": "hero",
+    "variant": "destination",
+    "content": {
+      "alt": "Madakaripura Waterfall (Air Terjun Madakaripura)"
+    },
+    "entity_refs": [],
+    "asset_refs": [
+      "destination-photo/madakaripura-waterfall/01"
+    ]
+  },
+  {
+    "route": "/destinations/madakaripura-waterfall",
+    "sort_order": 2,
     "section_type": "dest_facts",
     "variant": null,
     "content": {},
@@ -5402,7 +5548,7 @@
   },
   {
     "route": "/destinations/madakaripura-waterfall",
-    "sort_order": 2,
+    "sort_order": 3,
     "section_type": "rich_text",
     "variant": null,
     "content": {},
@@ -5413,7 +5559,7 @@
   },
   {
     "route": "/destinations/madakaripura-waterfall",
-    "sort_order": 3,
+    "sort_order": 4,
     "section_type": "section_head",
     "variant": null,
     "content": {
@@ -5424,7 +5570,7 @@
   },
   {
     "route": "/destinations/madakaripura-waterfall",
-    "sort_order": 4,
+    "sort_order": 5,
     "section_type": "card_grid",
     "variant": "package",
     "content": {},
@@ -5440,7 +5586,28 @@
   },
   {
     "route": "/destinations/madakaripura-waterfall",
-    "sort_order": 5,
+    "sort_order": 6,
+    "section_type": "gallery",
+    "variant": "destination",
+    "content": {
+      "title": "Madakaripura Waterfall (Air Terjun Madakaripura) gallery"
+    },
+    "entity_refs": [],
+    "asset_refs": [
+      "destination-photo/madakaripura-waterfall/01",
+      "destination-photo/madakaripura-waterfall/02",
+      "destination-photo/madakaripura-waterfall/03",
+      "destination-photo/madakaripura-waterfall/04",
+      "destination-photo/madakaripura-waterfall/05",
+      "destination-photo/madakaripura-waterfall/06",
+      "destination-photo/madakaripura-waterfall/07",
+      "destination-photo/madakaripura-waterfall/08",
+      "destination-photo/madakaripura-waterfall/09"
+    ]
+  },
+  {
+    "route": "/destinations/madakaripura-waterfall",
+    "sort_order": 7,
     "section_type": "page_content",
     "variant": "live",
     "content": {
@@ -5454,6 +5621,19 @@
   {
     "route": "/destinations/papuma-beach",
     "sort_order": 1,
+    "section_type": "hero",
+    "variant": "destination",
+    "content": {
+      "alt": "Papuma Beach (Pantai Papuma)"
+    },
+    "entity_refs": [],
+    "asset_refs": [
+      "destination-photo/papuma-beach/01"
+    ]
+  },
+  {
+    "route": "/destinations/papuma-beach",
+    "sort_order": 2,
     "section_type": "dest_facts",
     "variant": null,
     "content": {},
@@ -5464,7 +5644,7 @@
   },
   {
     "route": "/destinations/papuma-beach",
-    "sort_order": 2,
+    "sort_order": 3,
     "section_type": "rich_text",
     "variant": null,
     "content": {},
@@ -5475,7 +5655,7 @@
   },
   {
     "route": "/destinations/papuma-beach",
-    "sort_order": 3,
+    "sort_order": 4,
     "section_type": "section_head",
     "variant": null,
     "content": {
@@ -5486,7 +5666,7 @@
   },
   {
     "route": "/destinations/papuma-beach",
-    "sort_order": 4,
+    "sort_order": 5,
     "section_type": "card_grid",
     "variant": "package",
     "content": {},
@@ -5501,7 +5681,26 @@
   },
   {
     "route": "/destinations/papuma-beach",
-    "sort_order": 5,
+    "sort_order": 6,
+    "section_type": "gallery",
+    "variant": "destination",
+    "content": {
+      "title": "Papuma Beach (Pantai Papuma) gallery"
+    },
+    "entity_refs": [],
+    "asset_refs": [
+      "destination-photo/papuma-beach/01",
+      "destination-photo/papuma-beach/02",
+      "destination-photo/papuma-beach/03",
+      "destination-photo/papuma-beach/04",
+      "destination-photo/papuma-beach/05",
+      "destination-photo/papuma-beach/06",
+      "destination-photo/papuma-beach/07"
+    ]
+  },
+  {
+    "route": "/destinations/papuma-beach",
+    "sort_order": 7,
     "section_type": "page_content",
     "variant": "live",
     "content": {

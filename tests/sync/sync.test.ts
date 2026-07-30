@@ -84,7 +84,7 @@ describe.skipIf(!hasDb)('jvto_cms -> jvto_dev sync (integration)', () => {
   it('updates organization branding and mirrors the cms.* restructured model with FK integrity', async () => {
     expect(await n('SELECT count(*) n FROM organization_profile WHERE hero_image_url IS NOT NULL AND logo_url IS NOT NULL')).toBe(1);
     expect(await n('SELECT count(*) n FROM cms.pages')).toBe(76);
-    expect(await n('SELECT count(*) n FROM cms.page_sections')).toBe(306);
+    expect(await n('SELECT count(*) n FROM cms.page_sections')).toBe(316);
     expect(await n('SELECT count(*) n FROM cms.templates')).toBe(76);
     expect(await n('SELECT count(*) n FROM assets a LEFT JOIN folders f ON f.id = a.folder_id WHERE f.id IS NULL')).toBe(0);
   });

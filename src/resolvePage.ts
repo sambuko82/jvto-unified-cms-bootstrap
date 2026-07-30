@@ -22,11 +22,19 @@ export interface Entity {
   editable: boolean;
 }
 
+export interface Asset {
+  key: string;
+  url: string;
+  alt: string | null;
+  kind: string;
+}
+
 export interface HydratedSection {
   type: string;
   variant: string | null;
   content: Record<string, unknown>;
   entities: Entity[]; // hydrated, in entity_refs order
+  assets: Asset[]; // hydrated, in asset_refs order (media: hero, gallery, …)
 }
 
 export interface ResolvedPage {
@@ -419,6 +427,18 @@ export async function resolvePage(route: string): Promise<ResolvedPage | null> {
     for (const row of rows) entityMap.set(row.canonical_key, toPublicEntity(row));
   }
 
+  // Hydrate asset_refs → assets (media keys resolve to the assets registry, in ref order).
+  // Missing keys are skipped (a removed image should not 500 the page) rather than thrown.
+  const assetKeys = [...new Set(rawSections.flatMap((s) => s.asset_refs))];
+  const assetMap = new Map<string, Asset>();
+  if (assetKeys.length > 0) {
+    const { rows } = await query<Asset>(
+      'SELECT key, url, alt, kind FROM assets WHERE key = ANY($1)',
+      [assetKeys],
+    );
+    for (const row of rows) assetMap.set(row.key, row);
+  }
+
   const sections: HydratedSection[] = rawSections.map((s) => {
     const entities = s.entity_refs.map((key) => {
       const entity = entityMap.get(key);
@@ -427,7 +447,10 @@ export async function resolvePage(route: string): Promise<ResolvedPage | null> {
       }
       return entity;
     });
-    return { type: s.type, variant: s.variant, content: s.content ?? {}, entities };
+    const assets = s.asset_refs
+      .map((key) => assetMap.get(key))
+      .filter((a): a is Asset => Boolean(a));
+    return { type: s.type, variant: s.variant, content: s.content ?? {}, entities, assets };
   });
 
   const page: ResolvedPage['page'] = {
