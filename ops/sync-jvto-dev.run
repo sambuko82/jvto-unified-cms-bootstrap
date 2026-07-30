@@ -1,7 +1,7 @@
-apply
-# apply #3 (ATTEMPT 3 / final auto-retry). Attempts 1 (run 30518926839) and 2 (run 30519176065)
-# both failed with `connect ETIMEDOUT 31.97.223.43:5432` — pure connect failures, NO SQL ran,
-# jvto_dev UNTOUCHED. The read-only plan (30518271919) reached the same DB fine at 06:01, and the
-# host answers on :443, so :5432 external reachability degraded after ~06:01. Runner IPs rotate;
-# this fresh-IP attempt tests IP-block vs sustained firewall. If it ALSO times out, stop and have
-# the VPS owner check the firewall/fail2ban/pg listen for 31.97.223.43:5432.
+plan
+# apply #3 SUCCEEDED 2026-07-30 (run 30519490534): +74 Drive destination photos + hero/gallery
+# sections synced into jvto_dev — additive, nothing deleted. rollback.sql = run artifact 8750238071.
+# (Attempts 1-2 hit a transient connect ETIMEDOUT to :5432 from GitHub runners; attempt 3 on a
+# fresh runner IP connected and committed. Read-only plan had reached the DB fine.)
+# Default is `plan` (dry-run, writes nothing). Set line 1 to `apply` + bump this comment to
+# write jvto_dev again.
